@@ -1,0 +1,58 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import RefCard from '../../components/RefCard.astro';
+import WerbeHinweis from '../../components/WerbeHinweis.astro';
+import { KATEGORIEN } from '../../data/kategorien';
+
+const alle = (await getCollection('empfehlungen')).sort((a, b) => a.data.reihenfolge - b.data.reihenfolge);
+const aktiveWerbelinks = alle.filter((e) => e.data.werbelink).length;
+const gruppen = KATEGORIEN.map((k) => ({ ...k, eintraege: alle.filter((e) => e.data.kategorie === k.slug) })).filter(
+  (k) => k.eintraege.length > 0,
+);
+---
+
+<Base
+  title="Empfehlungen"
+  description="Anbieter, die in der Einundzwanzig-Community genutzt werden: Bitcoin kaufen, Hardware Wallets, Nostr, Steuer. Mit KYC-Stufe und Prüfdatum, Werbung ist gekennzeichnet."
+>
+  <section class="wrap pt-12 pb-6">
+    <h1 class="h1 font-display">Empfehlungen</h1>
+    <p class="mt-5 max-w-[60ch] text-lg text-ink-2">
+      Anbieter, die Leute aus der Community selbst benutzen. Bei jedem steht, wie viel Identitätsprüfung er verlangt, was zu
+      beachten ist und wann wir zuletzt nachgesehen haben. Nichts davon ist Anlageberatung.
+    </p>
+    <nav class="mt-6 flex flex-wrap gap-2" aria-label="Kategorien">
+      {
+        gruppen.map((g) => (
+          <a class="rounded-full border border-line px-3 py-1 text-sm text-ink-2 no-underline hover:border-ink-3 hover:text-ink" href={`#${g.slug}`}>
+            {g.titel}
+          </a>
+        ))
+      }
+    </nav>
+    <div class="mt-8">
+      <WerbeHinweis aktiveWerbelinks={aktiveWerbelinks} />
+    </div>
+  </section>
+
+  {
+    gruppen.map((g) => (
+      <section id={g.slug} class="wrap scroll-mt-6 py-10" aria-labelledby={`titel-${g.slug}`}>
+        <div class="flex flex-wrap items-baseline justify-between gap-3">
+          <h2 id={`titel-${g.slug}`} class="font-display text-2xl font-bold sm:text-3xl">
+            <a class="no-underline hover:text-orange-ink" href={`/empfehlungen/${g.slug}`}>
+              {g.titel}
+            </a>
+          </h2>
+        </div>
+        <p class="mt-3 max-w-[65ch] text-ink-2">{g.intro}</p>
+        <div class="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {g.eintraege.map((e) => (
+            <RefCard eintrag={e} />
+          ))}
+        </div>
+      </section>
+    ))
+  }
+</Base>

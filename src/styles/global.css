@@ -1,0 +1,208 @@
+@import "tailwindcss";
+@import "@fontsource-variable/syne";
+@import "@fontsource-variable/jetbrains-mono";
+
+/* Farbwelt: Stammtisch. Warmes Dunkel wie Holz und Stout, Orange wie Bitcoin,
+   Violett für alles, was Nostr ist. Dunkel ist der Standard, hell die Option. */
+:root {
+  --bg: #171210;
+  --bg-2: #211a15;
+  --line: #3b2f26;
+  --ink: #f3eadf;
+  --ink-2: #b9a999;
+  --ink-3: #948577;
+  --orange: #f7931a;
+  --orange-ink: #f7931a;
+  --violet: #b48cff;
+  --live: #6ccb8a;
+  --beta: #e8c547;
+  --idee: #8c7f74;
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --bg: #f7f0e6;
+  --bg-2: #fff9f1;
+  --line: #e3d6c5;
+  --ink: #1e1712;
+  --ink-2: #5e5147;
+  --ink-3: #74665a;
+  --orange-ink: #9c5407;
+  --violet: #6a3fd6;
+  --live: #1f7044;
+  --beta: #7a6100;
+  --idee: #74665a;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f7f0e6;
+    --bg-2: #fff9f1;
+    --line: #e3d6c5;
+    --ink: #1e1712;
+    --ink-2: #5e5147;
+    --ink-3: #74665a;
+    --orange-ink: #9c5407;
+    --violet: #6a3fd6;
+    --live: #1f7044;
+    --beta: #7a6100;
+    --idee: #74665a;
+    color-scheme: light;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-2: var(--bg-2);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-orange: var(--orange);
+  --color-orange-ink: var(--orange-ink);
+  --color-violet: var(--violet);
+  --color-live: var(--live);
+  --color-beta: var(--beta);
+  --color-idee: var(--idee);
+  --font-display: "Syne Variable", "Avenir Next", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@layer base {
+  html {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: 106.25%;
+    line-height: 1.55;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    min-height: 100dvh;
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    flex: 1;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  :focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  ::selection {
+    background: var(--orange);
+    color: #1e1712;
+  }
+  code, kbd {
+    font-family: var(--font-mono);
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 font-display font-semibold no-underline;
+    transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+  }
+  .btn-primary {
+    background: var(--orange);
+    color: #1e1712;
+  }
+  .btn-primary:hover {
+    background: #ffa43a;
+  }
+  .btn-ghost {
+    border: 1px solid var(--line);
+    color: var(--ink);
+  }
+  .btn-ghost:hover {
+    border-color: var(--ink-3);
+  }
+  .link {
+    color: var(--orange-ink);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+  }
+  .link:hover {
+    text-decoration-thickness: 2px;
+  }
+  .wrap {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+  }
+  /* Seitentitel: so bemessen, dass „Einundzwanzig“ (13 Zeichen Syne 800) auch bei 360px passt */
+  .h1 {
+    font-size: clamp(1.75rem, 8vw, 3rem);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    overflow-wrap: anywhere;
+  }
+  .status-dot {
+    display: inline-block;
+    width: 0.6em;
+    height: 0.6em;
+    border-radius: 9999px;
+    flex: none;
+  }
+  .status-dot.live { background: var(--live); }
+  .status-dot.beta { background: var(--beta); }
+  .status-dot.idee { background: var(--idee); }
+
+  /* Für gerenderte Markdown-Inhalte */
+  .prose-ez {
+    max-width: 68ch;
+  }
+  .prose-ez p, .prose-ez ul, .prose-ez ol {
+    margin-block: 1em;
+  }
+  .prose-ez ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+  }
+  .prose-ez ol {
+    list-style: decimal;
+    padding-left: 1.25rem;
+  }
+  .prose-ez li {
+    margin-block: 0.35em;
+  }
+  .prose-ez h2 {
+    @apply mt-10 mb-3 text-2xl font-bold;
+  }
+  .prose-ez h3 {
+    @apply mt-8 mb-2 text-xl font-semibold;
+  }
+  .prose-ez a {
+    color: var(--orange-ink);
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+  .prose-ez code {
+    font-size: 0.9em;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 0.05em 0.35em;
+  }
+  .prose-ez strong {
+    font-weight: 700;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

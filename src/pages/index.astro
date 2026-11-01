@@ -1,0 +1,106 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import EcosystemMap from '../components/EcosystemMap.astro';
+import FeedList from '../components/FeedList.astro';
+import MeetupTeaser from '../components/MeetupTeaser.astro';
+import PathCard from '../components/PathCard.astro';
+import RefCard from '../components/RefCard.astro';
+import WerbeHinweis from '../components/WerbeHinweis.astro';
+import { getFeed } from '../lib/feed';
+import { EXTERN } from '../lib/site';
+
+const alleProjekte = await getCollection('projects');
+const aufKarte = alleProjekte
+  .filter((p) => p.data.karte !== undefined)
+  .sort((a, b) => (a.data.karte ?? 0) - (b.data.karte ?? 0));
+
+const neu = await getFeed(5);
+
+const alleEmpfehlungen = (await getCollection('empfehlungen')).sort((a, b) => a.data.reihenfolge - b.data.reihenfolge);
+const gesehen = new Set<string>();
+const teaser = alleEmpfehlungen.filter((e) => {
+  if (gesehen.has(e.data.kategorie)) return false;
+  gesehen.add(e.data.kategorie);
+  return true;
+}).slice(0, 3);
+const aktiveWerbelinks = alleEmpfehlungen.filter((e) => e.data.werbelink).length;
+---
+
+<Base>
+  <section class="wrap grid gap-10 pt-12 pb-6 lg:grid-cols-2 lg:items-center lg:gap-12 lg:pt-16">
+    <div class="min-w-0">
+      <h1 class="font-display text-[clamp(1.6rem,7.2vw,3.1rem)] leading-[1.04] font-extrabold tracking-tight lg:text-[clamp(2rem,2.4vw+0.6rem,2.6rem)]">
+        Alles rund um <span class="whitespace-nowrap">Einundzwanzig,</span> an einem Tisch.
+      </h1>
+      <p class="mt-6 max-w-[50ch] text-lg text-ink-2">
+        Der Einstieg für Neue und der Überblick für alle, die schon länger dabei sind. Podcast, Meetups, Apps und Werkzeuge
+        der Community, verbunden über Bitcoin und Nostr.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a class="btn btn-primary" href="/start">Ich bin neu hier</a>
+        <a class="btn btn-ghost" href="/projekte">Alle Projekte ansehen</a>
+      </div>
+    </div>
+    <div class="min-w-0"><EcosystemMap projekte={aufKarte} /></div>
+  </section>
+
+  <section class="wrap py-14" aria-labelledby="neu-titel">
+    <div class="flex flex-wrap items-baseline justify-between gap-3">
+      <h2 id="neu-titel" class="font-display text-3xl font-bold sm:text-4xl">Neu</h2>
+      <a class="link text-sm" href={EXTERN.podcastFolgen} rel="noopener">Alle Podcast-Folgen</a>
+    </div>
+    <div class="mt-6">
+      <FeedList eintraege={neu} />
+    </div>
+    <p class="mt-3 text-sm text-ink-3">Quelle: Podcast-Feed und Neuigkeiten dieser Seite. Nostr, App-Releases und Kickstr-Runden kommen dazu.</p>
+  </section>
+
+  <section class="wrap py-14" aria-labelledby="start-titel">
+    <h2 id="start-titel" class="font-display text-3xl font-bold sm:text-4xl">Wo fängst du an?</h2>
+    <div class="mt-8 grid gap-5 lg:grid-cols-3">
+      <PathCard
+        titel="Neu bei Bitcoin"
+        text="Du willst verstehen, worum es geht, bevor du irgendetwas kaufst."
+        schritte={[
+          { label: 'Der Weg hören', href: EXTERN.derWeg, hinweis: 'Menschen erzählen, wie sie zu Bitcoin kamen.' },
+          { label: 'Ein Meetup besuchen', href: EXTERN.portalKarte, hinweis: 'Fragen stellen, ohne etwas kaufen zu müssen.' },
+          { label: 'Erste Wallet einrichten', href: '/empfehlungen/wallets' },
+        ]}
+      />
+      <PathCard
+        titel="Neu in der Community"
+        text="Du kennst Bitcoin und suchst Leute, mit denen du darüber reden kannst."
+        schritte={[
+          { label: 'Deinen Stammtisch finden', href: EXTERN.portalKarte },
+          { label: 'Meetup-App laden', href: '/projekte/meetup-app', hinweis: 'Termine und Anwesenheits-Badges.' },
+          { label: 'Auf Nostr folgen', href: EXTERN.nostrProfil, hinweis: 'Dort passiert das Gespräch zwischen den Folgen.' },
+        ]}
+      />
+      <PathCard
+        titel="Bauen und mitmachen"
+        text="Du kannst programmieren, organisieren oder schreiben und willst etwas beitragen."
+        schritte={[
+          { label: 'Projekte mit offenen Ideen ansehen', href: '/projekte#idee' },
+          { label: 'Dem Verein beitreten', href: EXTERN.verein, hinweis: 'Der Verein fördert Community-Projekte.' },
+          { label: 'Mitbauen', href: '/unterstuetzen#mitbauen' },
+        ]}
+      />
+    </div>
+  </section>
+
+  <MeetupTeaser />
+
+  <section class="wrap py-14" aria-labelledby="empfehlungen-titel">
+    <div class="flex flex-wrap items-baseline justify-between gap-3">
+      <h2 id="empfehlungen-titel" class="font-display text-3xl font-bold sm:text-4xl">Empfehlungen</h2>
+      <a class="link text-sm" href="/empfehlungen">Alle Empfehlungen</a>
+    </div>
+    <div class="mt-6">
+      <WerbeHinweis aktiveWerbelinks={aktiveWerbelinks} />
+    </div>
+    <div class="mt-6 grid gap-5 md:grid-cols-3">
+      {teaser.map((e) => <RefCard eintrag={e} />)}
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,15 @@
+---
+interface Props {
+  kyc: 'keine' | 'leicht' | 'voll' | 'entfaellt';
+}
+const { kyc } = Astro.props;
+const text = { keine: 'Ohne KYC', leicht: 'KYC-arm', voll: 'Mit KYC', entfaellt: null }[kyc];
+const ton = {
+  keine: 'border-live text-live',
+  leicht: 'border-beta text-beta',
+  voll: 'border-line text-ink-2',
+  entfaellt: '',
+}[kyc];
+---
+
+{text && <span class={`inline-flex items-center rounded-full border px-2 py-0.5 text-xs ${ton}`}>{text}</span>}

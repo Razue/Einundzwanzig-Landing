@@ -1,0 +1,47 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { render } from 'astro:content';
+import KycBadge from './KycBadge.astro';
+import { datumKurz } from '../lib/format';
+
+interface Props {
+  eintrag: CollectionEntry<'empfehlungen'>;
+}
+const { eintrag } = Astro.props;
+const { anbieter, kyc, laender, url, werbelink, programm, code, vorteil, risiken, geprueft_am } = eintrag.data;
+const { Content } = await render(eintrag);
+const hatBegruendung = (eintrag.body ?? '').trim().length > 0;
+const programmText = programm === 'offen' ? 'Partnerprogramm wird geprüft' : programm === 'kein' ? 'Kein Partnerprogramm' : 'Partnerlink';
+---
+
+<article class="relative flex flex-col gap-3 rounded-xl border border-line bg-bg-2 p-5">
+  {werbelink && <span class="absolute top-4 right-4 rounded-full border border-orange px-2 py-0.5 text-xs text-orange-ink">Werbung</span>}
+  <h3 class="pr-20 font-display text-xl font-bold">{anbieter}</h3>
+  <div class="flex flex-wrap items-center gap-2 text-xs text-ink-3">
+    <KycBadge kyc={kyc} />
+    {laender.length > 0 && <span>{laender.join(', ')}</span>}
+  </div>
+  <p class="text-ink-2">{vorteil}</p>
+  {risiken && <p class="text-sm text-ink-3">Beachte: {risiken}</p>}
+  {
+    code && (
+      <p class="text-sm">
+        Code <code class="rounded border border-line px-1.5 py-0.5 font-mono text-ink">{code}</code>
+      </p>
+    )
+  }
+  {
+    hatBegruendung && (
+      <details class="text-sm">
+        <summary class="cursor-pointer text-ink-2 hover:text-ink">Warum wir das empfehlen</summary>
+        <div class="prose-ez mt-2 text-ink-2">
+          <Content />
+        </div>
+      </details>
+    )
+  }
+  <div class="mt-auto pt-2">
+    <a class="btn btn-ghost text-sm" href={url} rel={werbelink ? 'sponsored noopener' : 'noopener'}>Zu {anbieter}</a>
+  </div>
+  <p class="text-xs text-ink-3">{programmText}. Stand {datumKurz(geprueft_am)}.</p>
+</article>

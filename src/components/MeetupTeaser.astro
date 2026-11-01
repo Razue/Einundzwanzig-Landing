@@ -1,0 +1,51 @@
+---
+import { getMeetupStatistik } from '../lib/portal';
+import { terminKurz, isoDatum } from '../lib/format';
+import { EXTERN } from '../lib/site';
+
+const stat = await getMeetupStatistik();
+const naechste = stat.kommende.slice(0, 4);
+---
+
+<section class="wrap py-14" aria-labelledby="meetups-titel">
+  <div class="grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
+    <div>
+      <h2 id="meetups-titel" class="font-display text-3xl font-bold sm:text-4xl">Dein Stammtisch ist näher, als du denkst.</h2>
+      <p class="mt-4 text-ink-2">
+        Im Portal sind gerade {stat.gesamt} Meetups in {stat.laender} Ländern eingetragen, {stat.deutschland} davon in Deutschland.
+        Die meisten treffen sich einmal im Monat, in einer Kneipe, ohne Anmeldung.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a class="btn btn-primary" href={EXTERN.portalKarte} rel="noopener">Karte im Portal öffnen</a>
+        <a class="btn btn-ghost" href="/projekte/meetup-app">Meetup-App ansehen</a>
+      </div>
+    </div>
+    <div>
+      <h3 class="text-sm text-ink-3">Die nächsten Termine</h3>
+      {
+        naechste.length === 0 ? (
+          <p class="mt-3 text-ink-2">Im Portal sind gerade keine kommenden Termine eingetragen. Die Karte zeigt trotzdem alle Gruppen.</p>
+        ) : (
+          <ol class="mt-3 divide-y divide-line border-y border-line">
+            {naechste.map((k) => (
+              <li class="grid gap-x-4 py-3 sm:grid-cols-[11rem_1fr]">
+                <time datetime={k.start.toISOString()} class="font-mono text-sm text-ink-2">
+                  {terminKurz(k.start)}
+                </time>
+                <span>
+                  <a href={k.termin.portalLink} rel="noopener" class="font-display font-semibold no-underline hover:text-orange-ink">
+                    {k.meetup.name}
+                  </a>
+                  {(k.termin.location || k.meetup.city) && (
+                    <span class="block text-sm text-ink-3">{k.termin.location ?? k.meetup.city}</span>
+                  )}
+                </span>
+              </li>
+            ))}
+          </ol>
+        )
+      }
+      <p class="mt-3 text-sm text-ink-3">Quelle: portal.einundzwanzig.space, aktualisiert mit jedem Build.</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,79 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+
+export async function getStaticPaths() {
+  const projekte = await getCollection('projects');
+  return projekte.map((p) => ({ params: { slug: p.id }, props: { projekt: p } }));
+}
+
+const { projekt } = Astro.props;
+const { name, kurz, status, offiziell, themen, links } = projekt.data;
+const { Content } = await render(projekt);
+const linkListe = [
+  links.web && { href: links.web, label: 'Website' },
+  links.zapstore && { href: links.zapstore, label: 'Zapstore (Android)' },
+  links.appstore && { href: links.appstore, label: 'App Store (iOS)' },
+  links.repo && { href: links.repo, label: 'Quellcode' },
+  links.rss && { href: links.rss, label: 'RSS-Feed' },
+  links.nostr && { href: `https://njump.me/${links.nostr}`, label: 'Nostr-Profil' },
+].filter(Boolean) as { href: string; label: string }[];
+---
+
+<Base title={name} description={kurz}>
+  <article class="wrap pt-12 pb-10">
+    <a class="text-sm text-ink-3 hover:text-ink" href="/projekte">Alle Projekte</a>
+    <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
+      <h1 class="h1 font-display">{name}</h1>
+      <StatusBadge status={status} class="text-base" />
+    </div>
+    <p class="mt-4 max-w-[60ch] text-lg text-ink-2">{kurz}</p>
+    {offiziell && <p class="mt-2 text-sm text-ink-3">Ein Angebot des Einundzwanzig-Teams.</p>}
+
+    <div class="mt-10 grid gap-10 lg:grid-cols-[minmax(0,7fr)_minmax(0,4fr)]">
+      <div class="prose-ez text-ink-2">
+        <Content />
+        {
+          status === 'idee' && (
+            <p class="mt-8 rounded-2xl border border-dashed border-line p-5 text-ink">
+              Das ist noch eine Idee, nichts davon ist gebaut. Wenn du mitmachen willst, <a href="/unterstuetzen#mitbauen">melde dich</a>.
+            </p>
+          )
+        }
+      </div>
+      <aside class="h-fit rounded-2xl border border-line bg-bg-2 p-5">
+        {
+          linkListe.length > 0 ? (
+            <>
+              <h2 class="font-display text-base font-bold">Links</h2>
+              <ul class="mt-3 grid gap-2">
+                {linkListe.map((l) => (
+                  <li>
+                    <a class="link" href={l.href} rel="noopener">
+                      {l.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : (
+            <p class="text-sm text-ink-3">Noch keine Links. Sobald es etwas zu sehen gibt, steht es hier.</p>
+          )
+        }
+        {
+          themen.length > 0 && (
+            <>
+              <h2 class="mt-6 font-display text-base font-bold">Themen</h2>
+              <ul class="mt-2 flex flex-wrap gap-2">
+                {themen.map((t) => (
+                  <li class="rounded-full border border-line px-2.5 py-0.5 text-xs text-ink-2">{t}</li>
+                ))}
+              </ul>
+            </>
+          )
+        }
+      </aside>
+    </div>
+  </article>
+</Base>

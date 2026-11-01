@@ -1,0 +1,13 @@
+---
+interface Props {
+  status: 'live' | 'beta' | 'idee';
+  class?: string;
+}
+const { status, class: klasse = '' } = Astro.props;
+const label = { live: 'Live', beta: 'Beta', idee: 'Idee' }[status];
+---
+
+<span class={`inline-flex items-center gap-1.5 text-sm text-ink-2 ${klasse}`}>
+  <span class={`status-dot ${status}`} aria-hidden="true"></span>
+  {label}
+</span>

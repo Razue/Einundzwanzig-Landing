@@ -1,0 +1,22 @@
+---
+interface Props {
+  aktiveWerbelinks: number;
+}
+const { aktiveWerbelinks } = Astro.props;
+---
+
+<aside class="rounded-2xl border border-dashed border-orange/60 px-5 py-4 text-sm text-ink-2" aria-label="Hinweis zu Werbung">
+  {
+    aktiveWerbelinks > 0 ? (
+      <p>
+        <strong class="text-ink">Werbung:</strong> Manche Links hier sind Partnerlinks und als solche markiert. Kaufst du darüber, bekommt dieser Hub eine Provision.
+        Wie wir auswählen, steht im <a class="link" href="/werbehinweis">Werbehinweis</a>.
+      </p>
+    ) : (
+      <p>
+        <strong class="text-ink">Noch keine Partnerlinks:</strong> Wir prüfen gerade, welche Programme zur Community passen. Sobald ein Link eine Provision bringt,
+        ist er hier als Werbung markiert. Mehr dazu im <a class="link" href="/werbehinweis">Werbehinweis</a>.
+      </p>
+    )
+  }
+</aside>

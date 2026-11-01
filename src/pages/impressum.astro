@@ -1,0 +1,41 @@
+---
+import Base from '../layouts/Base.astro';
+// Platzhalter sind mit data-platzhalter markiert. Der Link-Check im Build schlägt fehl, solange welche übrig sind (außer im Preview mit PUBLIC_NOINDEX=1),
+// damit die Seite nie ohne vollständiges Impressum veröffentlicht wird.
+---
+
+<Base title="Impressum" description="Impressum von start.einundzwanzig.dev">
+  <article class="wrap prose-ez pt-12 pb-14 text-ink-2">
+    <h1 class="h1 font-display text-ink">Impressum</h1>
+
+    <h2>Angaben gemäß § 5 DDG</h2>
+    <p>
+      <span data-platzhalter class="rounded bg-beta/20 px-1 text-ink">[Vor- und Nachname]</span><br />
+      <span data-platzhalter class="rounded bg-beta/20 px-1 text-ink">[Straße und Hausnummer]</span><br />
+      <span data-platzhalter class="rounded bg-beta/20 px-1 text-ink">[Postleitzahl und Ort]</span><br />
+      <span data-platzhalter class="rounded bg-beta/20 px-1 text-ink">[Land]</span>
+    </p>
+
+    <h2>Kontakt</h2>
+    <p>
+      E-Mail: <span data-platzhalter class="rounded bg-beta/20 px-1 text-ink">[E-Mail-Adresse]</span><br />
+      Nostr: <span data-platzhalter class="rounded bg-beta/20 px-1 text-ink">[npub des Betreibers]</span>
+    </p>
+
+    <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+    <p><span data-platzhalter class="rounded bg-beta/20 px-1 text-ink">[Vor- und Nachname, Anschrift wie oben]</span></p>
+
+    <h2>Hinweis zu Einundzwanzig</h2>
+    <p>
+      Diese Seite ist ein Community-Projekt und kein Angebot des Einundzwanzig Podcasts oder des Einundzwanzig Vereins.
+      Deren Impressum findest du auf den jeweiligen Seiten.
+    </p>
+
+    <h2>Haftung für Links</h2>
+    <p>
+      Diese Seite verweist auf externe Seiten, auf deren Inhalte wir keinen Einfluss haben. Für diese Inhalte ist der
+      jeweilige Anbieter verantwortlich. Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar. Werden uns
+      Verstöße bekannt, entfernen wir den Link.
+    </p>
+  </article>
+</Base>

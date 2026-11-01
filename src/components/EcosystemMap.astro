@@ -1,0 +1,191 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  projekte: CollectionEntry<'projects'>[];
+}
+const { projekte } = Astro.props;
+
+// Der Tisch von oben: die Community in der Mitte, die Projekte als Deckel drumherum.
+const W = 800;
+const H = 560;
+const CX = W / 2;
+const CY = H / 2;
+const RX = 292;
+const RY = 198;
+const R = 56;
+const HUB = 84;
+
+function zeilen(name: string): string[] {
+  if (name.length <= 13) return [name];
+  const woerter = name.split(' ');
+  if (woerter.length === 1) return [name];
+  let beste = 1;
+  let diff = Infinity;
+  for (let i = 1; i < woerter.length; i++) {
+    const d = Math.abs(woerter.slice(0, i).join(' ').length - woerter.slice(i).join(' ').length);
+    if (d < diff) {
+      diff = d;
+      beste = i;
+    }
+  }
+  return [woerter.slice(0, beste).join(' '), woerter.slice(beste).join(' ')];
+}
+
+const n = Math.max(projekte.length, 1);
+const knoten = projekte.map((p, i) => {
+  const a = -Math.PI / 2 + (i * 2 * Math.PI) / n;
+  return { p, x: CX + RX * Math.cos(a), y: CY + RY * Math.sin(a), zeilen: zeilen(p.data.name) };
+});
+const statusLabel = { live: 'Live', beta: 'Beta', idee: 'Idee' } as const;
+---
+
+<figure class="m-0">
+  <svg id="ecosystem-map" class="hidden w-full md:block" viewBox={`0 0 ${W} ${H}`} role="group" aria-labelledby="map-title">
+    <title id="map-title">Das Einundzwanzig-Ökosystem: die Projekte rund um den gemeinsamen Tisch</title>
+    {knoten.map(({ p, x, y }) => <line x1={CX} y1={CY} x2={x} y2={y} class:list={['verbindung', p.data.status]}></line>)}
+    <g class="hub" aria-hidden="true">
+      <circle cx={CX} cy={CY} r={HUB}></circle>
+      <circle cx={CX} cy={CY} r={HUB - 9} class="rille"></circle>
+      <text x={CX} y={CY + 12} text-anchor="middle" class="hub-zahl">21</text>
+      <text x={CX} y={CY + 40} text-anchor="middle" class="hub-name">Einundzwanzig</text>
+    </g>
+    {
+      knoten.map(({ p, x, y, zeilen }) => (
+        <a
+          href={`/projekte/${p.id}`}
+          class:list={['node', p.data.status]}
+          data-name={p.data.name}
+          data-kurz={p.data.kurz}
+          aria-label={`${p.data.name}, ${statusLabel[p.data.status]}`}
+        >
+          <circle cx={x} cy={y} r={R} class="deckel"></circle>
+          <circle cx={x} cy={y} r={R - 8} class="rille"></circle>
+          {zeilen.map((z, j) => (
+            <text x={x} y={y + (zeilen.length === 1 ? 5 : j === 0 ? -4 : 14)} text-anchor="middle" class="name">
+              {z}
+            </text>
+          ))}
+          <circle cx={x + R * 0.72} cy={y - R * 0.72} r={6} class="status"></circle>
+        </a>
+      ))
+    }
+  </svg>
+
+  <ol class="grid gap-2 md:hidden" aria-label="Die Projekte des Einundzwanzig-Ökosystems">
+    {
+      projekte.map((p) => (
+        <li>
+          <a href={`/projekte/${p.id}`} class="flex items-center gap-3 rounded-xl border border-line bg-bg-2 px-4 py-3 no-underline">
+            <span class:list={['status-dot', p.data.status]} aria-hidden="true" />
+            <span>
+              <span class="block font-display font-semibold text-ink">{p.data.name}</span>
+              <span class="block text-sm text-ink-2">{p.data.kurz}</span>
+            </span>
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+
+  <figcaption class="mt-3 flex flex-wrap items-center gap-x-5 gap-y-1 text-sm text-ink-3">
+    <span id="map-caption" aria-live="polite" class="hidden basis-full text-ink-2 md:inline md:min-h-6">Fahre über einen Deckel oder tippe ihn an.</span>
+    <span class="legende"><span class="status-dot live" aria-hidden="true"></span>Live</span>
+    <span class="legende"><span class="status-dot beta" aria-hidden="true"></span>Beta</span>
+    <span class="legende"><span class="status-dot idee" aria-hidden="true"></span>Idee, gestrichelt angebunden</span>
+  </figcaption>
+</figure>
+
+<style>
+  .verbindung {
+    stroke: var(--line);
+    stroke-width: 2;
+  }
+  .verbindung.idee {
+    stroke-dasharray: 6 8;
+  }
+  .hub circle {
+    fill: var(--orange);
+  }
+  .hub .rille {
+    fill: none;
+    stroke: rgb(30 23 18 / 0.35);
+    stroke-width: 1.5;
+    stroke-dasharray: 2 5;
+  }
+  .hub-zahl {
+    font: 800 60px/1 var(--font-display);
+    letter-spacing: -0.03em;
+    fill: #1e1712;
+  }
+  .hub-name {
+    font: 600 13px/1 var(--font-display);
+    fill: rgb(30 23 18 / 0.8);
+  }
+  .node {
+    cursor: pointer;
+    outline: none;
+  }
+  .node .deckel {
+    fill: var(--bg-2);
+    stroke: var(--line);
+    stroke-width: 2;
+    transition: stroke 0.15s, stroke-width 0.15s;
+  }
+  .node .rille {
+    fill: none;
+    stroke: var(--line);
+    stroke-width: 1.5;
+    stroke-dasharray: 2 5;
+  }
+  .node .name {
+    font: 600 14px/1 var(--font-display);
+    fill: var(--ink);
+  }
+  .node .status {
+    stroke: var(--bg);
+    stroke-width: 3;
+  }
+  .node.live .status {
+    fill: var(--live);
+  }
+  .node.beta .status {
+    fill: var(--beta);
+  }
+  .node.idee .status {
+    fill: var(--idee);
+  }
+  .node:hover .deckel,
+  .node:focus-visible .deckel {
+    stroke: var(--orange);
+    stroke-width: 3;
+  }
+  .node:focus-visible .deckel {
+    stroke-width: 4;
+  }
+  .legende {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+  }
+</style>
+
+<script>
+  const karte = document.getElementById('ecosystem-map');
+  const caption = document.getElementById('map-caption');
+  if (karte && caption) {
+    const standard = caption.textContent;
+    for (const a of karte.querySelectorAll<SVGAElement>('a[data-kurz]')) {
+      const zeigen = () => {
+        caption.textContent = `${a.dataset.name}: ${a.dataset.kurz}`;
+      };
+      const zurueck = () => {
+        caption.textContent = standard;
+      };
+      a.addEventListener('pointerenter', zeigen);
+      a.addEventListener('focus', zeigen);
+      a.addEventListener('pointerleave', zurueck);
+      a.addEventListener('blur', zurueck);
+    }
+  }
+</script>

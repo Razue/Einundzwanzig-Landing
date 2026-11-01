@@ -1,0 +1,35 @@
+---
+import type { FeedEintrag } from '../lib/feed';
+import { datumKurz, isoDatum } from '../lib/format';
+
+interface Props {
+  eintraege: FeedEintrag[];
+}
+const { eintraege } = Astro.props;
+const farbe: Record<string, string> = {
+  Podcast: 'text-orange-ink',
+  Hub: 'text-violet',
+};
+---
+
+{
+  eintraege.length === 0 ? (
+    <p class="text-ink-2">Gerade gibt es nichts Neues. Schau später wieder vorbei.</p>
+  ) : (
+    <ol class="divide-y divide-line border-y border-line">
+      {eintraege.map((e) => (
+        <li class="py-3">
+          <div class="flex flex-wrap items-baseline gap-x-3 text-sm">
+            <time datetime={isoDatum(e.datum)} class="font-mono text-ink-3">
+              {datumKurz(e.datum)}
+            </time>
+            <span class={farbe[e.quelle] ?? 'text-ink-2'}>{e.label}</span>
+          </div>
+          <a href={e.url} rel={e.extern ? 'noopener' : undefined} class="mt-0.5 block font-display text-lg font-semibold no-underline hover:text-orange-ink">
+            {e.titel}
+          </a>
+        </li>
+      ))}
+    </ol>
+  )
+}

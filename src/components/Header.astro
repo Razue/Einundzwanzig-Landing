@@ -1,0 +1,32 @@
+---
+import { SITE } from '../lib/site';
+import Logo from './Logo.astro';
+import ThemeToggle from './ThemeToggle.astro';
+
+const pfad = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+
+<header class="border-b border-line">
+  <div class="wrap grid grid-cols-[1fr_auto] items-center gap-x-6 gap-y-3 py-4 sm:flex">
+    <a href="/" class="flex items-center gap-3 font-display text-lg font-bold text-ink no-underline">
+      <Logo />
+      <span>Einundzwanzig Start</span>
+    </a>
+    <div class="justify-self-end sm:order-last">
+      <ThemeToggle />
+    </div>
+    <nav aria-label="Hauptnavigation" class="col-span-2 -mx-1 flex flex-wrap gap-1 sm:col-span-1 sm:ml-auto">
+      {
+        SITE.nav.map((n) => (
+          <a
+            href={n.href}
+            aria-current={pfad === n.href || pfad.startsWith(n.href + '/') ? 'page' : undefined}
+            class="rounded-full px-3 py-1.5 text-sm text-ink-2 no-underline hover:text-ink aria-[current=page]:bg-bg-2 aria-[current=page]:text-ink"
+          >
+            {n.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>

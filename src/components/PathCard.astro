@@ -1,0 +1,35 @@
+---
+interface Schritt {
+  label: string;
+  href: string;
+  hinweis?: string;
+}
+interface Props {
+  titel: string;
+  text: string;
+  schritte: Schritt[];
+}
+const { titel, text, schritte } = Astro.props;
+---
+
+<article class="flex flex-col rounded-2xl border border-line p-6">
+  <h3 class="font-display text-2xl font-bold">{titel}</h3>
+  <p class="mt-2 text-ink-2">{text}</p>
+  <ol class="mt-5 grid gap-3 border-t border-line pt-5">
+    {
+      schritte.map((s, i) => (
+        <li class="grid grid-cols-[1.6rem_1fr] gap-2">
+          <span class="font-mono text-sm leading-6 text-ink-3" aria-hidden="true">
+            {i + 1}
+          </span>
+          <span>
+            <a class="link" href={s.href} rel="noopener">
+              {s.label}
+            </a>
+            {s.hinweis && <span class="block text-sm text-ink-3">{s.hinweis}</span>}
+          </span>
+        </li>
+      ))
+    }
+  </ol>
+</article>

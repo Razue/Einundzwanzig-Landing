@@ -1,0 +1,70 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { EXTERN } from '../lib/site';
+
+const alle = await getCollection('empfehlungen');
+const aktive = alle.filter((e) => e.data.werbelink).sort((a, b) => a.data.anbieter.localeCompare(b.data.anbieter, 'de'));
+const inPruefung = alle.filter((e) => e.data.programm === 'offen').length;
+---
+
+<Base title="Werbehinweis" description="Wie diese Seite Geld verdient, wie Partnerlinks gekennzeichnet sind und nach welchen Regeln wir Anbieter aufnehmen.">
+  <article class="wrap prose-ez pt-12 pb-14 text-ink-2">
+    <h1 class="h1 font-display text-ink">Werbehinweis</h1>
+
+    <h2>Wie diese Seite Geld verdient</h2>
+    <p>
+      Diese Seite kostet Zeit und ein bisschen Hosting. Beides soll über Partnerlinks finanziert werden: Kaufst du bei einem
+      Anbieter über einen solchen Link, zahlt der Anbieter eine Provision an uns. Niemand bezahlt dafür, hier aufgenommen zu
+      werden, und keine Provision beeinflusst, wie wir einen Anbieter beschreiben.
+    </p>
+
+    <h2>Wie du Werbung erkennst</h2>
+    <p>
+      Jeder Link, der eine Provision bringt, trägt die Markierung „Werbung“ direkt an der Karte. Fehlt sie, gibt es kein
+      Partnerprogramm oder wir haben es noch nicht geprüft. Links auf Werbepartner tragen zusätzlich das Attribut
+      <code>rel="sponsored"</code>, das Suchmaschinen diese Beziehung mitteilt.
+    </p>
+
+    <h2>Nach welchen Regeln wir auswählen</h2>
+    <ul>
+      <li>Der Anbieter wird von Leuten aus der Community tatsächlich genutzt.</li>
+      <li>Bitcoin-only oder zumindest Bitcoin im Zentrum. Keine Casinos, keine Token.</li>
+      <li>Wir nennen die Identitätsprüfung ehrlich: ohne KYC, KYC-arm mit Limits, oder mit KYC.</li>
+      <li>Risiken stehen auf der Karte, nicht im Kleingedruckten.</li>
+      <li>Jede Empfehlung hat ein Prüfdatum. Was lange nicht geprüft wurde, fliegt raus.</li>
+    </ul>
+
+    <h2>Podcast und Verein</h2>
+    <p>
+      Der Einundzwanzig Podcast hat eigene Sponsoren, etwa für Hardware Wallets und Sparpläne. Wo der Podcast einen eigenen
+      Rabatt anbietet, verlinken wir diesen, damit das Geld beim Podcast ankommt. Die Mitgliedschaft im
+      <a href={EXTERN.verein}>Verein</a> empfehlen wir ohne Provision.
+    </p>
+
+    <h2>Aktueller Stand</h2>
+    {
+      aktive.length === 0 ? (
+        <p>
+          Derzeit enthält die Seite <strong>keinen</strong> aktiven Partnerlink. {inPruefung} Programme sind in Prüfung. Sobald eines
+          aufgenommen wird, erscheint es hier in einer Liste.
+        </p>
+      ) : (
+        <>
+          <p>Aktive Partnerprogramme:</p>
+          <ul>
+            {aktive.map((e) => (
+              <li>{e.data.anbieter}</li>
+            ))}
+          </ul>
+        </>
+      )
+    }
+
+    <h2>Keine Anlageberatung</h2>
+    <p>
+      Nichts auf dieser Seite ist Anlage-, Steuer- oder Rechtsberatung. Bitcoin ist volatil, Hardware kann kaputtgehen,
+      Anbieter können verschwinden. Prüfe Gebühren, Limits und Bedingungen immer direkt beim Anbieter, bevor du etwas kaufst.
+    </p>
+  </article>
+</Base>

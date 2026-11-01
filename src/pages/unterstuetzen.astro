@@ -1,0 +1,61 @@
+---
+import Base from '../layouts/Base.astro';
+import { EXTERN } from '../lib/site';
+---
+
+<Base title="Unterstützen" description="So hilfst du der Einundzwanzig-Community: Verein, Podcast, Projekte mitbauen, Empfehlungen nutzen.">
+  <section class="wrap pt-12 pb-6">
+    <h1 class="h1 font-display">Unterstützen</h1>
+    <p class="mt-5 max-w-[60ch] text-lg text-ink-2">
+      Alles hier läuft ohne Konzern dahinter. Es gibt vier Arten zu helfen, und keine davon braucht viel Geld.
+    </p>
+  </section>
+
+  <div class="wrap grid gap-6 pb-14 md:grid-cols-2">
+    <section id="verein" class="scroll-mt-6 rounded-2xl border border-line p-6" aria-labelledby="verein-titel">
+      <h2 id="verein-titel" class="font-display text-2xl font-bold">Dem Verein beitreten</h2>
+      <p class="mt-3 text-ink-2">
+        Der Einundzwanzig Verein fördert Projekte aus der Community und betreibt Infrastruktur. Mitglieder bekommen ein
+        Outbox-Relay, einen NIP-05-Namen, Speicher auf einem Blossom-Server und einen Lightning Watchtower.
+      </p>
+      <a class="btn btn-primary mt-5" href={EXTERN.vereinVorteile} rel="noopener">Mitgliedschaft ansehen</a>
+    </section>
+
+    <section id="podcast" class="scroll-mt-6 rounded-2xl border border-line p-6" aria-labelledby="podcast-titel">
+      <h2 id="podcast-titel" class="font-display text-2xl font-bold">Den Podcast unterstützen</h2>
+      <p class="mt-3 text-ink-2">
+        Der Podcast ist der Ursprung von allem. Du kannst spenden, einen Shoutout kaufen, der in der Folge vorgelesen wird,
+        oder beim Hören mit einer Podcasting-2.0-App Sats streamen.
+      </p>
+      <div class="mt-5 flex flex-wrap gap-3">
+        <a class="btn btn-ghost" href={EXTERN.spenden} rel="noopener">Spenden</a>
+        <a class="btn btn-ghost" href={EXTERN.shoutout} rel="noopener">Shoutout kaufen</a>
+      </div>
+    </section>
+
+    <section id="mitbauen" class="scroll-mt-6 rounded-2xl border border-line p-6" aria-labelledby="mitbauen-titel">
+      <h2 id="mitbauen-titel" class="font-display text-2xl font-bold">Mitbauen</h2>
+      <p class="mt-3 text-ink-2">
+        Die Apps und Werkzeuge hier sind von Einzelnen gestartet worden. Gesucht werden Entwickler, Tester, Designer und
+        Leute, die Texte schreiben oder Meetups organisieren. Der kürzeste Weg: ein Projekt aussuchen und den Verantwortlichen
+        auf Nostr anschreiben.
+      </p>
+      <div class="mt-5 flex flex-wrap gap-3">
+        <a class="btn btn-ghost" href="/projekte#idee">Offene Ideen</a>
+        <a class="btn btn-ghost" href={EXTERN.nostrProfil} rel="noopener">Einundzwanzig auf Nostr</a>
+      </div>
+    </section>
+
+    <section id="empfehlungen" class="scroll-mt-6 rounded-2xl border border-line p-6" aria-labelledby="empf-titel">
+      <h2 id="empf-titel" class="font-display text-2xl font-bold">Über Empfehlungen kaufen</h2>
+      <p class="mt-3 text-ink-2">
+        Wenn du ohnehin eine Hardware Wallet oder einen Sparplan brauchst: Über als Werbung markierte Links bekommt dieser Hub
+        eine Provision, die den Betrieb trägt. Was wir empfehlen und warum, steht offen im Werbehinweis.
+      </p>
+      <div class="mt-5 flex flex-wrap gap-3">
+        <a class="btn btn-ghost" href="/empfehlungen">Empfehlungen</a>
+        <a class="btn btn-ghost" href="/werbehinweis">Werbehinweis</a>
+      </div>
+    </section>
+  </div>
+</Base>

@@ -1,0 +1,48 @@
+name: Bauen und veröffentlichen
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # Stündlich neu bauen, damit Podcast-Folgen und Meetup-Termine aktuell bleiben
+    - cron: '7 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      # Repository-Variable PUBLIC_NOINDEX auf 1 setzen, solange die Seite nur ein Preview ist:
+      # Seiten bekommen noindex, robots.txt sperrt Crawler, Impressum-Platzhalter blockieren den Deploy nicht
+      PUBLIC_NOINDEX: ${{ vars.PUBLIC_NOINDEX }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run check-links
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

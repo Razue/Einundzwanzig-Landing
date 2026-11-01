@@ -1,0 +1,51 @@
+---
+import Base from '../layouts/Base.astro';
+import PathCard from '../components/PathCard.astro';
+import { EXTERN } from '../lib/site';
+---
+
+<Base title="Start" description="Drei Wege in die Einundzwanzig-Community: neu bei Bitcoin, neu in der Community oder bauen und mitmachen.">
+  <section class="wrap pt-12 pb-8">
+    <h1 class="h1 font-display">Wo fängst du an?</h1>
+    <p class="mt-5 max-w-[60ch] text-lg text-ink-2">
+      Einundzwanzig ist kein Verein mit Anmeldeformular, sondern ein Podcast, aus dem Hunderte Stammtische geworden sind. Es gibt
+      keinen falschen Einstieg. Such dir den Weg aus, der zu deiner Frage passt.
+    </p>
+  </section>
+
+  <section class="wrap grid gap-5 pb-14 lg:grid-cols-3">
+    <PathCard
+      titel="Neu bei Bitcoin"
+      text="Du willst verstehen, worum es geht, bevor du irgendetwas kaufst. Gute Reihenfolge: zuerst zuhören, dann Menschen treffen, dann erst Geld in die Hand nehmen."
+      schritte={[
+        { label: 'Der Weg hören', href: EXTERN.derWeg, hinweis: 'Hörer erzählen, wie sie zu Bitcoin gekommen sind. Keine Technik, nur Geschichten.' },
+        { label: 'Die News-Folge der Woche', href: EXTERN.podcastFolgen, hinweis: 'Was gerade passiert, eingeordnet von Leuten, die das seit Jahren machen.' },
+        { label: 'Ein Meetup besuchen', href: EXTERN.portalKarte, hinweis: 'Fragen stellen, ohne etwas kaufen zu müssen. Niemand erwartet Vorwissen.' },
+        { label: 'Erste Wallet einrichten', href: '/empfehlungen/wallets', hinweis: 'Eigene Schlüssel von Anfang an, auch für kleine Beträge.' },
+        { label: 'Kleine Beträge kaufen', href: '/empfehlungen/kaufen', hinweis: 'Mit Sparplan oder von Person zu Person. Wir zeigen, wie viel Ausweis jeder Anbieter verlangt.' },
+      ]}
+    />
+    <PathCard
+      titel="Neu in der Community"
+      text="Du kennst Bitcoin und suchst Leute, mit denen du darüber reden kannst. Die Community lebt an drei Orten: am Stammtisch, auf Nostr und im Podcast."
+      schritte={[
+        { label: 'Deinen Stammtisch finden', href: EXTERN.portalKarte, hinweis: 'Über 300 Gruppen, die meisten treffen sich monatlich.' },
+        { label: 'Meetup-App laden', href: '/projekte/meetup-app', hinweis: 'Termine, Anwesenheits-Badges, Nostr-Identität. Von der Community gebaut.' },
+        { label: 'Auf Nostr folgen', href: EXTERN.nostrProfil, hinweis: 'Das Gespräch zwischen den Folgen. Einen Signer brauchst du dafür, siehe Nostr-Empfehlungen.' },
+        { label: 'Nostr und Lightning einrichten', href: '/empfehlungen/nostr', hinweis: 'Relay, Name und Lightning-Adresse, am besten über den Verein.' },
+        { label: 'Telegram-Newsfeed abonnieren', href: EXTERN.telegramNews, hinweis: 'Schlagzeilen, ohne Diskussion.' },
+      ]}
+    />
+    <PathCard
+      titel="Bauen und mitmachen"
+      text="Du kannst programmieren, organisieren oder schreiben. Die meisten Projekte hier sind von Einzelnen aus der Community gestartet worden und suchen Mitstreiter."
+      schritte={[
+        { label: 'Projekte mit Status Idee ansehen', href: '/projekte#idee', hinweis: 'Dort fehlt noch alles, von der ersten Zeile Code bis zum Namen.' },
+        { label: 'An einem Beta-Projekt mitarbeiten', href: '/projekte#beta', hinweis: 'Prototypen, die Tester und Feedback brauchen.' },
+        { label: 'Einen Stammtisch gründen', href: EXTERN.portal, hinweis: 'Wenn in deiner Stadt noch keiner ist: im Portal eintragen, Ort suchen, Termin setzen.' },
+        { label: 'Dem Verein beitreten', href: EXTERN.verein, hinweis: 'Der Verein fördert Projekte und betreibt die Infrastruktur.' },
+        { label: 'Kontakt aufnehmen', href: '/unterstuetzen#mitbauen' },
+      ]}
+    />
+  </section>
+</Base>

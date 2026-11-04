@@ -1,23 +1,23 @@
 ---
 // Entwurf 3 „Magazin“: Nachrichtenportal. Laufband und Hauptmenü sitzen in der Kopfzeile (HeaderMagazin),
-// hier folgen Aufmacher, drei Kacheln aus der Community, Artikelraster, Empfehlungen, Podcast, Ökosystem und Meetups.
+// hier folgen die flache Claim-Zeile, direkt darunter das Artikelraster, dann Kacheln aus der Community,
+// Empfehlungen, Podcast, Ökosystem und Meetups.
 import { getCollection } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
-import ArtikelBild from '../../../components/ArtikelBild.astro';
 import ArtikelKarte from '../../../components/ArtikelKarte.astro';
 import MeetupTeaser from '../../../components/MeetupTeaser.astro';
 import ProjectCard from '../../../components/ProjectCard.astro';
 import RefCard from '../../../components/RefCard.astro';
 import WerbeHinweis from '../../../components/WerbeHinweis.astro';
-import { getArtikel, artikelPfad, RUBRIK_LABEL } from '../../../lib/artikel';
+import { getArtikel } from '../../../lib/artikel';
 import { getEpisoden } from '../../../lib/podcast';
 import { getMeetupStatistik } from '../../../lib/portal';
 import { datumKurz, isoDatum, terminKurz } from '../../../lib/format';
-import { EXTERN } from '../../../lib/site';
+import { EXTERN, SITE } from '../../../lib/site';
 
 const artikel = await getArtikel();
-const [top, ...weitere] = artikel;
-const raster = weitere.slice(0, 6);
+// Der neueste Artikel liegt quer über zwei Spalten, danach bis zu sechs weitere.
+const raster = artikel.slice(0, 7);
 
 const folgen = (await getEpisoden()).slice(0, 3);
 const meetups = await getMeetupStatistik();
@@ -69,37 +69,31 @@ const kacheln = [
   title="Magazin"
   description="Bitcoin-News, Wissen und Community: Artikel, Podcast, Meetups, Projekte und Empfehlungen der Einundzwanzig-Community."
 >
-  {
-    top && (
-      <section class="wrap pt-6 lg:pt-8" aria-labelledby="top-titel">
-        <div class="grid gap-6 rounded-2xl border border-line bg-bg-2 p-5 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-center lg:gap-8 lg:p-6">
-          <a href={artikelPfad(top)} class="min-w-0 no-underline" tabindex="-1" aria-hidden="true">
-            <ArtikelBild artikel={top} widths={[640, 960, 1280]} sizes="(min-width: 1024px) 55vw, 100vw" prioritaet />
-          </a>
-          <div class="flex min-w-0 flex-col">
-            <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm">
-              <span class="font-semibold text-orange-ink">{RUBRIK_LABEL[top.data.rubrik]}</span>
-              <time datetime={isoDatum(top.data.datum)} class="font-mono text-ink-3">
-                {datumKurz(top.data.datum)}
-              </time>
-              {top.data.beispiel && <span class="rounded-full border border-beta/70 px-2 py-0.5 text-xs text-beta">Beispiel</span>}
-            </div>
-            <h1 id="top-titel" class="mt-3 font-display text-[clamp(1.5rem,5vw,2.2rem)] leading-[1.08] font-extrabold tracking-tight">
-              <a href={artikelPfad(top)} class="no-underline hover:text-orange-ink">
-                {top.data.titel}
-              </a>
-            </h1>
-            <p class="mt-4 text-ink-2">{top.data.teaser}</p>
-            <a class="btn btn-primary mt-6 self-start" href={artikelPfad(top)}>
-              Weiterlesen
-            </a>
-          </div>
-        </div>
-      </section>
-    )
-  }
+  <section class="wrap pt-7 pb-6" aria-labelledby="claim-titel">
+    <h1 id="claim-titel" class="font-display text-[clamp(1.35rem,4vw,1.9rem)] leading-tight font-extrabold tracking-tight">
+      {SITE.claim}
+    </h1>
+  </section>
 
-  <section class="wrap pt-5" aria-label="Aus der Community">
+  <section class="wrap" aria-labelledby="news-titel">
+    <h2 id="news-titel" class="border-b border-line pb-3 font-display text-2xl font-bold sm:text-3xl">Aktuelle News</h2>
+    {
+      raster.length === 0 ? (
+        <p class="mt-6 text-ink-2">Die ersten Ausgaben folgen.</p>
+      ) : (
+        <div class="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {raster.map((a, i) => (
+            <ArtikelKarte artikel={a} quer={i === 0} class={i === 0 ? 'sm:col-span-2' : ''} />
+          ))}
+        </div>
+      )
+    }
+    <div class="mt-10 text-center">
+      <a class="btn btn-ghost" href="/artikel/">Alle Artikel anzeigen</a>
+    </div>
+  </section>
+
+  <section class="wrap pt-12" aria-label="Aus der Community">
     <ul class="grid gap-4 sm:grid-cols-3">
       {
         kacheln.map((k) => (
@@ -113,24 +107,6 @@ const kacheln = [
         ))
       }
     </ul>
-  </section>
-
-  <section class="wrap pt-14" aria-labelledby="news-titel">
-    <h2 id="news-titel" class="border-b border-line pb-3 font-display text-2xl font-bold sm:text-3xl">Aktuelle News</h2>
-    {
-      raster.length === 0 ? (
-        <p class="mt-6 text-ink-2">Die nächsten Ausgaben folgen.</p>
-      ) : (
-        <div class="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {raster.map((a) => (
-            <ArtikelKarte artikel={a} />
-          ))}
-        </div>
-      )
-    }
-    <div class="mt-10 text-center">
-      <a class="btn btn-ghost" href="/artikel/">Alle Artikel anzeigen</a>
-    </div>
   </section>
 
   <section class="wrap pt-14" aria-labelledby="empfehlungen-titel">

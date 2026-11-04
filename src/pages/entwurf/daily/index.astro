@@ -1,9 +1,9 @@
 ---
-// Entwurf 2 „Daily“: die täglichen Nachrichten zuerst, das Ökosystem daneben und darunter.
+// Entwurf 2 „Daily“: oben nur die flache Claim-Zeile, direkt darunter die Nachrichten,
+// das Ökosystem daneben und darunter.
 import { getCollection } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
 import SignalLeiste from '../../../components/SignalLeiste.astro';
-import ArtikelBild from '../../../components/ArtikelBild.astro';
 import ArtikelKarte from '../../../components/ArtikelKarte.astro';
 import FeedList from '../../../components/FeedList.astro';
 import EcosystemMap from '../../../components/EcosystemMap.astro';
@@ -11,13 +11,11 @@ import MeetupTeaser from '../../../components/MeetupTeaser.astro';
 import RefCard from '../../../components/RefCard.astro';
 import StatusBadge from '../../../components/StatusBadge.astro';
 import WerbeHinweis from '../../../components/WerbeHinweis.astro';
-import { getArtikel, artikelPfad, RUBRIK_LABEL } from '../../../lib/artikel';
+import { getArtikel } from '../../../lib/artikel';
 import { getFeed } from '../../../lib/feed';
-import { datumKurz, isoDatum } from '../../../lib/format';
-import { EXTERN } from '../../../lib/site';
+import { EXTERN, SITE } from '../../../lib/site';
 
 const artikel = await getArtikel();
-const [top, ...weitere] = artikel;
 const kurz = await getFeed(6);
 
 const projekte = (await getCollection('projects'))
@@ -43,48 +41,23 @@ const aktiveWerbelinks = alleEmpfehlungen.filter((e) => e.data.werbelink).length
 >
   <SignalLeiste />
 
-  {
-    top && (
-      <section class="wrap pt-8 pb-10 lg:pt-12" aria-labelledby="top-titel">
-        <div class="grid gap-6 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-center lg:gap-10">
-          <a href={artikelPfad(top)} class="min-w-0 no-underline" tabindex="-1" aria-hidden="true">
-            <ArtikelBild artikel={top} widths={[640, 960, 1280]} sizes="(min-width: 1024px) 58vw, 100vw" prioritaet />
-          </a>
-          <div class="min-w-0">
-            <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm">
-              <span class="font-semibold text-orange-ink">{RUBRIK_LABEL[top.data.rubrik]}</span>
-              <time datetime={isoDatum(top.data.datum)} class="font-mono text-ink-3">
-                {datumKurz(top.data.datum)}
-              </time>
-              {top.data.beispiel && <span class="rounded-full border border-beta/70 px-2 py-0.5 text-xs text-beta">Beispiel</span>}
-            </div>
-            <h1 id="top-titel" class="mt-3 font-display text-[clamp(1.6rem,6vw,2.4rem)] leading-[1.05] font-extrabold tracking-tight">
-              <a href={artikelPfad(top)} class="no-underline hover:text-orange-ink">
-                {top.data.titel}
-              </a>
-            </h1>
-            <p class="mt-4 text-lg text-ink-2">{top.data.teaser}</p>
-            <p class="mt-4 text-sm text-ink-3">Von {top.data.autor}</p>
-            <a class="btn btn-primary mt-6" href={artikelPfad(top)}>
-              Weiterlesen
-            </a>
-          </div>
-        </div>
-      </section>
-    )
-  }
+  <section class="wrap pt-7 pb-6" aria-labelledby="claim-titel">
+    <h1 id="claim-titel" class="font-display text-[clamp(1.35rem,4vw,1.9rem)] leading-tight font-extrabold tracking-tight">
+      {SITE.claim}
+    </h1>
+  </section>
 
-  <section class="wrap pb-14" aria-labelledby="weitere-titel">
+  <section class="wrap pb-14" aria-labelledby="news-titel">
     <div class="grid gap-10 lg:grid-cols-[minmax(0,8fr)_minmax(0,4fr)]">
       <div class="min-w-0">
-        <h2 id="weitere-titel" class="border-b border-line pb-3 font-display text-2xl font-bold">Weitere Artikel</h2>
+        <h2 id="news-titel" class="border-b border-line pb-3 font-display text-2xl font-bold">Aktuelle News</h2>
         {
-          weitere.length === 0 ? (
-            <p class="mt-6 text-ink-2">Die nächsten Ausgaben folgen.</p>
+          artikel.length === 0 ? (
+            <p class="mt-6 text-ink-2">Die ersten Ausgaben folgen.</p>
           ) : (
             <div class="mt-6 grid gap-8 sm:grid-cols-2">
-              {weitere.map((a) => (
-                <ArtikelKarte artikel={a} />
+              {artikel.map((a, i) => (
+                <ArtikelKarte artikel={a} quer={i === 0} class={i === 0 ? 'sm:col-span-2' : ''} />
               ))}
             </div>
           )

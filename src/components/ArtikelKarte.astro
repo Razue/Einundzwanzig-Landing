@@ -5,21 +5,33 @@ import { datumKurz, isoDatum } from '../lib/format';
 
 interface Props {
   artikel: Artikel;
+  // quer: Bild links, Text rechts. Für den neuesten Artikel oben im Raster, dort über zwei Spalten.
+  quer?: boolean;
+  class?: string;
 }
-const { artikel } = Astro.props;
+const { artikel, quer = false, class: klasse = '' } = Astro.props;
 const { titel, teaser, datum, rubrik, beispiel } = artikel.data;
 const pfad = artikelPfad(artikel);
 ---
 
-<article class="flex flex-col gap-3">
-  <a href={pfad} class="no-underline" tabindex="-1" aria-hidden="true"><ArtikelBild artikel={artikel} /></a>
-  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm">
-    <span class="font-semibold text-orange-ink">{RUBRIK_LABEL[rubrik]}</span>
-    <time datetime={isoDatum(datum)} class="font-mono text-ink-3">{datumKurz(datum)}</time>
-    {beispiel && <span class="rounded-full border border-beta/70 px-2 py-0.5 text-xs text-beta">Beispiel</span>}
+<article class={`${quer ? 'grid gap-4 self-start sm:grid-cols-2 sm:items-center sm:gap-6' : 'flex flex-col gap-3'} ${klasse}`}>
+  <a href={pfad} class="no-underline" tabindex="-1" aria-hidden="true">
+    <ArtikelBild
+      artikel={artikel}
+      widths={quer ? [640, 960] : undefined}
+      sizes={quer ? '(min-width: 1024px) 40vw, 100vw' : undefined}
+      prioritaet={quer}
+    />
+  </a>
+  <div class="flex flex-col gap-3">
+    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm">
+      <span class="font-semibold text-orange-ink">{RUBRIK_LABEL[rubrik]}</span>
+      <time datetime={isoDatum(datum)} class="font-mono text-ink-3">{datumKurz(datum)}</time>
+      {beispiel && <span class="rounded-full border border-beta/70 px-2 py-0.5 text-xs text-beta">Beispiel</span>}
+    </div>
+    <h3 class={`font-display leading-snug font-bold ${quer ? 'text-2xl' : 'text-xl'}`}>
+      <a href={pfad} class="no-underline hover:text-orange-ink">{titel}</a>
+    </h3>
+    <p class="line-clamp-3 text-ink-2">{teaser}</p>
   </div>
-  <h3 class="font-display text-xl leading-snug font-bold">
-    <a href={pfad} class="no-underline hover:text-orange-ink">{titel}</a>
-  </h3>
-  <p class="line-clamp-3 text-ink-2">{teaser}</p>
 </article>

@@ -1,0 +1,34 @@
+{
+  "preise": {
+    "time": 1793795403,
+    "USD": 78196,
+    "EUR": 69424,
+    "GBP": 57927,
+    "CAD": 108969,
+    "CHF": 63745,
+    "AUD": 111402,
+    "JPY": 12345099
+  },
+  "hoehe": 974527,
+  "gebuehren": {
+    "fastestFee": 1,
+    "halfHourFee": 1,
+    "hourFee": 1,
+    "economyFee": 1,
+    "minimumFee": 1
+  },
+  "difficulty": {
+    "progressPercent": 39.632936507936506,
+    "difficultyChange": -2.931862211778402,
+    "estimatedRetargetDate": 1794548992432,
+    "remainingBlocks": 1217,
+    "remainingTime": 753196432,
+    "previousRetarget": 5.5392014927774085,
+    "previousTime": 1793301298,
+    "nextRetargetHeight": 975744,
+    "timeAvg": 618896,
+    "adjustedTimeAvg": 618896,
+    "timeOffset": 0,
+    "expectedBlocks": 824.1633333333333
+  }
+}

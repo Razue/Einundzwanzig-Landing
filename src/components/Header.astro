@@ -6,9 +6,9 @@ import ThemeToggle from './ThemeToggle.astro';
 const pfad = Astro.url.pathname.replace(/\/$/, '') || '/';
 ---
 
-<header class="border-b border-line">
+<header class="nur-tisch border-b border-line">
   <div class="wrap grid grid-cols-[1fr_auto] items-center gap-x-6 gap-y-3 py-4 sm:flex">
-    <a href="/" class="flex items-center gap-3 font-display text-lg font-bold text-ink no-underline">
+    <a href="/" data-home class="flex items-center gap-3 font-display text-lg font-bold text-ink no-underline">
       <Logo />
       <span>Einundzwanzig Start</span>
     </a>

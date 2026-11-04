@@ -23,3 +23,17 @@ export function terminKurz(d: Date): string {
 export function isoDatum(d: Date): string {
   return d.toISOString().slice(0, 10);
 }
+
+export function datumLang(d: Date): string {
+  return new Intl.DateTimeFormat('de-DE', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    timeZone: ZEITZONE,
+  }).format(d);
+}
+
+export function uhrzeit(d: Date): string {
+  return new Intl.DateTimeFormat('de-DE', { hour: '2-digit', minute: '2-digit', timeZone: ZEITZONE }).format(d);
+}

@@ -65,4 +65,25 @@ const news = defineCollection({
   }),
 });
 
-export const collections = { projects, empfehlungen, news };
+export const RUBRIKEN = ['news', 'community', 'wissen'] as const;
+
+// Artikel für die täglichen Nachrichten (Entwurf „Daily“). MDX, damit Empfehlungen im Text stehen
+// können: <Empfehlung slug="bitbox02" />. Beispielartikel tragen beispiel: true und ein sichtbares Etikett.
+const artikel = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/artikel' }),
+  schema: ({ image }) =>
+    z
+      .object({
+        titel: z.string().max(110),
+        teaser: z.string().max(240),
+        datum: z.coerce.date(),
+        rubrik: z.enum(RUBRIKEN),
+        autor: z.string().default('Redaktion'),
+        bild: image().optional(),
+        bildAlt: z.string().optional(),
+        beispiel: z.boolean().default(false),
+      })
+      .refine((d) => !d.bild || !!d.bildAlt, { error: 'Ein Bild braucht bildAlt' }),
+});
+
+export const collections = { projects, empfehlungen, news, artikel };

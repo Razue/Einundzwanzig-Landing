@@ -1,0 +1,67 @@
+---
+// Laufband mit Bitcoin-Daten für Entwurf „Magazin“. Die Werte kommen aus dem Build (etwa stündlich),
+// deshalb steht der Stand dabei. Läuft per CSS, hält beim Zeigen an und steht bei reduzierter Bewegung still.
+import { getLaufband } from '../lib/bitcoin';
+import { uhrzeit } from '../lib/format';
+
+const { felder, stand } = await getLaufband();
+// Vier Kopien, damit die Schleife auch auf breiten Bildschirmen keine Lücke zeigt.
+const KOPIEN = 4;
+---
+
+<aside class="laufband border-b border-line bg-bg-2 text-sm" aria-label="Bitcoin-Daten">
+  <div class="laufband-spur">
+    {
+      Array.from({ length: KOPIEN }, (_, i) => (
+        <ul class="laufband-liste" aria-hidden={i > 0 ? 'true' : undefined}>
+          {felder.map((f) => (
+            <li class="flex items-baseline gap-2" title={f.titel}>
+              <span class="text-ink-3">{f.label}</span>
+              <span class="font-mono font-semibold text-ink">{f.wert}</span>
+            </li>
+          ))}
+          <li class="text-ink-3">Stand {uhrzeit(stand)} Uhr</li>
+        </ul>
+      ))
+    }
+  </div>
+</aside>
+
+<style>
+  .laufband {
+    overflow: hidden;
+  }
+  .laufband-spur {
+    display: flex;
+    width: max-content;
+    animation: laufen 48s linear infinite;
+  }
+  .laufband:hover .laufband-spur,
+  .laufband:focus-within .laufband-spur {
+    animation-play-state: paused;
+  }
+  .laufband-liste {
+    display: flex;
+    gap: 2.25rem;
+    padding: 0.5rem 1.125rem;
+    white-space: nowrap;
+  }
+  @keyframes laufen {
+    to {
+      transform: translateX(-25%);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .laufband {
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .laufband-spur {
+      width: auto;
+      animation: none;
+    }
+    .laufband-liste[aria-hidden] {
+      display: none;
+    }
+  }
+</style>

@@ -1,0 +1,42 @@
+---
+// Statt einer Kurs-Laufleiste: eine ruhige Zeile mit Signalen aus der Community,
+// gefüllt aus Portal und Podcast-Feed zur Build-Zeit.
+import { getMeetupStatistik } from '../lib/portal';
+import { getEpisoden } from '../lib/podcast';
+import { terminKurz } from '../lib/format';
+import { EXTERN } from '../lib/site';
+
+const [stat, episoden] = await Promise.all([getMeetupStatistik(), getEpisoden()]);
+const naechstes = stat.kommende[0];
+const folge = episoden[0];
+const kuerzen = (s: string, n = 44) => {
+  if (s.length <= n) return s;
+  const schnitt = s.lastIndexOf(' ', n);
+  return s.slice(0, schnitt > 20 ? schnitt : n).replace(/[\s\-–:,]+$/, '') + '…';
+};
+
+const signale = [
+  naechstes && {
+    label: 'Nächstes Meetup',
+    wert: `${terminKurz(naechstes.start)} ${naechstes.meetup.name}`,
+    href: naechstes.termin.portalLink,
+  },
+  { label: 'Portal', wert: `${stat.gesamt} Meetups in ${stat.laender} Ländern`, href: EXTERN.portalKarte },
+  folge && { label: 'Neue Folge', wert: kuerzen(folge.titel), href: folge.url },
+].filter(Boolean) as { label: string; wert: string; href: string }[];
+---
+
+<aside aria-label="Signale aus der Community" class="border-b border-line bg-bg-2">
+  <ul class="wrap flex gap-x-5 gap-y-1 overflow-x-auto py-2 text-sm whitespace-nowrap [scrollbar-width:none] md:flex-wrap">
+    {
+      signale.map((s) => (
+        <li class="flex shrink-0 items-baseline gap-2 border-l border-line pl-5 first:border-0 first:pl-0">
+          <span class="text-ink-3">{s.label}</span>
+          <a href={s.href} rel="noopener" class="font-semibold text-ink no-underline hover:text-orange-ink">
+            {s.wert}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</aside>

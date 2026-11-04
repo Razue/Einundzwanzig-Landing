@@ -1,0 +1,60 @@
+---
+// Kopfzeile für Entwurf „Daily“: Zeitungskopf mit Datum, darunter eine Rubrikenleiste.
+import { EXTERN } from '../lib/site';
+import Logo from './Logo.astro';
+import ThemeToggle from './ThemeToggle.astro';
+import { datumLang, isoDatum } from '../lib/format';
+import { HOMES } from '../lib/entwuerfe';
+
+const jetzt = new Date();
+const pfad = Astro.url.pathname.replace(/\/$/, '') || '/';
+const home = HOMES.daily.replace(/\/$/, '');
+
+function istAktiv(href: string): boolean {
+  if (href.includes('#')) return false;
+  const p = href.replace(/\/$/, '');
+  if (!p.startsWith('/')) return false;
+  if (p === home) return pfad === home || pfad.startsWith('/artikel');
+  return pfad === p || pfad.startsWith(p + '/');
+}
+
+const nav = [
+  { href: HOMES.daily, label: 'News' },
+  { href: EXTERN.podcast, label: 'Podcast', extern: true },
+  { href: '/projekte', label: 'Projekte' },
+  { href: `${HOMES.daily}#meetups`, label: 'Meetups' },
+  { href: '/empfehlungen', label: 'Empfehlungen' },
+  { href: EXTERN.verein, label: 'Verein', extern: true },
+  { href: '/unterstuetzen', label: 'Unterstützen' },
+];
+---
+
+<header class="nur-daily border-b border-line">
+  <div class="wrap flex items-center justify-between gap-4 pt-4 pb-3">
+    <a href={HOMES.daily} class="flex min-w-0 items-center gap-3 text-ink no-underline">
+      <Logo size={34} />
+      <span class="min-w-0">
+        <span class="block font-display text-[clamp(1.3rem,5.5vw,1.8rem)] leading-none font-extrabold tracking-tight">Einundzwanzig</span>
+        <span class="mt-1 block text-xs text-ink-3 sm:text-sm">Der tägliche Überblick der Community</span>
+      </span>
+    </a>
+    <div class="flex items-center gap-4">
+      <time datetime={isoDatum(jetzt)} class="hidden font-mono text-sm text-ink-2 md:block">{datumLang(jetzt)}</time>
+      <ThemeToggle />
+    </div>
+  </div>
+  <nav aria-label="Rubriken" class="wrap -mb-px flex gap-1 overflow-x-auto [scrollbar-width:none]">
+    {
+      nav.map((n) => (
+        <a
+          href={n.href}
+          rel={n.extern ? 'noopener' : undefined}
+          aria-current={istAktiv(n.href) ? 'page' : undefined}
+          class="shrink-0 border-b-2 border-transparent px-3 py-2.5 text-sm font-semibold text-ink-2 no-underline hover:text-ink aria-[current=page]:border-orange aria-[current=page]:text-ink"
+        >
+          {n.label}
+        </a>
+      ))
+    }
+  </nav>
+</header>

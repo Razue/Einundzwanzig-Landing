@@ -1,0 +1,37 @@
+---
+// Teaserbild eines Artikels. Ohne Bild erscheint eine typografische Kachel mit dem Tag der Ausgabe.
+import { Image } from 'astro:assets';
+import type { Artikel } from '../lib/artikel';
+
+interface Props {
+  artikel: Artikel;
+  widths?: number[];
+  sizes?: string;
+  prioritaet?: boolean;
+  class?: string;
+}
+const { artikel, widths = [480, 800], sizes = '(min-width: 1024px) 30vw, 100vw', prioritaet = false, class: klasse = '' } = Astro.props;
+const { bild, bildAlt, datum } = artikel.data;
+const tz = 'Europe/Berlin';
+const tag = new Intl.DateTimeFormat('de-DE', { day: '2-digit', timeZone: tz }).format(datum);
+const monat = new Intl.DateTimeFormat('de-DE', { month: 'long', year: 'numeric', timeZone: tz }).format(datum);
+---
+
+{
+  bild ? (
+    <Image
+      src={bild}
+      alt={bildAlt ?? ''}
+      widths={widths}
+      sizes={sizes}
+      loading={prioritaet ? 'eager' : 'lazy'}
+      fetchpriority={prioritaet ? 'high' : undefined}
+      class={`aspect-[16/10] w-full rounded-xl border border-line object-cover ${klasse}`}
+    />
+  ) : (
+    <div class={`flex aspect-[2/1] w-full flex-col sm:aspect-[16/10] justify-between rounded-xl border border-line bg-bg-2 p-5 ${klasse}`} aria-hidden="true">
+      <span class="font-display text-[clamp(3rem,9vw,5rem)] leading-none font-extrabold text-orange">{tag}</span>
+      <span class="font-mono text-sm text-ink-3">{monat}</span>
+    </div>
+  )
+}

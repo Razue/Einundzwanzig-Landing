@@ -1,5 +1,5 @@
 <button
-  id="theme-toggle"
+  data-theme-toggle
   type="button"
   class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-line text-ink-2 hover:text-ink"
   aria-label="Zwischen hellem und dunklem Design wechseln"
@@ -24,15 +24,17 @@
 </style>
 
 <script>
-  const knopf = document.getElementById('theme-toggle');
-  knopf?.addEventListener('click', () => {
-    const root = document.documentElement;
-    const aktuell =
-      root.dataset.theme ?? (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-    const neu = aktuell === 'light' ? 'dark' : 'light';
-    root.dataset.theme = neu;
-    try {
-      localStorage.setItem('theme', neu);
-    } catch {}
-  });
+  // Steht mehrfach auf einer Seite (eine Kopfzeile je Entwurf), deshalb kein id-Selektor.
+  document.querySelectorAll<HTMLButtonElement>('[data-theme-toggle]').forEach((knopf) =>
+    knopf.addEventListener('click', () => {
+      const root = document.documentElement;
+      const aktuell =
+        root.dataset.theme ?? (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      const neu = aktuell === 'light' ? 'dark' : 'light';
+      root.dataset.theme = neu;
+      try {
+        localStorage.setItem('theme', neu);
+      } catch {}
+    }),
+  );
 </script>

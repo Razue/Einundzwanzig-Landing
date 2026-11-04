@@ -1,0 +1,58 @@
+---
+// Schwebender Umschalter zwischen den Design-Entwürfen. Auf einer Startseite wechselt er die
+// Seite, auf geteilten Unterseiten tauscht er nur die Kopfzeile und merkt sich die Wahl.
+import { ENTWUERFE, HOMES } from '../lib/entwuerfe';
+---
+
+<div
+  id="entwurf-switch"
+  role="group"
+  aria-label="Design-Entwurf wählen"
+  data-homes={JSON.stringify(HOMES)}
+  class="fixed right-3 bottom-3 z-40 flex items-center gap-0.5 rounded-full border border-line bg-bg-2/95 p-1 shadow-lg backdrop-blur sm:right-5 sm:bottom-5"
+>
+  <span class="px-2.5 text-xs text-ink-3">Entwurf</span>
+  {
+    ENTWUERFE.map((e) => (
+      <button
+        type="button"
+        data-entwurf={e.id}
+        title={e.kurz}
+        aria-pressed="false"
+        class="rounded-full px-3 py-1.5 text-sm font-semibold text-ink-2 hover:text-ink aria-pressed:bg-orange aria-pressed:text-[#1e1712]"
+      >
+        <span class="font-mono text-xs opacity-70">{e.nummer}</span> {e.name}
+      </button>
+    ))
+  }
+</div>
+
+<script>
+  const el = document.getElementById('entwurf-switch');
+  const html = document.documentElement;
+  if (el) {
+    const homes = JSON.parse(el.dataset.homes ?? '{}') as Record<string, string>;
+    const knoepfe = [...el.querySelectorAll<HTMLButtonElement>('button[data-entwurf]')];
+    const sync = () => {
+      const id = html.dataset.entwurf ?? '';
+      document.querySelectorAll<HTMLAnchorElement>('a[data-home]').forEach((a) => a.setAttribute('href', homes[id] ?? '/'));
+      knoepfe.forEach((k) => k.setAttribute('aria-pressed', String(k.dataset.entwurf === id)));
+    };
+    sync();
+    knoepfe.forEach((k) =>
+      k.addEventListener('click', () => {
+        const id = k.dataset.entwurf ?? '';
+        if (id === html.dataset.entwurf) return;
+        try {
+          localStorage.setItem('entwurf', id);
+        } catch {}
+        if (html.hasAttribute('data-entwurf-fest')) {
+          location.href = homes[id] ?? '/';
+          return;
+        }
+        html.dataset.entwurf = id;
+        sync();
+      }),
+    );
+  }
+</script>

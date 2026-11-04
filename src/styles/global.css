@@ -206,3 +206,8 @@
     animation-duration: 0.01ms !important;
   }
 }
+
+/* Design-Entwürfe: data-entwurf auf <html> schaltet die Kopfzeile, siehe src/lib/entwuerfe.ts */
+html:not([data-entwurf="tisch"]) .nur-tisch,
+html:not([data-entwurf="daily"]) .nur-daily,
+html:not([data-entwurf="magazin"]) .nur-magazin { display: none; }

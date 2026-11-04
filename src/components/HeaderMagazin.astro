@@ -1,0 +1,55 @@
+---
+// Kopfzeile für Entwurf „Magazin“: Laufband mit Bitcoin-Daten oben, darunter Logo und Hauptmenü in einer Zeile.
+import { EXTERN } from '../lib/site';
+import { HOMES } from '../lib/entwuerfe';
+import Logo from './Logo.astro';
+import ThemeToggle from './ThemeToggle.astro';
+import Laufband from './Laufband.astro';
+
+const pfad = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+function istAktiv(href: string): boolean {
+  const p = href.replace(/\/$/, '');
+  if (!p.startsWith('/')) return false;
+  return pfad === p || pfad.startsWith(p + '/');
+}
+
+const nav = [
+  { href: '/artikel', label: 'News' },
+  { href: '/start', label: 'Einstieg' },
+  { href: '/projekte', label: 'Projekte' },
+  { href: EXTERN.portalKarte, label: 'Meetups', extern: true },
+  { href: '/empfehlungen', label: 'Empfehlungen' },
+  { href: EXTERN.podcast, label: 'Podcast', extern: true },
+  { href: EXTERN.shop, label: 'Shop', extern: true },
+  { href: '/unterstuetzen', label: 'Unterstützen' },
+];
+---
+
+<header class="nur-magazin border-b border-line">
+  <Laufband />
+  <div class="wrap flex flex-wrap items-center gap-x-6 gap-y-2 py-3">
+    <a href={HOMES.magazin} class="mr-auto flex items-center gap-2.5 text-ink no-underline">
+      <Logo size={32} />
+      <span class="font-display text-xl font-extrabold tracking-tight">Einundzwanzig</span>
+    </a>
+    <nav
+      aria-label="Hauptmenü"
+      class="order-last -mx-2.5 flex w-[calc(100%+1.25rem)] gap-0.5 overflow-x-auto px-2.5 [scrollbar-width:none] lg:order-none lg:mx-0 lg:w-auto lg:px-0"
+    >
+      {
+        nav.map((n) => (
+          <a
+            href={n.href}
+            rel={n.extern ? 'noopener' : undefined}
+            aria-current={istAktiv(n.href) ? 'page' : undefined}
+            class="shrink-0 rounded-md px-2.5 py-1.5 text-sm font-semibold text-ink-2 no-underline hover:bg-bg-2 hover:text-ink aria-[current=page]:text-orange-ink"
+          >
+            {n.label}
+          </a>
+        ))
+      }
+    </nav>
+    <ThemeToggle />
+  </div>
+</header>

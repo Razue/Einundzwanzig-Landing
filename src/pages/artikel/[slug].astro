@@ -1,0 +1,75 @@
+---
+// Artikelseite. Die Route ist entwurfsneutral, die Kopfzeile folgt dem gewählten Entwurf.
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ArtikelBild from '../../components/ArtikelBild.astro';
+import ArtikelKarte from '../../components/ArtikelKarte.astro';
+import EmpfehlungInline from '../../components/EmpfehlungInline.astro';
+import { getArtikel, RUBRIK_LABEL, type Artikel } from '../../lib/artikel';
+import { datumKurz, isoDatum } from '../../lib/format';
+
+export async function getStaticPaths() {
+  const alle = await getArtikel();
+  return alle.map((a) => ({
+    params: { slug: a.id },
+    props: { artikel: a, weitere: alle.filter((x) => x.id !== a.id).slice(0, 3) },
+  }));
+}
+
+interface Props {
+  artikel: Artikel;
+  weitere: Artikel[];
+}
+const { artikel, weitere } = Astro.props;
+const { titel, teaser, datum, rubrik, autor, beispiel, bild } = artikel.data;
+const { Content } = await render(artikel);
+---
+
+<Base title={titel} description={teaser}>
+  <article class="wrap py-10 lg:py-14">
+    <div class="mx-auto max-w-3xl">
+      <p class="text-sm"><a class="link" data-home href="/">Zurück zur Übersicht</a></p>
+      <div class="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm">
+        <span class="font-semibold text-orange-ink">{RUBRIK_LABEL[rubrik]}</span>
+        <time datetime={isoDatum(datum)} class="font-mono text-ink-3">{datumKurz(datum)}</time>
+        {beispiel && <span class="rounded-full border border-beta/70 px-2 py-0.5 text-xs text-beta">Beispiel</span>}
+      </div>
+      <h1 class="mt-3 font-display text-[clamp(1.75rem,7vw,3rem)] leading-[1.05] font-extrabold tracking-tight">{titel}</h1>
+      <p class="mt-5 text-lg text-ink-2">{teaser}</p>
+      <p class="mt-4 text-sm text-ink-3">Von {autor}</p>
+    </div>
+    {
+      bild && (
+        <div class="mx-auto mt-8 max-w-4xl">
+          <ArtikelBild artikel={artikel} widths={[800, 1200, 1600]} sizes="(min-width: 1024px) 896px, 100vw" prioritaet />
+        </div>
+      )
+    }
+    <div class="prose-ez mx-auto mt-10 max-w-3xl text-[1.05rem]">
+      <Content components={{ Empfehlung: EmpfehlungInline }} />
+    </div>
+    {
+      beispiel && (
+        <p class="mx-auto mt-10 max-w-3xl rounded-xl border border-dashed border-beta/70 px-5 py-4 text-sm text-ink-2">
+          Dieser Artikel ist ein Beispiel. Er zeigt, wie die täglichen Nachrichten hier aussehen werden, und verschwindet, sobald die
+          ersten echten Ausgaben erscheinen.
+        </p>
+      )
+    }
+  </article>
+
+  {
+    weitere.length > 0 && (
+      <section class="wrap pb-16" aria-labelledby="weitere-titel">
+        <h2 id="weitere-titel" class="border-b border-line pb-3 font-display text-2xl font-bold">
+          Weitere Artikel
+        </h2>
+        <div class="mt-6 grid gap-8 sm:grid-cols-3">
+          {weitere.map((a) => (
+            <ArtikelKarte artikel={a} />
+          ))}
+        </div>
+      </section>
+    )
+  }
+</Base>

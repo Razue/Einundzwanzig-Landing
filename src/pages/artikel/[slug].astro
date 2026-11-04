@@ -5,7 +5,7 @@ import Base from '../../layouts/Base.astro';
 import ArtikelBild from '../../components/ArtikelBild.astro';
 import ArtikelKarte from '../../components/ArtikelKarte.astro';
 import EmpfehlungInline from '../../components/EmpfehlungInline.astro';
-import { getArtikel, RUBRIK_LABEL, type Artikel } from '../../lib/artikel';
+import { getArtikel, zuBeitrag, RUBRIK_LABEL, type Artikel } from '../../lib/artikel';
 import { datumKurz, isoDatum } from '../../lib/format';
 
 export async function getStaticPaths() {
@@ -41,7 +41,7 @@ const { Content } = await render(artikel);
     {
       bild && (
         <div class="mx-auto mt-8 max-w-4xl">
-          <ArtikelBild artikel={artikel} widths={[800, 1200, 1600]} sizes="(min-width: 1024px) 896px, 100vw" prioritaet />
+          <ArtikelBild beitrag={zuBeitrag(artikel)} widths={[800, 1200, 1600]} sizes="(min-width: 1024px) 896px, 100vw" prioritaet />
         </div>
       )
     }
@@ -66,7 +66,7 @@ const { Content } = await render(artikel);
         </h2>
         <div class="mt-6 grid gap-8 sm:grid-cols-3">
           {weitere.map((a) => (
-            <ArtikelKarte artikel={a} />
+            <ArtikelKarte beitrag={zuBeitrag(a)} />
           ))}
         </div>
       </section>

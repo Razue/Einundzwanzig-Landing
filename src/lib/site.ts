@@ -17,6 +17,8 @@ export const EXTERN = {
   podcast: 'https://einundzwanzig.space/',
   podcastFeed: 'https://einundzwanzig.space/feed.xml',
   podcastFolgen: 'https://einundzwanzig.space/podcast/',
+  dailyNews: 'https://media.einundzwanzig.space/s/einundzwanzig-news',
+  dailyFeed: 'https://media.einundzwanzig.space/s/einundzwanzig-news/feed.xml',
   derWeg: 'https://einundzwanzig.space/podcast/der-weg/',
   spenden: 'https://einundzwanzig.space/spenden/',
   kontakt: 'https://einundzwanzig.space/kontakt/',

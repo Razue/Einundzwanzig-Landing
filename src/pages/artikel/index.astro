@@ -1,23 +1,26 @@
 ---
-// Übersicht aller Artikel, neueste zuerst. Entwurfsneutral wie die Artikelseiten.
+// Übersicht aller Beiträge: eigene Artikel und die täglichen Nachrichten, neueste zuerst. Entwurfsneutral.
 import Base from '../../layouts/Base.astro';
 import ArtikelKarte from '../../components/ArtikelKarte.astro';
-import { getArtikel } from '../../lib/artikel';
+import { getBeitraege } from '../../lib/artikel';
+import { EXTERN } from '../../lib/site';
 
-const artikel = await getArtikel();
+const beitraege = await getBeitraege();
 ---
 
-<Base title="Artikel" description="Alle Artikel auf start.einundzwanzig.dev: News, Community und Wissen aus der Einundzwanzig-Community, neueste zuerst.">
+<Base title="Artikel" description="Alle Artikel auf start.einundzwanzig.dev und die täglichen Nachrichten der Einundzwanzig-Community, neueste zuerst.">
   <section class="wrap pt-12 pb-14">
     <h1 class="h1 font-display">Artikel</h1>
-    <p class="mt-5 max-w-[60ch] text-lg text-ink-2">News, Community und Wissen aus der Einundzwanzig-Community, neueste zuerst.</p>
+    <p class="mt-5 max-w-[60ch] text-lg text-ink-2">
+      Eigene Artikel und die täglichen Nachrichten von <a class="link" href={EXTERN.dailyNews} rel="noopener">Einundzwanzig News</a>, neueste zuerst.
+    </p>
     {
-      artikel.length === 0 ? (
+      beitraege.length === 0 ? (
         <p class="mt-10 text-ink-2">Die ersten Ausgaben folgen.</p>
       ) : (
         <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {artikel.map((a) => (
-            <ArtikelKarte artikel={a} />
+          {beitraege.map((b) => (
+            <ArtikelKarte beitrag={b} />
           ))}
         </div>
       )

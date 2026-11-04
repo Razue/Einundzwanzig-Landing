@@ -37,3 +37,7 @@ export function datumLang(d: Date): string {
 export function uhrzeit(d: Date): string {
   return new Intl.DateTimeFormat('de-DE', { hour: '2-digit', minute: '2-digit', timeZone: ZEITZONE }).format(d);
 }
+
+export function datumTag(d: Date): string {
+  return new Intl.DateTimeFormat('de-DE', { day: 'numeric', month: 'long', timeZone: ZEITZONE }).format(d);
+}

@@ -1,7 +1,9 @@
 import { getCollection } from 'astro:content';
 import { getEpisoden } from './podcast';
+import { getDailyNews } from './daily';
+import { dailyZuBeitrag, RUBRIK_LABEL } from './artikel';
 
-export type Quelle = 'Podcast' | 'Hub';
+export type Quelle = 'Podcast' | 'Hub' | 'Daily';
 
 export interface FeedEintrag {
   id: string;
@@ -14,7 +16,7 @@ export interface FeedEintrag {
 }
 
 export async function getFeed(limit?: number): Promise<FeedEintrag[]> {
-  const [episoden, news] = await Promise.all([getEpisoden(), getCollection('news')]);
+  const [episoden, news, daily] = await Promise.all([getEpisoden(), getCollection('news'), getDailyNews()]);
   const eintraege: FeedEintrag[] = [
     ...episoden.map((e) => ({
       id: `podcast-${e.id}`,
@@ -34,6 +36,10 @@ export async function getFeed(limit?: number): Promise<FeedEintrag[]> {
       datum: n.data.datum,
       extern: /^https?:/.test(n.data.url ?? ''),
     })),
+    ...daily.map((n) => {
+      const b = dailyZuBeitrag(n);
+      return { id: b.id, quelle: 'Daily' as const, label: RUBRIK_LABEL[b.rubrik], titel: b.titel, url: b.href, datum: b.datum, extern: true };
+    }),
   ].sort((a, b) => b.datum.getTime() - a.datum.getTime());
   return limit ? eintraege.slice(0, limit) : eintraege;
 }

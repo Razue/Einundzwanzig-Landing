@@ -1,33 +1,31 @@
 ---
-// Teaserbild eines Artikels. Ohne Bild erscheint eine typografische Kachel mit dem Tag der Ausgabe.
+// Teaserbild eines Beitrags. Eigene Artikel bringen ein lokales Bild mit, die täglichen Nachrichten
+// eine Bild-URL; beide optimiert Astro beim Build. Ohne Bild erscheint eine typografische Kachel mit dem Tag.
 import { Image } from 'astro:assets';
-import type { Artikel } from '../lib/artikel';
+import type { Beitrag } from '../lib/artikel';
 
 interface Props {
-  artikel: Artikel;
+  beitrag: Beitrag;
   widths?: number[];
   sizes?: string;
   prioritaet?: boolean;
   class?: string;
 }
-const { artikel, widths = [480, 800], sizes = '(min-width: 1024px) 30vw, 100vw', prioritaet = false, class: klasse = '' } = Astro.props;
-const { bild, bildAlt, datum } = artikel.data;
+const { beitrag, widths = [480, 800], sizes = '(min-width: 1024px) 30vw, 100vw', prioritaet = false, class: klasse = '' } = Astro.props;
+const { bild, bildAlt, datum } = beitrag;
+const klassen = `aspect-[16/10] w-full rounded-xl border border-line object-cover ${klasse}`;
+const loading = prioritaet ? 'eager' : 'lazy';
+const fetchpriority = prioritaet ? 'high' : undefined;
 const tz = 'Europe/Berlin';
 const tag = new Intl.DateTimeFormat('de-DE', { day: '2-digit', timeZone: tz }).format(datum);
 const monat = new Intl.DateTimeFormat('de-DE', { month: 'long', year: 'numeric', timeZone: tz }).format(datum);
 ---
 
 {
-  bild ? (
-    <Image
-      src={bild}
-      alt={bildAlt ?? ''}
-      widths={widths}
-      sizes={sizes}
-      loading={prioritaet ? 'eager' : 'lazy'}
-      fetchpriority={prioritaet ? 'high' : undefined}
-      class={`aspect-[16/10] w-full rounded-xl border border-line object-cover ${klasse}`}
-    />
+  typeof bild === 'string' ? (
+    <Image src={bild} alt={bildAlt} inferSize widths={widths} sizes={sizes} loading={loading} fetchpriority={fetchpriority} class={klassen} />
+  ) : bild ? (
+    <Image src={bild} alt={bildAlt} widths={widths} sizes={sizes} loading={loading} fetchpriority={fetchpriority} class={klassen} />
   ) : (
     <div class={`flex aspect-[2/1] w-full flex-col sm:aspect-[16/10] justify-between rounded-xl border border-line bg-bg-2 p-5 ${klasse}`} aria-hidden="true">
       <span class="font-display text-[clamp(3rem,9vw,5rem)] leading-none font-extrabold text-orange">{tag}</span>

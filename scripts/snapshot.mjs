@@ -5,6 +5,7 @@ import { writeFile } from 'node:fs/promises';
 const quellen = [
   ['https://einundzwanzig.space/feed.xml', 'src/data/snapshots/podcast.xml'],
   ['https://portal.einundzwanzig.space/api/meetups', 'src/data/snapshots/meetups.json'],
+  ['https://media.einundzwanzig.space/s/einundzwanzig-news/feed.xml', 'src/data/snapshots/daily.xml'],
 ];
 
 for (const [url, ziel] of quellen) {

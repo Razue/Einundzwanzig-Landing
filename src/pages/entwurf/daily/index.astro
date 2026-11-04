@@ -11,11 +11,11 @@ import MeetupTeaser from '../../../components/MeetupTeaser.astro';
 import RefCard from '../../../components/RefCard.astro';
 import StatusBadge from '../../../components/StatusBadge.astro';
 import WerbeHinweis from '../../../components/WerbeHinweis.astro';
-import { getArtikel } from '../../../lib/artikel';
+import { getBeitraege } from '../../../lib/artikel';
 import { getFeed } from '../../../lib/feed';
 import { EXTERN, SITE } from '../../../lib/site';
 
-const artikel = await getArtikel();
+const beitraege = await getBeitraege();
 const kurz = await getFeed(6);
 
 const projekte = (await getCollection('projects'))
@@ -52,12 +52,12 @@ const aktiveWerbelinks = alleEmpfehlungen.filter((e) => e.data.werbelink).length
       <div class="min-w-0">
         <h2 id="news-titel" class="border-b border-line pb-3 font-display text-2xl font-bold">Aktuelle News</h2>
         {
-          artikel.length === 0 ? (
+          beitraege.length === 0 ? (
             <p class="mt-6 text-ink-2">Die ersten Ausgaben folgen.</p>
           ) : (
             <div class="mt-6 grid gap-8 sm:grid-cols-2">
-              {artikel.map((a, i) => (
-                <ArtikelKarte artikel={a} quer={i === 0} class={i === 0 ? 'sm:col-span-2' : ''} />
+              {beitraege.map((b, i) => (
+                <ArtikelKarte beitrag={b} quer={i === 0} class={i === 0 ? 'sm:col-span-2' : ''} />
               ))}
             </div>
           )

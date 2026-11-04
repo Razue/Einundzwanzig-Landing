@@ -9,15 +9,14 @@ import MeetupTeaser from '../../../components/MeetupTeaser.astro';
 import ProjectCard from '../../../components/ProjectCard.astro';
 import RefCard from '../../../components/RefCard.astro';
 import WerbeHinweis from '../../../components/WerbeHinweis.astro';
-import { getArtikel } from '../../../lib/artikel';
+import { getBeitraege } from '../../../lib/artikel';
 import { getEpisoden } from '../../../lib/podcast';
 import { getMeetupStatistik } from '../../../lib/portal';
 import { datumKurz, isoDatum, terminKurz } from '../../../lib/format';
 import { EXTERN, SITE } from '../../../lib/site';
 
-const artikel = await getArtikel();
-// Der neueste Artikel liegt quer über zwei Spalten, danach bis zu sechs weitere.
-const raster = artikel.slice(0, 7);
+// Eigene Artikel und die täglichen Nachrichten zusammen; der neueste Beitrag liegt quer über zwei Spalten.
+const raster = (await getBeitraege()).slice(0, 7);
 
 const folgen = (await getEpisoden()).slice(0, 3);
 const meetups = await getMeetupStatistik();
@@ -82,8 +81,8 @@ const kacheln = [
         <p class="mt-6 text-ink-2">Die ersten Ausgaben folgen.</p>
       ) : (
         <div class="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {raster.map((a, i) => (
-            <ArtikelKarte artikel={a} quer={i === 0} class={i === 0 ? 'sm:col-span-2' : ''} />
+          {raster.map((b, i) => (
+            <ArtikelKarte beitrag={b} quer={i === 0} class={i === 0 ? 'sm:col-span-2' : ''} />
           ))}
         </div>
       )

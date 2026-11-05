@@ -1,0 +1,78 @@
+---
+// Kartenreihe wie auf discover.einundzwanzig.space: Titel links, Pfeile rechts, die Karten scrollen
+// waagerecht und rasten ein. Auf Mobil ragt die nächste Karte sichtbar an. Die Karten kommen per Slot
+// und bringen ihre Breite selbst mit.
+interface Props {
+  id: string;
+  titel: string;
+  href?: string;
+  extern?: boolean;
+  mehr?: string;
+  mehrHref?: string;
+}
+const { id, titel, href, extern = false, mehr, mehrHref } = Astro.props;
+---
+
+<section class="wrap pt-12" aria-labelledby={`${id}-titel`} data-reihe>
+  <div class="flex items-center justify-between gap-4">
+    <h2 id={`${id}-titel`} class="text-2xl font-bold tracking-tight">
+      {
+        href ? (
+          <a href={href} rel={extern ? 'noopener' : undefined} class="inline-flex items-center gap-1.5 no-underline hover:text-orange-ink">
+            {titel}
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17 17 7M8 7h9v9" />
+            </svg>
+          </a>
+        ) : (
+          titel
+        )
+      }
+    </h2>
+    <div class="flex items-center gap-3">
+      {mehr && mehrHref && <a href={mehrHref} class="text-sm text-ink-2 no-underline hover:text-ink">{mehr}</a>}
+      {mehr && !mehrHref && <span class="hidden text-sm text-ink-3 sm:inline">{mehr}</span>}
+      <div class="hidden gap-2 sm:flex">
+        <button
+          type="button"
+          data-zurueck
+          aria-label="Zurück"
+          class="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-bg-2 text-ink-2 hover:text-ink disabled:opacity-40"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 6-6 6 6 6" /></svg>
+        </button>
+        <button
+          type="button"
+          data-vor
+          aria-label="Weiter"
+          class="flex h-10 w-10 items-center justify-center rounded-full bg-ink text-bg hover:opacity-90 disabled:opacity-40"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div data-spur class="mt-5 -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 [scrollbar-width:none] sm:mx-0 sm:gap-5 sm:px-0">
+    <slot />
+  </div>
+</section>
+
+<script>
+  const sanft = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+  document.querySelectorAll<HTMLElement>('[data-reihe]').forEach((reihe) => {
+    const spur = reihe.querySelector<HTMLElement>('[data-spur]');
+    const zurueck = reihe.querySelector<HTMLButtonElement>('[data-zurueck]');
+    const vor = reihe.querySelector<HTMLButtonElement>('[data-vor]');
+    if (!spur || !zurueck || !vor) return;
+    const schritt = () => spur.clientWidth * 0.9;
+    const stand = () => {
+      zurueck.disabled = spur.scrollLeft <= 2;
+      vor.disabled = spur.scrollLeft + spur.clientWidth >= spur.scrollWidth - 2;
+    };
+    zurueck.addEventListener('click', () => spur.scrollBy({ left: -schritt(), behavior: sanft }));
+    vor.addEventListener('click', () => spur.scrollBy({ left: schritt(), behavior: sanft }));
+    spur.addEventListener('scroll', stand, { passive: true });
+    addEventListener('resize', stand);
+    stand();
+  });
+</script>

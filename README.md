@@ -33,8 +33,9 @@ Die Vorschau kann zwischen Design-Entwürfen umschalten (Knopf unten rechts). Je
 | 1 Tisch | `/` (`src/pages/index.astro`) | Ökosystem-Karte zuerst, Neues darunter |
 | 2 Daily | `/entwurf/daily/` (`src/pages/entwurf/daily/index.astro`) | News zuerst, Ökosystem daneben, Signal-Leiste statt Kurs-Ticker |
 | 3 Magazin | `/entwurf/magazin/` (`src/pages/entwurf/magazin/index.astro`) | Nachrichtenportal, angelehnt an Blocktrainer: Laufband mit Bitcoin-Daten, Hauptmenü, Artikelraster |
+| 4 Entdecken | `/entwurf/entdecken/` (`src/pages/entwurf/entdecken/index.astro`) | Nach discover.einundzwanzig.space: helle Farbwelt mit System-Sans und Serifen-Hero, dunkle Hero-Karte, Kartenreihen mit Pfeilen. Eigene Tokens per `:root[data-entwurf="entdecken"]` in `global.css` |
 
-Die Liste steht in `src/lib/entwuerfe.ts`. Ein neuer Entwurf braucht einen Eintrag dort, eine Startseite, die `<Base entwurf="…">` setzt, eine Kopfzeile mit der Klasse `nur-<id>` in `Base.astro` und eine Zeile in der Regel am Ende von `global.css`. Ist ein Entwurf entschieden, kommt seine Startseite nach `/`, die anderen Einträge fallen weg, und der Umschalter verschwindet von selbst.
+Die Liste steht in `src/lib/entwuerfe.ts`. Ein neuer Entwurf braucht einen Eintrag dort, eine Startseite, die `<Base entwurf="…">` setzt, eine Kopfzeile mit der Klasse `nur-<id>` in `Base.astro` und eine Zeile in der Regel am Ende von `global.css`. Eine eigene Farbwelt bekommt ein Entwurf über Token-Overrides auf `:root[data-entwurf="<id>"]` (Beispiel: Entdecken). Ist ein Entwurf entschieden, kommt seine Startseite nach `/`, die anderen Einträge fallen weg, und der Umschalter verschwindet von selbst.
 
 ### Daten zur Build-Zeit
 

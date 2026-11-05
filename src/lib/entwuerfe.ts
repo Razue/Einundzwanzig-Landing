@@ -7,6 +7,7 @@ export const ENTWUERFE = [
   { id: 'tisch', nummer: 1, name: 'Tisch', kurz: 'Ökosystem-Karte zuerst, Neues darunter', home: '/' },
   { id: 'daily', nummer: 2, name: 'Daily', kurz: 'News zuerst, Ökosystem daneben', home: '/entwurf/daily/' },
   { id: 'magazin', nummer: 3, name: 'Magazin', kurz: 'Nachrichtenportal mit Laufband, Hauptmenü und Artikelraster', home: '/entwurf/magazin/' },
+  { id: 'entdecken', nummer: 4, name: 'Entdecken', kurz: 'Helle Entdecker-Ansicht mit Kartenreihen, nach dem Vorbild der Vereinsplattform', home: '/entwurf/entdecken/' },
 ] as const;
 
 export type EntwurfId = (typeof ENTWUERFE)[number]['id'];

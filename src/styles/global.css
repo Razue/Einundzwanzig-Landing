@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "@fontsource-variable/syne";
 @import "@fontsource-variable/jetbrains-mono";
+@import "@fontsource-variable/newsreader";
 
 /* Farbwelt: Stammtisch. Warmes Dunkel wie Holz und Stout, Orange wie Bitcoin,
    Violett für alles, was Nostr ist. Dunkel ist der Standard, hell die Option. */
@@ -18,6 +19,8 @@
   --beta: #e8c547;
   --idee: #8c7f74;
   color-scheme: dark;
+  /* Schrift als Variable, damit ein Entwurf sie austauschen kann */
+  --schrift-display: "Syne Variable", "Avenir Next", "Segoe UI", sans-serif;
 }
 
 :root[data-theme="light"] {
@@ -52,6 +55,56 @@
   }
 }
 
+/* Entwurf „Entdecken“: Farbwelt und Schrift nach discover.einundzwanzig.space, hell als Standard.
+   Gilt für alle Seiten, solange dieser Entwurf gewählt ist. */
+:root[data-entwurf="entdecken"] {
+  --schrift-display: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+:root[data-entwurf="entdecken"]:not([data-theme="dark"]) {
+  --bg: #f6f5f2;
+  --bg-2: #ffffff;
+  --line: #e5e7eb;
+  --ink: #111827;
+  --ink-2: #4b5563;
+  --ink-3: #6b7280;
+  --orange-ink: #a85a08;
+  --violet: #6a3fd6;
+  --live: #16a34a;
+  --beta: #7a6100;
+  --idee: #6b7280;
+  color-scheme: light;
+}
+:root[data-entwurf="entdecken"][data-theme="dark"] {
+  --bg: #0e0e0d;
+  --bg-2: #191918;
+  --line: #2a2927;
+  --ink: #f3f2ee;
+  --ink-2: #bebcb5;
+  --ink-3: #9c9a93;
+  --orange-ink: #f7a13a;
+  --violet: #b48cff;
+  --live: #22c55e;
+  --beta: #e8c547;
+  --idee: #9c9a93;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-entwurf="entdecken"]:not([data-theme="light"]) {
+    --bg: #0e0e0d;
+    --bg-2: #191918;
+    --line: #2a2927;
+    --ink: #f3f2ee;
+    --ink-2: #bebcb5;
+    --ink-3: #9c9a93;
+    --orange-ink: #f7a13a;
+    --violet: #b48cff;
+    --live: #22c55e;
+    --beta: #e8c547;
+    --idee: #9c9a93;
+    color-scheme: dark;
+  }
+}
+
 @theme inline {
   --color-bg: var(--bg);
   --color-bg-2: var(--bg-2);
@@ -65,7 +118,8 @@
   --color-live: var(--live);
   --color-beta: var(--beta);
   --color-idee: var(--idee);
-  --font-display: "Syne Variable", "Avenir Next", "Segoe UI", sans-serif;
+  --font-display: var(--schrift-display);
+  --font-editorial: "Newsreader Variable", Georgia, "Times New Roman", serif;
   --font-mono: "JetBrains Mono Variable", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
@@ -210,4 +264,5 @@
 /* Design-Entwürfe: data-entwurf auf <html> schaltet die Kopfzeile, siehe src/lib/entwuerfe.ts */
 html:not([data-entwurf="tisch"]) .nur-tisch,
 html:not([data-entwurf="daily"]) .nur-daily,
-html:not([data-entwurf="magazin"]) .nur-magazin { display: none; }
+html:not([data-entwurf="magazin"]) .nur-magazin,
+html:not([data-entwurf="entdecken"]) .nur-entdecken { display: none; }

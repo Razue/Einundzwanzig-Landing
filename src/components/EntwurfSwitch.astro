@@ -19,9 +19,10 @@ import { ENTWUERFE, HOMES } from '../lib/entwuerfe';
         data-entwurf={e.id}
         title={e.kurz}
         aria-pressed="false"
-        class="rounded-full px-3 py-1.5 text-sm font-semibold text-ink-2 hover:text-ink aria-pressed:bg-orange aria-pressed:text-[#1e1712]"
+        aria-label={`${e.nummer} ${e.name}`}
+        class="rounded-full px-2.5 py-1.5 text-sm font-semibold text-ink-2 hover:text-ink aria-pressed:bg-orange aria-pressed:text-[#1e1712] sm:px-3"
       >
-        <span class="font-mono text-xs opacity-70">{e.nummer}</span> {e.name}
+        <span class="font-mono text-xs opacity-70">{e.nummer}</span> <span class="hidden sm:inline">{e.name}</span>
       </button>
     ))
   }

@@ -28,8 +28,8 @@
   document.querySelectorAll<HTMLButtonElement>('[data-theme-toggle]').forEach((knopf) =>
     knopf.addEventListener('click', () => {
       const root = document.documentElement;
-      const aktuell =
-        root.dataset.theme ?? (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      // Das wirksame Schema steht im CSS (color-scheme), weil Entwürfe eigene Standards haben können.
+      const aktuell = getComputedStyle(root).colorScheme.includes('dark') ? 'dark' : 'light';
       const neu = aktuell === 'light' ? 'dark' : 'light';
       root.dataset.theme = neu;
       try {

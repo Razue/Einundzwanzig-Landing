@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import HeaderDaily from '../components/HeaderDaily.astro';
 import HeaderMagazin from '../components/HeaderMagazin.astro';
+import HeaderEntdecken from '../components/HeaderEntdecken.astro';
 import Footer from '../components/Footer.astro';
 import EntwurfSwitch from '../components/EntwurfSwitch.astro';
 import { SITE } from '../lib/site';
@@ -77,6 +78,7 @@ const entwurfListe = ENTWUERFE.map((e) => e.id).join(' ');
     <Header />
     <HeaderDaily />
     <HeaderMagazin />
+    <HeaderEntdecken />
     <main id="inhalt">
       <slot />
     </main>

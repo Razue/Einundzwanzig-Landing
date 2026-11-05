@@ -3,24 +3,25 @@
 // deshalb steht der Stand dabei. Läuft per CSS, hält beim Zeigen an und steht bei reduzierter Bewegung still.
 import { getLaufband } from '../lib/bitcoin';
 import { uhrzeit } from '../lib/format';
+import { LIVE_URL } from '../lib/site';
 
 const { felder, stand } = await getLaufband();
 // Vier Kopien, damit die Schleife auch auf breiten Bildschirmen keine Lücke zeigt.
 const KOPIEN = 4;
 ---
 
-<aside class="laufband border-b border-line bg-bg-2 text-sm" aria-label="Bitcoin-Daten">
+<aside class="laufband border-b border-line bg-bg-2 text-sm" aria-label="Bitcoin-Daten" data-laufband data-live={LIVE_URL || undefined}>
   <div class="laufband-spur">
     {
       Array.from({ length: KOPIEN }, (_, i) => (
         <ul class="laufband-liste" aria-hidden={i > 0 ? 'true' : undefined}>
           {felder.map((f) => (
-            <li class="flex items-baseline gap-2" title={f.titel}>
+            <li class="flex items-baseline gap-2" data-feld={f.id} title={f.titel}>
               <span class="text-ink-3">{f.label}</span>
-              <span class="font-mono font-semibold text-ink">{f.wert}</span>
+              <span class="font-mono font-semibold text-ink" data-wert>{f.wert}</span>
             </li>
           ))}
-          <li class="text-ink-3">Stand {uhrzeit(stand)} Uhr</li>
+          <li class="text-ink-3" data-feld="stand">Stand {uhrzeit(stand)} Uhr</li>
         </ul>
       ))
     }
@@ -65,3 +66,34 @@ const KOPIEN = 4;
     }
   }
 </style>
+
+<script>
+  // Live-Werte vom Dienst: dieselbe Formatierung wie beim Build, nur die Zahlen wechseln.
+  import { liveStream } from '../lib/live';
+  import { rohwerteAus, zuFelder } from '../lib/laufband-format';
+  import { uhrzeit } from '../lib/format';
+
+  const band = document.querySelector<HTMLElement>('[data-laufband]');
+  const url = band?.dataset.live;
+  if (band && url) {
+    liveStream(url).addEventListener('ticker', (ev) => {
+      let roh;
+      try {
+        roh = rohwerteAus(JSON.parse((ev as MessageEvent).data));
+      } catch {
+        return;
+      }
+      if (!roh) return;
+      for (const f of zuFelder(roh)) {
+        band.querySelectorAll<HTMLElement>(`[data-feld="${f.id}"]`).forEach((li) => {
+          const wert = li.querySelector('[data-wert]');
+          if (wert) wert.textContent = f.wert;
+          if (f.titel) li.title = f.titel;
+        });
+      }
+      band.querySelectorAll<HTMLElement>('[data-feld="stand"]').forEach((li) => {
+        li.textContent = `Live ${uhrzeit(roh.stand)} Uhr`;
+      });
+    });
+  }
+</script>

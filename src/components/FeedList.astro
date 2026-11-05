@@ -1,6 +1,7 @@
 ---
 import type { FeedEintrag } from '../lib/feed';
 import { datumKurz, isoDatum } from '../lib/format';
+import { LIVE_URL } from '../lib/site';
 
 interface Props {
   eintraege: FeedEintrag[];
@@ -17,7 +18,7 @@ const farbe: Record<string, string> = {
   eintraege.length === 0 ? (
     <p class="text-ink-2">Gerade gibt es nichts Neues. Schau später wieder vorbei.</p>
   ) : (
-    <ol class="divide-y divide-line border-y border-line">
+    <ol class="divide-y divide-line border-y border-line" data-feed data-live={LIVE_URL || undefined} data-limit={eintraege.length}>
       {eintraege.map((e) => (
         <li class="py-3">
           <div class="flex flex-wrap items-baseline gap-x-3 text-sm">
@@ -34,3 +35,73 @@ const farbe: Record<string, string> = {
     </ol>
   )
 }
+
+<script>
+  // Live-Liste vom Dienst: ersetzt die Einträge aus dem Build, sobald der Dienst welche schickt.
+  // Die Texte kommen aus fremden Quellen (Nostr), deshalb nur textContent, nie innerHTML.
+  import { liveStream } from '../lib/live';
+  import { datumKurz, isoDatum } from '../lib/format';
+
+  interface LiveEintrag {
+    id: string;
+    quelle: string;
+    label: string;
+    titel: string;
+    url: string;
+    datum: string;
+    extern: boolean;
+  }
+
+  const FARBE: Record<string, string> = { Podcast: 'text-orange-ink', Hub: 'text-violet', Nostr: 'text-violet', Daily: 'text-orange-ink' };
+  const liste = document.querySelector<HTMLOListElement>('[data-feed]');
+  const url = liste?.dataset.live;
+
+  if (liste && url) {
+    const limit = Number(liste.dataset.limit) || 6;
+    liveStream(url).addEventListener('feed', (ev) => {
+      let eintraege: unknown;
+      try {
+        eintraege = JSON.parse((ev as MessageEvent).data);
+      } catch {
+        return;
+      }
+      if (!Array.isArray(eintraege)) return;
+      const neu = (eintraege as LiveEintrag[]).filter(gueltig).slice(0, limit).map(zuElement);
+      if (neu.length > 0) liste.replaceChildren(...neu);
+    });
+  }
+
+  function gueltig(e: LiveEintrag): boolean {
+    return (
+      typeof e?.titel === 'string' &&
+      typeof e.label === 'string' &&
+      typeof e.url === 'string' &&
+      /^(https?:\/\/|\/)/.test(e.url) &&
+      !Number.isNaN(Date.parse(e.datum))
+    );
+  }
+
+  // Gleicher Aufbau wie das Markup oben.
+  function zuElement(e: LiveEintrag): HTMLLIElement {
+    const datum = new Date(e.datum);
+    const li = document.createElement('li');
+    li.className = 'py-3';
+    const kopf = document.createElement('div');
+    kopf.className = 'flex flex-wrap items-baseline gap-x-3 text-sm';
+    const zeit = document.createElement('time');
+    zeit.dateTime = isoDatum(datum);
+    zeit.className = 'font-mono text-ink-3';
+    zeit.textContent = datumKurz(datum);
+    const label = document.createElement('span');
+    label.className = FARBE[e.quelle] ?? 'text-ink-2';
+    label.textContent = e.label;
+    kopf.append(zeit, label);
+    const a = document.createElement('a');
+    a.href = e.url;
+    if (e.extern) a.rel = 'noopener';
+    a.className = 'mt-0.5 block font-display text-lg font-semibold no-underline hover:text-orange-ink';
+    a.textContent = e.titel;
+    li.append(kopf, a);
+    return li;
+  }
+</script>

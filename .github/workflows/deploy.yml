@@ -24,6 +24,8 @@ jobs:
       # Repository-Variable PUBLIC_NOINDEX auf 1 setzen, solange die Seite nur ein Preview ist:
       # Seiten bekommen noindex, robots.txt sperrt Crawler, Impressum-Platzhalter blockieren den Deploy nicht
       PUBLIC_NOINDEX: ${{ vars.PUBLIC_NOINDEX }}
+      # Adresse des Live-Dienstes (einundzwanzig-live), z. B. https://live.einundzwanzig.dev. Leer = rein statisch.
+      PUBLIC_LIVE_URL: ${{ vars.PUBLIC_LIVE_URL }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

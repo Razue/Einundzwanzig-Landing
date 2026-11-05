@@ -45,6 +45,10 @@ Die Liste steht in `src/lib/entwuerfe.ts`. Ein neuer Entwurf braucht einen Eintr
 
 Ist eine Quelle nicht erreichbar, nutzt der Build den Snapshot aus `src/data/snapshots/`. Der GitHub-Workflow baut stündlich neu, damit Folgen und Termine aktuell bleiben.
 
+### Live-Dienst (optional)
+
+Mit der Build-Variable `PUBLIC_LIVE_URL` (z. B. `https://live.einundzwanzig.dev`) verbindet sich die Seite im Browser per Server-Sent Events mit dem Phoenix-Dienst aus dem Repo `einundzwanzig-live`. Dann aktualisieren sich das Laufband (Entwurf 3) und „Kurz notiert“ laufend; der Dienst holt die Daten bei mempool.space, dem Podcast-Feed, Nostr-Relays und `/neu.json` dieser Seite. Ohne die Variable bleibt alles statisch. Lokal: `PUBLIC_LIVE_URL=http://localhost:4000 npm run dev` bei laufendem Dienst. Die Datenschutzseite zeigt den Abschnitt „Live-Daten“ nur, wenn die Variable gesetzt ist.
+
 ### Veröffentlichen
 
 `.github/workflows/deploy.yml` baut bei jedem Push auf `main`, stündlich per Cron und auf Knopfdruck, und veröffentlicht `dist/` auf GitHub Pages (Repo `Razue/Einundzwanzig-Landing`, öffentlich, damit Pages und die stündlichen Actions-Minuten kostenlos sind).

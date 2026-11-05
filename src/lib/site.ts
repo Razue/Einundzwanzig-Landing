@@ -13,6 +13,10 @@ export const SITE = {
   ],
 } as const;
 
+// Adresse des Live-Dienstes (einundzwanzig-live). Leer, wenn PUBLIC_LIVE_URL beim Build fehlt:
+// dann bleibt die Seite rein statisch.
+export const LIVE_URL = (import.meta.env.PUBLIC_LIVE_URL ?? '').trim().replace(/\/$/, '');
+
 export const EXTERN = {
   podcast: 'https://einundzwanzig.space/',
   podcastFeed: 'https://einundzwanzig.space/feed.xml',

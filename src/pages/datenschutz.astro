@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import { LIVE_URL } from '../lib/site';
 ---
 
 <Base title="Datenschutz" description="Datenschutzerklärung von start.einundzwanzig.dev: keine Cookies, kein Tracking, Fonts lokal.">
@@ -38,6 +39,22 @@ import Base from '../layouts/Base.astro';
       Podcast-Folgen und Meetup-Termine werden beim Bauen der Seite abgerufen und als Text ausgeliefert. Dein Browser
       stellt dabei keine Verbindung zu diesen Quellen her, solange du keinen Link anklickst.
     </p>
+
+    {
+      LIVE_URL && (
+        <>
+          <h2>Live-Daten</h2>
+          <p>
+            Das Laufband mit Bitcoin-Daten und die Liste „Kurz notiert“ aktualisieren sich im Browser über eine Verbindung
+            zu <code>{new URL(LIVE_URL).host}</code>. Das ist ein Server dieser Seite, betrieben bei Fly.io (Rechenzentrum
+            Frankfurt), kein Drittanbieter. Der Server verarbeitet deine IP-Adresse nur, um die Verbindung zu halten; er
+            speichert sie nicht dauerhaft, legt keine Profile an und setzt keine Cookies. Die Daten selbst (Kurs, Blockhöhe,
+            Podcast-Folgen, Nostr-Notes) holt der Server bei den Quellen, nicht dein Browser. Rechtsgrundlage ist Art. 6
+            Abs. 1 lit. f DSGVO.
+          </p>
+        </>
+      )
+    }
 
     <h2>Externe Links</h2>
     <p>

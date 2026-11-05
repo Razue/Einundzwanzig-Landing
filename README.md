@@ -40,7 +40,7 @@ Die Liste steht in `src/lib/entwuerfe.ts`. Ein neuer Entwurf braucht einen Eintr
 
 - Podcast: `https://einundzwanzig.space/feed.xml`
 - Meetups: `https://portal.einundzwanzig.space/api/meetups`
-- Tägliche Nachrichten: `https://media.einundzwanzig.space/s/einundzwanzig-news/feed.xml` (Nostr-Langtexte des Autorenteams; Titelbilder werden beim Build optimiert, nicht erreichbare Bilder werden zur Kachel)
+- Tägliche Nachrichten: `https://media.einundzwanzig.space/s/einundzwanzig-news/feed.xml` (Nostr-Langtexte des Autorenteams). Die Titelbilder lädt `scripts/daily-bilder.mjs` vor jedem Build nach `src/data/daily-bilder/` (nicht eingecheckt); Astro optimiert sie dann wie eigene Bilder, nicht erreichbare Bilder werden zur Kachel
 - Bitcoin-Daten für das Laufband (Entwurf 3): `https://mempool.space/api` (Preise, Blockhöhe, Gebühren, Difficulty), Snapshot `bitcoin.json`. Nur zur Build-Zeit, der Browser stellt keine Verbindung her; der Stand steht im Laufband.
 
 Ist eine Quelle nicht erreichbar, nutzt der Build den Snapshot aus `src/data/snapshots/`. Der GitHub-Workflow baut stündlich neu, damit Folgen und Termine aktuell bleiben.

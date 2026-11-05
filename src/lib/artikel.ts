@@ -19,7 +19,7 @@ export interface Beitrag {
   href: string;
   extern: boolean;
   autor: string;
-  bild?: ImageMetadata | string;
+  bild?: ImageMetadata;
   bildAlt: string;
   beispiel: boolean;
 }

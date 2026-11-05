@@ -1,11 +1,16 @@
 // Tägliche Nachrichten von media.einundzwanzig.space: Nostr-Langtexte des Autorenteams, die die
 // Plattform als RSS-Feed anbietet. Zur Build-Zeit geladen wie der Podcast-Feed, mit Snapshot als
-// Fallback. Der Hub zeigt Teaser und verlinkt auf die Plattform; die Titelbilder optimiert Astro
-// beim Build, damit der Browser nichts von fremden Servern nachlädt.
+// Fallback. Der Hub zeigt Teaser und verlinkt auf die Plattform. Die Titelbilder lädt
+// scripts/daily-bilder.mjs vor dem Build nach src/data/daily-bilder/; hier werden sie über den
+// Hash der Bild-URL zugeordnet und von Astro wie eigene Bilder optimiert.
+import { createHash } from 'node:crypto';
+import type { ImageMetadata } from 'astro';
 import { XMLParser } from 'fast-xml-parser';
 import { EXTERN } from './site';
 import { ladeText } from './laden';
 import snapshot from '../data/snapshots/daily.xml?raw';
+
+const bilder = import.meta.glob<ImageMetadata>('../data/daily-bilder/*.{jpg,png,webp,gif,avif}', { eager: true, import: 'default' });
 
 export interface DailyNews {
   id: string;
@@ -14,7 +19,7 @@ export interface DailyNews {
   url: string;
   datum: Date;
   autor: string;
-  bild?: string;
+  bild?: ImageMetadata;
 }
 
 const ANZAHL = 10;
@@ -37,21 +42,18 @@ async function laden(): Promise<DailyNews[]> {
   const doc = parser.parse(text);
   const roh = doc?.rss?.channel?.item ?? [];
   const items: any[] = Array.isArray(roh) ? roh : [roh];
-  const news = items
+  return items
     .map(zuNews)
     .filter((n): n is DailyNews => n !== null)
     .sort((a, b) => b.datum.getTime() - a.datum.getTime())
     .slice(0, ANZAHL);
-  // Ein nicht erreichbares Titelbild würde die Bildoptimierung und damit den Build abbrechen.
-  await Promise.all(
-    news.map(async (n) => {
-      if (n.bild && !(await bildErreichbar(n.bild))) {
-        console.warn(`[daily] Titelbild nicht erreichbar, Kachel stattdessen: ${n.bild}`);
-        delete n.bild;
-      }
-    }),
-  );
-  return news;
+}
+
+// Gleiche Namensregel wie in scripts/daily-bilder.mjs.
+function lokalesBild(url: string): ImageMetadata | undefined {
+  const name = createHash('sha256').update(url).digest('hex').slice(0, 16);
+  const pfad = Object.keys(bilder).find((k) => k.includes(`/${name}.`));
+  return pfad ? bilder[pfad] : undefined;
 }
 
 function zuNews(item: any): DailyNews | null {
@@ -70,20 +72,6 @@ function zuNews(item: any): DailyNews | null {
     url,
     datum,
     autor: String(item.author ?? '').trim() || 'Einundzwanzig News',
-    bild: /^https:\/\//.test(bildUrl) ? bildUrl : undefined,
+    bild: /^https:\/\//.test(bildUrl) ? lokalesBild(bildUrl) : undefined,
   };
-}
-
-async function bildErreichbar(url: string): Promise<boolean> {
-  try {
-    const ctrl = new AbortController();
-    const timer = setTimeout(() => ctrl.abort(), 8_000);
-    const res = await fetch(url, { signal: ctrl.signal, headers: { 'user-agent': 'start.einundzwanzig.dev build' } });
-    clearTimeout(timer);
-    const ok = res.ok && (res.headers.get('content-type') ?? '').startsWith('image/');
-    await res.body?.cancel();
-    return ok;
-  } catch {
-    return false;
-  }
 }

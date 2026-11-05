@@ -1,6 +1,6 @@
 ---
-// Teaserbild eines Beitrags. Eigene Artikel bringen ein lokales Bild mit, die täglichen Nachrichten
-// eine Bild-URL; beide optimiert Astro beim Build. Ohne Bild erscheint eine typografische Kachel mit dem Tag.
+// Teaserbild eines Beitrags, von Astro beim Build optimiert. Ohne Bild erscheint eine typografische
+// Kachel mit dem Tag der Ausgabe.
 import { Image } from 'astro:assets';
 import type { Beitrag } from '../lib/artikel';
 
@@ -22,9 +22,7 @@ const monat = new Intl.DateTimeFormat('de-DE', { month: 'long', year: 'numeric',
 ---
 
 {
-  typeof bild === 'string' ? (
-    <Image src={bild} alt={bildAlt} inferSize widths={widths} sizes={sizes} loading={loading} fetchpriority={fetchpriority} class={klassen} />
-  ) : bild ? (
+  bild ? (
     <Image src={bild} alt={bildAlt} widths={widths} sizes={sizes} loading={loading} fetchpriority={fetchpriority} class={klassen} />
   ) : (
     <div class={`flex aspect-[2/1] w-full flex-col sm:aspect-[16/10] justify-between rounded-xl border border-line bg-bg-2 p-5 ${klasse}`} aria-hidden="true">

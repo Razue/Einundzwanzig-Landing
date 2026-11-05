@@ -5,7 +5,9 @@
   "type": "module",
   "description": "start.einundzwanzig.dev – der Hub für alles rund um Einundzwanzig",
   "scripts": {
+    "predev": "node scripts/daily-bilder.mjs",
     "dev": "astro dev",
+    "prebuild": "node scripts/daily-bilder.mjs",
     "build": "astro build",
     "preview": "astro preview",
     "snapshot": "node scripts/snapshot.mjs",

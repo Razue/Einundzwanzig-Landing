@@ -1,0 +1,31 @@
+---
+// Pillen zum Filtern der Artikelübersicht nach Rubrik. Jede Pille ist eine eigene statische Seite
+// (/artikel/rubrik/<rubrik>/), damit sich ein Filter teilen lässt und ohne Skript funktioniert.
+import { RUBRIK_LABEL, type Rubrik } from '../lib/artikel';
+
+interface Props {
+  anzahl: Partial<Record<Rubrik, number>>;
+  aktiv?: Rubrik;
+}
+const { anzahl, aktiv } = Astro.props;
+const rubriken = (Object.keys(RUBRIK_LABEL) as Rubrik[]).filter((r) => (anzahl[r] ?? 0) > 0);
+const gesamt = Object.values(anzahl).reduce((a, b) => a + (b ?? 0), 0);
+
+const pille = (istAktiv: boolean) =>
+  `inline-flex items-baseline gap-1.5 rounded-full border px-3.5 py-1.5 text-sm no-underline ${
+    istAktiv ? 'border-ink bg-ink text-bg' : 'border-line text-ink-2 hover:border-ink-3 hover:text-ink'
+  }`;
+---
+
+<nav aria-label="Rubriken" class="mt-8 flex flex-wrap gap-2">
+  <a href="/artikel/" class={pille(!aktiv)} aria-current={!aktiv ? 'page' : undefined}>
+    Alle <span class={`font-mono text-xs ${aktiv ? 'text-ink-3' : 'opacity-70'}`}>{gesamt}</span>
+  </a>
+  {
+    rubriken.map((r) => (
+      <a href={`/artikel/rubrik/${r}/`} class={pille(aktiv === r)} aria-current={aktiv === r ? 'page' : undefined}>
+        {RUBRIK_LABEL[r]} <span class={`font-mono text-xs ${aktiv === r ? 'opacity-70' : 'text-ink-3'}`}>{anzahl[r]}</span>
+      </a>
+    ))
+  }
+</nav>

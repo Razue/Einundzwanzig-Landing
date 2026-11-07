@@ -21,11 +21,11 @@ interface Props {
   weitere: Artikel[];
 }
 const { artikel, weitere } = Astro.props;
-const { titel, teaser, datum, rubrik, autor, beispiel, bild } = artikel.data;
+const { titel, teaser, datum, rubrik, autor, beispiel, bild, bildAlt } = artikel.data;
 const { Content } = await render(artikel);
 ---
 
-<Base title={titel} description={teaser}>
+<Base title={titel} description={teaser} bild={bild} bildAlt={bildAlt}>
   <article class="wrap py-10 lg:py-14">
     <div class="mx-auto max-w-3xl">
       <p class="text-sm"><a class="link" data-home href="/">Zurück zur Übersicht</a></p>

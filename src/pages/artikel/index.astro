@@ -1,8 +1,10 @@
 ---
 // Übersicht aller Beiträge: eigene Artikel und die täglichen Nachrichten, neueste zuerst. Entwurfsneutral.
+// Die Rubrik-Pillen führen zu statischen Rubrikseiten unter /artikel/rubrik/<rubrik>/.
 import Base from '../../layouts/Base.astro';
 import ArtikelKarte from '../../components/ArtikelKarte.astro';
-import { getBeitraege } from '../../lib/artikel';
+import RubrikFilter from '../../components/RubrikFilter.astro';
+import { getBeitraege, rubrikAnzahl } from '../../lib/artikel';
 import { EXTERN } from '../../lib/site';
 
 const beitraege = await getBeitraege();
@@ -13,16 +15,20 @@ const beitraege = await getBeitraege();
     <h1 class="h1 font-display">Artikel</h1>
     <p class="mt-5 max-w-[60ch] text-lg text-ink-2">
       Eigene Artikel und die täglichen Nachrichten von <a class="link" href={EXTERN.dailyNews} rel="noopener">Einundzwanzig News</a>, neueste zuerst.
+      Die eigenen Artikel gibt es auch als <a class="link" href="/rss.xml">RSS-Feed</a>.
     </p>
     {
       beitraege.length === 0 ? (
         <p class="mt-10 text-ink-2">Die ersten Ausgaben folgen.</p>
       ) : (
-        <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {beitraege.map((b) => (
-            <ArtikelKarte beitrag={b} />
-          ))}
-        </div>
+        <>
+          <RubrikFilter anzahl={rubrikAnzahl(beitraege)} />
+          <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {beitraege.map((b) => (
+              <ArtikelKarte beitrag={b} ueberschrift="h2" />
+            ))}
+          </div>
+        </>
       )
     }
   </section>

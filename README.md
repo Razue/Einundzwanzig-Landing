@@ -19,7 +19,7 @@ Node 22.12 oder neuer (siehe `.nvmrc`).
 | Projekte (Ökosystem-Karte, Steckbriefe) | `src/content/projects/*.md` | Frontmatter + Markdown. `status: live / beta / idee`, `karte: <n>` setzt die Position auf der Karte, ohne `karte` erscheint das Projekt nur in der Liste. |
 | Empfehlungen | `src/content/empfehlungen/*.md` | Frontmatter + optional Markdown („Warum wir das empfehlen“). `werbelink: true` ist nur mit `programm: bestaetigt` erlaubt, sonst bricht der Build. |
 | Kuratierte Neuigkeiten | `src/content/news/*.md` | Frontmatter (`titel`, `datum`, `url`). Erscheinen im „Neu“-Feed neben den Podcast-Folgen. |
-| Artikel (Entwurf „Daily“) | `src/content/artikel/*.mdx` | Frontmatter (`titel`, `teaser`, `datum`, `rubrik: news / community / wissen`, optional `bild` + `bildAlt`, `beispiel: true` für Platzhalter) + Text. Eine Empfehlung im Text: `<Empfehlung slug="bitbox02" />`. Artikel erscheinen unter `/artikel/<dateiname>/`, die Übersicht unter `/artikel/`. |
+| Artikel (Entwurf „Daily“) | `src/content/artikel/*.mdx` | Frontmatter (`titel`, `teaser`, `datum`, `rubrik: news / community / wissen`, optional `bild` + `bildAlt`, `beispiel: true` für Platzhalter) + Text. Eine Empfehlung im Text: `<Empfehlung slug="bitbox02" />`. Artikel erscheinen unter `/artikel/<dateiname>/`, die Übersicht unter `/artikel/`, je Rubrik unter `/artikel/rubrik/<rubrik>/` (nur Rubriken mit Beiträgen). Eigene Artikel ohne `beispiel` stehen im Feed `/rss.xml`. Ein Artikel mit `bild` nutzt es als Vorschaubild (`og:image`), alle anderen Seiten die Hub-Skizze. |
 | Tägliche Nachrichten | kommen vom Feed `media.einundzwanzig.space/s/einundzwanzig-news` | Keine Pflege nötig. Der Build holt die neuesten zehn Einträge, zeigt Titelbild, Datum, Autor und Zusammenfassung als Rubrik „Bitcoin Daily“ und verlinkt auf die Plattform. |
 | Kategorien der Empfehlungen | `src/data/kategorien.ts` | Titel und Einleitung je Kategorie. |
 | Externe Links und Konstanten | `src/lib/site.ts` | |
@@ -43,6 +43,8 @@ Die Liste steht in `src/lib/entwuerfe.ts`. Ein neuer Entwurf braucht einen Eintr
 - Meetups: `https://portal.einundzwanzig.space/api/meetups`
 - Tägliche Nachrichten: `https://media.einundzwanzig.space/s/einundzwanzig-news/feed.xml` (Nostr-Langtexte des Autorenteams). Die Titelbilder lädt `scripts/daily-bilder.mjs` vor jedem Build nach `src/data/daily-bilder/` (nicht eingecheckt); Astro optimiert sie dann wie eigene Bilder, nicht erreichbare Bilder werden zur Kachel
 - Bitcoin-Daten für das Laufband (Entwurf 3): `https://mempool.space/api` (Preise, Blockhöhe, Gebühren, Difficulty), Snapshot `bitcoin.json`. Nur zur Build-Zeit, der Browser stellt keine Verbindung her; der Stand steht im Laufband.
+
+Der Build schreibt außerdem `sitemap-index.xml` (ohne die Entwurfs-Startseiten); `robots.txt` nennt sie, sobald `PUBLIC_NOINDEX` fehlt.
 
 Ist eine Quelle nicht erreichbar, nutzt der Build den Snapshot aus `src/data/snapshots/`. Der GitHub-Workflow baut stündlich neu, damit Folgen und Termine aktuell bleiben.
 

@@ -7,9 +7,11 @@ interface Props {
   beitrag: Beitrag;
   // quer: Bild links, Text rechts. Für den neuesten Beitrag oben im Raster, dort über zwei Spalten.
   quer?: boolean;
+  // h2, wenn die Karten direkt unter der Seitenüberschrift stehen (Übersicht), sonst h3.
+  ueberschrift?: 'h2' | 'h3';
   class?: string;
 }
-const { beitrag, quer = false, class: klasse = '' } = Astro.props;
+const { beitrag, quer = false, ueberschrift: Ueberschrift = 'h3', class: klasse = '' } = Astro.props;
 const { titel, teaser, datum, rubrik, beispiel, href, extern, autor } = beitrag;
 const rel = extern ? 'noopener' : undefined;
 ---
@@ -25,14 +27,14 @@ const rel = extern ? 'noopener' : undefined;
   </a>
   <div class="flex flex-col gap-3">
     <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm">
-      <span class="font-semibold text-orange-ink">{RUBRIK_LABEL[rubrik]}</span>
+      <a href={`/artikel/rubrik/${rubrik}/`} class="font-semibold text-orange-ink no-underline hover:underline">{RUBRIK_LABEL[rubrik]}</a>
       <time datetime={isoDatum(datum)} class="font-mono text-ink-3">{datumKurz(datum)}</time>
       {extern && <span class="text-ink-3">{autor}</span>}
       {beispiel && <span class="rounded-full border border-beta/70 px-2 py-0.5 text-xs text-beta">Beispiel</span>}
     </div>
-    <h3 class={`font-display leading-snug font-bold ${quer ? 'text-2xl' : 'text-xl'}`}>
+    <Ueberschrift class={`font-display leading-snug font-bold ${quer ? 'text-2xl' : 'text-xl'}`}>
       <a href={href} rel={rel} class="no-underline hover:text-orange-ink">{titel}</a>
-    </h3>
+    </Ueberschrift>
     {teaser && <p class="line-clamp-3 text-ink-2">{teaser}</p>}
   </div>
 </article>

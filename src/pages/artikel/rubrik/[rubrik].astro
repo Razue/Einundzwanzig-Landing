@@ -1,0 +1,46 @@
+---
+// Artikelübersicht gefiltert nach Rubrik. Nur Rubriken mit Beiträgen bekommen eine Seite.
+import Base from '../../../layouts/Base.astro';
+import ArtikelKarte from '../../../components/ArtikelKarte.astro';
+import RubrikFilter from '../../../components/RubrikFilter.astro';
+import { getBeitraege, rubrikAnzahl, RUBRIK_LABEL, type Beitrag, type Rubrik } from '../../../lib/artikel';
+import { EXTERN } from '../../../lib/site';
+
+export async function getStaticPaths() {
+  const alle = await getBeitraege();
+  const anzahl = rubrikAnzahl(alle);
+  return (Object.keys(RUBRIK_LABEL) as Rubrik[])
+    .filter((r) => (anzahl[r] ?? 0) > 0)
+    .map((r) => ({ params: { rubrik: r }, props: { rubrik: r, beitraege: alle.filter((b) => b.rubrik === r), anzahl } }));
+}
+
+interface Props {
+  rubrik: Rubrik;
+  beitraege: Beitrag[];
+  anzahl: Partial<Record<Rubrik, number>>;
+}
+const { rubrik, beitraege, anzahl } = Astro.props;
+const label = RUBRIK_LABEL[rubrik];
+---
+
+<Base title={`Artikel: ${label}`} description={`Alle Beiträge der Rubrik ${label} auf start.einundzwanzig.dev, neueste zuerst.`}>
+  <section class="wrap pt-12 pb-14">
+    <p class="text-sm"><a class="link" href="/artikel/">Artikel</a></p>
+    <h1 class="h1 mt-2 font-display">{label}</h1>
+    <p class="mt-5 max-w-[60ch] text-lg text-ink-2">
+      {
+        rubrik === 'daily' ? (
+          <>
+            Die täglichen Nachrichten von <a class="link" href={EXTERN.dailyNews} rel="noopener">Einundzwanzig News</a>, neueste zuerst. Jede Ausgabe öffnet sich auf der Plattform.
+          </>
+        ) : (
+          <>Alle Beiträge dieser Rubrik, neueste zuerst.</>
+        )
+      }
+    </p>
+    <RubrikFilter anzahl={anzahl} aktiv={rubrik} />
+    <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {beitraege.map((b) => <ArtikelKarte beitrag={b} ueberschrift="h2" />)}
+    </div>
+  </section>
+</Base>

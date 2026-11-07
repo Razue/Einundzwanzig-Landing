@@ -69,3 +69,10 @@ export async function getBeitraege(): Promise<Beitrag[]> {
   const [eigene, daily] = await Promise.all([getArtikel(), getDailyNews()]);
   return [...eigene.map(zuBeitrag), ...daily.map(dailyZuBeitrag)].sort((a, b) => b.datum.getTime() - a.datum.getTime());
 }
+
+// Wie viele Beiträge je Rubrik, für die Rubrik-Pillen und die Rubrikseiten.
+export function rubrikAnzahl(beitraege: Beitrag[]): Partial<Record<Rubrik, number>> {
+  const anzahl: Partial<Record<Rubrik, number>> = {};
+  for (const b of beitraege) anzahl[b.rubrik] = (anzahl[b.rubrik] ?? 0) + 1;
+  return anzahl;
+}

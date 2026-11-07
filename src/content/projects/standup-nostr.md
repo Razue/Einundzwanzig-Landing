@@ -1,15 +1,17 @@
 ---
 name: Standup Nostr
-kurz: Dezentrales Publizieren ohne Zensur. Beiträge, Termine und Nachrichten der Community direkt auf Nostr.
-status: idee
+kurz: Lesen, hören und schreiben auf Nostr. Discover sammelt Artikel, Hörfolgen und Autoren der Community an einem Ort.
+status: live
 themen: [nostr, publizieren]
+links:
+  web: https://discover.einundzwanzig.space/
 karte: 7
 ---
 
-Die Idee: Alles, was die Community veröffentlicht, soll auf Nostr landen, ohne dass dafür ein zentraler Server nötig ist. Podcast-Folgen, Meetup-Termine, Artikel, Ankündigungen. Wer einem Relay folgt, bekommt alles; wer eins betreibt, hält die Community am Laufen.
+Standup ist die Publishing-Plattform der Community auf Nostr. Discover ist ihr Schaufenster: Artikel, Hörfolgen und Hörbücher, Publikationen und Autorenprofile aus dem Nostr-Netzwerk, sortiert nach Themen wie Bitcoin, Geld oder Reisen. Lesen und hören geht ohne Konto, mit Konto kommen Folgen, Reaktionen und Zaps dazu.
 
-Bausteine dafür gibt es schon: Werkzeuge, die RSS-Feeds auf Nostr spiegeln, einen Dienst für zeitversetztes Veröffentlichen, NIP-05-Namen über den Verein. Was fehlt, ist der Zusammenbau zu etwas, das Meetup-Organisatoren ohne Technikwissen benutzen können.
+Geschrieben wird im eigenen Editor auf media.einundzwanzig.space. Von dort kommen auch die täglichen Nachrichten „Bitcoin Daily“, die auf dieser Seite erscheinen. Jeder Beitrag ist ein signierter Nostr-Langtext und liegt auf den Relays.
 
-## Was gesucht wird
+## Was Standup von einem Blog unterscheidet
 
-Jemand, der die bestehenden Werkzeuge zu einem Ablauf verbindet, und Organisatoren, die es ausprobieren.
+Autorinnen und Autoren behalten ihre Texte und ihre Leserschaft, egal welche App sie benutzen. Discover ist eine Sicht darauf, andere Nostr-Leser zeigen dieselben Beiträge.

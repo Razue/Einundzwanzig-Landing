@@ -1,15 +1,17 @@
 ---
 name: Twenty One Esports
-kurz: Browser- und PC-Spiele, Turniere und Ligen mit echten Sats als Gewinn.
-status: idee
-themen: [spiele, lightning]
+kurz: Spiele, Turniere und Ligen für Bitcoiner. Schach und andere Browser-Spiele direkt auf der Seite, Sats als Preisgeld.
+status: live
+themen: [spiele, lightning, nostr]
+links:
+  web: https://esports.einundzwanzig.space/
 karte: 6
 ---
 
-Die Idee: eine Plattform für Spiele, bei der der Einsatz und der Gewinn in Sats fließen. Turniere für Browser-Spiele am Stammtisch-Abend, Ligen über eine Saison, Preisgelder über Lightning.
+Twenty One Esports ist die Spiele-Plattform der Community. Ein Dutzend Spiele läuft direkt im Browser, darunter Schach, Dame und Blockfill. Dazu kommen Turniere für Spiele am eigenen Rechner wie Rocket League und EA Sports FC.
 
-Vieles davon gibt es in Teilen schon: Kickstr zeigt, wie Spiel-Events auf Nostr aussehen, Stammtisch zeigt, wie Gewinne genau einmal ausgezahlt werden. Was fehlt, ist der Rest: welche Spiele, welche Regeln, wer organisiert.
+Gespielt wird in offenen Turnieren und in Ligen über eine Saison, mit Rangliste. Die Anmeldung geht ohne Passwort, mit Nostr-Schlüssel oder Google-Konto. Für die kommende Saison sind Sats pro Sieg als Preisgeld angekündigt.
 
-## Was gesucht wird
+## Für Meetups
 
-Leute, die Spiele bauen oder Turniere organisieren wollen, und Meetups, die als erste einen Spieleabend ausprobieren.
+Ein Spieleabend am Stammtisch braucht nur einen Browser und einen Nostr-Schlüssel.

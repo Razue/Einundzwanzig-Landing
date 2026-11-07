@@ -26,7 +26,7 @@ const monat = new Intl.DateTimeFormat('de-DE', { month: 'long', year: 'numeric',
     <Image src={bild} alt={bildAlt} widths={widths} sizes={sizes} loading={loading} fetchpriority={fetchpriority} class={klassen} />
   ) : (
     <div class={`flex aspect-[2/1] w-full flex-col sm:aspect-[16/10] justify-between rounded-xl border border-line bg-bg-2 p-5 ${klasse}`} aria-hidden="true">
-      <span class="font-display text-[clamp(3rem,9vw,5rem)] leading-none font-extrabold text-orange">{tag}</span>
+      <span class="font-display text-[clamp(3rem,9vw,5rem)] leading-none font-extrabold text-orange-ink">{tag}</span>
       <span class="font-mono text-sm text-ink-3">{monat}</span>
     </div>
   )

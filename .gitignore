@@ -9,4 +9,3 @@ tmp/
 # Titelbilder der täglichen Nachrichten, lädt scripts/daily-bilder.mjs vor jedem Build
 src/data/daily-bilder/*
 !src/data/daily-bilder/.gitkeep
-.tool-versions

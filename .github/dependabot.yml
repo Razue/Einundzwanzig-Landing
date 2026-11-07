@@ -1,0 +1,21 @@
+# Wöchentlich ein gebündelter Pull Request mit Minor- und Patch-Updates der npm-Pakete.
+# Major-Versionen bleiben außen vor und werden bewusst von Hand gemacht.
+# Der Deploy-Workflow baut jeden PR zur Probe; die Lockdatei schreibt Dependabot auf GitHub.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "07:00"
+      timezone: Europe/Berlin
+    groups:
+      npm-updates:
+        patterns: ["*"]
+        update-types: [minor, patch]
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    commit-message:
+      prefix: "Abhängigkeiten"

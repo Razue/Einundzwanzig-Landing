@@ -1,6 +1,6 @@
 # Wöchentlich ein gebündelter Pull Request mit Minor- und Patch-Updates der npm-Pakete.
 # Major-Versionen bleiben außen vor und werden bewusst von Hand gemacht.
-# Der Deploy-Workflow baut jeden PR zur Probe; die Lockdatei schreibt Dependabot auf GitHub.
+# Der Deploy-Workflow baut jeden PR zur Probe (ohne Veröffentlichung); die Lockdatei schreibt Dependabot auf GitHub.
 version: 2
 updates:
   - package-ecosystem: npm

@@ -3,6 +3,9 @@ name: Bauen und veröffentlichen
 on:
   push:
     branches: [main]
+  # Pull Requests (z. B. von Dependabot) werden nur gebaut und geprüft, nicht veröffentlicht
+  pull_request:
+    branches: [main]
   schedule:
     # Stündlich neu bauen, damit Podcast-Folgen und Meetup-Termine aktuell bleiben
     - cron: '7 * * * *'
@@ -14,7 +17,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -23,7 +26,8 @@ jobs:
     env:
       # Repository-Variable PUBLIC_NOINDEX auf 1 setzen, solange die Seite nur ein Preview ist:
       # Seiten bekommen noindex, robots.txt sperrt Crawler, Impressum-Platzhalter blockieren den Deploy nicht
-      PUBLIC_NOINDEX: ${{ vars.PUBLIC_NOINDEX }}
+      # In Pull Requests immer Preview-Modus, damit die Platzhalter den Probebau nicht stoppen
+      PUBLIC_NOINDEX: ${{ github.event_name == 'pull_request' && '1' || vars.PUBLIC_NOINDEX }}
       # Adresse des Live-Dienstes (einundzwanzig-live), z. B. https://live.einundzwanzig.dev. Leer = rein statisch.
       PUBLIC_LIVE_URL: ${{ vars.PUBLIC_LIVE_URL }}
     steps:
@@ -35,11 +39,13 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm run check-links
-      - uses: actions/upload-pages-artifact@v3
+      - if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
         with:
           path: dist
 
   deploy:
+    if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     environment:

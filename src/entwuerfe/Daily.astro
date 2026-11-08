@@ -2,18 +2,18 @@
 // Entwurf 2 „Daily“: oben nur die flache Claim-Zeile, direkt darunter die Nachrichten,
 // das Ökosystem daneben und darunter.
 import { getCollection } from 'astro:content';
-import Base from '../../../layouts/Base.astro';
-import SignalLeiste from '../../../components/SignalLeiste.astro';
-import ArtikelKarte from '../../../components/ArtikelKarte.astro';
-import FeedList from '../../../components/FeedList.astro';
-import EcosystemMap from '../../../components/EcosystemMap.astro';
-import MeetupTeaser from '../../../components/MeetupTeaser.astro';
-import RefCard from '../../../components/RefCard.astro';
-import StatusBadge from '../../../components/StatusBadge.astro';
-import WerbeHinweis from '../../../components/WerbeHinweis.astro';
-import { getBeitraege } from '../../../lib/artikel';
-import { getFeed } from '../../../lib/feed';
-import { EXTERN, SITE } from '../../../lib/site';
+import Base from '../layouts/Base.astro';
+import SignalLeiste from '../components/SignalLeiste.astro';
+import ArtikelKarte from '../components/ArtikelKarte.astro';
+import FeedList from '../components/FeedList.astro';
+import EcosystemMap from '../components/EcosystemMap.astro';
+import MeetupTeaser from '../components/MeetupTeaser.astro';
+import RefCard from '../components/RefCard.astro';
+import StatusBadge from '../components/StatusBadge.astro';
+import WerbeHinweis from '../components/WerbeHinweis.astro';
+import { getBeitraege } from '../lib/artikel';
+import { getFeed } from '../lib/feed';
+import { EXTERN, SITE } from '../lib/site';
 
 const beitraege = await getBeitraege();
 const kurz = await getFeed(6);

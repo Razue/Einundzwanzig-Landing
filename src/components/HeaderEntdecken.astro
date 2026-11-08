@@ -5,11 +5,13 @@ import { EXTERN } from '../lib/site';
 import { HOMES } from '../lib/entwuerfe';
 import ThemeToggle from './ThemeToggle.astro';
 
-const pfad = Astro.url.pathname.replace(/\/$/, '') || '/';
-const home = HOMES.entdecken.replace(/\/$/, '');
+// Pfade ohne Schluss-Schrägstrich vergleichen; die Startseite „/“ bleibt „/“.
+const norm = (s: string) => s.replace(/\/$/, '') || '/';
+const pfad = norm(Astro.url.pathname);
+const home = norm(HOMES.entdecken);
 
 function istAktiv(href: string): boolean {
-  const p = href.replace(/\/$/, '');
+  const p = norm(href);
   if (!p.startsWith('/')) return false;
   if (p === home) return pfad === home;
   return pfad === p || pfad.startsWith(p + '/');

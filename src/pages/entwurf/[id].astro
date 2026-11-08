@@ -1,0 +1,17 @@
+---
+// Startseiten der nicht gewählten Entwürfe. Nur im Vergleichsmodus (VERGLEICH in src/lib/entwuerfe.ts)
+// liefert getStaticPaths Pfade; sonst entsteht hier keine Seite.
+import { ENTWUERFE, STANDARD_ENTWURF } from '../../lib/entwuerfe';
+import Tisch from '../../entwuerfe/Tisch.astro';
+import Daily from '../../entwuerfe/Daily.astro';
+import Magazin from '../../entwuerfe/Magazin.astro';
+
+export function getStaticPaths() {
+  return ENTWUERFE.filter((e) => e.id !== STANDARD_ENTWURF).map((e) => ({ params: { id: e.id } }));
+}
+
+const SEITEN = { tisch: Tisch, daily: Daily, magazin: Magazin };
+const Seite = SEITEN[Astro.params.id as keyof typeof SEITEN];
+---
+
+<Seite />

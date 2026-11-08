@@ -1,106 +1,252 @@
 ---
+// Startseite, Entwurf 4 „Entdecken“: nach dem Vorbild von discover.einundzwanzig.space, der Plattform des Vereins.
+// Dunkle Hero-Karte mit den drei neuesten Beiträgen, darunter Kartenreihen: Bitcoin Daily, Podcast-Folgen
+// als Kacheln, das Ökosystem als Kreise, Empfehlungen, Meetups und zum Schluss weitere Artikel als Liste.
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import EcosystemMap from '../components/EcosystemMap.astro';
-import FeedList from '../components/FeedList.astro';
-import MeetupTeaser from '../components/MeetupTeaser.astro';
-import PathCard from '../components/PathCard.astro';
+import ArtikelBild from '../components/ArtikelBild.astro';
+import Reihe from '../components/Reihe.astro';
 import RefCard from '../components/RefCard.astro';
+import StatusBadge from '../components/StatusBadge.astro';
 import WerbeHinweis from '../components/WerbeHinweis.astro';
-import { getFeed } from '../lib/feed';
+import { getArtikel, getBeitraege, dailyZuBeitrag, zuBeitrag, RUBRIK_LABEL } from '../lib/artikel';
+import { getDailyNews } from '../lib/daily';
+import { getEpisoden } from '../lib/podcast';
+import { getMeetupStatistik } from '../lib/portal';
+import { datumKurz, datumTag, isoDatum, uhrzeit } from '../lib/format';
 import { EXTERN } from '../lib/site';
 
-const alleProjekte = await getCollection('projects');
-const aufKarte = alleProjekte
+const heute = new Date();
+const heroKarten = (await getBeitraege()).slice(0, 3);
+const dailys = (await getDailyNews()).map(dailyZuBeitrag);
+const folgen = (await getEpisoden()).slice(0, 6);
+const meetups = await getMeetupStatistik();
+const termine = meetups.kommende.slice(0, 6);
+const eigene = (await getArtikel()).map(zuBeitrag);
+
+const projekte = (await getCollection('projects'))
   .filter((p) => p.data.karte !== undefined)
   .sort((a, b) => (a.data.karte ?? 0) - (b.data.karte ?? 0));
 
-const neu = await getFeed(5);
-
 const alleEmpfehlungen = (await getCollection('empfehlungen')).sort((a, b) => a.data.reihenfolge - b.data.reihenfolge);
 const gesehen = new Set<string>();
-const teaser = alleEmpfehlungen.filter((e) => {
-  if (gesehen.has(e.data.kategorie)) return false;
-  gesehen.add(e.data.kategorie);
-  return true;
-}).slice(0, 3);
+const teaser = alleEmpfehlungen
+  .filter((e) => {
+    if (gesehen.has(e.data.kategorie)) return false;
+    gesehen.add(e.data.kategorie);
+    return true;
+  })
+  .slice(0, 3);
 const aktiveWerbelinks = alleEmpfehlungen.filter((e) => e.data.werbelink).length;
+
+// Kartenbreite in den Reihen: eine Karte und ein Stück der nächsten auf Mobil, zwei ab sm, drei ab lg.
+const KARTE = 'w-[78%] shrink-0 snap-start sm:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-2.5rem)/3)]';
+// Vier zarte Kacheltöne wie auf Discover, aus den Tokens, damit sie auch im Dunklen stimmen.
+const TON = ['bg-orange/15 text-orange-ink', 'bg-violet/15 text-violet', 'bg-live/15 text-live', 'bg-ink/8 text-ink-2'];
+
+const formatKurz = (f: string) => (f === 'Der Weg' ? 'W' : f.charAt(0));
+const minuten = (dauer?: string) => {
+  if (!dauer) return null;
+  const t = dauer.split(':').map(Number);
+  if (t.some(Number.isNaN)) return null;
+  const sekunden = t.length === 3 ? t[0] * 3600 + t[1] * 60 + t[2] : t.length === 2 ? t[0] * 60 + t[1] : t[0];
+  return Math.round(sekunden / 60);
+};
+const initialen = (name: string) =>
+  name
+    .split(/\s+/)
+    .filter((w) => !['und', 'der', 'die', 'das', '&'].includes(w.toLowerCase()))
+    .slice(0, 2)
+    .map((w) => w.charAt(0).toUpperCase())
+    .join('');
+const tz = 'Europe/Berlin';
+const tag = (d: Date) => new Intl.DateTimeFormat('de-DE', { day: '2-digit', timeZone: tz }).format(d);
+const monatKurz = (d: Date) => new Intl.DateTimeFormat('de-DE', { month: 'short', timeZone: tz }).format(d).replace('.', '');
 ---
 
-<Base entwurf="tisch">
-  <section class="wrap grid gap-10 pt-12 pb-6 lg:grid-cols-2 lg:items-center lg:gap-12 lg:pt-16">
-    <div class="min-w-0">
-      <h1 class="font-display text-[clamp(1.6rem,7.2vw,3.1rem)] leading-[1.04] font-extrabold tracking-tight lg:text-[clamp(2rem,2.4vw+0.6rem,2.6rem)]">
-        Alles rund um <span class="whitespace-nowrap">Einundzwanzig,</span> an einem Tisch.
+<Base
+  entwurf="entdecken"
+  description="Entdecke, was die Einundzwanzig-Community bewegt: Artikel, Bitcoin Daily, Podcast-Folgen, Meetups, Projekte und Empfehlungen."
+>
+  <section class="wrap pt-1" aria-labelledby="hero-titel">
+    <div
+      class="overflow-hidden rounded-[28px] bg-[#0b0b0a] bg-[radial-gradient(120%_90%_at_50%_0%,#2d2926_0%,#0b0b0a_65%)] px-5 pt-10 pb-5 text-center text-[#f3f2ee] sm:px-8 sm:pt-12 sm:pb-8"
+    >
+      <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-sm text-[#dcdad4]">
+        <span class="h-1.5 w-1.5 rounded-full bg-orange" aria-hidden="true"></span>
+        Heute auf Einundzwanzig
+        <time datetime={isoDatum(heute)} class="text-[#9c9a93]">{datumTag(heute)}</time>
+      </span>
+      <h1 id="hero-titel" class="mx-auto mt-5 max-w-[16ch] font-editorial text-[clamp(2.3rem,6.5vw,4rem)] leading-[1.02] font-normal tracking-[-0.01em]">
+        Entdecke, was die Community bewegt.
       </h1>
-      <p class="mt-6 max-w-[50ch] text-lg text-ink-2">
-        Der Einstieg für Neue und der Überblick für alle, die schon länger dabei sind. Podcast, Meetups, Apps und Werkzeuge
-        der Community, verbunden über Bitcoin und Nostr.
-      </p>
-      <div class="mt-8 flex flex-wrap gap-3">
-        <a class="btn btn-primary" href="/start">Ich bin neu hier</a>
-        <a class="btn btn-ghost" href="/projekte">Alle Projekte ansehen</a>
+      <p class="mx-auto mt-4 max-w-[46ch] text-[#bebcb5] sm:text-lg">Artikel, Podcast, Meetups und Werkzeuge aus dem Einundzwanzig-Ökosystem.</p>
+
+      <div class="-mx-5 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-1 text-left [scrollbar-width:none] sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:overflow-visible">
+        {
+          heroKarten.map((b) => (
+            <a
+              href={b.href}
+              rel={b.extern ? 'noopener' : undefined}
+              class="w-[78%] shrink-0 snap-start rounded-2xl bg-bg-2 p-3 text-ink no-underline shadow-[0_24px_48px_rgba(0,0,0,.35)] sm:w-[48%] lg:w-auto"
+            >
+              <ArtikelBild beitrag={b} widths={[400, 800]} sizes="(min-width: 1024px) 300px, 70vw" prioritaet />
+              <p class="mt-3 flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] text-ink-3 uppercase">
+                {RUBRIK_LABEL[b.rubrik]}
+                {b.beispiel && <span class="rounded-full border border-beta/70 px-1.5 py-px text-[10px] tracking-normal text-beta normal-case">Beispiel</span>}
+              </p>
+              <h2 class="mt-1.5 line-clamp-2 font-editorial text-xl leading-snug font-normal">{b.titel}</h2>
+              <p class="mt-2 text-sm text-ink-3">
+                <span class="font-medium text-ink-2">{b.autor}</span> · <time datetime={isoDatum(b.datum)}>{datumKurz(b.datum)}</time>
+              </p>
+            </a>
+          ))
+        }
       </div>
     </div>
-    <div class="min-w-0"><EcosystemMap projekte={aufKarte} /></div>
   </section>
 
-  <section class="wrap py-14" aria-labelledby="neu-titel">
-    <div class="flex flex-wrap items-baseline justify-between gap-3">
-      <h2 id="neu-titel" class="font-display text-3xl font-bold sm:text-4xl">Neu</h2>
-      <a class="link text-sm" href={EXTERN.podcastFolgen} rel="noopener">Alle Podcast-Folgen</a>
+  {
+    dailys.length > 0 && (
+      <Reihe id="daily" titel="Bitcoin Daily" href={EXTERN.dailyNews} extern>
+        {dailys.map((b) => (
+          <article class={KARTE}>
+            <a href={b.href} rel="noopener" class="block no-underline" tabindex="-1" aria-hidden="true">
+              <ArtikelBild beitrag={b} />
+            </a>
+            <h3 class="mt-3 text-[1.05rem] leading-snug font-bold">
+              <a href={b.href} rel="noopener" class="no-underline hover:text-orange-ink">
+                {b.titel}
+              </a>
+            </h3>
+            {b.teaser && <p class="mt-1 line-clamp-2 text-sm text-ink-2">{b.teaser}</p>}
+            <p class="mt-2 text-sm text-ink-3">
+              <span class="font-medium text-ink-2">{b.autor}</span> · {datumKurz(b.datum)}
+            </p>
+          </article>
+        ))}
+      </Reihe>
+    )
+  }
+
+  <section class="wrap pt-12" aria-labelledby="hoeren-titel">
+    <div class="flex items-center justify-between gap-4">
+      <h2 id="hoeren-titel" class="text-2xl font-bold tracking-tight">Neu zum Hören</h2>
+      <a href={EXTERN.podcastFolgen} rel="noopener" class="text-sm text-ink-2 no-underline hover:text-ink">Alle Folgen</a>
     </div>
-    <div class="mt-6">
-      <FeedList eintraege={neu} />
-    </div>
-    <p class="mt-3 text-sm text-ink-3">Quelle: Podcast-Feed und Neuigkeiten dieser Seite. Nostr, App-Releases und Kickstr-Runden kommen dazu.</p>
+    <ol class="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+      {
+        folgen.map((f, i) => (
+          <li>
+            <a href={f.url} rel="noopener" class="group block no-underline">
+              <div class={`relative flex aspect-square items-center justify-center rounded-2xl ${TON[i % TON.length]}`}>
+                <span class="font-editorial text-5xl">#{formatKurz(f.format)}</span>
+                <span class="absolute right-3 bottom-3 flex h-9 w-9 items-center justify-center rounded-full bg-bg-2 text-ink shadow-md" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 14v-3a8 8 0 0 1 16 0v3" />
+                    <path d="M4 14a2 2 0 0 1 2-2h1a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H6a2 2 0 0 1-2-2v-3Zm16 0a2 2 0 0 0-2-2h-1a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h1a2 2 0 0 0 2-2v-3Z" />
+                  </svg>
+                </span>
+              </div>
+              <h3 class="mt-3 line-clamp-2 text-sm leading-snug font-semibold text-ink group-hover:text-orange-ink">{f.titel}</h3>
+              <p class="mt-1 text-xs text-ink-3">Einundzwanzig</p>
+              <p class="text-xs text-ink-3">
+                {f.format}
+                {minuten(f.dauer) ? ` · ${minuten(f.dauer)} Min.` : ''}
+              </p>
+            </a>
+          </li>
+        ))
+      }
+    </ol>
   </section>
 
-  <section class="wrap py-14" aria-labelledby="start-titel">
-    <h2 id="start-titel" class="font-display text-3xl font-bold sm:text-4xl">Wo fängst du an?</h2>
-    <div class="mt-8 grid gap-5 lg:grid-cols-3">
-      <PathCard
-        titel="Neu bei Bitcoin"
-        text="Du willst verstehen, worum es geht, bevor du irgendetwas kaufst."
-        schritte={[
-          { label: 'Der Weg hören', href: EXTERN.derWeg, hinweis: 'Menschen erzählen, wie sie zu Bitcoin kamen.' },
-          { label: 'Ein Meetup besuchen', href: EXTERN.portalKarte, hinweis: 'Fragen stellen, ohne etwas kaufen zu müssen.' },
-          { label: 'Erste Wallet einrichten', href: '/empfehlungen/wallets' },
-        ]}
-      />
-      <PathCard
-        titel="Neu in der Community"
-        text="Du kennst Bitcoin und suchst Leute, mit denen du darüber reden kannst."
-        schritte={[
-          { label: 'Deinen Stammtisch finden', href: EXTERN.portalKarte },
-          { label: 'Meetup-App laden', href: '/projekte/meetup-app', hinweis: 'Termine und Anwesenheits-Badges.' },
-          { label: 'Auf Nostr folgen', href: EXTERN.nostrProfil, hinweis: 'Dort passiert das Gespräch zwischen den Folgen.' },
-        ]}
-      />
-      <PathCard
-        titel="Bauen und mitmachen"
-        text="Du kannst programmieren, organisieren oder schreiben und willst etwas beitragen."
-        schritte={[
-          { label: 'Projekte in Beta ansehen', href: '/projekte#beta', hinweis: 'Die brauchen Tester und Feedback.' },
-          { label: 'Dem Verein beitreten', href: EXTERN.verein, hinweis: 'Der Verein fördert Community-Projekte.' },
-          { label: 'Mitbauen', href: '/unterstuetzen#mitbauen' },
-        ]}
-      />
+  <section class="wrap pt-12" aria-labelledby="oeko-titel">
+    <div class="flex items-center justify-between gap-4">
+      <h2 id="oeko-titel" class="text-2xl font-bold tracking-tight">Ökosystem</h2>
+      <a href="/projekte" class="text-sm text-ink-2 no-underline hover:text-ink">Alle Projekte</a>
     </div>
+    <ul class="mt-5 -mx-4 flex gap-5 overflow-x-auto px-4 pb-2 [scrollbar-width:none] sm:mx-0 sm:gap-8 sm:px-0">
+      {
+        projekte.map((p, i) => (
+          <li class="w-28 shrink-0 text-center [overflow-wrap:anywhere] sm:w-32">
+            <a href={`/projekte/${p.id}`} class="group block no-underline">
+              <span class={`mx-auto flex h-20 w-20 items-center justify-center rounded-full text-2xl font-bold sm:h-24 sm:w-24 ${TON[i % TON.length]}`}>
+                {initialen(p.data.name)}
+              </span>
+              <span class="mt-2 line-clamp-2 block text-sm leading-snug font-semibold text-ink group-hover:text-orange-ink">{p.data.name}</span>
+              <StatusBadge status={p.data.status} class="mt-1 justify-center text-xs" />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
   </section>
 
-  <MeetupTeaser />
-
-  <section class="wrap py-14" aria-labelledby="empfehlungen-titel">
-    <div class="flex flex-wrap items-baseline justify-between gap-3">
-      <h2 id="empfehlungen-titel" class="font-display text-3xl font-bold sm:text-4xl">Empfehlungen</h2>
-      <a class="link text-sm" href="/empfehlungen">Alle Empfehlungen</a>
+  <section class="wrap pt-12" aria-labelledby="empfehlungen-titel">
+    <div class="flex items-center justify-between gap-4">
+      <h2 id="empfehlungen-titel" class="text-2xl font-bold tracking-tight">Empfehlungen</h2>
+      <a href="/empfehlungen" class="text-sm text-ink-2 no-underline hover:text-ink">Alle ansehen</a>
     </div>
-    <div class="mt-6">
+    <div class="mt-5">
       <WerbeHinweis aktiveWerbelinks={aktiveWerbelinks} />
     </div>
-    <div class="mt-6 grid gap-5 md:grid-cols-3">
+    <div class="mt-5 grid gap-5 md:grid-cols-3">
       {teaser.map((e) => <RefCard eintrag={e} />)}
+    </div>
+  </section>
+
+  {
+    termine.length > 0 && (
+      <Reihe id="meetups" titel="Meetups" href={EXTERN.portalKarte} extern mehr={`${meetups.gesamt} Meetups in ${meetups.laender} Ländern`}>
+        {termine.map((k, i) => (
+          <article class={`${KARTE} flex gap-4 rounded-2xl border border-line bg-bg-2 p-4`}>
+            <div class={`flex h-16 w-16 shrink-0 flex-col items-center justify-center rounded-xl ${TON[i % TON.length]}`}>
+              <span class="text-2xl leading-none font-bold">{tag(k.start)}</span>
+              <span class="mt-1 text-xs">{monatKurz(k.start)}</span>
+            </div>
+            <div class="min-w-0">
+              <h3 class="line-clamp-2 leading-snug font-semibold">
+                <a href={k.termin.portalLink} rel="noopener" class="no-underline hover:text-orange-ink">
+                  {k.meetup.name}
+                </a>
+              </h3>
+              <p class="mt-1 truncate text-sm text-ink-3">
+                {uhrzeit(k.start)} Uhr{(k.termin.location || k.meetup.city) && ` · ${k.termin.location ?? k.meetup.city}`}
+              </p>
+            </div>
+          </article>
+        ))}
+      </Reihe>
+    )
+  }
+
+  <section class="wrap pt-14 pb-4" aria-labelledby="mehr-titel">
+    <h2 id="mehr-titel" class="text-2xl font-bold tracking-tight">Noch mehr zu entdecken.</h2>
+    <div class="mt-6 grid gap-x-10 gap-y-8 md:grid-cols-2">
+      {
+        eigene.map((b) => (
+          <article class="border-t border-line pt-5">
+            <p class="flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] text-ink-3 uppercase">
+              {RUBRIK_LABEL[b.rubrik]}
+              {b.beispiel && <span class="rounded-full border border-beta/70 px-1.5 py-px text-[10px] tracking-normal text-beta normal-case">Beispiel</span>}
+            </p>
+            <h3 class="mt-2 text-lg leading-snug font-bold">
+              <a href={b.href} class="no-underline hover:text-orange-ink">
+                {b.titel}
+              </a>
+            </h3>
+            <p class="mt-2 line-clamp-2 text-sm text-ink-2">{b.teaser}</p>
+            <p class="mt-3 text-sm text-ink-3">
+              <span class="font-medium text-ink-2">{b.autor}</span> · {datumKurz(b.datum)}
+            </p>
+          </article>
+        ))
+      }
+    </div>
+    <div class="mt-10 flex flex-wrap justify-center gap-3">
+      <a href="/artikel/" class="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-bg no-underline hover:opacity-90">Alle Artikel</a>
+      <a href="/start" class="rounded-full border border-line bg-bg-2 px-5 py-2.5 text-sm font-semibold text-ink no-underline hover:border-ink-3">Ich bin neu hier</a>
     </div>
   </section>
 </Base>

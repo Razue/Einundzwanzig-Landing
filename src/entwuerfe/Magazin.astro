@@ -3,17 +3,17 @@
 // hier folgen die flache Claim-Zeile, direkt darunter das Artikelraster, dann Kacheln aus der Community,
 // Empfehlungen, Podcast, Ökosystem und Meetups.
 import { getCollection } from 'astro:content';
-import Base from '../../../layouts/Base.astro';
-import ArtikelKarte from '../../../components/ArtikelKarte.astro';
-import MeetupTeaser from '../../../components/MeetupTeaser.astro';
-import ProjectCard from '../../../components/ProjectCard.astro';
-import RefCard from '../../../components/RefCard.astro';
-import WerbeHinweis from '../../../components/WerbeHinweis.astro';
-import { getBeitraege } from '../../../lib/artikel';
-import { getEpisoden } from '../../../lib/podcast';
-import { getMeetupStatistik } from '../../../lib/portal';
-import { datumKurz, isoDatum, terminKurz } from '../../../lib/format';
-import { EXTERN, SITE } from '../../../lib/site';
+import Base from '../layouts/Base.astro';
+import ArtikelKarte from '../components/ArtikelKarte.astro';
+import MeetupTeaser from '../components/MeetupTeaser.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import RefCard from '../components/RefCard.astro';
+import WerbeHinweis from '../components/WerbeHinweis.astro';
+import { getBeitraege } from '../lib/artikel';
+import { getEpisoden } from '../lib/podcast';
+import { getMeetupStatistik } from '../lib/portal';
+import { datumKurz, isoDatum, terminKurz } from '../lib/format';
+import { EXTERN, SITE } from '../lib/site';
 
 // Eigene Artikel und die täglichen Nachrichten zusammen; der neueste Beitrag liegt quer über zwei Spalten.
 const raster = (await getBeitraege()).slice(0, 7);

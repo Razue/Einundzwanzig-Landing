@@ -1,15 +1,18 @@
-// Design-Entwürfe, zwischen denen die Vorschau umschalten kann.
-// Jeder Entwurf hat eine eigene Startseite. Alle anderen Seiten sind geteilt und übernehmen
-// die Kopfzeile des zuletzt gewählten Entwurfs (localStorage „entwurf“, gesetzt beim Besuch
-// einer Startseite oder über den Umschalter). Ist ein Entwurf entschieden, bleibt hier nur
-// noch einer stehen, und der Umschalter verschwindet von selbst.
-export const ENTWUERFE = [
-  { id: 'tisch', nummer: 1, name: 'Tisch', kurz: 'Ökosystem-Karte zuerst, Neues darunter', home: '/' },
+// Design-Entwürfe. Entschieden ist Entwurf 4 „Entdecken“ (8. November 2026), er ist die Startseite „/“.
+// VERGLEICH = true schaltet den Vergleichsmodus wieder ein: Die anderen Entwürfe werden unter
+// /entwurf/<id>/ gebaut (src/pages/entwurf/[id].astro, Seiten in src/entwuerfe/), unten rechts
+// erscheint der Umschalter, und alle geteilten Seiten übernehmen die Kopfzeile des zuletzt gewählten
+// Entwurfs (localStorage „entwurf“). Mit false bleibt nur Entdecken, der Umschalter verschwindet von selbst.
+export const VERGLEICH: boolean = false;
+
+const ALLE = [
+  { id: 'tisch', nummer: 1, name: 'Tisch', kurz: 'Ökosystem-Karte zuerst, Neues darunter', home: '/entwurf/tisch/' },
   { id: 'daily', nummer: 2, name: 'Daily', kurz: 'News zuerst, Ökosystem daneben', home: '/entwurf/daily/' },
   { id: 'magazin', nummer: 3, name: 'Magazin', kurz: 'Nachrichtenportal mit Laufband, Hauptmenü und Artikelraster', home: '/entwurf/magazin/' },
-  { id: 'entdecken', nummer: 4, name: 'Entdecken', kurz: 'Helle Entdecker-Ansicht mit Kartenreihen, nach dem Vorbild der Vereinsplattform', home: '/entwurf/entdecken/' },
+  { id: 'entdecken', nummer: 4, name: 'Entdecken', kurz: 'Helle Entdecker-Ansicht mit Kartenreihen, nach dem Vorbild der Vereinsplattform', home: '/' },
 ] as const;
 
-export type EntwurfId = (typeof ENTWUERFE)[number]['id'];
-export const STANDARD_ENTWURF: EntwurfId = 'tisch';
-export const HOMES = Object.fromEntries(ENTWUERFE.map((e) => [e.id, e.home])) as Record<EntwurfId, string>;
+export type EntwurfId = (typeof ALLE)[number]['id'];
+export const STANDARD_ENTWURF: EntwurfId = 'entdecken';
+export const ENTWUERFE: readonly (typeof ALLE)[number][] = VERGLEICH ? ALLE : ALLE.filter((e) => e.id === STANDARD_ENTWURF);
+export const HOMES = Object.fromEntries(ALLE.map((e) => [e.id, e.home])) as Record<EntwurfId, string>;

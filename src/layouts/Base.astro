@@ -35,6 +35,9 @@ const og = await getImage({ src: bild ?? ogStandard, width: 1200, height: 630, f
 const ogBild = new URL(og.src, SITE.url).href;
 const ogAlt = bild ? (bildAlt ?? '') : 'Skizze des Hubs: Einundzwanzig in der Mitte, außen herum die Projekte der Community';
 const entwurfListe = ENTWUERFE.map((e) => e.id).join(' ');
+const aktiv = (id: EntwurfId) => ENTWUERFE.some((e) => e.id === id);
+// Syne ist die Schrift von Tisch, Daily und Magazin; Entdecken nutzt die System-Sans.
+const syneNoetig = ENTWUERFE.some((e) => e.id !== 'entdecken');
 ---
 
 <!doctype html>
@@ -54,10 +57,10 @@ const entwurfListe = ENTWUERFE.map((e) => e.id).join(' ');
     <link rel="alternate" type="application/rss+xml" title={`${SITE.name}: Artikel`} href="/rss.xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preload" as="font" type="font/woff2" crossorigin href={syneUrl} />
+    {syneNoetig && <link rel="preload" as="font" type="font/woff2" crossorigin href={syneUrl} />}
     <link rel="preload" as="font" type="font/woff2" crossorigin href={monoUrl} />
-    <meta name="theme-color" content="#171210" media="(prefers-color-scheme: dark)" />
-    <meta name="theme-color" content="#f7f0e6" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0e0e0d" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f6f5f2" media="(prefers-color-scheme: light)" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={SITE.name} />
     <meta property="og:title" content={seitentitel} />
@@ -92,10 +95,10 @@ const entwurfListe = ENTWUERFE.map((e) => e.id).join(' ');
       class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-full focus:bg-orange focus:px-4 focus:py-2 focus:text-[#1e1712]"
       >Zum Inhalt springen</a
     >
-    <Header />
-    <HeaderDaily />
-    <HeaderMagazin />
-    <HeaderEntdecken />
+    {aktiv('tisch') && <Header />}
+    {aktiv('daily') && <HeaderDaily />}
+    {aktiv('magazin') && <HeaderMagazin />}
+    {aktiv('entdecken') && <HeaderEntdecken />}
     <main id="inhalt">
       <slot />
     </main>

@@ -1,7 +1,7 @@
 export const SITE = {
   url: 'https://start.einundzwanzig.dev',
   name: 'Einundzwanzig Start',
-  claim: 'Alles rund um Einundzwanzig, an einem Tisch.',
+  claim: 'Alles rund um Einundzwanzig.',
   description:
     'Der Einstieg für Neue und der Überblick für alle, die schon länger dabei sind: Podcast, Meetups, Apps und Werkzeuge der Einundzwanzig-Community, verbunden über Bitcoin und Nostr.',
   npub: 'npub1qv02xpsc3lhxxx5x7xswf88w3u7kykft9ea7t78tz7ywxf7mxs9qrxujnc',

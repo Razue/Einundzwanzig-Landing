@@ -1,6 +1,6 @@
 ---
 // Kopfzeile für Entwurf „Entdecken“: Wortmarke mit orangem Punkt, Navigation als Pillen, rechts
-// Theme-Schalter und ein dunkler Knopf. Keine Trennlinie, die Hero-Karte beginnt direkt darunter.
+// der Theme-Schalter. Keine Trennlinie, die Hero-Karte beginnt direkt darunter.
 import { EXTERN } from '../lib/site';
 import { HOMES } from '../lib/entwuerfe';
 import ThemeToggle from './ThemeToggle.astro';
@@ -50,7 +50,6 @@ const nav = [
     </nav>
     <div class="ml-auto flex items-center gap-2">
       <ThemeToggle />
-      <a href={EXTERN.verein} rel="noopener" class="rounded-full bg-ink px-4 py-2 text-sm font-semibold text-bg no-underline hover:opacity-90">Verein</a>
     </div>
   </div>
 </header>

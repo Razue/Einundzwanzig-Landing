@@ -1,6 +1,6 @@
 ---
 // Startseite, Entwurf 4 „Entdecken“: nach dem Vorbild von discover.einundzwanzig.space, der Plattform des Vereins.
-// Dunkle Hero-Karte mit den drei neuesten Beiträgen, darunter Kartenreihen: Bitcoin Daily, Podcast-Folgen
+// Oben die flache Claim-Zeile, darunter Kartenreihen: Bitcoin Daily, Podcast-Folgen
 // als Kacheln, das Ökosystem als Kreise, Empfehlungen, Meetups und zum Schluss weitere Artikel als Liste.
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
@@ -9,15 +9,13 @@ import Reihe from '../components/Reihe.astro';
 import RefCard from '../components/RefCard.astro';
 import StatusBadge from '../components/StatusBadge.astro';
 import WerbeHinweis from '../components/WerbeHinweis.astro';
-import { getArtikel, getBeitraege, dailyZuBeitrag, zuBeitrag, RUBRIK_LABEL } from '../lib/artikel';
+import { getArtikel, dailyZuBeitrag, zuBeitrag, RUBRIK_LABEL } from '../lib/artikel';
 import { getDailyNews } from '../lib/daily';
 import { getEpisoden } from '../lib/podcast';
 import { getMeetupStatistik } from '../lib/portal';
-import { datumKurz, datumTag, isoDatum, uhrzeit } from '../lib/format';
-import { EXTERN } from '../lib/site';
+import { datumKurz, uhrzeit } from '../lib/format';
+import { EXTERN, SITE } from '../lib/site';
 
-const heute = new Date();
-const heroKarten = (await getBeitraege()).slice(0, 3);
 const dailys = (await getDailyNews()).map(dailyZuBeitrag);
 const folgen = (await getEpisoden()).slice(0, 6);
 const meetups = await getMeetupStatistik();
@@ -68,51 +66,18 @@ const monatKurz = (d: Date) => new Intl.DateTimeFormat('de-DE', { month: 'short'
   entwurf="entdecken"
   description="Entdecke, was die Einundzwanzig-Community bewegt: Artikel, Bitcoin Daily, Podcast-Folgen, Meetups, Projekte und Empfehlungen."
 >
-  <section class="wrap pt-1" aria-labelledby="hero-titel">
-    <div
-      class="overflow-hidden rounded-[28px] bg-[#0b0b0a] bg-[radial-gradient(120%_90%_at_50%_0%,#2d2926_0%,#0b0b0a_65%)] px-5 pt-10 pb-5 text-center text-[#f3f2ee] sm:px-8 sm:pt-12 sm:pb-8"
-    >
-      <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-sm text-[#dcdad4]">
-        <span class="h-1.5 w-1.5 rounded-full bg-orange" aria-hidden="true"></span>
-        Heute auf Einundzwanzig
-        <time datetime={isoDatum(heute)} class="text-[#9c9a93]">{datumTag(heute)}</time>
-      </span>
-      <h1 id="hero-titel" class="mx-auto mt-5 max-w-[16ch] font-editorial text-[clamp(2.3rem,6.5vw,4rem)] leading-[1.02] font-normal tracking-[-0.01em]">
-        Entdecke, was die Community bewegt.
-      </h1>
-      <p class="mx-auto mt-4 max-w-[46ch] text-[#bebcb5] sm:text-lg">Artikel, Podcast, Meetups und Werkzeuge aus dem Einundzwanzig-Ökosystem.</p>
-
-      <div class="-mx-5 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-1 text-left [scrollbar-width:none] sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:overflow-visible">
-        {
-          heroKarten.map((b) => (
-            <a
-              href={b.href}
-              rel={b.extern ? 'noopener' : undefined}
-              class="w-[78%] shrink-0 snap-start rounded-2xl bg-bg-2 p-3 text-ink no-underline shadow-[0_24px_48px_rgba(0,0,0,.35)] sm:w-[48%] lg:w-auto"
-            >
-              <ArtikelBild beitrag={b} widths={[400, 800]} sizes="(min-width: 1024px) 300px, 70vw" prioritaet />
-              <p class="mt-3 flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] text-ink-3 uppercase">
-                {RUBRIK_LABEL[b.rubrik]}
-                {b.beispiel && <span class="rounded-full border border-beta/70 px-1.5 py-px text-[10px] tracking-normal text-beta normal-case">Beispiel</span>}
-              </p>
-              <h2 class="mt-1.5 line-clamp-2 font-editorial text-xl leading-snug font-normal">{b.titel}</h2>
-              <p class="mt-2 text-sm text-ink-3">
-                <span class="font-medium text-ink-2">{b.autor}</span> · <time datetime={isoDatum(b.datum)}>{datumKurz(b.datum)}</time>
-              </p>
-            </a>
-          ))
-        }
-      </div>
-    </div>
+  <section class="wrap pt-6" aria-labelledby="claim-titel">
+    <h1 id="claim-titel" class="text-[clamp(1.5rem,4vw,2.1rem)] leading-tight font-bold tracking-tight">{SITE.claim}</h1>
   </section>
 
   {
     dailys.length > 0 && (
       <Reihe id="daily" titel="Bitcoin Daily" href={EXTERN.dailyNews} extern>
-        {dailys.map((b) => (
+        {dailys.map((b, i) => (
           <article class={KARTE}>
             <a href={b.href} rel="noopener" class="block no-underline" tabindex="-1" aria-hidden="true">
-              <ArtikelBild beitrag={b} />
+              {/* Die erste Karte ist das größte sichtbare Element der Seite, ihr Bild lädt sofort. */}
+              <ArtikelBild beitrag={b} prioritaet={i === 0} />
             </a>
             <h3 class="mt-3 text-[1.05rem] leading-snug font-bold">
               <a href={b.href} rel="noopener" class="no-underline hover:text-orange-ink">

@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import HeaderDaily from '../components/HeaderDaily.astro';
 import HeaderMagazin from '../components/HeaderMagazin.astro';
 import HeaderEntdecken from '../components/HeaderEntdecken.astro';
+import HeaderZeitung from '../components/HeaderZeitung.astro';
 import Footer from '../components/Footer.astro';
 import EntwurfSwitch from '../components/EntwurfSwitch.astro';
 import { getImage } from 'astro:assets';
@@ -11,6 +12,8 @@ import type { ImageMetadata } from 'astro';
 import { SITE } from '../lib/site';
 import { ENTWUERFE, STANDARD_ENTWURF, type EntwurfId } from '../lib/entwuerfe';
 import syneUrl from '@fontsource-variable/syne/files/syne-latin-wght-normal.woff2?url';
+import playfairUrl from '@fontsource-variable/playfair-display/files/playfair-display-latin-wght-normal.woff2?url';
+import newsreaderUrl from '@fontsource-variable/newsreader/files/newsreader-latin-wght-normal.woff2?url';
 // Vorschaubild für Links auf Nostr, Telegram und Co., wenn eine Seite kein eigenes mitbringt.
 import ogStandard from '../content/artikel/bilder/hub-konzept.jpg';
 
@@ -37,8 +40,9 @@ const ogBild = new URL(og.src, SITE.url).href;
 const ogAlt = bild ? (bildAlt ?? '') : 'Skizze des Hubs: Einundzwanzig in der Mitte, außen herum die Projekte der Community';
 const entwurfListe = ENTWUERFE.map((e) => e.id).join(' ');
 const aktiv = (id: EntwurfId) => ENTWUERFE.some((e) => e.id === id);
-// Syne ist die Schrift von Tisch, Daily und Magazin; Entdecken nutzt die System-Sans.
-const syneNoetig = ENTWUERFE.some((e) => e.id !== 'entdecken');
+// Syne ist die Schrift von Tisch, Daily und Magazin; Entdecken nutzt die System-Sans, Zeitung
+// Playfair Display für Überschriften und Newsreader für den Text.
+const syneNoetig = ENTWUERFE.some((e) => e.id !== 'entdecken' && e.id !== 'zeitung');
 ---
 
 <!doctype html>
@@ -59,8 +63,10 @@ const syneNoetig = ENTWUERFE.some((e) => e.id !== 'entdecken');
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     {syneNoetig && <link rel="preload" as="font" type="font/woff2" crossorigin href={syneUrl} />}
-    <meta name="theme-color" content="#0e0e0d" media="(prefers-color-scheme: dark)" />
-    <meta name="theme-color" content="#f6f5f2" media="(prefers-color-scheme: light)" />
+    {aktiv('zeitung') && <link rel="preload" as="font" type="font/woff2" crossorigin href={playfairUrl} />}
+    {aktiv('zeitung') && <link rel="preload" as="font" type="font/woff2" crossorigin href={newsreaderUrl} />}
+    <meta name="theme-color" content="#0e0c0a" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f1ebe0" media="(prefers-color-scheme: light)" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={SITE.name} />
     <meta property="og:title" content={seitentitel} />
@@ -99,6 +105,7 @@ const syneNoetig = ENTWUERFE.some((e) => e.id !== 'entdecken');
     {aktiv('daily') && <HeaderDaily />}
     {aktiv('magazin') && <HeaderMagazin />}
     {aktiv('entdecken') && <HeaderEntdecken />}
+    {aktiv('zeitung') && <HeaderZeitung />}
     <main id="inhalt">
       <slot />
     </main>

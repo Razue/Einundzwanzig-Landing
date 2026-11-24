@@ -2,6 +2,8 @@
 @import "@fontsource-variable/syne";
 @import "@fontsource-variable/jetbrains-mono";
 @import "@fontsource-variable/newsreader";
+@import "@fontsource-variable/newsreader/wght-italic.css";
+@import "@fontsource-variable/playfair-display";
 
 /* Farbwelt: Stammtisch. Warmes Dunkel wie Holz und Stout, Orange wie Bitcoin,
    Violett für alles, was Nostr ist. Dunkel ist der Standard, hell die Option. */
@@ -21,6 +23,10 @@
   color-scheme: dark;
   /* Schrift als Variable, damit ein Entwurf sie austauschen kann */
   --schrift-display: "Syne Variable", "Avenir Next", "Segoe UI", sans-serif;
+  /* Fließtext: ohne eigene Angabe dieselbe Schrift wie die Überschriften */
+  --schrift-text: var(--schrift-display);
+  /* Kräftige Linie für Zeitungskopf, Abschnittsköpfe und Fußzeile (Entwurf „Zeitung“) */
+  --linie-stark: var(--line);
 }
 
 :root[data-theme="light"] {
@@ -105,6 +111,77 @@
   }
 }
 
+/* Entwurf „Zeitung“: Papierton, Serifen und eckige Flächen. Hell ist der Standard, dunkel folgt der
+   Systemeinstellung oder dem Schalter. Gilt für alle Seiten, solange dieser Entwurf gewählt ist.
+   --ink-3, --orange-ink und --live sind gegenüber der Vorlage nachgezogen, damit 4,5:1 hält. */
+:root[data-entwurf="zeitung"] {
+  --schrift-display: "Playfair Display Variable", Georgia, "Times New Roman", serif;
+  --schrift-text: "Newsreader Variable", Georgia, "Times New Roman", serif;
+  font-size: 112.5%;
+  --radius-md: 2px;
+  --radius-lg: 2px;
+  --radius-xl: 2px;
+  --radius-2xl: 2px;
+}
+:root[data-entwurf="zeitung"]:not([data-theme="dark"]) {
+  --bg: #f1ebe0;
+  --bg-2: #fffaf2;
+  --line: #c9c0b6;
+  --linie-stark: #16130e;
+  --ink: #16130e;
+  --ink-2: #5c564c;
+  --ink-3: #665f54;
+  --orange-ink: #a8440c;
+  --violet: #6a3fd6;
+  --live: #1f7044;
+  --beta: #7a6100;
+  --idee: #665f54;
+  color-scheme: light;
+}
+:root[data-entwurf="zeitung"][data-theme="dark"] {
+  --bg: #0e0c0a;
+  --bg-2: #1c1915;
+  --line: #3a332c;
+  --linie-stark: #f7931a;
+  --ink: #f3ece3;
+  --ink-2: #b7aea3;
+  --ink-3: #9a9186;
+  --orange-ink: #f7931a;
+  --violet: #b48cff;
+  --live: #3dd68c;
+  --beta: #e8c547;
+  --idee: #9a9186;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-entwurf="zeitung"]:not([data-theme="light"]) {
+    --bg: #0e0c0a;
+    --bg-2: #1c1915;
+    --line: #3a332c;
+    --linie-stark: #f7931a;
+    --ink: #f3ece3;
+    --ink-2: #b7aea3;
+    --ink-3: #9a9186;
+    --orange-ink: #f7931a;
+    --violet: #b48cff;
+    --live: #3dd68c;
+    --beta: #e8c547;
+    --idee: #9a9186;
+    color-scheme: dark;
+  }
+}
+/* Knöpfe und Fußzeile im Zeitungsbild: Sans in Versalien, eckig, kräftige Linie. */
+:root[data-entwurf="zeitung"] .btn {
+  border-radius: 3px;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+:root[data-entwurf="zeitung"] body > footer {
+  border-top: 2px solid var(--linie-stark);
+}
+
 @theme inline {
   --color-bg: var(--bg);
   --color-bg-2: var(--bg-2);
@@ -118,6 +195,7 @@
   --color-live: var(--live);
   --color-beta: var(--beta);
   --color-idee: var(--idee);
+  --color-linie-stark: var(--linie-stark);
   --font-display: var(--schrift-display);
   --font-editorial: "Newsreader Variable", Georgia, "Times New Roman", serif;
   --font-mono: "JetBrains Mono Variable", ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -127,7 +205,7 @@
   html {
     background: var(--bg);
     color: var(--ink);
-    font-family: var(--font-display);
+    font-family: var(--schrift-text);
     font-size: 106.25%;
     line-height: 1.55;
     -webkit-text-size-adjust: 100%;
@@ -190,6 +268,10 @@
   }
   .link:hover {
     text-decoration-thickness: 2px;
+  }
+  /* Kleine Zeile in Versalien: Rubrik, Kastentitel, Kopfleiste (Entwurf „Zeitung“) */
+  .etikett {
+    @apply font-sans text-xs font-semibold tracking-[0.14em] uppercase;
   }
   .wrap {
     @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
@@ -282,4 +364,5 @@
 html:not([data-entwurf="tisch"]) .nur-tisch,
 html:not([data-entwurf="daily"]) .nur-daily,
 html:not([data-entwurf="magazin"]) .nur-magazin,
-html:not([data-entwurf="entdecken"]) .nur-entdecken { display: none; }
+html:not([data-entwurf="entdecken"]) .nur-entdecken,
+html:not([data-entwurf="zeitung"]) .nur-zeitung { display: none; }

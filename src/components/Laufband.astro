@@ -1,16 +1,23 @@
 ---
-// Laufband mit Bitcoin-Daten für Entwurf „Magazin“. Die Werte kommen aus dem Build (etwa stündlich),
-// deshalb steht der Stand dabei. Läuft per CSS, hält beim Zeigen an und steht bei reduzierter Bewegung still.
+// Laufband mit Bitcoin-Daten für die Entwürfe „Magazin“ und „Zeitung“. Die Werte kommen aus dem Build
+// (etwa stündlich), deshalb steht der Stand dabei. Läuft per CSS, hält beim Zeigen und über den Knopf an
+// und steht bei reduzierter Bewegung still.
 import { getLaufband } from '../lib/bitcoin';
 import { uhrzeit } from '../lib/format';
 import { LIVE_URL } from '../lib/site';
+
+interface Props {
+  // Klassen der Hülle (Linie, Grund, Schrift). Der Grund wird gebraucht, weil der Knopf ihn erbt.
+  class?: string;
+}
+const { class: klasse = 'border-b border-line bg-bg-2 text-sm' } = Astro.props;
 
 const { felder, stand } = await getLaufband();
 // Vier Kopien, damit die Schleife auch auf breiten Bildschirmen keine Lücke zeigt.
 const KOPIEN = 4;
 ---
 
-<aside class="laufband border-b border-line bg-bg-2 text-sm" aria-label="Bitcoin-Daten" data-laufband data-live={LIVE_URL || undefined}>
+<aside class={`laufband ${klasse}`} aria-label="Bitcoin-Daten" data-laufband data-live={LIVE_URL || undefined}>
   <div class="laufband-spur">
     {
       Array.from({ length: KOPIEN }, (_, i) => (
@@ -26,10 +33,15 @@ const KOPIEN = 4;
       ))
     }
   </div>
+  <button type="button" class="laufband-pause text-ink-2 hover:text-ink" data-pause aria-pressed="false" aria-label="Laufband anhalten">
+    <svg class="zeichen-pause" width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="M2 1h3v10H2zM7 1h3v10H7z" /></svg>
+    <svg class="zeichen-weiter" width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="M3 1l8 5-8 5z" /></svg>
+  </button>
 </aside>
 
 <style>
   .laufband {
+    position: relative;
     overflow: hidden;
   }
   .laufband-spur {
@@ -38,7 +50,8 @@ const KOPIEN = 4;
     animation: laufen 48s linear infinite;
   }
   .laufband:hover .laufband-spur,
-  .laufband:focus-within .laufband-spur {
+  .laufband:focus-within .laufband-spur,
+  .laufband[data-angehalten] .laufband-spur {
     animation-play-state: paused;
   }
   .laufband-liste {
@@ -46,6 +59,23 @@ const KOPIEN = 4;
     gap: 2.25rem;
     padding: 0.5rem 1.125rem;
     white-space: nowrap;
+  }
+  .laufband-pause {
+    position: absolute;
+    inset: 0 0 0 auto;
+    display: flex;
+    width: 2.25rem;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid var(--line);
+    background: inherit;
+  }
+  .laufband-pause .zeichen-weiter,
+  .laufband-pause[aria-pressed='true'] .zeichen-pause {
+    display: none;
+  }
+  .laufband-pause[aria-pressed='true'] .zeichen-weiter {
+    display: block;
   }
   @keyframes laufen {
     to {
@@ -61,21 +91,27 @@ const KOPIEN = 4;
       width: auto;
       animation: none;
     }
-    .laufband-liste[aria-hidden] {
+    .laufband-liste[aria-hidden],
+    .laufband-pause {
       display: none;
     }
   }
 </style>
 
 <script>
-  // Live-Werte vom Dienst: dieselbe Formatierung wie beim Build, nur die Zahlen wechseln.
+  // Knopf zum Anhalten. Mit Live-Dienst: dieselbe Formatierung wie beim Build, nur die Zahlen wechseln.
   import { liveStream } from '../lib/live';
   import { rohwerteAus, zuFelder } from '../lib/laufband-format';
   import { uhrzeit } from '../lib/format';
 
-  const band = document.querySelector<HTMLElement>('[data-laufband]');
-  const url = band?.dataset.live;
-  if (band && url) {
+  document.querySelectorAll<HTMLElement>('[data-laufband]').forEach((band) => {
+    const knopf = band.querySelector<HTMLButtonElement>('[data-pause]');
+    knopf?.addEventListener('click', () => {
+      knopf.setAttribute('aria-pressed', String(band.toggleAttribute('data-angehalten')));
+    });
+
+    const url = band.dataset.live;
+    if (!url) return;
     liveStream(url).addEventListener('ticker', (ev) => {
       let roh;
       try {
@@ -95,5 +131,5 @@ const KOPIEN = 4;
         li.textContent = `Live ${uhrzeit(roh.stand)} Uhr`;
       });
     });
-  }
+  });
 </script>

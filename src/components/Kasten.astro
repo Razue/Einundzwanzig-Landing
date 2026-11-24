@@ -1,0 +1,26 @@
+---
+// Kasten der rechten Spalte im Entwurf „Zeitung“: Titelzeile in Versalien, rechts optional ein Link,
+// darunter der Inhalt per Slot.
+interface Props {
+  id: string;
+  titel: string;
+  href?: string;
+  mehr?: string;
+  extern?: boolean;
+}
+const { id, titel, href, mehr, extern = false } = Astro.props;
+---
+
+<section class="border border-line bg-bg-2 p-4" aria-labelledby={`${id}-titel`}>
+  <div class="mb-3 flex items-baseline justify-between gap-3">
+    <h2 id={`${id}-titel`} class="etikett tracking-[0.16em]">{titel}</h2>
+    {
+      href && mehr && (
+        <a href={href} rel={extern ? 'noopener' : undefined} class="shrink-0 font-sans text-xs text-ink-2 hover:text-orange-ink">
+          {mehr}
+        </a>
+      )
+    }
+  </div>
+  <slot />
+</section>

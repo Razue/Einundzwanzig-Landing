@@ -52,7 +52,8 @@ const { id, titel, href, extern = false, mehr, mehrHref } = Astro.props;
       </div>
     </div>
   </div>
-  <div data-spur class="mt-5 -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 [scrollbar-width:none] sm:mx-0 sm:gap-5 sm:px-0">
+  {/* Innenabstand samt scroll-padding: Die erste Karte rastet unter der Überschrift ein, und der Fokusring der Randkarten wird nicht abgeschnitten. */}
+  <div data-spur class="mt-5 -mx-4 flex snap-x snap-mandatory scroll-px-4 gap-4 overflow-x-auto px-4 pb-2 [scrollbar-width:none] sm:-mx-2 sm:scroll-px-2 sm:gap-5 sm:px-2">
     <slot />
   </div>
 </section>

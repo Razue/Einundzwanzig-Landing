@@ -37,6 +37,15 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      # Bilder der täglichen Nachrichten zwischen den Builds behalten: ein Cache-Eintrag pro Tag,
+      # jeder Lauf startet mit dem jüngsten und lädt nur neue Bilder vom Blossom-Server
+      - id: datum
+        run: echo "tag=$(date -u +%F)" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache@v4
+        with:
+          path: src/data/daily-bilder
+          key: daily-bilder-${{ steps.datum.outputs.tag }}
+          restore-keys: daily-bilder-
       - run: npm run build
       - run: npm run check-links
       - if: github.event_name != 'pull_request'

@@ -31,7 +31,7 @@ const label = RUBRIK_LABEL[rubrik];
       {
         rubrik === 'daily' ? (
           <>
-            Die täglichen Nachrichten von <a class="link" href={EXTERN.dailyNews} rel="noopener">Einundzwanzig News</a>, neueste zuerst. Jede Ausgabe öffnet sich auf der Plattform.
+            Die täglichen Nachrichten von <a class="link" href={EXTERN.dailyNews} rel="noopener">Einundzwanzig News</a>, neueste zuerst. Jede Ausgabe lässt sich hier lesen, das Original mit Kommentaren und Zaps liegt auf der Plattform.
           </>
         ) : (
           <>Alle Beiträge dieser Rubrik, neueste zuerst.</>
@@ -40,7 +40,7 @@ const label = RUBRIK_LABEL[rubrik];
     </p>
     <RubrikFilter anzahl={anzahl} aktiv={rubrik} />
     <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-      {beitraege.map((b) => <ArtikelKarte beitrag={b} ueberschrift="h2" />)}
+      {beitraege.map((b, i) => <ArtikelKarte beitrag={b} ueberschrift="h2" prioritaet={i === 0} />)}
     </div>
   </section>
 </Base>

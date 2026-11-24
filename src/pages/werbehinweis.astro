@@ -22,7 +22,7 @@ const inPruefung = alle.filter((e) => e.data.programm === 'offen').length;
     <h2>Wie du Werbung erkennst</h2>
     <p>
       Jeder Link, der eine Provision bringt, trägt die Markierung „Werbung“ direkt an der Karte. Fehlt sie, gibt es kein
-      Partnerprogramm oder wir haben es noch nicht geprüft. Links auf Werbepartner tragen zusätzlich das Attribut
+      Partnerprogramm oder wir haben es noch nicht geprüft. Links auf Werbepartner tragen zusätzlich das Attribut{' '}
       <code>rel="sponsored"</code>, das Suchmaschinen diese Beziehung mitteilt.
     </p>
 
@@ -38,8 +38,8 @@ const inPruefung = alle.filter((e) => e.data.programm === 'offen').length;
     <h2>Podcast und Verein</h2>
     <p>
       Der Einundzwanzig Podcast hat eigene Sponsoren, etwa für Hardware Wallets und Sparpläne. Wo der Podcast einen eigenen
-      Rabatt anbietet, verlinken wir diesen, damit das Geld beim Podcast ankommt. Die Mitgliedschaft im
-      <a href={EXTERN.verein}>Verein</a> empfehlen wir ohne Provision.
+      Rabatt anbietet, verlinken wir diesen, damit das Geld beim Podcast ankommt. Die Mitgliedschaft im{' '}
+      <a href={EXTERN.verein} rel="noopener">Verein</a> empfehlen wir ohne Provision.
     </p>
 
     <h2>Aktueller Stand</h2>

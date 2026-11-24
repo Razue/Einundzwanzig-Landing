@@ -11,7 +11,6 @@ import type { ImageMetadata } from 'astro';
 import { SITE } from '../lib/site';
 import { ENTWUERFE, STANDARD_ENTWURF, type EntwurfId } from '../lib/entwuerfe';
 import syneUrl from '@fontsource-variable/syne/files/syne-latin-wght-normal.woff2?url';
-import monoUrl from '@fontsource-variable/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2?url';
 // Vorschaubild für Links auf Nostr, Telegram und Co., wenn eine Seite kein eigenes mitbringt.
 import ogStandard from '../content/artikel/bilder/hub-konzept.jpg';
 
@@ -24,11 +23,13 @@ interface Props {
   // Eigenes Vorschaubild (Artikel). Ohne Angabe die Hub-Skizze.
   bild?: ImageMetadata;
   bildAlt?: string;
+  // Kanonische Adresse, wenn das Original woanders liegt (Volltexte der täglichen Nachrichten).
+  canonical?: string;
 }
 
-const { title, description = SITE.description, entwurf, bild, bildAlt } = Astro.props;
+const { title, description = SITE.description, entwurf, bild, bildAlt, canonical: original } = Astro.props;
 const seitentitel = title ? `${title} | ${SITE.name}` : `${SITE.name}: ${SITE.claim}`;
-const canonical = new URL(Astro.url.pathname, SITE.url).href;
+const canonical = original ?? new URL(Astro.url.pathname, SITE.url).href;
 // Preview-Deployments bauen mit PUBLIC_NOINDEX=1, damit Suchmaschinen sie nicht aufnehmen.
 const noindex = import.meta.env.PUBLIC_NOINDEX === '1';
 const og = await getImage({ src: bild ?? ogStandard, width: 1200, height: 630, fit: 'cover', format: 'jpg' });
@@ -44,7 +45,7 @@ const syneNoetig = ENTWUERFE.some((e) => e.id !== 'entdecken');
 <html
   lang="de"
   data-entwurf={entwurf ?? STANDARD_ENTWURF}
-  data-entwurf-fest={entwurf ? '' : undefined}
+  data-entwurf-fest={entwurf && ENTWUERFE.length > 1 ? '' : undefined}
   data-entwurf-liste={entwurfListe}
 >
   <head>
@@ -58,7 +59,6 @@ const syneNoetig = ENTWUERFE.some((e) => e.id !== 'entdecken');
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     {syneNoetig && <link rel="preload" as="font" type="font/woff2" crossorigin href={syneUrl} />}
-    <link rel="preload" as="font" type="font/woff2" crossorigin href={monoUrl} />
     <meta name="theme-color" content="#0e0e0d" media="(prefers-color-scheme: dark)" />
     <meta name="theme-color" content="#f6f5f2" media="(prefers-color-scheme: light)" />
     <meta property="og:type" content="website" />

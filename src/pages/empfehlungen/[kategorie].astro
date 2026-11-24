@@ -21,7 +21,7 @@ const aktiveWerbelinks = alle.filter((e) => e.data.werbelink).length;
 
 <Base title={kategorie.titel} description={kategorie.intro}>
   <section class="wrap pt-12 pb-6">
-    <a class="text-sm text-ink-3 hover:text-ink" href="/empfehlungen">Alle Empfehlungen</a>
+    <a class="text-sm text-ink-3 hover:text-ink" href="/empfehlungen/">Alle Empfehlungen</a>
     <h1 class="h1 mt-4 font-display">{kategorie.titel}</h1>
     <p class="mt-5 max-w-[60ch] text-lg text-ink-2">{kategorie.intro}</p>
     <div class="mt-8">
@@ -29,6 +29,6 @@ const aktiveWerbelinks = alle.filter((e) => e.data.werbelink).length;
     </div>
   </section>
   <section class="wrap grid gap-5 pb-14 md:grid-cols-2 xl:grid-cols-3">
-    {eintraege.map((e) => <RefCard eintrag={e} />)}
+    {eintraege.map((e) => <RefCard eintrag={e} ueberschrift="h2" />)}
   </section>
 </Base>

@@ -1,5 +1,6 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { dailyLoader } from './lib/daily-loader';
 import { z } from 'astro/zod';
 
 export const STATUS = ['live', 'beta', 'idee'] as const;
@@ -86,4 +87,21 @@ const artikel = defineCollection({
       .refine((d) => !d.bild || !!d.bildAlt, { error: 'Ein Bild braucht bildAlt' }),
 });
 
-export const collections = { projects, empfehlungen, news, artikel };
+// Tägliche Nachrichten als Volltext, siehe src/lib/daily-loader.ts. Felder wie DailyNews plus slug und njump.
+const daily = defineCollection({
+  loader: dailyLoader(),
+  schema: z.object({
+    id: z.string(),
+    d: z.string(),
+    slug: z.string(),
+    titel: z.string(),
+    zusammenfassung: z.string(),
+    url: z.string().url(),
+    datum: z.date(),
+    autor: z.string(),
+    bildUrl: z.string().url().optional(),
+    njump: z.string().url(),
+  }),
+});
+
+export const collections = { projects, empfehlungen, news, artikel, daily };

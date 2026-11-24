@@ -9,10 +9,12 @@ interface Props {
   quer?: boolean;
   // h2, wenn die Karten direkt unter der Seitenüberschrift stehen (Übersicht), sonst h3.
   ueberschrift?: 'h2' | 'h3';
+  // Für die erste Karte einer Übersicht: Ihr Bild ist dort das größte sichtbare Element und lädt sofort.
+  prioritaet?: boolean;
   class?: string;
 }
-const { beitrag, quer = false, ueberschrift: Ueberschrift = 'h3', class: klasse = '' } = Astro.props;
-const { titel, teaser, datum, rubrik, beispiel, href, extern, autor } = beitrag;
+const { beitrag, quer = false, ueberschrift: Ueberschrift = 'h3', prioritaet = false, class: klasse = '' } = Astro.props;
+const { titel, teaser, datum, rubrik, beispiel, href, extern, fremd, autor } = beitrag;
 const rel = extern ? 'noopener' : undefined;
 ---
 
@@ -22,14 +24,14 @@ const rel = extern ? 'noopener' : undefined;
       beitrag={beitrag}
       widths={quer ? [640, 960] : undefined}
       sizes={quer ? '(min-width: 1024px) 40vw, 100vw' : undefined}
-      prioritaet={quer}
+      prioritaet={quer || prioritaet}
     />
   </a>
   <div class="flex flex-col gap-3">
     <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm">
       <a href={`/artikel/rubrik/${rubrik}/`} class="font-semibold text-orange-ink no-underline hover:underline">{RUBRIK_LABEL[rubrik]}</a>
       <time datetime={isoDatum(datum)} class="font-mono text-ink-3">{datumKurz(datum)}</time>
-      {extern && <span class="text-ink-3">{autor}</span>}
+      {fremd && <span class="text-ink-3">{autor}</span>}
       {beispiel && <span class="rounded-full border border-beta/70 px-2 py-0.5 text-xs text-beta">Beispiel</span>}
     </div>
     <Ueberschrift class={`font-display leading-snug font-bold ${quer ? 'text-2xl' : 'text-xl'}`}>

@@ -16,7 +16,7 @@ Der Podcast ist der Ursprung der Community. Seit über 300 Folgen besprechen Sir
 ## Wo anfangen
 
 - **Der Weg**, wenn du neu bist. Keine Technik, nur Geschichten von Menschen.
-- **News**, wenn du wissen willst, was gerade passiert. Die aktuelle Folge steht immer oben auf dieser Seite.
+- **News**, wenn du wissen willst, was gerade passiert. Die neuesten Folgen stehen auf der Startseite unter [„Neu zum Hören“](/#hoeren-titel).
 - **Lesestunde**, wenn du lieber Hintergrund als Schlagzeilen willst.
 
 Der Podcast unterstützt Podcasting 2.0: Mit einer passenden App kannst du beim Hören Sats direkt an die Sprecher streamen.

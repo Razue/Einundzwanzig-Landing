@@ -8,12 +8,14 @@ interface Props {
   titel: string;
   text: string;
   schritte: Schritt[];
+  // h2, wenn die Karten direkt unter der Seitenüberschrift stehen, sonst h3.
+  ueberschrift?: 'h2' | 'h3';
 }
-const { titel, text, schritte } = Astro.props;
+const { titel, text, schritte, ueberschrift: Ueberschrift = 'h3' } = Astro.props;
 ---
 
 <article class="flex flex-col rounded-2xl border border-line p-6">
-  <h3 class="font-display text-2xl font-bold">{titel}</h3>
+  <Ueberschrift class="font-display text-2xl font-bold">{titel}</Ueberschrift>
   <p class="mt-2 text-ink-2">{text}</p>
   <ol class="mt-5 grid gap-3 border-t border-line pt-5">
     {

@@ -8,31 +8,31 @@ const npubKurz = `${SITE.npub.slice(0, 12)}…${SITE.npub.slice(-6)}`;
     <div>
       <h2 class="font-display text-base font-bold">Einundzwanzig</h2>
       <ul class="mt-3 grid gap-2 text-sm text-ink-2">
-        <li><a class="hover:text-ink" href={EXTERN.podcast}>Podcast</a></li>
-        <li><a class="hover:text-ink" href={EXTERN.portal}>Meetup-Portal</a></li>
-        <li><a class="hover:text-ink" href={EXTERN.verein}>Verein</a></li>
-        <li><a class="hover:text-ink" href={EXTERN.shoutout}>Shoutout</a></li>
-        <li><a class="hover:text-ink" href={EXTERN.shop}>Shop</a></li>
+        <li><a class="hover:text-ink" rel="noopener" href={EXTERN.podcast}>Podcast</a></li>
+        <li><a class="hover:text-ink" rel="noopener" href={EXTERN.portal}>Meetup-Portal</a></li>
+        <li><a class="hover:text-ink" rel="noopener" href={EXTERN.verein}>Verein</a></li>
+        <li><a class="hover:text-ink" rel="noopener" href={EXTERN.shoutout}>Shoutout</a></li>
+        <li><a class="hover:text-ink" rel="noopener" href={EXTERN.shop}>Shop</a></li>
       </ul>
     </div>
     <div>
       <h2 class="font-display text-base font-bold">Folgen</h2>
       <ul class="mt-3 grid gap-2 text-sm text-ink-2">
         <li>
-          <a class="hover:text-ink" href={EXTERN.nostrProfil}>Nostr <span class="font-mono text-xs text-ink-3">{npubKurz}</span></a>
+          <a class="hover:text-ink" rel="noopener" href={EXTERN.nostrProfil}>Nostr <span class="font-mono text-xs text-ink-3">{npubKurz}</span></a>
         </li>
-        <li><a class="hover:text-ink" href={EXTERN.telegramNews}>Telegram-Newsfeed</a></li>
-        <li><a class="hover:text-ink" href={EXTERN.youtube}>YouTube</a></li>
-        <li><a class="hover:text-ink" href={EXTERN.podcastFeed}>Podcast-RSS</a></li>
+        <li><a class="hover:text-ink" rel="noopener" href={EXTERN.telegramNews}>Telegram-Newsfeed</a></li>
+        <li><a class="hover:text-ink" rel="noopener" href={EXTERN.youtube}>YouTube</a></li>
+        <li><a class="hover:text-ink" rel="noopener" href={EXTERN.podcastFeed}>Podcast-RSS</a></li>
       </ul>
     </div>
     <div>
       <h2 class="font-display text-base font-bold">Diese Seite</h2>
       <ul class="mt-3 grid gap-2 text-sm text-ink-2">
         <li><a class="hover:text-ink" href="/rss.xml">RSS-Feed der Artikel</a></li>
-        <li><a class="hover:text-ink" href="/werbehinweis">Werbehinweis</a></li>
-        <li><a class="hover:text-ink" href="/impressum">Impressum</a></li>
-        <li><a class="hover:text-ink" href="/datenschutz">Datenschutz</a></li>
+        <li><a class="hover:text-ink" href="/werbehinweis/">Werbehinweis</a></li>
+        <li><a class="hover:text-ink" href="/impressum/">Impressum</a></li>
+        <li><a class="hover:text-ink" href="/datenschutz/">Datenschutz</a></li>
       </ul>
       <p class="mt-6 text-sm text-ink-3">
         Von der Community, für die Community. Nichts hier ist Anlageberatung.

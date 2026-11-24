@@ -1,0 +1,908 @@
+[
+ {
+  "id": "db3ed9b751901af9d4c446d5225b0bdb6837d247b465235e504fbea8f1e28e6a",
+  "pubkey": "f240be2b684f85cc81566f2081386af81d7427ea86250c8bde6b7a8500c761ba",
+  "created_at": 1794391643,
+  "kind": 30023,
+  "tags": [
+   [
+    "d",
+    "draft-2dfbb4a7-765e-4f1b-b891-7d8858d687a7"
+   ],
+   [
+    "title",
+    "₿ Bitcoin Daily"
+   ],
+   [
+    "summary",
+    "11. Nov. Trump, Kasachstan, LNbits, LNbits, Square"
+   ],
+   [
+    "image",
+    "https://blossom.einundzwanzig.space/f6eff2e1877b7f4ff5cf61b8ddc2196f0bfd95365f305ae70534101dff33f8a7.jpg"
+   ],
+   [
+    "published_at",
+    "1794391643"
+   ],
+   [
+    "L",
+    "ISO-639-1"
+   ],
+   [
+    "l",
+    "de",
+    "ISO-639-1"
+   ],
+   [
+    "client",
+    "EINUNDZWANZIG HUB"
+   ]
+  ],
+  "content": "Einundzwanzig.tech\\\n\\\nHeiße Inflation drückt Bitcoin auf ein 11-Wochen-Tief: Zinserhöhung im Dezember gilt als sicher – Trump Media, Kasachstan und Großbanken setzen trotzdem auf digitale Assets\n============================================================================================================================================================================\n\n**Die US-Inflation für Oktober fiel höher aus als erwartet – und Bitcoin reagierte prompt: Der Kurs rutschte zeitweise unter 73.400 Dollar und damit auf den tiefsten Stand seit dem 21. August. Am Mittwochmorgen notiert die Kryptowährung bei rund 73.700 Dollar. Die Märkte preisen nun eine Zinserhöhung der Fed im Dezember praktisch fest ein. Gleichzeitig zeigen neue Zahlen, dass börsennotierte Firmen 2026 bereits mehr als 108.000 BTC verkauft haben – während Trump Media, Kasachstans Zentralbank und ein Bankenkonsortium in die Gegenrichtung gehen.**\n\n## Der Kurs: Neues Tief seit August\n\nDamit setzt sich ein Muster fort, das Händler seit Tagen frustriert: Am Montag feierten die US-Aktien ihren besten Tag seit April, Bitcoin blieb flach. Am Dienstag fiel der Ölpreis auf den tiefsten Stand seit zehn Wochen – auch das half nicht. WTI-Rohöl lag bei rund 85 Dollar je Barrel, nachdem es Anfang des Monats noch über 100 Dollar gekostet hatte.&#x20;\n\n## Warum: Die Inflation\n\nEine Zinserhöhung im Dezember sei „so ziemlich besiegelt“. Laut CME FedWatch Tool ist die Wahrscheinlichkeit, dass die Fed die Zinsen am 9. Dezember unverändert lässt, auf null Prozent gefallen; zu mehr als elf Prozent wird sogar ein großer Schritt um 50 Basispunkte eingepreist. Fed-Gouverneur Christopher Waller hatte schon vor den Daten erklärt, bei weiter steigender Inflation sollte auch eine Anhebung um 50 Basispunkte in Betracht gezogen werden. Zur Einordnung: Die Fed hatte im September erstmals seit mehr als drei Jahren die Zinsen erhöht und im Oktober pausiert.\n\n**Warum das für Bitcoin zählt:** Höhere Zinsen machen sichere Anlagen wie Staatsanleihen attraktiver und verteuern Kredit. Das trifft riskantere Anlagen, zu denen Bitcoin am Markt weiterhin gezählt wird. Trader Peter Brandt rechnet mit sieben Prozent Rendite auf 30-jährige US-Staatsanleihen – ein Umfeld, in dem es Bitcoin kurzfristig schwer hat.\n\n## Wer verkauft: 108.247 BTC aus Firmenkassen\n\n14 börsennotierte Unternehmen haben 2026 bislang **108.247 BTC** im Wert von 8,08 Milliarden Dollar verkauft. Mehr als die Hälfte entfällt auf zwei Miner. MARA gab seit Jahresbeginn 40.581 BTC ab, allein 13.597 seit Ende September; Riot Platforms verkaufte 20.264 BTC, um den Ausbau von KI-Rechenzentren zu finanzieren. Auch Firmen wie der französische Chiphersteller Sequans, der erst 2025 eine Bitcoin-Reserve aufgebaut hatte, haben sich wieder vollständig von BTC getrennt.\n\nDazu kommen die ETFs: Am 9. November flossen netto 201 Millionen Dollar aus den US-Spot-ETFs ab, allein 213 Millionen aus BlackRocks IBIT. In der vergangenen Woche summierten sich die Abflüsse auf mehr als 1,5 Milliarden Dollar.\n\n## Wer kauft: Trump Media, Kasachstan, Wale\n\nAuf der anderen Seite stehen neue Käufer. Trump Media meldete laut [Decrypt](https://decrypt.co/382967/trump-media-posts-410-million-profit-bitcoin-gains) für das dritte Quartal einen Gewinn von 409,7 Millionen Dollar – bei nur 2,97 Millionen Dollar Umsatz. Den Großteil lieferten Buchgewinne auf Bitcoin und Wertpapiere.\n\nDie Zentralbank Kasachstans hat laut [Blocktrainer](https://www.blocktrainer.de/blog/zentralbank-kasachstans-gibt-krypto-und-bitcoin-investment-fuer-190-millionen-us-dollar-bekannt) 100 Millionen Dollar in Krypto-Fonds und weitere 90 Millionen Dollar in Kryptowährungen und Bitcoin-ETFs investiert. Der geplante staatliche Reservefonds soll einmal 500 Millionen bis eine Milliarde Dollar umfassen.\n\nParallel bauen die Großbanken ihre eigene Digitalgeld-Infrastruktur: Es 21 Finanzinstitute, darunter Goldman Sachs, Citigroup, Santander, Deutsche Bank und BBVA, rund 270 Millionen Dollar für das „Project Faro“ zugesagt. Ein Dollar-Stablecoin soll im ersten Halbjahr 2027 starten, ein Euro-Coin danach folgen.\n\n## Was ansteht\n\nKurzfristig dominiert die Geldpolitik.Am Freitag, 13. November, folgen die US-Erzeugerpreise, am 18. November das Protokoll der letzten Fed-Sitzung und am 25. November der PCE-Index, das bevorzugte Inflationsmaß der Notenbank. Die nächste Zinsentscheidung fällt am 9. Dezember.\n\n# Technik\n\n## Sicherheitswoche bei Bitcoin: LNbits stopft Lücke nach Diebstählen, Bitcoin Core legt drei alte Schwachstellen offen – und Square schaltet Lightning für vier Millionen Händler frei\n\n**Die Technik-Nachrichten des Tages drehen sich fast alle um Sicherheit. Die Lightning-Software LNbits hat nach einer Angriffswelle mit gestohlenen Guthaben ein Notfall-Update veröffentlicht. Bitcoin Core hat Details zu drei bereits behobenen Schwachstellen veröffentlicht, ein Bitaxe-Entwickler warnt vor manipulierter Mining-Software, und eine iOS-Lücke betrifft potenziell Wallet-Apps. Die gute Nachricht kommt von Square: Bitcoin-Zahlungen per Lightning sind jetzt für rund vier Millionen US-Händler aktiv.**\n\n## LNbits: Notfall-Update nach Angriffen\n\nLNbits ist eine weit verbreitete Open-Source-Software, mit der man Lightning-Wallets und Bezahlanwendungen betreibt – von Händlerkassen über Trinkgeld-Bots bis zu Paywalls. Nach Angaben des Entwicklers Ben Arc betreiben rund 200.000 Menschen die Software selbst. Am Sonntag, 8. November, forderte das Projekt zunächst dazu auf, die Paywall-Erweiterung abzuschalten, und kurz darauf, alle LNbits-Server sofort herunterzufahren; die eigenen gehosteten Instanzen wurden offline genommen.\n\nAm Dienstag folgte **Version 1.7.0** als dringendes Sicherheitsupdate.Kevin Ravensberg, Betreiber des Telegram-Trinkgelddienstes BitTipBot, berichtete, Angreifer hätten auf seiner Instanz neue Konten angelegt und 2.285.545 Satoshi abgezogen.\n\n> „It’s been a very challenging few days, working relentlessly to get the v1.7 release out after our users and we suffered losses.“ Ben Arc\n\nEin ausführlicher technischer Bericht zum Exploit soll folgen.\n\n## Bitcoin Core: Drei Schwachstellen offengelegt\n\nDas Bitcoin-Core-Projekt hat am 10. November Details zu drei Schwachstellen veröffentlicht, die alle längst behoben sind. Die Offenlegung folgt der Regel, Details erst zu nennen, wenn die letzte betroffene Version das Ende ihres Supports erreicht hat.\n\n**Praktisch heißt das:** Wer Bitcoin Core 30.0 oder neuer beziehungsweise 29.2 oder neuer nutzt, ist geschützt. Wer noch ältere Versionen auf einem Node-Paket laufen hat, sollte aktualisieren.\n\n## Mining und Smartphones: Zwei Warnungen\n\nLaut [@btcinsider\\_\\_](https://x.com/btcinsider__/status/2120215049558278286) berichtet skot9000, Gründer des **Open-Source-Miners Bitaxe**, von einer möglicherweise kompromittierten Mining-Management-Software, bei der Pool-Einstellungen ohne Wissen der Nutzer geändert wurden. Wer mit Hive On arbeitet, sollte seine Pool-Daten prüfen – sonst schürft man im schlimmsten Fall für jemand anderen.\n\n**iOS-Lücke**: Manipulierte Apps können damit unter Umständen auf Daten anderer Apps zugreifen; betroffen sind laut Dokumentation Versionen von iOS 26 und iOS 27. Gefährlich wird das vor allem für Software-Wallets, die Schlüssel unzureichend geschützt speichern. Hardware-Wallets und Seeds auf Papier bleiben davon unberührt.\n\n## Square: Lightning für vier Millionen Händler\n\nLaut Jack Dorseys hat Square den Rollout von Bitcoin-Zahlungen am 10. November abgeschlossen: **Rund vier Millionen berechtigte US-Händler** **haben die Lightning-Option automatisch erhalten**, ohne Antrag. Kunden scannen einen QR-Code, Händler bekommen standardmäßig Dollar gutgeschrieben oder behalten Bitcoin. Bis Ende 2026 fallen keine Gebühren an, danach ein Prozent. **Ausgenommen sind Händler in New York.** Ob das den Alltag verändert, hängt nun davon ab, ob Kunden und Kassenpersonal es tatsächlich nutzen.\n",
+  "sig": "e132620da799a5c78df45e4f23726e78d33dbb09fd34f20a696f9d59502a999ebb6e18c8056db095b4d468d3e290fea491999b34548c90bd4803d8b01326a600"
+ },
+ {
+  "id": "d1783fd23445a4a68218322fbbd2a0850bb54817dc290d4ec85c317e7c225e38",
+  "pubkey": "f240be2b684f85cc81566f2081386af81d7427ea86250c8bde6b7a8500c761ba",
+  "created_at": 1794319159,
+  "kind": 30023,
+  "tags": [
+   [
+    "d",
+    "draft-c3cd5655-7db3-4759-bdd9-ca3f111b85c2"
+   ],
+   [
+    "title",
+    "₿ Bitcoin Daily"
+   ],
+   [
+    "summary",
+    "10. Nov., Strategy, Mara, BlackRock ETFs, Eclair, USDT, RGB"
+   ],
+   [
+    "image",
+    "https://blossom.einundzwanzig.space/6a19d754d88f552723a2489026761acba1451d892000629e163b88d7fda744ef.jpg"
+   ],
+   [
+    "published_at",
+    "1794319159"
+   ],
+   [
+    "L",
+    "ISO-639-1"
+   ],
+   [
+    "l",
+    "de",
+    "ISO-639-1"
+   ],
+   [
+    "client",
+    "EINUNDZWANZIG HUB"
+   ]
+  ],
+  "content": "# Bitcoin tritt bei 74.700 Dollar auf der Stelle: Aktien feiern, Strategy kauft mit MSTR-Aktien, MARA verkauft – und heute kommt die US-Inflation\n\n**Während die US-Börsen am Montag ihren besten Tag seit April feierten, bewegte sich Bitcoin kaum. Am Dienstagmorgen notiert die Kryptowährung nahezu unverändert. Strategy hat erneut gekauft, der Miner MARA hat dagegen mehr als 13.000 BTC verkauft, und BlackRock meldet Rekord-Umschichtungen aus der Selbstverwahrung in den ETF. Um 14:30 Uhr MEZ folgen die US-Inflationsdaten für Oktober.**\n\n## Der Kurs: Seitwärts knapp unter 75.000 Dollar\n\nAuffällig ist der Kontrast zu den Aktienmärkten. Der S\\&P 500 legte am Montag um 2,35 Prozent auf 7.549,94 Punkte zu, der Nasdaq um 2,74 Prozent und der Dow Jones um mehr als 1.100 Punkte – rechnerisch rund zwei Billionen Dollar zusätzlicher Börsenwert an einem Tag. Fallende Ölpreise dämpften die Inflationssorgen. Bitcoin dagegen blieb flach. Händler sprechen von der geringsten Korrelation zum Nasdaq seit Langem; einer kommentierte drastisch: **„What is this DISGUSTING Bitcoin price action?“**\n\n## Was heute ansteht: Die Oktober-Inflation\n\nUm 8:30 Uhr Ortszeit in Washington, also **14:30 Uhr MEZ**, veröffentlicht das US-Arbeitsministerium den Verbraucherpreisindex (CPI) für Oktober. Ökonomen erwaten einen Anstieg von 0,3 Prozent zum Vormonat, bei der Kerninflation ohne Energie und Lebensmittel von 0,2 Prozent. Im September waren es 0,6 und 0,3 Prozent. Einen Jahresvergleich gibt es diesmal nicht: Wegen des Regierungs-Shutdowns im Oktober 2025 fehlt der Vergleichswert.\n\nWarum das für Bitcoin zählt: Niedrigere Inflation macht Zinssenkungen wahrscheinlicher – oder zumindest weitere Zinserhöhungen unwahrscheinlicher. Billigeres Geld hilft riskanteren Anlagen. Die Analysten von BRN dämpfen aber die Erwartungen: **„Bitcoin needs real buying, not a lucky break. Until ETF flows turn positive and the Fed turns dovish, the path of least resistance remains lower.“** Auch Bitget Wallet schreibt, eine dauerhafte Erholung hänge von Liquidität und Spot-Nachfrage ab, **„not macro relief alone“.**\n\n## Strategy kauft weiter – diesmal mit Stammaktien\n\nStrategy hat laut 8-K-Meldung vom Montag zwischen dem 2. und 8. November **1.036 BTC für 81,9 Millionen Dollar** gekauft, im Schnitt zu 79.012 Dollar je Coin.\n\nDamit hält das Unternehmen erstmals mehr als 850.000 BTC, genau 850.364. Laut [Blocktrainer](https://www.blocktrainer.de/blog/strategy-hat-keine-neuen-strc-aktien-ausgegeben-um-bitcoin-zu-kaufen) stammt das Geld nicht aus der Vorzugsaktie STRC, obwohl diese kurz wieder bei 100 Dollar handelte, sondern aus dem Verkauf von 2.051.348 MSTR-Stammaktien für insgesamt 283,8 Millionen Dollar. Die neu gekauften Coins liegen laut Blocktrainer bereits mehr als fünf Prozent im Minus. Parallel kaufte Strategy Vorzugsaktien für 188 Millionen Dollar zurück und hält 4,9 Milliarden Dollar Bargeld.\n\nDer durchschnittliche Einkaufspreis über alle Bestände liegt bei rund 75.456 Dollar – also knapp über dem aktuellen Kurs. Am **Mittwoch, 11. November**, entscheidet zudem der Indexanbieter MSCI über einen möglichen Ausschluss von Strategy aus seinen Indizes. Auch Strive stockte auf: 29 BTC zu durchschnittlich 75.721 Dollar, insgesamt jetzt 43.153 BTC. Laut X-News fehlen Strive nur noch 847 BTC, um Metaplanet als zweitgrößten börsennotierten Bitcoin-Halter abzulösen.\n\n## MARA verkauft 13.597 BTC\n\nGanz anders der Miner MARA. Laut [The Block](https://www.theblock.co/news/business/2026-11-09-mara-q3-earnings-net-profit-bitcoin-sale-ai-pivot-436950) verkaufte das Unternehmen nach Quartalsende 13.597 Bitcoin für rund 1,1 Milliarden Dollar und tilgte mit 750 Millionen Dollar davon seine Bitcoin-besicherten Kredite vollständig. Im dritten Quartal meldete MARA zwar 634,4 Millionen Dollar Gewinn – fast ausschließlich durch Buchgewinne auf Bitcoin –, **der Umsatz fiel aber um 35 Prozent auf 164,2 Millionen Dollar.** **Die Einnahmen aus Blockbelohnungen sanken um 37 Prozent.** CEO Fred Thiel schreibt: „When we think about MARA’s future, the opportunity is bigger than monetizing the megawatt.“ **MARA baut sich zum KI-Rechenzentrumsbetreiber um.**\n\n## BlackRock: Milliarden aus der Selbstverwahrung in den ETF\n\nBlackRocks Digital-Asset-Chef Robbie Mitchnick sagte im Interview mit Barron’s, Bitcoin-Besitzer hätten bereits rund **3,6 Milliarden Dollar in Anteile des IBIT-ETFs umgetauscht** **– ein wichtiger Grund seien Sicherheitsbedenken.** Möglich ist das per „In-Kind“-Tausch seit einer SEC-Genehmigung vom Juli 2025: Coins rein, ETF-Anteile raus, ohne Verkauf. Die Mindestgröße sank von 25 bis 30 Millionen auf etwa ein bis zwei Millionen Dollar. Wichtig: **Das ist kein frisches Kapital, die Coins wechseln nur den Verwahrer.** Bei den Spot-ETFs insgesamt standen laut X-News bis zum 6. November 1,28 Milliarden Dollar Nettoabflüsse in der Bilanz.\n\n**Praktisch heißt das:** Ein ETF nimmt die Schlüsselverwaltung ab, aber auch die Kontrolle.\n\n**TMTG, die Aktiengesellschaft von Trump**, geht anscheinend einen anderen Weg, sie kaufen 4.359 Bitcoin hinzu und finanzieren dies mit **IBIT-ETF** verkäufen.\n\n## Fazit\n\nBitcoin wartet. Die Aktienrallye hat es nicht mitgezogen, die Unternehmen kaufen und verkaufen gleichzeitig, und der Nachmittag bringt mit der Inflation den nächsten Test. Wer langfristig denkt, braucht heute keinen Plan – wer kurzfristig handelt, sollte die 73.000-Dollar-Marke im Blick haben.\n\n# Technik\n\n## Eclair schließt Speicher-Lücke, USDT kommt per RGB: Was die Bitcoin-Technik am Dienstag bewegt\n\n**ACINQ hat eine Lücke in der Lightning-Software Eclair offengelegt, die jeden Knoten mit Version 0.14.0 lahmlegen konnte. Dazu: ein Fast-Rekordblock mit nur 180 Dollar Gebühren, eine Debatte um Taproot-Adressen und USDT auf Bitcoin ab dem 28. November.**\n\n## Eclair 0.14.0: Jeder Fremde konnte den Speicher füllen\n\nAuf [Delving Bitcoin](https://delvingbitcoin.org/t/disclosure-memory-exhaustion-dos-in-eclair-0-14-0/3057) legte der Entwickler rorp am späten Sonntagabend eine Schwachstelle in Eclair offen, der Lightning-Software von ACINQ. Betroffen ist Version 0.14.0, behoben ist sie in 0.14.1. Die Beschreibung: „Any peer that can connect to an Eclair 0.14.0 node can make it buffer an unlimited number of commitment\\_signed messages until it runs out of memory. The attacker doesn’t need a channel with the node.“\n\nEinfach erklärt: Lightning-Knoten tauschen bei jeder Zahlung signierte Nachrichten aus, sogenannte Commitments. Eine Nachricht namens `start_batch` kündigt an, dass mehrere davon gebündelt folgen. In 0.14.0 konnte ein Angreifer diese Ankündigung missbrauchen und den Knoten immer weiter Nachrichten zwischenspeichern lassen, bis der Arbeitsspeicher voll war und das Programm abstürzte. Geld wird dadurch nicht direkt gestohlen, aber ein abgestürzter Knoten kann keine Zahlungen weiterleiten und nicht auf Betrugsversuche reagieren. Der Fix lehnt `start_batch` mit einer Größe von höchstens eins ab.\n\n**Praktisch heißt das:** Wer Eclair betreibt, aktualisiert auf 0.14.1 oder neuer. Nutzer der Phoenix-Wallet oder anderer Apps müssen nichts tun.\n\n## Fast-Rekordblock mit Mini-Gebühren\n\nDer am Samstag gefundene **Block 974.961 mit 11.255 Transaktionen** beschäftigt weiter. Der Block habe zwar fast den Rekord von 2015 erreicht, aber insgesamt nur rund **180 Dollar Gebühren** gezahlt. Das unterstreicht: Viele Transaktionen bedeuten nicht automatisch viel Nachfrage nach Blockplatz. Für euch heißt das im Moment – ein guter Zeitpunkt, um kleine Beträge zusammenzulegen (Konsolidierung).\n\n## Taproot oder SegWit als Standard?\n\nAuf Delving Bitcoin läuft seit Sonntag eine Diskussion mit dem Titel [„Should wallets default to Taproot or SegWit receive addresses while some services still reject bc1p?“](https://delvingbitcoin.org/t/should-wallets-default-to-taproot-or-segwit-receive-addresses-while-some-services-still-reject-bc1p/3056) Hintergrund: Taproot-Adressen beginnen mit „bc1p“, ältere SegWit-Adressen mit „bc1q“. Manche Dienste nehmen bc1p-Adressen noch immer nicht an. Wallets stehen also vor der Wahl zwischen neuerem Standard und maximaler Kompatibilität.\n\n## USDT auf Bitcoin ab 28. November\n\nUtexo öffnet am 28. November den öffentlichen Zugang zu USDT auf Bitcoin. Grundlage ist das RGB-Protokoll mit sogenannter Client-seitiger Validierung: Die Details einer Übertragung kennen nur Sender und Empfänger, auf der Blockchain erscheint nur eine kompakte Prüfsumme. Ein Software-Baukasten (SDK) für Web, React Native und Node.js soll Wallets und Lightning-Zahlungen unterstützen; Wie gut das in der Praxis funktioniert, muss sich ab Ende November zeigen.\n",
+  "sig": "4ce8a58c770dc25c38d295669f692b22a15409925e713022be7f8dc4f9bad51f066ad5a76a279f58cc7aeadc212aef79dfb949390e9f6b5a3c9219e426ee0b55"
+ },
+ {
+  "id": "32a805a990da170033792bf2e2fca414ee0fc37fc7cee4e0c2174376b60c0fb0",
+  "pubkey": "f240be2b684f85cc81566f2081386af81d7427ea86250c8bde6b7a8500c761ba",
+  "created_at": 1794303770,
+  "kind": 30023,
+  "tags": [
+   [
+    "d",
+    "draft-4316eb2f-38e9-4061-9286-89c6a0c32a0b"
+   ],
+   [
+    "title",
+    "Orange Alarm im Petitionsausschuss"
+   ],
+   [
+    "summary",
+    "DACH Community · 10. November 2026"
+   ],
+   [
+    "image",
+    "https://blossom.einundzwanzig.space/56da2d7058194a45fd85665569b71df5bd2adaa5b7b08727a9c4f8d47300b627.webp"
+   ],
+   [
+    "published_at",
+    "1794303770"
+   ],
+   [
+    "L",
+    "ISO-639-1"
+   ],
+   [
+    "l",
+    "de",
+    "ISO-639-1"
+   ],
+   [
+    "client",
+    "EINUNDZWANZIG HUB"
+   ]
+  ],
+  "content": "**Die DACH-Bitcoin-Szene der letzten zwei Wochen war steuerpolitisch unterwegs, philosophisch etwas überfordert und charttechnisch ein bisschen untröstlich. Der Kurs endete bei knapp unter 75.000 Dollar – das größte Drama war trotzdem nicht der Chart, sondern die Haltefrist.**\n\n## **Die heilige Kuh heißt Haltefrist**\n\nIm Bundesfinanzministerium liegt ein Entwurf, der die einjährige steuerfreie Haltefrist für Krypto abschaffen will. [Blocktrainer](https://x.com/blocktrainer) hat am Montag noch einmal [nachgelegt](https://x.com/blocktrainer/status/2119732703914299497): Bei den Haushaltsgesprächen diese Woche könnte die Sache tatsächlich fallen.\n\nAn vorderster Front steht [Nicole Nowak](https://x.com/nicolen8wak). Sie hat im Petitionsausschuss für die Initiative **#ProHaltefrist** gesprochen – und dann gesehen, wie der grüne Bochumer Abgeordnete [Max Lucks](https://x.com/max_lucks) (Kreißsaal/Hörsaal/Plenarsaal) weiter über „Milliardenbeträge“ redet, die laut ihr der Ökonom **Co-Pierre Georg** „nachweislich fehlerhaft vorgerechnet“ hat. In einem [Video-Post](https://x.com/nicolen8wak/status/2117701200691044369) mit Hunderten Likes schrieb sie: **„Jetzt hetzt er auch noch die Gen Z gegen vermeintlich ‚reiche Kryptospekulanten‘** auf.“ Und, falls irgendwer den Subtext verpasst hat: „Zum Schreien @max\\_lucks. Die Haltefrist muss bleiben!“\n\n![](https://blossom.einundzwanzig.space/35f14fd3eb85388c62eabca9466ca763b5dd5185430b9d7b33e5bfe9f6f6d968.png)\n\nVideo aus [Nicole Nowaks Post](https://x.com/nicolen8wak/status/2117701200691044369) über Max Lucks.\n\n[Roman Reher](https://x.com/RomanReher) hat das [sofort weitergereicht](https://x.com/RomanReher/status/2117721773651136947): Deutschland habe Rekordsteuereinnahmen und Rekordausgaben, bei einem Milliardendefizit – und aktuell sähe es so aus, **„dass die Einnahmen nicht mal reichen, um den zusätzlichen Verwaltungsaufwand der Behörden zu decken.“**\n\n[Alex von Frankenberg](https://x.com/Justdoitalex) wurde in den Antworten noch kürzer: **„Das Einzige, was sie können, ist die Unwahrheit sagen.“** In derselben Kommentarspalte wurde es persönlich, jemand hielt das Video für KI (Nicole, [trocken](https://x.com/nicolen8wak/status/2117948421990687113): „Der ist echt“), und [einer](https://x.com/Vorstand1/status/2117988324489265355) erinnerte daran, dass Gold 2025 um 64 Prozent zugelegt habe, während Bitcoin 17 Prozent verloren hat. Sollen sie doch lieber Gold besteuern?\n\nDrei Tage später [legte Nicole nach](https://x.com/nicolen8wak/status/2118712754328551525): Die SPD habe von Bitpanda „exakt dieselben 500.000 Euro wie die CDU“ kassiert – und wo genau sei die Garantie, dass Arbeitnehmer von einer neuen Kryptosteuer auch nur einen Cent sehen? „Riecht nach billiger Stimmungsmache.“ [Pius Sprenger](https://x.com/PiusSprenger) hat das [zitiert](https://x.com/PiusSprenger/status/2119056892940915112) und den Kern der Szene-Theologie in sieben Wörter gepresst: **„Nie vergessen. Der Typ lebt von eurem Geld.“**\n\nDen Preis für die beste Steuersatire der Woche holt sich trotzdem [derHelper](https://x.com/derHelper). In einem [Dialog mit dem Finanzamt](https://x.com/derHelper/status/2119126744418644017) lässt er jemanden fragen: **„Ich habe mit Bitcoin einen Kaffee bezahlt. Muss ich das angeben?“**\n\n„Natürlich. Das ist ein privates Veräußerungsgeschäft.“\n\nAm Ende ruft der arme Kaffeetrinker an, ob seine Erklärung jetzt richtig sei. Das Finanzamt: „Das müssen Sie wissen.“ Wenn die Haltefrist wirklich fällt, wird das weniger Witz als Bedienungsanleitung.\n\n[Niko Jilch](https://x.com/NikoJilch) hat derweil [ein Interview](https://x.com/NikoJilch/status/2119834662042304614) mit Kai Benz verlinkt, der 21 Tage und 21 Kilometer gegen das Streichen der Haltefrist läuft. In dieser Szene protestiert man nicht mit Transparenten vor dem Bundestag, sondern mit einer Zahl.\n\nWas Max Lucks selbst auf X dazu gesagt hat, bleibt seine Sache: Öffentlich war dazu in den letzten Tagen nichts Auffindbares. Die Debatte läuft zurzeit als Einbahnstraße mit sehr viel Gegenverkehr.\n\n## **Wenn der Bäcker plötzlich Kommunist ist**\n\nNicht jede Auseinandersetzung braucht einen Bundestagsabgeordneten. Manchmal reicht ein Satz von Sam Altman. [Roman Reher](https://x.com/RomanReher) hat Ende Oktober einen [Viral-Post](https://x.com/pubity/status/2116213541304746415) zitiert, in dem Altman private RAM für Verschwendung hält und sie lieber in Rechenzentren sähe. Romans Diagnose, [800 Likes schwer](https://x.com/RomanReher/status/2116454976901759234): **„Kommunisten argumentieren immer gleich.“**\n\n![](https://blossom.einundzwanzig.space/7531427358af00bcf211d768843e55613a2b96ae8f2803da1e30df9fa1ef483a.png)\n\nDas von [Roman Reher zitierte](https://x.com/RomanReher/status/2116454976901759234) Original von Pubity über Sam Altman.\n\nDas wollte [German HODL](https://x.com/GermanHODL) so nicht stehen lassen. „Naja. Jeder Geschäftsmann würde so argumentieren.“ Roman: „Quatsch.“ Daraus wurde ein mehrtägiger [Schlagabtausch](https://x.com/GermanHODL/status/2116485688283820365) über Bäcker, Backöfen und die Frage, ab wann man Sozialist ist. [BitBeller](https://x.com/BitBeller) schaltete sich ein: Jeder Geschäftsmann würde die Knappheit von Gütern und Eigentum anerkennen. Roman blieb beim Katechismus: **„Kapitalismus lebt vom Eigentum. Kommunismus von der Enteignung.“**\n\nGerman HODL versuchte es mit einer Analogie – als Bäcker wolle er auch, dass die Leute beim Bäcker kaufen und nicht zu Hause backen. [Morpheus](https://x.com/GetOrangePill) hakte nach, was denn wäre, wenn der Bäcker forderte, Öfen dürften nur an Bäckereien verkauft werden. Roman erklärte, das würde man als Sozialist fordern; als Unternehmer würde man die Preise anpassen. German HODL, merklich amüsiert-genervt: **„…bin ich plötzlich Sozialist. Alles klar, Roman.“** Roman behielt [das letzte Wort](https://x.com/RomanReher/status/2116848145204158692): **Wenn man denke, einem stünden die Ressourcen anderer zu, ohne dafür zu zahlen – dann schon.**\n\nIn der DACH-Szene kann man sich über zwei Tage hinweg ernsthaft darüber streiten, ob ein hypothetischer Bäcker jetzt Karl Marx persönlich ist :-).\n\n## **Zahlen mit Bitcoin, oder Number Go Up?**\n\nDerselbe [BitBeller](https://x.com/BitBeller) hat Anfang November [erzählt](https://x.com/BitBeller/status/2118637377136607523), er zahle seine Miete in Bitcoin. Der Vermieter habe nur gesagt: „**Klar, ich schick dir meine Adresse.“** Und: „Jeder, der sagt, mit Bitcoin könne man im echten Leben nichts bezahlen, liegt schlicht falsch.“ Über 1.000 Likes, Zitate bis nach Korea, Japan und Brasilien. In den deutschen Antworten wollte jemand wissen, ob das [ein Paulaner sei](https://x.com/diegegenfrage/status/2118646352888344766). BitBeller: noch nie einen gemacht, das sei die Wahrheit. Ein anderer wandte ein, richtig angekommen wäre Bitcoin erst, wenn die Miete immer in derselben Sat-Zahl fällig würde – nicht einfach umgerechnet.\n\nUnabhängig davon, als Gegenpol in derselben Woche, hat [Saifedean Ammous](https://x.com/saifedean) [geschrieben](https://x.com/saifedean/status/2119757952189907341), manche Bitcoiner wollten Bitcoin als Geld und hielten Kursanstiege für kontraproduktiv. Seine Antwort: **Embrace the NGU**. [Fab](https://x.com/fabthefoxx) hat das [zitiert](https://x.com/fabthefoxx/status/2119860839981502636) und nur noch drangesetzt: **„Deal with it.“** Die ewige Therapiegruppe tagt weiter.\n\n&#x20;[Saifedean Ammous’ Post](https://x.com/saifedean/status/2119757952189907341), den Fab zitiert hat.\n\n## **Die Kamera im Nacken**\n\nWährend die einen über Steuern und Miete reden, hat [FreiheitsMaximalist](https://x.com/maximal_frei) ein anderes Problem: Gesichter. Nach dem Livestream von Bitcoin Amsterdam 2026 [schrieb er](https://x.com/maximal_frei/status/2119077988956504327), manche im Publikum hätten den Kameramann angeschrien – und er verstehe sie. **„Wir schützen unsere Private Keys, und andere veröffentlichen unsere Gesichter.“**\n\n![](https://blossom.einundzwanzig.space/a4ee56de4666783a5beeec191deabd37fac148880851596d25bd50f20d747daa.png)\n\nDas von ihm selbst verpixelte Livestream-Bild aus [dem Post von FreiheitsMaximalist](https://x.com/maximal_frei/status/2119077988956504327).\n\nDer Widerspruch kam prompt. Jemand erinnerte an die DSGVO und daran, dass es eine öffentliche Veranstaltung sei; ein anderer schrieb, Bitcoin stehe doch für maximale Transparenz; ein Dritter hatte vor allem keine Lust auf den langen Text.\n\nPassend zum Überwachungswochengefühl hat [Fab](https://x.com/fabthefoxx) [DAC8](https://x.com/fabthefoxx/status/2117981220281946146) so erklärt: **Bitcoin auf der eigenen Wallet sei wie Bargeld zu Hause. Gefährlich werde es erst, wenn irgendwo eine Liste liege, wer wie viel hat.** [Niko Jilch](https://x.com/NikoJilch) [meldete](https://x.com/NikoJilch/status/2118744728501989558), der Wiener Krypto-Anwalt Oliver Völkel klage die EU deswegen. Die Stimmung lässt sich grob so zusammenfassen: erst will irgendwer das Gesicht, dann die Transaktionsliste, und irgendwann vermutlich auch noch den Kaffeebeleg.\n\n## **Influencer, Exit Liquidity, Galgenhumor**\n\n[Furkan Yildirim](https://x.com/FurkanCCTV) hat [gefragt](https://x.com/FurkanCCTV/status/2119005935402209566), wann in Deutschland endlich dasselbe passiert wie anderswo: dass Krypto-Influencer auffliegen, die die eigene Community betrogen haben. **„Am Ende waren die eigenen Zuschauer nur die Exit Liquidity der Creator.“** Fast 900 Likes, 174 Antworten – und in den Kommentaren wurden eifrig Namen genannt, die man besser nicht weiterreicht. [BitcoinDani](https://x.com/Bitcoin_Dani) hatte zwei Tage zuvor in eine ähnliche Kerbe [geschlagen](https://x.com/Bitcoin_Dani/status/2118307250838061210): Der härteste Bullrun aller Zeiten? Für Bitcoin sicher nicht. Für viele Altcoin-Retailer möglicherweise schon.\n\nUnd der Kurs? [sunnydecree](https://x.com/sunnydecree) hat am Montag in die Stille [hinein gefragt](https://x.com/sunnydecree/status/2119708686637531627): **„Any Bitcoiners still alive?“** 1.751 Likes, 334 Antworten. Offenbar ja, sie checken nur gerade den Chart mit zusammengebissenen Zähnen. [Robin Seyr](https://x.com/RobinSeyr) lieferte das gegenteilige Stimmungsbild und damit den reichweitenstärksten Roster-Post der Woche: ein Meme darüber, wie Bitcoin sich das ganze Kapital der Welt einverleibt ([2.567 Likes](https://x.com/RobinSeyr/status/2119176462548729965)). [Bitbull](https://x.com/BitbullTrading) blieb der Straßenprediger des Bärenmarkts: Der Weg zum nächsten Allzeithoch führe nicht an den Bären vorbei, **„sondern mitten durch sie hindurch.“** [Fab](https://x.com/fabthefoxx) erwähnte beiläufig, heute sei [der berühmte Zeitpunkt](https://x.com/fabthefoxx/status/2119708949448470801) **„500 Tage vor dem Halving. Just saying.“**\n\n![](https://blossom.einundzwanzig.space/feaa661caef3c5aa1c029fb27aca894a48b4f7bed70cebbe0e0f561c1d8abef0.png)\n\nVideo aus [Robin Seyrs reichweitenstärkstem Post der Woche](https://x.com/RobinSeyr/status/2119176462548729965). (erinnert irgendwie an Gigis Bitcoin Busen :-)\n\nEinen laufenden Gag darf man nicht unterschlagen: [Bitcoin Cat](https://x.com/realmuster) hat ein altes Zitat von [Maurice Höfgen](https://x.com/MauriceHoefgen) aus dem Jahr 2022 [wieder hervorgeholt](https://x.com/realmuster/status/2119340402230894760), in dem Höfgen den Leuten nach einem Bitcoin-Kauf sein Beileid aussprach. Ein paar Tage zuvor hatte [jonathancgi](https://x.com/jonathancgiart) erzählt, er habe Höfgen um ein Bitcoin-Interview gebeten – und die Antwort bekommen, die Bitcoiner hassen ihn doch eh schon. [Roman](https://x.com/RomanReher) hat daraufhin [nur ein Meme hinterlassen](https://x.com/RomanReher/status/2115865463607410719). Manche Feindschaften brauchen keine neue Folge. Ein Wiederholungsclip reicht.\n\n## **Was sonst noch im Dorf passiert ist**\n\n[Swiss Hodler](https://x.com/SwissHodler) hat einen Rant zitiert, die Schweiz sei ein scheiß Land, und [seine Landsleute gefragt](https://x.com/SwissHodler/status/2116874592992075941), ob sie zustimmen. [Bitcoin Cat](https://x.com/realmuster) antwortete geschäftsmäßig, **er hebele gerade Immobilien, um Bitcoin zu kaufen. Prioritäten.**\n\n## **Fazit**\n\nDie DACH-Timelines kochen gerade nicht am Kurs, sondern an der Steuer, am Eigentum und daran, wer ins Bild darf. Wer mitlesen will, springt am besten direkt in die Threads – die Protagonisten haben diese Woche genug Material geliefert.\n",
+  "sig": "424ba7dc3fb78e9d1b64838ca087aa9e9b0d905ee43892af6edeb8264f636cd7b8068cfb2c9d0a60e9bf4bdd9121a78e085e7d18f3e21506c8db725e2e3a02d5"
+ },
+ {
+  "id": "931008f96ec9385e9a63b403bf13276be233962d555fa413d6cda051e6fb40f0",
+  "pubkey": "f240be2b684f85cc81566f2081386af81d7427ea86250c8bde6b7a8500c761ba",
+  "created_at": 1794217023,
+  "kind": 30023,
+  "tags": [
+   [
+    "d",
+    "draft-099b4ed7-7967-406a-be3e-2d9df5d4550c"
+   ],
+   [
+    "title",
+    "₿ Bitcoin Daily"
+   ],
+   [
+    "summary",
+    "9. Nov., Bitcoin rutscht, Altcoins und ETFs, Strategy, LNbits, Zapstore"
+   ],
+   [
+    "image",
+    "https://blossom.einundzwanzig.space/2fe08e1039fa5e1c65e5d41860f84b207052d95d19e8738d9a3c20ee5cb3a7f8.jpg"
+   ],
+   [
+    "published_at",
+    "1794217023"
+   ],
+   [
+    "L",
+    "ISO-639-1"
+   ],
+   [
+    "l",
+    "de",
+    "ISO-639-1"
+   ],
+   [
+    "client",
+    "EINUNDZWANZIG HUB"
+   ]
+  ],
+  "content": "## Die gute Nachrichten am Morgen\n\n\\\n[DeFiChain](https://x.com/defichain/status/2119447402683711566) teilte mit, dass die Kommunikation auf allen Kanälen am 14. November 2026 eingestellt wird und die Webseiten offline gehen:&#x20;\n\n> „Thank you for being part of DeFiChain and for all your contributions along the way.“\n\nHoffentlich bleibt uns dieser Scam-Doktor künftig erspart.\n\n# Bitcoin rutscht auf 74.500 Dollar\n\n**Nach einem ruhigen Wochenende kippte Bitcoin in der Nacht auf Montag unter 74.000 Dollar und notiert am Morgen rund 1,6 Prozent im Minus. Auslöser soll die Affäre des NVIDIA-Chefs Jensen Huang mit einer mutmaßlichen chinesischen Agentin ein.**&#x20;\n\n## Der Kurs: Rutsch unter 74.000 Dollar\n\nBitcoin notiert am Montag gegen 6:20 Uhr (MEZ) bei **74.564 Dollar** beziehungsweise **66.823 Euro**. Das sind rund 1,6 Prozent weniger als vor 24 Stunden in Dollar und 1,7 Prozent in Euro. Gestern Morgen stand der Kurs noch knapp unter 76.000 Dollar. Bitcoin fiel am späten Sonntagabend binnen Minuten unter die Marke von 74.000 Dollar und erreichte damit den tiefsten Stand seit August.\n\n![](https://blossom.einundzwanzig.space/143d24ef8c9638bf991e44698c3ddaf78719d52efd52a91998b9c7f124a1fc0a.png)\n\n*Anscheinend sehen die Chart-Jungs schon wieder bessere Zeiten kommen.*\n\n## Altcoins und ETFs: Der Druck bleibt\n\nAnscheinend handeln 70 Prozent der auf Binance gelisteten Altcoins unter ihrem 200-Tage-Durchschnitt; die Altcoin-Kapitalisierung habe seit Mitte August rund 200 Milliarden Dollar abgegeben, die Bitcoin-Dominanz liegt bei etwa 59 bis 60 Prozent. Stablecoins machen derzeit **etwa 11,5 % der gesamten Krypto-Marktkapitalisierung** aus – daher bleiben für andere Shitcoins nur noch wenig als 30% am Gesamtmarkt.\n\nBei den US-Spot-ETFs summieren sich die Abflüsse von letzter Woche auf 1,92 Milliarden Dollar in sechs Handelstagen, neue Tageszahlen folgen erst im Lauf des Montags.\n\n## Strategy: Sonntags-Chart und MSCI-Risiko\n\n&#x20;Strategy-Chef Michael Saylor postete am Sonntag einen Chart der Bestände mit dem Titel „Connecting the dots“. Das Unternehmen hält 849.327 BTC zu einem durchschnittlichen Einkaufspreis von rund 75.451 Dollar je Coin – der aktuelle Kurs liegt damit leicht darunter. Beobachter verweisen auf das Muster, dass Sonntags-Teaser oft Montags-Kaufmeldungen vorausgingen; zuletzt kamen laut X-News 811 BTC für 65,5 Millionen Dollar hinzu. Ob es diesmal wieder so kommt, ist offen – die 8-K-Meldung wird frühestens heute erwartet.\n\n![](https://blossom.einundzwanzig.space/87ae6604a74f427f3e22b97355522f71bbd042e33fe4d701e7d9ea0327e4a545.jpg)\n\n*Connecting the dots.*\n\n## Fazit\n\n&#x20;Der Markt ist nervös, aber nicht kopflos: tiefe Stimmungswerte, Rekord-Shorts und ein wackeliger Aktienmarkt prägen das Bild. Für Anleger mit langem Horizont ändert ein Montagmorgen wenig – für Kurzfristige ist die Woche voller Termine.\n\n# Technik\n\n## LNbits-Notabschaltung und ein Fast-Rekordblock: Was Bitcoin-Technik zum Wochenstart bewegt\n\n**LNbits ruft alle Betreiber auf, ihre Server sofort abzuschalten – nach einer Angriffswelle auf Lightning-Zubehör, ein Block mit 11.255 Transaktionen nähert sich dem Allzeitrekord und Zapstore bringt Version 2.**\n\n## LNbits: „Stoppt eure Server – sofort“\n\n&#x20;Am Sonntag, dem 8. November, veröffentlichte das Projekt LNbits gegen 14:56 Uhr auf X eine ungewöhnlich scharfe Warnung: „All LNbits users should stop their LNbits servers IMMEDIATELY. \\[…] Following a wave of attacks, we have a number of security patches to push. Until then, it’s better to err on the side of caution.“ [@btcinsider\\_\\_](https://x.com/btcinsider__/status/2119509023997460550) verbreitete die Meldung unter der Überschrift „BREAKING“. Schon rund 90 Minuten zuvor hatte LNbits Betreibern geraten, die Paywall-Erweiterung abzuschalten.\n\nDer LNbits-Entwickler Ben Arc kündigte Patches innerhalb von 24 bis 48 Stunden an; der gehostete Dienst my.lnbits.com wurde laut Cybersixt vorsorglich komplett abgeschaltet und soll binnen eines Tages zurückkehren. Offen ist laut Berichten, welche Schwachstellen genau betroffen sind, wie viele Instanzen angegriffen wurden und wie hoch der Gesamtschaden ist.\n\n## Nahe am Rekord: 11.255 Transaktionen in einem Block\n\n&#x20;Block 974.961, am Samstag von Antpool gefunden, enthielt  11.255 Transaktionen – das zweithöchste Ergebnis der Geschichte, nur 984 hinter dem Rekord vom August 2015. Schon drei Tage zuvor gab es einen ähnlich dichten Block. Aussagekraft für die tatsächliche Nutzung ist damit begrenzt: Viele Transaktionen bedeuten nicht automatisch hohe Nachfrage.\n\n## Zapstore v2: App-Store über Nostr\n\n&#x20;Das Projekt kündigte am 6. November einen „soft launch“ an und versprach eine „agent friendly“ Dokumentation. Laut GitHub folgten seither die Versionen 2.0.2 bis 2.0.4 (zuletzt am 8. November), mit Änderungen wie Such-Panel und Kennzeichnung „Claimed by the developer“ für Apps. Zapstore verteilt Android-Apps über Nostr, ohne Plattformbetreiber als Torwächter.\n\n## Fazit\n\n&#x20;Die Woche beginnt mit einer Erinnerung: Bitcoin selbst lief weiter, aber der Aufsatz um Lightning und Brücken ist verwundbar. Wer eigene Schlüssel hält und möglichst wenige Dienste Dritter braucht, schläft ruhiger.\n",
+  "sig": "cb9882ff193d87ee1c472b988f90f91bff8fe580c73cac4a121e20a1c0a46f2c47d97e5d99fd091cb84caa73f4ec7bb2c85462008aa2aa9151a3509f56370132"
+ },
+ {
+  "id": "a0404092772bab74def46021cf779f5d5f493ec481bc3e58440c2b5def736f98",
+  "pubkey": "f240be2b684f85cc81566f2081386af81d7427ea86250c8bde6b7a8500c761ba",
+  "created_at": 1794168965,
+  "kind": 30023,
+  "tags": [
+   [
+    "d",
+    "draft-08cfe70b-fe19-442f-95c2-341476b1fb65"
+   ],
+   [
+    "title",
+    "Bitcoin muss nicht neu erfunden werden – aber gewartet"
+   ],
+   [
+    "summary",
+    "Matt Corallo über den Consensus Cleanup, die Macht der Mining-Pools und die Frage, wen Bitcoin vor Quantenangriffen schützen muss."
+   ],
+   [
+    "image",
+    "https://blossom.einundzwanzig.space/e5178f10f8bd39ce3f2eb0eaa8b20dd0455da60779fb3a1609d4ea7531aaa054.webp"
+   ],
+   [
+    "published_at",
+    "1794168965"
+   ],
+   [
+    "L",
+    "ISO-639-1"
+   ],
+   [
+    "l",
+    "de",
+    "ISO-639-1"
+   ],
+   [
+    "client",
+    "EINUNDZWANZIG HUB"
+   ]
+  ],
+  "content": "#\n\n&#x20;Bitcoin zu verändern ist schwierig. Das ist Absicht: Niemand soll die Regeln eines Geldes nach Belieben umschreiben können. Doch was passiert, wenn nicht neue Funktionen zur Debatte stehen, sondern Fehler, die seit Jahren bekannt sind?\n\nIm Interview mit MARA Foundation TV beschreibt **Bitcoin-Entwickler Matt Corallo** genau diese Aufgabe. Der **„Consensus Cleanup“** soll mehrere Schwachstellen im bestehenden Regelwerk beheben. Dahinter steht aber eine größere Frage: Kann Bitcoin sich weiterhin gemeinsam um seine technischen Grundlagen kümmern, ohne jede Änderung in einen Grundsatzstreit zu verwandeln?\n\n## Ein Soft Fork ohne großes Versprechen\n\nCorallos Vorschlag ist älter als Taproot. Schon damals erschien ihm ein überschaubares Paket von Fehlerkorrekturen als geeigneter nächster Schritt nach den erbitterten Auseinandersetzungen um die Blockgröße. Stattdessen kam zunächst Taproot. Nun steht der Cleanup erneut zur Diskussion.\n\nSein Reiz liegt gerade darin, dass er keine spektakulären neuen Möglichkeiten verspricht. Nach Corallos Darstellung besteht weitgehend Einigkeit darüber, dass die betreffenden Fehler behoben werden sollten. Über einzelne Lösungen lässt sich trotzdem streiten.\n\nDie Vorstellung, Bitcoin habe inzwischen verlernt, einen Soft Fork durchzuführen, weist er zurück. Zwar hätten viele heutige Beteiligte noch keine solche Aktivierung erlebt. Das nötige Wissen sei deshalb aber nicht verschwunden. Corallo hofft vielmehr auf ein Verfahren, das sich auch für spätere Änderungen wiederverwenden lässt, statt den Aktivierungsstreit jedes Mal neu zu beginnen.\n\nDass der Cleanup tatsächlich Bitcoins nächster Soft Fork wird, schätzt er im Gespräch auf 80 Prozent. Das ist seine persönliche Einschätzung, kein vereinbarter Fahrplan.\n\n## Vier Schwachstellen im bestehenden Regelwerk\n\n![](https://blossom.einundzwanzig.space/b742a978ba6232f8c638d4782edded500e2e05d43ab91fa9d9c6faf592b5690a.jpg)\n\nDas Paket umfasst vier Probleme, deren Folgen sehr unterschiedlich ausfallen.\n\nBei sogenannten **Poison Blocks** geht es um den Aufwand der Validierung. Bestimmte Transaktionen können die Prüfung eines Blocks unverhältnismäßig teuer machen. Corallo beschreibt ein Szenario, in dem ein Miner seine Konkurrenz mit einem besonders langsam zu prüfenden Block ausbremst und währenddessen selbst weiterarbeitet. Das bedrohe nicht unmittelbar die Existenz Bitcoins, könne aber die Zentralisierung im Mining begünstigen. Der Cleanup soll den möglichen Prüfaufwand begrenzen.\n\nDer **Time-Warp-Angriff** betrifft die Schwierigkeitsanpassung. Nach Corallos Erklärung können koordinierte Miner eine Schwachstelle in der Verarbeitung der Zeitstempel ausnutzen und die Schwierigkeit schrittweise stark absenken. Dadurch geriete auch der zeitliche Ausgabeplan neuer Bitcoin aus dem Takt. Eine zusätzliche Zeitstempelregel an der Grenze zwischen zwei Anpassungsperioden soll diese Möglichkeit schließen.\n\nEin drittes Problem sind **Transaktionen mit genau 64 Byte**. Im Merkle-Baum, mit dem Bitcoin Transaktionen in einem Block zusammenfasst, können unter bestimmten Umständen innere Knoten und Transaktionen verwechselt werden. Corallo betont, dass daraus vor allem Risiken für Software entstehen, die auf entsprechenden Nachweisen aufbaut – etwa Wallet-Systeme oder Bridges. Der vorgeschlagene Fix verbietet diese spezielle Transaktionsgröße. Gerade über diesen Teil des Pakets habe es allerdings konkrete Gegenargumente gegeben.\n\nSchließlich geht es um **doppelte Coinbase-Transaktionen**. Gemeint sind nicht Transaktionen der gleichnamigen Börse, sondern die besonderen Transaktionen, mit denen Miner ihre Blockbelohnung erhalten. Historische Duplikate erfordern bereits heute Sonderbehandlungen. Der Cleanup soll verhindern, dass eine vergleichbare Konstellation künftig erneut möglich wird.\n\nWarum diese Änderungen gemeinsam durchführen? Für Corallo verursacht jeder Soft Fork technische und gesellschaftliche Kosten. Ein gemeinsames Paket sei deshalb sinnvoll – solange es tatsächlich zusammengehörige Fehlerkorrekturen bündelt und nicht umstrittene Lieblingsprojekte gegenseitig durchschleust.\n\n## Mining-Dezentralisierung beginnt bei der Transaktionsauswahl\n\n![](https://blossom.einundzwanzig.space/0448ad30cbd1c06af1a3b69bd04c82036e1b4492f9f85a04a2fc60c506f38968.jpg)\n\nIm zweiten großen Themenblock wechselt das Gespräch zu Stratum V2, dem Kommunikationsprotokoll zwischen Minern und Pools.\n\nCorallo beschreibt den Vorgänger Stratum V1 als historisch gewachsene Lösung mit erheblichen Schwächen. Fehlende Verschlüsselung könne unter anderem ermöglichen, Rechenleistung unbemerkt umzuleiten. Stratum V2 soll die Kommunikation durch authentifizierte Verschlüsselung und ein effizienteres Datenformat verbessern.\n\nEntscheidender ist für ihn jedoch die Verteilung der Kontrolle. Wer einen Mining-Rechner betreibt, entscheidet heute nicht automatisch selbst, welche Transaktionen dieser in einen Block aufnehmen soll. Diese Auswahl liegt häufig beim Pool.\n\nFür Bitcoins Zensurresistenz ist das ein wesentlicher Unterschied. Viele räumlich verteilte Geräte bedeuten wenig, wenn nur wenige Stellen ihre Blockvorlagen bestimmen. Stratum V2 soll es ermöglichen, die Auswahl der Transaktionen stärker zu den tatsächlichen Minern zu verlagern, während sie weiterhin gemeinsam an einem Pool teilnehmen.\n\nDie langsame Einführung erklärt Corallo mit dem notwendigen Umbau bestehender Systeme und den Prioritäten der Betreiber. Es sei eine Verbesserung gegen langfristige Risiken – nicht unbedingt etwas, das sich kurzfristig am Kurs ablesen lässt.\n\n## Quantenresistenz darf kein Angebot nur für Experten sein\n\n![](https://blossom.einundzwanzig.space/0ae585bb7e58fb1c568606bca8e8f7caba9819b6b58657c42c1d6e365aa5ec37.jpg)\n\nBei möglichen Quantenangriffen wird das Gespräch grundsätzlicher. Mehrere diskutierte Ansätze sollen Bitcoin-Ausgaben weniger abhängig von heute verwendeten Signaturverfahren machen. Sie unterscheiden sich allerdings bei Kosten, Funktionsumfang und den Anforderungen an die Nutzer.\n\nCorallo spricht unter anderem über P2MR, P2TRv2 und P2QR. Hinter diesen Kürzeln stehen unterschiedliche Vorschläge, keine bereits beschlossene Umstellung. Ihm geht es dabei weniger darum, einen einzelnen Ansatz zum Sieger zu erklären, als um die praktischen Folgen ihrer Gestaltung.\n\nEine Schutzwirkung, die nur unter idealem Nutzerverhalten besteht, reicht ihm nicht. Adresswiederverwendung, gemeinsam verwaltete Wallets oder andere Anwendungen können Annahmen über geheim gehaltene Schlüssel unterlaufen. Gleichzeitig könnten mehrere neue Optionen die Nutzer überfordern und zu schlechten Entscheidungen führen.\n\nSein wichtigster Einwand richtet sich deshalb gegen eine zu enge Vorstellung von Sicherheit: Die eigenen Coins zu retten, während große Teile des übrigen Netzwerks bestohlen oder eingefroren würden, sei kein überzeugendes Ziel. Bitcoin müsse auch für Menschen funktionieren, die keine kryptografischen Spezialisten sind und erwarten, dass ihre Wallet die technischen Fragen für sie löst.\n\n## Vorsicht ist kein Ersatz für Umsetzung\n\nDas Interview verbindet drei zunächst unterschiedliche Baustellen: Konsensfehler, Mining-Infrastruktur und langfristige kryptografische Risiken. Gemeinsam ist ihnen, dass bekannte Probleme nicht dadurch verschwinden, dass eine Änderung schwierig ist.\n\nCorallo fordert dabei keinen schnellen Umbau um jeden Preis. Seine Argumentation ist konkreter: Risiken beschreiben, Lösungen ausarbeiten und ihre Nachteile offenlegen. Beim Cleanup liegt bereits ein abgegrenztes Paket auf dem Tisch. Bei Stratum V2 geht es um die Einführung vorhandener Technik. In der Quantenfrage müssten Vorschläge nun ausreichend präzisiert und umgesetzt werden, damit aus der Debatte belastbare Entscheidungen entstehen können.\n\nBitcoin muss dafür nicht ständig neu erfunden werden. Aber auch ein System, dessen größte Stärke seine verlässlichen Regeln sind, braucht Menschen, die sich um deren Schwachstellen kümmern.\n\n*Grundlage: das vollständige, automatisch erzeugte englische Transkript des Interviews* *[„Bitcoin’s Next Soft Fork: Quantum or the Great Consensus Cleanup? | Matt Corallo“](https://www.youtube.com/watch?v=8H95SW7eYoI), MARA Foundation TV, veröffentlicht am 4. November 2026. Der Artikel gibt Corallos Positionen sinngemäß auf Deutsch wieder.*\n",
+  "sig": "a1176e220a5716dd46f9f8a9f32799ae9fa37a1c40f5d68fb1a94038dc98c85b3ff2629276d974bec722229e2623a2bc7a9768d0213305023cdab3bcb59a3dd5"
+ },
+ {
+  "id": "c31f5f3580601dfe62869a1d5566e39256385570d211f117f272761d6f56a70b",
+  "pubkey": "f240be2b684f85cc81566f2081386af81d7427ea86250c8bde6b7a8500c761ba",
+  "created_at": 1794127612,
+  "kind": 30023,
+  "tags": [
+   [
+    "d",
+    "draft-8c7148b5-848e-4ac0-aca8-cc3f8363eb2a"
+   ],
+   [
+    "title",
+    "₿ Bitcoin Daily"
+   ],
+   [
+    "summary",
+    "8. Nov., ETF-Woche, Paraguay, Miner, Script-Restauration und Solo-Mining-Glück"
+   ],
+   [
+    "image",
+    "https://blossom.einundzwanzig.space/02f87bc37a6750ed164f814e7e3325c75d6a8d1e07e255bcc8afe1a83f89c787.jpg"
+   ],
+   [
+    "published_at",
+    "1794127612"
+   ],
+   [
+    "L",
+    "ISO-639-1"
+   ],
+   [
+    "l",
+    "de",
+    "ISO-639-1"
+   ],
+   [
+    "client",
+    "EINUNDZWANZIG HUB"
+   ]
+  ],
+  "content": "# Bitcoin seitwärts bei 75.800 Dollar: ETF-Woche mit 1,28 Milliarden Abfluss, Bankenkrise in Paraguay und Miner auf KI-Kurs\n\n**Nach einer Woche mit Tech-Crash, Midterm-Nervosität und Milliarden-Abflüssen aus den Spot-ETFs verharrt Bitcoin am Sonntagmorgen fast unverändert knapp unter 76.000 Dollar. Gleichzeitig liefert Paraguay ein Lehrstück, warum Menschen in einer Bankenkrise zu Stablecoins und Bitcoin greifen – und Core Scientific zeigt, wohin sich Teile der Mining-Branche verabschieden.**\n\n## Der Kurs: Wochenendruhe nach dem Sturm\n\nBitcoin notiert am Sonntag gegen 6:20 Uhr (MEZ) bei **75.802 Dollar** beziehungsweise **68.005 Euro**. Das entspricht einem Minus von rund 0,1 Prozent in 24 Stunden – praktisch Stillstand. Nach dem Rutsch am Donnerstag und dem Intraday-Tief unter 75.000 Dollar am Freitag hat sich der Markt damit zumindest nicht weiter verschlechtert. Von einer Erholung kann man aber auch nicht sprechen: Seit Jahresbeginn liegt Bitcoin rund 13,8 Prozent im Minus, nachdem das Jahr über 87.000 Dollar begonnen hatte.\n\n![](https://blossom.einundzwanzig.space/9d8b93f13bd086f45fb78145f79b7a7ccceb8f3a2752f1d81f9c0f8c0d86455c.jpg)\n\nBemerkenswert ist das Wochenendmuster: Ohne US-Börsenhandel und ohne ETF-Flows fehlen die großen Taktgeber. Wochenenden sind deshalb oft ruhig – oder, bei dünner Liquidität, plötzlich sehr volatil. Diesmal überwiegt die Ruhe. Der Crypto Fear & Greed Index steht laut X-News bei 25, also im Bereich „Angst“.\n\n## ETF: eine Woche zum Vergessen\n\nDie Zahlen für die US-Spot-Bitcoin-ETFs fallen deutlich aus: Am Freitag, dem 6. November, flossen  netto **411,9 Millionen Dollar** ab. Fast alles davon entfiel auf BlackRocks IBIT mit rund 403 Millionen Dollar an einem einzigen Tag. Fidelitys FBTC verbuchte dagegen Zuflüsse von 42,8 Millionen Dollar. In der Wochensumme stehen **1,28 Milliarden Dollar** Rückgaben, die verwalteten Bitcoin-ETF-Vermögen lagen bei rund 95,9 Milliarden Dollar.\n\n![](https://blossom.einundzwanzig.space/a03c5ab5e70011f9cbaadac50c18fdcfb8d8564d4c409fa398c3370e35f8f24d.jpg)\n\n*ETF Zu und Abflüsse*\n\n## Paraguay: Wenn die Bank schließt\n\nDie eigentliche Geschichte des Wochenendes spielt in Südamerika. Nach der Pleite der Ueno Bank in Paraguay sind laut Decrypt rund 60 Prozent der erwachsenen Bevölkerung betroffen. Die Bank hielt demnach auch 800 bis 850 Millionen Dollar öffentlicher Gelder, darunter Renten- und Gesundheitsfonds. Vor der Zentrale in Asunción verbrannten wütende Sparer ihre Bankkarten.\n\nDer USDT-Kurs stieg in Paraguay von 5.692 auf über 6.000 Guaraníes, der physische Dollar legte im Interbankenhandel um mehr als sechs Prozent zu. Samson Mow kommentierte:&#x20;\n\n> „USDT von Tether ist 1:1 gedeckt und man hält die Schlüssel selbst. Es ist sicherer als Geld auf einer Bank, wo Einlagen fraktional gehalten werden und eingefroren oder beschränkt werden können.“ Es sei „auch der sauberste Pfad zu Bitcoin“.\n\nMan muss Mows Sicht auf Stablecoins nicht teilen – USDT hat einen zentralen Herausgeber, der Guthaben einfrieren kann. Der Kern bleibt aber: Wer seine Schlüssel selbst hält, ist nicht vom Schicksal einer einzelnen Bank abhängig. Bitcoin geht noch einen Schritt weiter, weil es weder einen Emittenten noch eine Einfriertaste gibt.\n\n## Miner und Treasury-Firmen\n\nCore Scientific will bis Jahresende komplett aus dem Bitcoin-Mining aussteigen. Mining machte im dritten Quartal nur noch 17,5 Millionen Dollar oder 7,5 Prozent des Umsatzes aus. Der Grund ist einfach: KI-Kunden zahlen für Strom und Fläche mehr als die aktuell niedrige Hashprice.\n\n## Fazit\n\nDer Kurs ruht, die Nachrichtenlage nicht. Während die Wall Street über ETF-Anteile Risiko abbaut, zeigt Paraguay, wofür Bitcoin eigentlich gebaut wurde: Geld, das keine Bank schließen kann. Der praktische Vorteil liegt nicht im Wochenchart, sondern in der Kontrolle über die eigenen Schlüssel.\n\n# Technik\n\n## Script-Restauration und Solo-Mining-Glück: Was Bitcoin-Technik am Wochenende bewegt\n\n**Rusty Russell und Julian Moik legen ein Update zur „Great Script Restoration“ vor, ein Solo-Miner trifft Block 974.930, und neue Details zum Chainalysis-Angriff zeigen erneut, warum weniger Drittanbieter mehr Sicherheit bedeuten. Dazu: ein Ausbildungsprogramm für eine Million Entwickler und offene KI-Modelle, die ohne Rechenzentrum laufen.**\n\n## Great Script Restoration: fünf Bausteine für mehr Programmierbarkeit\n\nLaut [@btcinsider\\_\\_](https://x.com/btcinsider__/status/2118984997235282344) haben Julian Moik und Core-Lightning-Entwickler Rusty Russell ein Update zur „Great Script Restoration“ veröffentlicht. Das Framework besteht aus fünf einzelnen Vorschlägen, die zusammen als neue Tapscript-Leaf-Version **0xc2** eingeführt würden. Neu hinzugekommen sind „Extended Primitives“ und „Reusable Macros“.\n\nWas bedeutet das einfach erklärt? Satoshi hat 2010 aus Sicherheitsgründen viele Befehle der Bitcoin-Skriptsprache deaktiviert – etwa Rechenoperationen auf großen Zahlen oder das Zusammenfügen von Daten. Die Script Restoration will diese Fähigkeiten zurückbringen, aber mit klaren Kostenlimits, damit niemand Knoten mit teuren Skripten lahmlegen kann. Weil das Ganze als neue Tapscript-Version kommt, bleiben bestehende Skripte unberührt: Wer die neuen Funktionen nicht nutzt, merkt nichts.\n\n**Der praktische Vorteil:** Mit einer reicheren Skriptsprache ließen sich Dinge wie Vaults (Tresore mit Verzögerung und Notfall-Abbruch), bessere Erbschaftslösungen oder vertrauensärmere Layer-2-Brücken direkt in Bitcoin abbilden – ohne für jede Idee einen eigenen Soft Fork zu brauchen. Wiederverwendbare Makros sollen dabei Skripte kürzer und damit günstiger machen. Ob und wann das kommt, ist offen; es handelt sich um Vorschläge in Diskussion, nicht um beschlossene Änderungen.\n\n## Solo-Mining: zwei Glückstreffer an einem Tag\n\nEin Teilnehmer des Projekts Okay Bears hat über solo.ckpool Block **974.930** gefunden und 3,07 BTC (über 230.000 Dollar) erhalten, die unter 1.601 Haltern aufgeteilt werden sollen. Am selben 7. November gelang laut der Zusammenfassung ein zweiter Solo-Treffer über denselben Pool mit ebenfalls über 3,1 BTC.\n\n![](https://blossom.einundzwanzig.space/4449509b7fbcef86c71e50efa12420d4cf2e29c62d1e53fca8292b559da4138f.png)\n\nSolo-Mining ist wie Lotto mit Strom: Man rechnet allein, und nur wer den Block findet, bekommt alles. Die meisten Miner schließen sich Pools an, um regelmäßige kleine Auszahlungen zu erhalten. Solche Treffer zeigen aber etwas Wichtiges: Jeder mit Hashrate kann einen Block finden und selbst bestimmen, welche Transaktionen hineinkommen. Das stärkt die Dezentralisierung – je mehr unabhängige Blockbauer, desto schwerer lässt sich Zensur durchsetzen.\n\n# Open Source Badge - Bitcoin Amsterdam 2026 Edition\n\n<https://blossom.einundzwanzig.space/f918431465b5bc7cc3e8501a59c863f3a5db48ce6fc49ccf9744311bd50dde3c.mp4>\n\nIn Amsterdam gab es richtig coole Open Source Badges, das wäre sicherlich auch etwas für die nostr:npub12gu2kjnlnkrkjt2npteh3qcn8cp8q5ufamw6jzkk4sjk7snd8flqa3sz97 , Kay soll das mal machen :-).\\\n**Es tauscht Kontaktkarten mit anderen Badges aus, leuchtet auf, wenn dich jemand zappt, und schürft im Solo-Betrieb.**\n",
+  "sig": "9b7b732975d5c06e8c66775e64854b1b0ac9b57a56b9da9cfb7856ab6ad6a76fe722f1efcffad05f0867cf6828ce3f049ff8783071c0f7d925deb684b4db4aa9"
+ },
+ {
+  "id": "732feaa0de80cd286f16fa0a32b7018051555eeb4e9252709bde13ac22756c9d",
+  "pubkey": "f240be2b684f85cc81566f2081386af81d7427ea86250c8bde6b7a8500c761ba",
+  "created_at": 1794039651,
+  "kind": 30023,
+  "tags": [
+   [
+    "d",
+    "draft-b579f4e6-1b16-43b4-af94-1eadd31db312"
+   ],
+   [
+    "title",
+    "₿ Bitcoin Daily"
+   ],
+   [
+    "summary",
+    "7. Nov., ETF-Abflüsse, Job-Daten, Quantum-Landminen, Payjoin-by-Default, White Noise im App Store"
+   ],
+   [
+    "image",
+    "https://blossom.einundzwanzig.space/534c93230903cdbdc52430d516b81029e16c1249321a5ac6726b1ce8703b74e1.jpg"
+   ],
+   [
+    "published_at",
+    "1794039651"
+   ],
+   [
+    "L",
+    "ISO-639-1"
+   ],
+   [
+    "l",
+    "de",
+    "ISO-639-1"
+   ],
+   [
+    "client",
+    "EINUNDZWANZIG HUB"
+   ]
+  ],
+  "content": "## Kurz in eigenes Sache:\n\nEs gibt etwas zu gewinnen: **Zitadellen-Tickets im Wert von fast 2.000 Euro!**\n\nWas ihr dafür tun müsst? Schreibt einen Artikel auf Nostr und schafft es damit auf unsere Newsseite. Veröffentlicht euren Beitrag auf Nostr und verlinkt dabei nostr:npub17fqtu2mgf7zueq2kdusgzwr2lqwhgfl2scjsez77ddag2qx8vxaq3vnr8y**** , nostr:npub187y0rs2ewuxlmv7fftv8ncrap2qmykv27qvgdnllywjlqv3u35fsxhm3tk****  oder nostr:npub1qv02xpsc3lhxxx5x7xswf88w3u7kykft9ea7t78tz7ywxf7mxs9qrxujnc .\n\nIst euer Artikel interessant und überzeugend, nehme ich ihn in den Newsblog auf. Jeder veröffentlichte Artikel bringt euch ein Los im Lostopf. Je mehr Artikel ihr schreibt, desto größer sind eure Gewinnchancen!\n\nDie Verlosung findet voraussichtlich in etwa vier Wochen statt, live in einer Einundzwanzig Newsfolge.\n\n# Nach dem Tech-Crash: Bitcoin hält die 76.000-Dollar-Zone – ETF-Abflüsse, Job-Daten und Russlands Retail-Start\n\n---\n\nNach dem Donnerstags-Crash unter 76.000 Dollar hat sich Bitcoin am Freitag und Samstagmorgen leicht stabilisiert. US-Spot-ETFs verloren am 5. November rund 430 Millionen Dollar, starke US-Arbeitsmarktdaten erhöhten die Chance auf eine Dezember-Zinserhöhung. Parallel öffnet Russland ab dem 17. November den Retail-Handel mit Bitcoin, Ether und USDT – gedeckelt und stark reguliert.\n\n## Der Kurs: leichte Stabilisierung nach dem Rutsch\n\nEin Bitcoin kostet am Samstag, 7. November 2026, gegen 06:15 Uhr (MEZ) 75.848 US-Dollar beziehungsweise 68.047 Euro. Das ist ein Plus von rund 0,4 Prozent in Dollar und 0,9 Prozent in Euro gegenüber dem Vortag. Das 24-Stunden-Hoch lag bei etwa 76.266 Dollar, das Tief bei rund 74.921 Dollar. Damit notiert der Kurs knapp über dem Midterm-/Tech-Crash-Niveau vom Donnerstag – ohne den Rebound über 80.000 Dollar zurückzuholen.\n\n Der Nasdaq brach um 5,52 Prozent ein (stärkster Tagesverlust seit 19 Monaten), der S\\&P 500 verlor 4,36 Prozent. Bitcoin korrigierte von über 80.000 auf bis zu etwa 75.100 Dollar. Binnen 24 Stunden lösten sich gehebelte Positionen im Wert von gut einer Milliarde Dollar auf – überwiegend Longs. Der Fear-and-Greed-Index fiel von 50 auf 28. Bitcoin schloss den Donnerstag oberhalb der 50-Wochen-Linie um etwa 75.500 Dollar – Galaxy-Researcher Alex Thorn sprach von bemerkenswerter Widerstandskraft.\n\nDie Nonfarm Payrolls für Oktober kamen mit +165.000 deutlich über der Erwartung von 65.000; die Arbeitslosenquote lag bei 4,1 Prozent. Laut CME FedWatch stieg die Wahrscheinlichkeit einer 25-Basispunkte-Erhöhung im Dezember von rund 67 auf etwa 77 Prozent. **Einfach erklärt:** Starke Jobs-Daten können Zinserhöhungen wahrscheinlicher machen – und damit Liquidität für Risikoassets verknappen. \n\n## ETF: der Zufluss-Tag war ein Intermezzo\n\nAm 4. November hatten US-Spot-Bitcoin-ETFs laut Branchendaten rund 74,6 Millionen Dollar Nettozufluss verzeichnet. Am 5. November drehte das Bild: Abflüsse auf 430,2 Millionen Dollar – angeführt von Fidelitys FBTC (rund 199,9 Millionen) und BlackRocks IBIT (rund 105 Millionen). Für die Woche bis Donnerstag summiert sich der Nettoabfluss auf etwa 869,8 Millionen Dollar.\n\n## Russland öffnet den Retail-Kanal\n\nDie Bank of Russia hat am 6. November bekannt gegeben: Ab dem 17. November 2026 dürfen nicht-qualifizierte Anleger Bitcoin, Ether und USDT über lizenzierte Intermediäre (Broker, Trust Manager, Crypto Exchange Offices) handeln. \n\nHoffentlich funktioniert der Schwarzmarkt in Russland gut, weil diese Bank of Russia Scheiße  ist nur totalitärer Bullshit.&#x20;\n\n## Fazit\n\nBitcoin um 76.000 Dollar nach dem Abverkauf zeigt: Risk-off an der Wall Street schlägt Hebel und ETF-Flows härter als jede Midterm-Überschrift.\n\n# Technik\n\n# Quantum-Landminen, Payjoin-by-Default und CISA-Entwürfe: Was Bitcoin-Technik bewegt\n\nBitcoin-Core-Entwickler Cory Fields skizziert auf der bitcoin-dev-Liste „Quantum Landmines“, die Diebe zur Hinterlegung von Collateral zwingen könnten. Parallel macht Bull Bitcoin Payjoin zum Standard bei On-Chain-Trades, Blockstream forscht an Lattice-Signaturen, und die CISA-BIPs 458–460 liegen als Entwürfe vor. Dazu: Chainalysis meldet einen Credential-Leak aller Kunden – ein Warnschuss für Analytics-Abhängigkeit.\n\n## Quantum Landmines: Diebe sollen Collateral riskieren\n\nDie Idee: Wer verwundbare Coins (etwa mit freiliegendem Public Key) nach einem hypothetischen Q-Day ausgeben will, müsste Matching-Collateral aus einer quantum-sicheren Wallet stellen. Beide Beträge liegen für ein Zeitfenster – etwa 30 Tage – im Limbo. Der vorbereitete Eigentümer kann in dieser Zeit einen zuvor versteckten Besitzbeweis offenlegen, seine Coins retten und das Collateral des Angreifers einziehen.\n\nFields nennt das Thought Experiments: Es braucht erst quantum-sichere Wallets und neue Validierungsregeln. Landminen helfen nur Besitzern mit aktiven Keys – nicht verlorenen Coins oder Satoshi-Beständen. Für ehrliche Nutzer, die eigene Alt-UTXOs bewegen, entstünde ebenfalls Collateral-Aufwand.\n\nDie Debatte steht in einer längeren Linie: Ob verwundbare Outputs eingefroren, migriert oder dem Markt überlassen werden sollen, ist seit Jahren umstritten. Fields’ Ansatz verschiebt den Fokus von „alles sperren“ zu „Stehlen muss wehtun“. **Einfach erklärt:** Statt alles einzufrieren, soll Stehlen teuer und riskant werden. \n\nOb daraus jemals Konsensregeln werden, ist offen.\n\n## Bull Bitcoin: Payjoin als Handelsstandard\n\nDie kanadische Bitcoin-only-Börse macht Payjoin zur Standardeinstellung für On-Chain-Käufe und -Verkäufe über die BULL Wallet. Einzahlungen und Auszahlungen können Payjoin nutzen; Lightning- und Liquid-Orders bleiben außen vor.\n\n**Vorteile für Nutzer:** automatische Konsolidierung, schwächere Chain-Analysis, Default statt Opt-in. \\\n**Praktisch:** Wer On-Chain über Bull handelt, baut Privacy und UTXO-Hygiene ein, ohne Extra-Ritual – solange die App bis „Payjoin completed“ offen bleibt. Der erste Kauf in eine leere Wallet bleibt eine Normaltransaktion, weil noch kein UTXO für die Kollaboration vorliegt.\n\nJe mehr Börsen und Wallets Payjoin defaulten, desto unzuverlässiger werden die Standard-Heuristiken für alle – nicht nur für Bull-Kunden. Das ist Privacy als Infrastruktur, nicht als Spezialwerkzeug für Experten.\n\n## CISA-Entwürfe und Privacy-Hackathon\n\nLaut [@btcinsider\\_\\_](https://x.com/btcinsider__/status/2118651251848085776) und den Entwürfen auf [bips.dev](https://bips.dev/458/) liegen BIP 458 (Half-Aggregation von BIP-340-Signaturen), BIP 459 (DahLIAS Full Aggregation) und BIP 460 (CISA für Taproot Key-Path) als Drafts vor – maßgeblich von **Fabian Jahr**. Cross-Input Signature Aggregation würde Zeugen-Daten verkleinern und Gebühren senken, erfordert aber Konsensarbeit und sorgfältige Opt-out-Pfade. Optech dokumentiert CISA seit Jahren als Forschungsthema; die Draft-BIPs machen daraus greifbare Specs zum Review.\n\nBeim **bitcoin++ Privacy Edition in Seoul** gewann das Team BlackIce: **FROST plus Silent Payments für Multisig-Empfang** – ein konkreter Hackathon-Output für Privacy-Wallets, der genau die Lücke schließt, die Silent Payments bei Multisig und Hardware-Wallets bisher hatten.\n\n## Chainalysis: Credential-Leak aller Kunden\n\nChainalysis hat einen Security-Vorfall bestätigt: Credentials und Live-Tokens für alle Kunden seien betroffen; Dienste wie Reactor und KYT wurden zeitweise abgeschaltet. Es gibt auch gute Nachrichten im Zusammenhang mit Hacks :-).\n\n## White Noise im App Store\n\nWhite Noise, ein Nostr-basierter E2E-Messenger ohne Telefonnummer, ist laut [btcinsider\\_\\_](https://x.com/btcinsider__/status/2118650370951913773) im Apple App Store gelandet – nach etwa zwei Monaten Review. \n\n# **Social Media**\n\n## Worüber die Bitcoin-Timelines sprechen\n\nNach dem Tech-Crash dominieren Chart und ETF-Abflüsse die Feeds, aber es gibt noch mehr: Bitcoin Amsterdam geht zu Ende, während Fear & Greed in der Angstzone bleibt.\n\n## Der Chart bleibt der Lautsprecher\n\nAuf X drehen sich die meistgelesenen Bitcoin-Stories um die Zone 74.800 bis 76.500 Dollar: Stabilisierung nach dem Donnerstags-Rutsch, ETF-Abflüsse von rund 430 Millionen Dollar, Jobs-Daten und die Frage, ob 75.000 Dollar hält oder 73.000/69.000 Dollar drohen. [X-News](https://x.com/i/trending/2118924732451983545) fasst die Trader-Debatte zusammen: Fear & Greed um 25–28, Shorts vs. Akkumulation, dünne Supports darunter. Manche sehen die Zone als gesunden Reset, andere als Start einer tieferen Korrektur Richtung Wintermute-Levels um 68.000 Dollar.\n",
+  "sig": "c282c4b3787b589f4d91c727c82011ec2ec3a86b29a6fe5eab26b9375604d92434aa5b3c316771d6b34f0dd65aadd26e2b6dd8c742731693cb67c418a13f8112"
+ },
+ {
+  "id": "d0b62a0de567292cfd9e63387733027a8ee053fb6f491fe5b470e8c049611b0f",
+  "pubkey": "f240be2b684f85cc81566f2081386af81d7427ea86250c8bde6b7a8500c761ba",
+  "created_at": 1793956573,
+  "kind": 30023,
+  "tags": [
+   [
+    "d",
+    "draft-6b7b3c4e-b65c-4ce8-a4a3-3f1311d087d4"
+   ],
+   [
+    "title",
+    "₿ Bitcoin Daily"
+   ],
+   [
+    "summary",
+    "6 Nov., Kursrutsch, Trump, Core Lightning, Bull Bitcoin"
+   ],
+   [
+    "image",
+    "https://blossom.einundzwanzig.space/33d6be38041fbf7cd2a7758dd80369c22c094ebb35838b241b460636df6d12c3.jpg"
+   ],
+   [
+    "published_at",
+    "1793956573"
+   ],
+   [
+    "L",
+    "ISO-639-1"
+   ],
+   [
+    "l",
+    "de",
+    "ISO-639-1"
+   ],
+   [
+    "client",
+    "EINUNDZWANZIG HUB"
+   ]
+  ],
+  "content": "# Bitcoin unter 76.000 Dollar: Tech-Ausverkauf löscht Midterm-Rebound\n\n**Der Rebound über 80.000 Dollar hielt kaum einen Tag. Ein Ausverkauf bei Tech- und KI-Aktien an der Wall Street zog Bitcoin unter die 76.000-Dollar-Marke, Liquidationen summierten sich auf rund eine Milliarde Dollar – überwiegend Longs. Parallel verdauen Anleger Data-Center-Moratorien, ETF-Zuflüsse bei Fidelity, den Mercado-Bitcoin-Hack und Trump Medias BTC-Transfer zu Crypto.com.**\n\n## Der Kurs: Rebound verpufft\n\nBitcoin kostet am Freitag, 6. November 2026, gegen 06:08 Uhr (MEZ) 75.543 US-Dollar beziehungsweise 67.456 Euro. Das ist ein Minus von rund 6,0 Prozent in Dollar und 5,5 Prozent in Euro gegenüber dem Vortag. Nur einen Tag zuvor hatte der Kurs die 80.000-Dollar-Marke zurückerobert – jetzt notiert er wieder nahe dem Midterm-Tief um 75.100 bis 75.500 Dollar.\n\nBitcoin verliert binnen 24 Stunden  gut fünf Prozent auf rund 75.500 Dollar, Ether um etwa 6,5 Prozent. Der Nasdaq 100 verlor 6,3 Prozent, der Halbleiterindex SOX sogar 8,4 Prozent. \n\n## Warum Tech Bitcoin mitzieht\n\nAuslöser ist laut Marktexperten die Sorge vor Data-Center-Moratorien: Nach dem Demokraten-Sieg in beiden Kammern könnten geplante Rechenzentren – etwa in Texas – vorübergehend auf Eis gelegt werden. Was sicherlich auch nicht positiv ist, für Dezember preist der Markt laut FedWatch derzeit mit rund 75 Prozent eine Zinserhöhung ein.\n\n## ETF: leichte Zuflüsse trotz Abverkauf\n\nAm 4. November verzeichneten US-Spot-Bitcoin-ETFs laut Branchendaten rund 74,6 Millionen Dollar Nettozufluss. Fidelitys FBTC zog allein etwa 236,7 Millionen Dollar an und kompensierte damit Abflüsse bei BlackRocks IBIT von rund 201 Millionen Dollar. \n\n## Trump Media und Mercado Bitcoin\n\nWallets, die mit Trump Media in Verbindung gebracht werden, transferierten  rund 4.259 BTC (etwa 340 Millionen Dollar) zu Crypto.com. Die Beträge passen zu zuvor als Collateral für Wandelanleihen ausgewiesenen Beständen; ein Verkauf ist nicht bestätigt – frühere Moves gingen in Custody. Parallel belastet der Cyberangriff auf Brasiliens Mercado Bitcoin die Stimmung.\n\n## Fazit\n\nBitcoin unter 76.000 Dollar nach einem 80k-Strohfeuer zeigt erneut die enge Kopplung an Tech-Risiko und Hebel. Gleichzeitig erinnert uns das alle daran, dass der eigentliche Vorteil von Bitcoin nicht der Tageschart ist, sondern Eigentum ohne Börsen-Hot-Wallet – und die Disziplin, Hebel und Gerüchte zu meiden.\n\n# Technik\n\n## Core Lightning Security-Patch: Was Bitcoin-Technik bewegt\n\n**Core Lightning veröffentlicht v26.06.10 als Security-Release gegen Channel-Drain-Risiken und Bull Bitcoin macht Payjoin zum Standard.**\n\n## Core Lightning v26.06.10: Patchen, bevor es teuer wird\n\nUngepatchte Core-Lightning-Nodes stehen vor Channel-Draining-Risiken. Maintainer drängen auf den Upgrade auf **v26.06.10**. Laut Changelog und [Freedom.Tech](https://freedom.tech/posts/2026-11-04-core-lightning-26-06-10/) schließt der Release Lücken bei Dual Funding, Splicing, HTLC-Auflösung und Remote-Zugriff über Commando-Runes.\n\nKonkret prüft die neue Version Peer-Signaturen bei Dual-Funded-Channel-Opens und Splicing nach BOLT 2. Ein HTLC, das gerade entfernt wurde, konnte zuvor mit einem noch aktiven HTLC derselben Payment Hash, Amount und Expiry verwechselt werden – der Node konnte die Live-Zahlung upstream failen, während der Peer sie noch claimen konnte. \n\n**Einfach erklärt:** Wer einen Lightning-Node betreibt, lädt Software nach – und räumt Zugangs-Tokens auf.&#x20;\n\n## Bull Bitcoin: Payjoin als Standard\n\n[@btcinsider\\_\\_](https://x.com/btcinsider__/status/2118527776156426740) meldet: Bull Bitcoin werde die erste Börse, die das Payjoin-Protokoll standardmäßig für On-Chain-Ein- und Auszahlungen unterstützt. Payjoin (BIP78) lässt Sender und Empfänger Inputs in derselben Transaktion kombinieren – von außen schwerer als klassische „eine Adresse, ein Betrag“-Muster zu lesen. **Einfach erklärt:** Die Börse hilft mit, dass eure Auszahlung on-chain weniger wie ein typischer Exchange-Withdrawal aussieht. **Praktischer Vorteil:** Mehr Privatsphäre ohne Extra-Tooling für den Endnutzer – ein Schritt, den Self-Custody-Wallets schon länger anbieten, der jetzt in den Börsen-Alltag wandert.\n",
+  "sig": "18906e96466a468a9e1c1d079a46c18f6c331be408ba162db4e69f84197c9beb5a1c1c6348ecb44d990d39198d258a0d351c578fa9dec0cc03a0fc34a29428f5"
+ },
+ {
+  "id": "2bdbdbfbfa1639390734c4ad3262d36c83010dff5bc16c0d433a03abb180c751",
+  "pubkey": "f240be2b684f85cc81566f2081386af81d7427ea86250c8bde6b7a8500c761ba",
+  "created_at": 1793900921,
+  "kind": 30023,
+  "tags": [
+   [
+    "d",
+    "draft-11d77da1-3ca4-47f6-b143-bc67aeb7a381"
+   ],
+   [
+    "title",
+    "₿ Bitcoin Daily"
+   ],
+   [
+    "summary",
+    "Midterm, Bhutan, Paraguay"
+   ],
+   [
+    "image",
+    "https://blossom.einundzwanzig.space/ff66c857f0f0031522e2edfee35ede5ec8e336d498355cb8621becdf745f68cb.webp"
+   ],
+   [
+    "published_at",
+    "1793900921"
+   ],
+   [
+    "L",
+    "ISO-639-1"
+   ],
+   [
+    "l",
+    "de",
+    "ISO-639-1"
+   ],
+   [
+    "client",
+    "EINUNDZWANZIG HUB"
+   ]
+  ],
+  "content": "# Bitcoin zurück über 80.000 Dollar: Märkte schütteln Midterms ab – und Europa schärft die Meldepflichten\n\nNach dem Midterm-Tief bei rund 75.700 Dollar notiert Bitcoin am Donnerstagmorgen wieder klar über 80.000 Dollar. Anleger verdauen den Demokraten-Sieg, einen bestätigten Banken-Hack und die Frage, ob Self-Custody in Frankreich und Österreich bald zur Meldepflicht wird. Gleichzeitig setzt Bhutan auf Bitcoin als Zentralbank-Reserve – und in Paraguay zeigt eine Bankenkrise, warum Selbstverwahrung zählt.\n\n## Der Kurs: Rebound über 80.000 Dollar\n\nEin Bitcoin kostete am Donnerstag, 5. November 2026, gegen 06:09 Uhr (MEZ) 80.393 US-Dollar beziehungsweise 71.381 Euro. Das ist ein Plus von rund 4,1 Prozent in Dollar und 3,8 Prozent in Euro gegenüber dem Vortag. Nur eine Nacht zuvor war der Kurs im Midterm-Tief bis etwa 75.700 Dollar gefallen.\n\nBitcoin ist nach dem Wahlsieg der Demokraten in beiden Kongresskammern wieder über 80.000 Dollar gestiegen. Die Märkte haben anscheinend eine politische Blockade bereits eingepreist. Short-Positionen wurden laut Branchenschlagzeilen in Größenordnung von rund einer Milliarde Dollar liquidiert, als der Kurs die runde Marke zurückeroberte.\n\n> „There are no sellers left in crypto“\n\nDazu passt auch die Nachricht das Strategy-Vorzugsaktien STRC erstmals seit Mitte Mai wieder bei 100 Dollar gestiegen sind – dem Kurs, bei dem neue Emissionen und damit frische Kaufkraft für Bitcoin-Käufe wieder attraktiver werden.\n\n## Europa: Self-Custody unter Beobachtung\n\nFrankreichs Nationalversammlung hat  am 3. November mit 150 zu 44 Stimmen (8 Enthaltungen) einen Änderungsantrag verabschiedet: Selbstverwahrte Krypto-Wallets ab einem Gesamtwert von 100.000 Euro sollen den Steuerbehörden gemeldet werden. Wer nicht meldet, riskiert bis zu 10.000 Euro Strafe. Die Regelung ist Teil des Haushaltsentwurfs 2027 oder auch nicht.\n\nDenn schon einen Tag später lehnte die Nationalversammlung den gesamten Einnahmenteil des Haushaltsentwurfs für 2027 ab, womit auch die Meldepflicht wieder aus dem Entwurf herausfiel.\n\nIhr solltet mit solchen Meldungen vorsichtig sein, oft wird hier versucht viel Aufmerksamkeit abzugreifen.\n\nIn Deutschland fordert Max Lucks von den Grünen eine Senkung der Höchststeuersatz auf Bitcoin-Spekulationen von derzeit 42% auf 25%. Dafür soll die Steuer für Kleinsparer auf 26,5% steigen.\\\nWas auch Sinn ergibt wenn man bedenkt wer die Grünen wählt, die Kleinsparer sind es meist nicht.\n\n## Bhutan und Paraguay: zwei Seiten derselben Medaille\n\nEin Königreich geht einen anderen Weg, hier darf eine Zentralbank ausdrücklich in Bitcoin investieren. Ganz anders Paraguay: Die Ueno-Bank steht unter Zwangsverwaltung, Millionen Kunden sind gesperrt, die Krise weitet sich aus.\\\nIn Paraguay ist Cash aber noch immer King und fat 40% der Einwohner haben überhaupt kein Bankkonto.\n\nFür Bitcoiner ist die Lehre alt und aktuell: Ein Konto bei der Bank ist ein Versprechen der Bank – ein UTXO auf der eigenen Wallet ist Eigentum im Netzwerk.\n\n## Fazit\n\nBitcoin über 80.000 Dollar nach einer Wahlnacht, die Aktienfutures und Krypto kurz gemeinsam nach unten zog, ist ein starkes Signal. Gleichzeitig erinnern Frankreichs Meldepflicht, Paraguays Bankenchaos und Bhutans Reserve-Dekret daran, dass der eigentliche Vorteil von Bitcoin nicht der Tageskurs ist, sondern die Möglichkeit, Vermögen ohne Erlaubnis zu halten.\n\n# Technik\n\n## Great Consensus Cleanup: Was Bitcoin-Technik diese Woche bewegt\n\nMatt Corallo gibt dem „Great Consensus Cleanup“ rund 80 Prozent Chance als nächster Soft Fork – weniger Revolution als Aufräumen. Coinbase betont 99 Prozent Offline-Verwahrung, und Spiral fragt, was nach dem Speichern von Wert als Nächstes kommt.\n\n## BIP-54: Soft Fork als Übungslauf\n\nLaut [Decrypt](https://decrypt.co/382568/why-bitcoin-next-soft-fork-could-feel-like-practice-run) sieht der langjährige Bitcoin-Entwickler und BIP-54-Mitautor Matt Corallo eine etwa 80-prozentige Chance, dass der „Great Consensus Cleanup“ – erstmals 2019 vorgeschlagen – Bitcoins nächster Soft Fork wird. Es geht um vier Altlasten, bei denen sich die Entwickler weitgehend einig sind: poison blocks, time-warp-Bugs, Merkle-Malleabilität und doppelte Coinbase-Transaktionen. Nichts davon ist akut brandgefährlich, aber alles ist real.\n\nPaul Sztorc von LayerTwo Labs nennt die mögliche Aktivierung \n\n> „kind of depressing, since it is a janitorial maintenance fork that doesn't do anything“\n\nHausmeisterarbeit statt Feature. Genau darin liegt für Corallo und andere der Sinn: Die Community übt wieder das Activation-Playbook, bevor größere Änderungen anstehen. Die frühesten Schätzungen liegen bei September 2027, die meisten Stimmen bei 2028 oder später.\n\n## Coinbase nach dem Binance-Hack\n\nNach dem 6,4-Milliarden-Hack bei Binance betont Coinbase laut Decrypt, mehr als 99 Prozent der Kundenvermögen lägen offline in Cold Storage. Dazu kämen Split-Keys, Withdrawal-Limits, Anomalie-Erkennung und Kill-Switches, die Signing-Keys offline nehmen können. Kundengelder seien 1:1 hinterlegt. \n\n## Fazit\n\nDie Technik-Nachrichten ergänzen sich: Das Basisprotokoll räumt Altlasten auf und übt Upgrades, Wallets werden schwellenfähig und privater, Börsen betonen Cold Storage.\n\n# Community\n\n## Varoufakis/DiEM25\n\nDer Steinzeit-Sozialist und Bitcoin-Kritiker Varoufakis bettelt auf X um Geld weil ihnen die Konten gesperrt wurden. Wenn es da nur ein Netzwerk geben würden ... Naja, wenn er nicht so ein Idiot wäre, wäre er auch kein Sozialist.\n\n##\n",
+  "sig": "082fd81acd0f982fde6646aebf71beb50536314f738550bd9beab935299e3151d8819309b404e853b1f20c02e94758e7fbe384f44144dc47c823ebd22b044289"
+ },
+ {
+  "id": "b9770f065ca63dbd681ccd566207f0b20bb71f202e6e30fc638629ce31fe181f",
+  "pubkey": "f240be2b684f85cc81566f2081386af81d7427ea86250c8bde6b7a8500c761ba",
+  "created_at": 1793778127,
+  "kind": 30023,
+  "tags": [
+   [
+    "d",
+    "draft-ca995db3-73e9-4297-822d-53767cdcabc3"
+   ],
+   [
+    "title",
+    "₿ Bitcoin Daily"
+   ],
+   [
+    "summary",
+    "4 Nov., US Wahlen, Tether, Hacks\n\n"
+   ],
+   [
+    "image",
+    "https://blossom.primal.net/ba52e0016b8721253d45d4144377cade43edc63aedfc8da85915fad286ef3d0b.jpg"
+   ],
+   [
+    "published_at",
+    "1793778127"
+   ],
+   [
+    "L",
+    "ISO-639-1"
+   ],
+   [
+    "l",
+    "de",
+    "ISO-639-1"
+   ],
+   [
+    "client",
+    "EINUNDZWANZIG HUB"
+   ]
+  ],
+  "content": "# Bitcoin nach der US-Wahlnacht: Kurzer Absturz, schnelle Erholung – und Tether sitzt auf 150.000 Bitcoin\n\nDie US-Zwischenwahlen haben den Bitcoin-Kurs in der Nacht kräftig durchgeschüttelt: Als erste Ergebnisse einen Erfolg der Demokraten andeuteten, fiel die Kryptowährung kurzzeitig auf rund 75.700 Dollar. Am Mittwochmorgen notiert sie wieder über 77.000 Dollar. Für Gesprächsstoff sorgen außerdem Tethers Bitcoin-Bestand, neue Hack-Meldungen und die Frage, woher die nächste Liquiditätswelle kommen soll.\n\n## Der Kurs: Achterbahn über Nacht\n\nBitcoin bewegte sich dabei nicht allein. Die Futures auf den S\\&P 500 fielen um 1,3 Prozent, die Nasdaq-100-Futures sogar um 2,3 Prozent. Der Dollar gab gegenüber den meisten Währungen nach, die Rendite zehnjähriger US-Staatsanleihen sank um sechs Basispunkte auf 4,90 Prozent, und der MSCI-Asien-Pazifik-Index verlor fast 2 Prozent. Anleger fürchten bei einem Durchmarsch der Demokraten weniger billiges Geld. Staatsanleihen profitieren dagegen, wenn eine Blockade in Washington weitere Steuersenkungen und vor allem Ausgaben bremst.\n\n## Die Wahl: Demokraten erobern den Senat\n\nInzwischen ist klar, dass die Demokraten die Mehrheit im Senat übernehmen. Für die Kryptobranche hat das konkrete Folgen: Der CLARITY Act, der Regeln für den US-Kryptomarkt schaffen soll, war im September bei einer Verfahrensabstimmung im Senat mit 49 zu 50 Stimmen gescheitert. Jetzt hat es keine Chance durch den Senat zu kommen.\n\n## Tether: 150.000 Bitcoin – und eine Lücke in den Unterlagen\n\nDie meistgeteilte Zahl des Tages kam aus Lugano. Tether-Chef Paolo Ardoino sagte laut Decrypt auf dem Plan ₿ Forum: \n\n> „We have give or take 150,000 bitcoin ourselves. It’s not much, but it’s honest work.“ \n\nDas wären rund 11,5 Milliarden Dollar. Bemerkenswert: Der Reservebericht für das dritte Quartal weist Bitcoin im Wert von 8,37 Milliarden Dollar bei einem Kurs von 83.621 Dollar aus – das entspricht etwa 100.060 BTC. Rund 50.000 Coins tauchen in den öffentlichen Unterlagen also nicht auf. Ardoino sagte nicht, wo sie liegen oder wann sie gekauft wurden; Tether betont seit Langem, dass Firmen-Bitcoin getrennt von den USDT-Reserven gehalten wird. Seit Mai 2023 steckt Tether bis zu 15 Prozent seiner realisierten Betriebsgewinne in Bitcoin, allein im dritten Quartal lag der Nettobetriebsgewinn bei 1,5 Milliarden Dollar.\n\n## Sicherheit: Hacks treffen jetzt auch Banken\n\nDie Hack-Serie der vergangenen Tage reißt nicht ab. ZachXBT nennt laut die französische Bankengruppe Crédit Mutuel Arkéa als mutmaßliches Opfer eines Krypto-Diebstahls von mehr als 133 Millionen Dollar. „I suspect the amount stolen is larger when accounting for OTC activity“, so ZachXBT. Die Bank hat ihre Beteiligung nicht bestätigt. Kraken und Crypto.com haben nach eigenen Angaben verdächtige Konten beschränkt. Die brasilianische Börse Mercado Bitcoin verspricht ihren Kunden nach dem Angriff vom 2. November vollen Ersatz; offiziell geht es laut News.Bitcoin.com um rund 38 Millionen Dollar, Arkham-Analyst Emmett Gallic schätzte mehr als 46 Millionen. Und Binance hat in seinem Untersuchungsbericht nachgezeichnet, dass der 6,3-Milliarden-Hack mit einem gefälschten Bewerbungsgespräch begann.\n\n# Längere Passphrasen, gefälschte Transaktionen, selbst gescannter Code: Was Bitcoin-Nutzer aus der Hack-Welle lernen\n\nDie Technik-Nachrichten des Tages haben ein gemeinsames Thema: Sicherheit für den Alltag. Trezor erlaubt nach den Coldcard-Diebstählen deutlich längere Passphrasen, Bitcoin-Safe schützt vor manipulierten Daten aus dem Netzwerk, und ein Entwickler zeigt, wie man Open-Source-Code mit einfachen Mitteln auf Lücken prüft.\n\n## Trezor: Passphrasen bis 128 Zeichen\n\nHardware-Wallet-Hersteller Trezor hat die maximale Länge der optionalen Passphrase von 50 auf 128 Zeichen erhöht. Das neue Limit steht laut Trezor-Blog mit der aktuellen Trezor Suite und neuer Geräte-Firmware zur Verfügung; ältere Firmware bleibt bei 50 Zeichen. CoinTelegraph zufolge gilt das für Model T, Safe 3, Safe 5 und Safe 7, das Model One bleibt beim alten Wert.\n\nTrezor begründet den Schritt ausdrücklich mit den Coldcard-Diebstählen aus dem Sommer. Damals hatte ein Firmware-Fehler dazu geführt, dass manche Coldcard-Geräte ihre Wiederherstellungsphrasen mit viel zu wenig Zufall erzeugten. Angreifer konnten diese Phrasen offline nachrechnen und räumten tausende Adressen leer, insgesamt ging es um mehr als 100 Millionen Dollar. Nicht alle Betroffenen verloren Geld: „Those with a strong, unique passphrase were protected“, schreibt Trezor.\n\nEinfach erklärt: Die 12 oder 24 Wörter der Seed-Phrase sind wie der Hauptschlüssel zu einem Haus. Die Passphrase ist ein zusätzliches, frei wählbares Passwort – oft „25. Wort“ genannt –, das aus demselben Schlüssel ein völlig anderes Haus macht, mit eigenen Adressen und eigenem Guthaben. Wer nur die Wörter kennt, steht vor dem falschen Haus. Der praktische Vorteil: Selbst wenn die Seed-Phrase gestohlen, abfotografiert oder wie bei Coldcard schwach erzeugt wurde, bleibt das Geld hinter einer starken Passphrase sicher. Mehr Zeichen bedeuten, dass man etwa einen ganzen Satz verwenden kann, der leicht zu merken, aber schwer zu erraten ist. Trezor warnt allerdings: Wer die Passphrase vergisst oder falsch tippt, verliert den Zugriff – sie muss genauso sorgfältig gesichert werden wie die Wörter selbst.\n\n## Selbst nach Lücken suchen: Talips Leitfaden\n\nDer Bitcoin-Entwickler Talip (@otaliptus), der laut The Bitcoin Insider als Erster den Coldcard-Hack bestätigte, hat einen Praxisleitfaden zum Scannen von Open-Source-Code veröffentlicht. In seinem Post dazu schreibt er, er habe zwei bis drei Monate lang Bitcoin-Repositories durchsucht: „The pace is surreal, and it's very hard to keep up.“ Der Leitfaden konzentriert sich bewusst auf Methoden, die „simple and cheap“ sind – für alle, die nicht die Mittel eines großen KI-Labors oder professioneller Red Teams haben. Der praktische Nutzen: Open Source ist nur dann sicherer, wenn tatsächlich jemand hinschaut. Je einfacher die Werkzeuge, desto mehr Augen prüfen den Code, auf dem Wallets und Knoten laufen.\n\n## Die Angriffe werden menschlicher – und KI-gestützt\n\nWie wichtig das ist, zeigen die Berichte über die großen Hacks. Binance zufolge begann der 6,3-Milliarden-Dollar-Angriff mit einem gefälschten Bewerbungsgespräch; die Täter nutzten kompromittierte Mitarbeiterrechner, gestohlene Zugangsdaten und ein manipuliertes KI-Werkzeug. Der Dokumentations-Dienst GitBook, den viele Krypto-Projekte nutzen, meldete laut Decrypt einen KI-gestützten Einbruch und forderte Nutzer auf, Schlüssel und Tokens zu erneuern. Binance-Gründer CZ ruft laut The Block zu einer Sicherheitsallianz der Branche auf, weil KI-gestützte Angriffe zunehmen.\n\nDie Lehre für Privatnutzer: Die Schwachstelle ist selten die Kryptografie von Bitcoin, sondern fast immer der Mensch und sein Computer. Eine Hardware-Wallet, die Transaktionen auf dem eigenen Display bestätigen lässt, und eine Verteilung auf mehrere Schlüssel helfen genau dagegen.\n",
+  "sig": "c63a4fc7e9b0f9adc73aa9af29fd88a8a40399a8a52f62d10a052ec8171a23f9b1763f5ed5c16e28e211eca2bb45265e3e4c452b331fa3bf65bd83cd2cfdb5a6"
+ },
+ {
+  "id": "85f45de4529c63c80b0cf9526da827de5e38119363339cfb271ce1c7ef556aec",
+  "pubkey": "f240be2b684f85cc81566f2081386af81d7427ea86250c8bde6b7a8500c761ba",
+  "created_at": 1793698550,
+  "kind": 30023,
+  "tags": [
+   [
+    "d",
+    "zlrsLS1Am6tFRsdm"
+   ],
+   [
+    "title",
+    "₿ Bitcoin Daily"
+   ],
+   [
+    "summary",
+    "3 Nov, ETFs, liquid, OpReturn"
+   ],
+   [
+    "image",
+    "https://npub17fqtu2mgf7zueq2kdusgzwr2lqwhgfl2scjsez77ddag2qx8vxaq3vnr8y.blossom.band/c4dbfa13f8d81dd631c567b9caa46cdbbb44a1f04577ec6119a35b5c457d3bb4.jpg"
+   ],
+   [
+    "published_at",
+    "1793698386"
+   ],
+   [
+    "t",
+    "429"
+   ],
+   [
+    "t",
+    "bitcoin"
+   ],
+   [
+    "t",
+    "news"
+   ],
+   [
+    "client",
+    "Amethyst"
+   ]
+  ],
+  "content": "# Bitcoin rutscht unter 77.000 Dollar – ETF-Abflüsse, Chip-Ausverkauf und die US-Zwischenwahl\n\nDer Bitcoin-Kurs ist zum Wochenstart unter Druck geraten: Am Dienstagmorgen notiert er bei rund 76.700 Dollar, knapp 2 Prozent tiefer als vor 24 Stunden. Spot-ETFs verzeichnen hohe Abflüsse, Technologieaktien geben nach, und heute wählen die USA einen neuen Kongress.\n\nDer Kurs: tiefster Stand seit August\n\nAm Morgen war der Kurs kurzzeitig unter 76.400 Dollar gefallen – der tiefste Stand seit August. Auf Sieben-Tage-Sicht steht ein Minus von 3,7 Prozent. Noch am Montagmorgen hatte Bitcoin Richtung 79.000 Dollar gestrebt; die Erholung nach dem Binance-Hack hat damit vorerst keine Fortsetzung gefunden.\n\nDer Nasdaq 100 rutschte in eine Korrektur, ein Ausverkauf bei Chip-Aktien zog auch asiatische Börsen nach unten. \n\n## ETFs: größter IBIT-Abfluss seit Juni\n\nEin wichtiger Grund für die Schwäche sind die Spot-ETFs. Am Montag flossen netto 398,6 Millionen Dollar aus den US-Bitcoin-ETFs ab. Allein BlackRocks iShares Bitcoin Trust (IBIT) verlor 405,3 Millionen Dollar – der größte Tagesabfluss seit dem 26. Juni. Fidelitys FBTC verbuchte dagegen ein kleines Plus von 6,7 Millionen Dollar. Schon im Oktober waren netto 515 Millionen Dollar abgeflossen; seit Jahresbeginn liegt die Bilanz bei rund 38 Millionen Dollar im Minus. \n\nBrasiliens größte Börse Mercado Bitcoin bestätigte laut The Block einen Sicherheitsvorfall über 46 Millionen Dollar und stoppte die Auszahlungen. Und laut Decrypt verlor eine nicht genannte Einrichtung in der EU nach Angaben des On-Chain-Ermittlers ZachXBT am Sonntag mehr als 106 Millionen Dollar aus Börsenkonten.\n\n## Wer kauft? Strive und die Treasury-Firmen\n\nEs gibt aber auch Käufer. Strive, die von Vivek Ramaswamy mitgegründete Bitcoin-Treasury-Firma, kaufte laut Decrypt zwischen dem 24. und 30. Oktober 124 BTC für rund 10 Millionen Dollar, zu einem Durchschnittspreis von 80.526 Dollar. Damit hält Strive 43.124 BTC und liegt auf Platz vier der börsennotierten Firmen – nur 390 BTC hinter Twenty One Capital und 876 BTC hinter Metaplanet. Der durchschnittliche Einstandspreis von Strive liegt mit 87.785 Dollar allerdings deutlich über dem aktuellen Kurs.\n\n## Was ansteht: die Midterms\n\nHeute wählen die US-Amerikaner einen neuen Kongress. Bitcoin hat nach den letzten drei Zwischenwahlen jeweils deutlich nachgegeben und erst danach sein Zyklustief erreichte. Unsicher ist auch die Zukunft des Clarity Act, des geplanten US-Marktstrukturgesetzes für Kryptowerte.\n\nCoinDesk beschreibt die Gegenposition: Trader setzen auf eine Rally nach der Wahl und verweisen auf Abflüsse von den Börsen, die auf ein knapperes Angebot hindeuten. \n\nFür die kommenden Tage zählen damit drei Dinge: das Wahlergebnis und seine Folgen für die Krypto-Gesetzgebung, die Frage, ob die ETF-Abflüsse anhalten, und ob Binance seinen SAFU-Fonds wieder auffüllt. Kurzfristig bleibt die Marke von 76.000 Dollar im Fokus – darunter läge Bitcoin auf dem Niveau des Spätsommers.\n\n# Liquid wieder voll gedeckt\n\nDie Liquid-Sidechain ist nach dem Hack vom September wieder vollständig mit Bitcoin gedeckt. Auf Delving Bitcoin stellt ein Entwickler eine Node vor, die große OP\\_RETURN-Daten verwerfen kann, und eine formale Prüfung macht schnellere Signaturprüfung greifbar.\n\n## Liquid: 1:1-Deckung wiederhergestellt\n\nDie wichtigste technische Nachricht des Tages kommt von Blockstream. Am Montagabend meldete The Bitcoin Insider: „JUST IN: 300 bitcoin spotted being deposited into the Liquid Network's bridge address“. Die Transaktion ist auf mempool.space öffentlich einsehbar; auf Stacker News wurde sie ebenfalls diskutiert. Kurz darauf folgte die Bestätigung: Laut The Bitcoin Insider ist die Bindung („Peg“) des Liquid Network „officially back to 100% for the first time since early September“. Damals hatte ein Hacking-Vorfall in der Brücke ein Loch von 600 Bitcoin hinterlassen.\n\nBlockstream selbst schrieb am Dienstagmorgen: „The Liquid Network's bitcoin reserves are fully restored: 1:1 BTC backing for all LBTC, verifiable by anyone running a Liquid node.“ Der letzte Teil ist entscheidend. Liquid ist eine Sidechain, auf der Bitcoin als L-BTC umläuft. Jeder L-BTC soll durch einen echten Bitcoin in der Föderations-Wallet gedeckt sein. Wer eine eigene Liquid-Node betreibt, muss diese Aussage nicht glauben, sondern kann sie selbst nachrechnen. Das ist der Unterschied zwischen einem Versprechen und einem prüfbaren Beweis – derselbe Gedanke, der in dieser Woche auch hinter den Reserve-Nachweisen der großen Börsen steht.\n\n## Satd: OP\\_RETURN-Daten auf Wunsch verwerfen\n\nAuf Delving Bitcoin stellt der Entwickler bkeroack eine Neuerung seiner alternativen Node-Implementierung satd vor. Sie ist nach eigener Aussage „the first Bitcoin node implementation to allow optional full OP\\_RETURN value pruning“. Drei Optionen steuern das: -pruneopreturn=N legt fest, wie viele Blöcke hinter der Spitze die Daten entfernt werden (mindestens 288, passend zur Garantie für „NODE\\_NETWORK\\_LIMITED“). -pruneopreturnsize=X bestimmt, ab welcher Größe Daten verworfen werden, und -restoreopreturns stellt alles wieder her.\n\nDie jüngste Kontroverse um BIP-110 habe gezeigt, „that a certain proportion of node runners care deeply about OP\\_RETURN value sizes and what they see as spam on the blockchain“. Seine persönliche Sicht sei, dass der Platzbedarf von OP\\_RETURN auf dem Mainnet derzeit vernachlässigbar ist. Das philosophische Argument, dass nicht-finanzielle Daten nicht auf die Chain gehören, sei aber real. Weil das Verwerfen ohne Bruch der Konsensregeln möglich ist, kann jeder Node-Betreiber selbst entscheiden. In einfachen Worten: Die Blockchain bleibt gültig, nur die eigene Festplatte hält bestimmte Datenanhängsel nicht mehr vor.\n\n## Post-Quanten: Blockstream wirbt für Hash-Signaturen\n\nDie Quantenfrage bleibt auf der Agenda. Blockstream kündigte an, dass der Direktor von Blockstream Research am 13. November beim Digital Assets Forum in New York über „the race to replace Bitcoin's signatures“ spricht: „Bitcoin can get ahead of quantum.“ In einem weiteren Post verweist Blockstream auf ein Papier zu hashbasierten Signaturen – „post-quantum security built on the hash functions Bitcoin already trusts“. Der Charme dieses Ansatzes: Er stützt sich auf Bausteine, die in Bitcoin seit Jahren im Einsatz sind.\n\n## Ökosystem: Fedimint, KaleidoSwap, Cashu und Mining\n\nIm Wochenupdate geht es um „Nut November“, den einmonatigen Hackathon des Cashu-Ökosystems. Lightning News rechnete vor, was es braucht, um einen ganzen Bitcoin pro Tag zu schürfen: rund 2.400.000 TH/s, etwa 4.140 Antminer S23 Hydro und fast 23 Megawatt Dauerleistung – „industrial-scale infrastructure“.\n\nBei Bitcoin Core gibt es seit den Releases 29.5, 30.4 und 31.2 vom 28. Oktober nichts Neues; der letzte Optech-Newsletter bleibt #429. Wer noch nicht aktualisiert hat, sollte das nachholen. Die drei Releases schließen unter anderem zwei Speicherlecks, die das Projekt am selben Tag als CVE-2026-117349 und CVE-2026-117350 offengelegt hat. Beide betreffen unbegrenztes Speicherwachstum durch präparierte Verbindungen; ein Update ist für alle Node-Betreiber die einfachste Absicherung.\n",
+  "sig": "679730b19754c5c21339fa7f68250cbdd5d29053e416f76a1ce487b2d4f374837db3b9395f36c8222c9665467d5d3dbcfac6601e812f258a8037721c12c48f32"
+ },
+ {
+  "id": "713545ccf767b4bf179e82392ba9dfb5077a727a11f81cc78f1476a69e6b4709",
+  "pubkey": "f240be2b684f85cc81566f2081386af81d7427ea86250c8bde6b7a8500c761ba",
+  "created_at": 1793605557,
+  "kind": 30023,
+  "tags": [
+   [
+    "d",
+    "draft-f5e0d8a3-efff-49a2-a394-1560e0fe591b"
+   ],
+   [
+    "title",
+    "₿ Bitcoin Daily"
+   ],
+   [
+    "summary",
+    "2. November 2026 Binance, ETFs, BTCPay-Server, BTC Balkans"
+   ],
+   [
+    "image",
+    "https://blossom.einundzwanzig.space/572a8228fecd7fc67cd9549b35f36c3ed008786133e538829a3abd84df8a130e.jpg"
+   ],
+   [
+    "published_at",
+    "1793605557"
+   ],
+   [
+    "L",
+    "ISO-639-1"
+   ],
+   [
+    "l",
+    "de",
+    "ISO-639-1"
+   ],
+   [
+    "client",
+    "EINUNDZWANZIG HUB"
+   ]
+  ],
+  "content": "# Bitcoin nähert sich wieder 79.000 Dollar – Binance öffnet die Schleusen, ETF-Anleger ziehen Geld ab\n\nVier Tage nach dem größten Krypto-Hack der Geschichte steht Bitcoin am Montagmorgen bei rund 78.400 US-Dollar. Binance hat die Auszahlungen wieder geöffnet und Milliarden fließen ab, die Spot-ETFs verzeichneten den größten Tagesabfluss seit Monaten – und trotzdem hält der Kurs.\n\nBitcoin arbeite sich zurück in Richtung 79.000 Dollar, während die Märkte den größten Hack der Kryptogeschichte abschüttelten. Der Blick zurück zeigt, wie schwer der Oktober war. Bitcoin beendete den Monat mit einem Abschlag von fast acht Prozent; im Wochenvergleich verlor der Kurs infolge des Binance-Hacks knapp drei Prozent auf etwa 77.800 Dollar.\n\n## Binance: Auszahlungen laufen – und das Geld fließt ab\n\nDer wichtigste Termin des Wochenendes war die Wiedereröffnung der Auszahlungen bei Binance. Laut Binance standen bis zum Zeitpunkt der Meldung 4,6 Milliarden Dollar an Auszahlungen nur 1 Milliarde Dollar an Einzahlungen gegenüber, ein Nettoabfluss von 3,6 Milliarden Dollar. Am stärksten abgezogen wurden die Stablecoins USDT und USDC, danach Bitcoin.\n\nEinordnen muss man diese Zahl trotzdem: Binance verwaltet nach eigenen Angaben rund 171 Milliarden Dollar an Kundengeldern. Die Abflüsse seien zunächst stark gewesen, hätten sich aber inzwischen verlangsamt und stabilisiert, so die Börse. \n\n## ![](https://blossom.einundzwanzig.space/52b248c5d79686e5a593b7afcb83290a480db0d3e2daf7167e7037c0d1550f50.jpg)ETFs: Größter Abfluss seit Monaten\n\nDeutlich nervöser reagierte die Wall Street. Anleger zogen  am Freitag 643,2 Millionen Dollar aus den US-Spot-Bitcoin-ETFs ab – der größte Tagesabfluss im Oktober und der größte seit vier Monaten.\n\nEs war der erste volle Handelstag nach Beginn des Angriffs. Damit wurde eine viertägige Zuflussserie von 441 Millionen Dollar komplett ausradiert. Auf Wochensicht stehen die Fonds rund 202 Millionen Dollar im Minus, für den Oktober etwa 516 Millionen. Seit dem Start im Januar 2024 summieren sich die Nettozuflüsse dennoch auf 57,4 Milliarden Dollar, das verwaltete Vermögen liegt bei 103,2 Milliarden. \n\n## Was steht an?\n\n- **US-Wahl:** Am Dienstag, 3. November, finden die US-Zwischenwahlen statt. Wer im Kongress sitzt, entscheidet mit über die Regulierung von Börsen und Stablecoins.\n- **Makro:** Diese Woche kommen vor allem neue US-Arbeitsmarktdaten und die Quartalszahlen von Apple. Zusätzlicher Gegenwind kommt von der Fed: Zwei Mitglieder stimmten  für eine Erhöhung, und Händler preisen eine Zinserhöhung im Dezember mit über 70 Prozent ein.\n\n# Technik\n\n## BTCPay-Server: Hot Wallets geleert – warum Updates jetzt Pflicht sind\n\nIn der Nacht zu Montag schlug das BTCPay-Server-Team Alarm: Angreifer räumten Hot Wallets auf selbst gehosteten Zahlungsservern leer. Betroffen sind nach aktuellem Stand nur veraltete Versionen. \n\n## Was bei BTCPay passiert ist\n\nAm Sonntagabend gegen 23:25 Uhr (MEZ) veröffentlichte das Projekt eine Dringlichkeitswarnung: „We are receiving reports of hot wallets on BTCPay Servers being swept by unauthorized attackers.“ Es gebe also Berichte, dass Hot Wallets auf BTCPay-Servern von Unbefugten geleert würden. Betreiber sollten ihre Instanzen sofort mit dem Befehl `./btcpay-down.sh` herunterfahren. \n\nDie Untersuchung habe einen Angriffsweg identifiziert, der Instanzen mit Version 2.4.1 (vom 23. Juli 2026) oder älter betrifft. Für Nutzer der aktuellen Version 2.4.7 gebe es keine glaubwürdigen Berichte über geleerte Hot Wallets. \n\n![](https://blossom.einundzwanzig.space/b86f67d9e3bb0033a9d7918aa075b8e503fc9753e49080bfb1c9714305649bcc.png)Hosting-Anbieter wie LunaNode hätten Instanzen laut [BTCPay](https://x.com/BtcpayServer/status/2117106240098611681) nach der ersten Warnung möglicherweise automatisch abgeschaltet, um ältere Versionen zu schützen. Wie viel gestohlen wurde und wie viele Händler betroffen sind, ist noch nicht veröffentlicht; ein ausführlicher Blogpost ist angekündigt.\n\n## Warum alte Versionen gefährlich sind\n\nEs gibt Anzeichen das Angreifer über Schwachstellen in Versionen vor 2.4.2 Administratorzugriff erlangten. Im August war bereits eine Lücke geschlossen worden, über die nicht angemeldete Angreifer an sogenannte LND-Macaroons kommen konnten – das sind Zugangsschlüssel für den Lightning-Knoten. Ob genau diese oder eine andere alte Lücke ausgenutzt wurde, ist noch offen.\n\nErst am 29. Oktober erschien Version 2.4.7, die 85 Befunde aus einer KI-gestützten Sicherheitsprüfung im Rahmen einer Open-Source-Initiative von Anthropic behebt, darunter einer kritisch und 13 mit hohem Schweregrad.\n\n**Der praktische Rat für Händler:** BTCPay sofort auf 2.4.7 aktualisieren, Einnahmen regelmäßig von der Hot Wallet auf eine Cold Wallet oder ein reines Watch-only-Setup verschieben – BTCPay kann Zahlungen auch ganz ohne Schlüssel auf dem Server empfangen, nur mit einem öffentlichen Schlüssel (xpub). Dann gibt es auf dem Server schlicht nichts zu stehlen.\n\n# Social Media\n\nDer Sonntag war in den beobachteten Accounts auf X und Nostr vergleichsweise ruhig – bis in der Nacht der BTCPay-Alarm die Timelines erreichte. \n\n## Sofia: Die größte Bitcoin-Konferenz des Balkans\n\nAbseits der Hacks gab es auch gute Nachrichten. [@LightningNewsX](https://x.com/LightningNewsX/status/2116866122624496086) berichtete von der BTC Balkans in Sofia, nach eigenen Worten der größten Bitcoin-Konferenz auf dem Balkan: „Adoption never sleeps…“. \\\nZwei Tage lang sei es um Themen von ersten Wallets bis zu harten Fragen zu KI, Deepfakes und Stromausfällen gegangen – plus intensives Networking auf den Fluren.\n\n# ![](https://blossom.einundzwanzig.space/bd50732156570348f8f8568d916b8c469434d5e14eedfcbcf6cc4c6a7bb06030.jpg)Fazit\n\nNach dem Binance-Hack folgt mit BTCPay der nächste Sicherheitsfall – diesmal bei Software, die Händler selbst betreiben. Die Lehre der Woche lautet daher nicht „Bitcoin ist unsicher“, sondern: Selbstverwahrung heißt auch Selbstverantwortung – Updates einspielen, Hot Wallets klein halten.\n\n",
+  "sig": "4a96c452f6648489d81b4320f6e5032d55adb8683e94034db0f631b50ab1c18e12e2b2df3374041385d35663d7a1b7f691db5cd19b71e9e10958e4df691edd6f"
+ },
+ {
+  "id": "de2dfe47dfe970f1217447fdeab95c32e4cfe2cd1a4eec436dce1f0d2081b9e2",
+  "pubkey": "f240be2b684f85cc81566f2081386af81d7427ea86250c8bde6b7a8500c761ba",
+  "created_at": 1793526669,
+  "kind": 30023,
+  "tags": [
+   [
+    "d",
+    "draft-41fa1bca-2573-43ae-bb14-dcabfb47b0c3"
+   ],
+   [
+    "title",
+    "₿ Bitcoin Daily"
+   ],
+   [
+    "summary",
+    "1. November 2026\nBinance, FBI, Chainalysis, Eltoo, Whitepaper"
+   ],
+   [
+    "image",
+    "https://blossom.einundzwanzig.space/9a15f7203582b5eca928674b08be88946d6146995f9cd32d0dbbe7ab6e159300.jpg"
+   ],
+   [
+    "published_at",
+    "1793526669"
+   ],
+   [
+    "L",
+    "ISO-639-1"
+   ],
+   [
+    "l",
+    "de",
+    "ISO-639-1"
+   ],
+   [
+    "client",
+    "EINUNDZWANZIG HUB"
+   ]
+  ],
+  "content": "# Bitcoin stabilisiert sich bei 77.700 Dollar – Binance meldet 90 Prozent Ersatz, FBI nennt Nordkorea\n\nDrei Tage nach dem größten Krypto-Hack der Geschichte beruhigt sich der Markt: Bitcoin notiert am Sonntagmorgen bei rund 77.700 US-Dollar, Binance will heute die Auszahlungen wieder öffnen, und das FBI hat Nordkorea offiziell als Täter benannt.\n\n## Der Kurs: leichte Erholung nach dem Schock\n\nEin Bitcoin kostete am Sonntag, 1. November 2026, um 06:04 Uhr (MEZ) 77.737 US-Dollar beziehungsweise 69.411 Euro. Das ist ein Plus von rund 0,8 Prozent gegenüber dem Vortag. Die Marktkapitalisierung liegt bei etwa 1,56 Billionen Dollar, das gehandelte Volumen der letzten 24 Stunden bei rund 45 Milliarden Dollar. Der Wochenendhandel ist damit ruhig verlaufen: Nach dem Einbruch am Freitag hat sich der Kurs knapp unter der Marke von 78.000 Dollar eingependelt.  Gemessen an der Dimension des Binance-Vorfalls ist die Reaktion also vergleichsweise milde ausgefallen.\n\n## Die Gründe: Binance zahlt, Nordkorea war es\n\nDer wichtigste Faktor für die Beruhigung ist die Zusage von Binance, den Schaden vollständig selbst zu tragen. Die Börse hat nach eigenen Angaben inzwischen 90 Prozent der gestohlenen Vermögenswerte wiederbeschafft – nach 80 Prozent am Vortag.\n\nDen Rest bilden vor allem weniger liquide Token, die Binance über den Markt und außerbörslich zukauft. Finanziert wird das aus der Unternehmenskasse, einem Teil des Notfallfonds SAFU und einem Teil des Versicherungsfonds für Futures. Die Auszahlungen sollen am heutigen Sonntag wieder starten.\n\nParallel ist die Täterfrage offiziell geklärt. Das FBI hat am 31. Oktober bestätigt, dass Nordkorea für den Diebstahl von mehr als 6 Milliarden Dollar verantwortlich ist. \n\n&#x20;Laut FBI haben die Angreifer gestohlene Werte bereits in Ether umgetauscht. Laut Glassnode ist der Binance-Hack mit rund 6,3 Milliarden Dollar größer als die nächsten neun größten Krypto-Hacks zusammen. Der bisherige Rekord war der Bybit-Exploit mit 1,5 Milliarden Dollar.\n\n> „I've always felt it was a little bit dangerous. But no, they say they have it pretty much under control. We'll see.“ **Donald Trump**\n\n> „Binance has committed its own balance sheet to making customers whole. I expect it to deliver. Our industry will learn from this incident, strengthen security, and emerge stronger and more resilient.“ **Michael Saylor**\n\n> „I do have conviction that over any reasonable time frame, this does not change the investment thesis on Bitcoin.“ **Matt Cole**, CEO von Strive\n\nAuf X fasste der On-Chain-Analyst **@therationalroot** die Lage in einem Satz zusammen: [„Reset to the STH Cost Basis.“](https://x.com/therationalroot/status/2116537650836279463) Bitcoin ist demnach auf die durchschnittliche Einstandsbasis kurzfristiger Halter zurückgefallen – ein Niveau, das in seiner [Analyse](https://x.com/therationalroot/status/2116547629463318599) als Prüfstein für das Momentum gilt.\n\n# Technik\n\n## Signierprozess statt Schlüssel: Was der Binance-Hack technisch lehrt – plus Eltoo mit TEMPLATEHASH auf Signet\n\nDas Wochenende stand technisch im Zeichen der Sicherheit: Neue Details zum Binance-Angriff zeigen, dass nicht private Schlüssel, sondern der Signierprozess das Einfallstor war. Gleichzeitig gab es KI-gestützte Angriffe auf Chainalysis  und auf Delving Bitcoin ein spannendes Experiment zu Covenants.\n\n## Binance: Der Angriff auf den Signierprozess\n\nJe mehr Details zum Rekord-Hack bekannt werden, desto klarer wird: Die Angreifer mussten keine Wallet-Schlüssel stehlen. Laut Blockaid-CEO Ido Ben-Natan, die Täter hätten offenbar den Transaktions-Signierprozess von Binance kompromittiert.  Binance selbst erklärte, man habe keine Hinweise darauf, dass private Schlüssel geleakt wurden; die Untersuchung laufe aber noch.\n\nKryptografie schützt nur so gut wie die Prozesse drumherum. Wenn ein Angreifer die Software kontrolliert, die entscheidet, *was* signiert wird, helfen auch sicher verwahrte Schlüssel nicht. \n\n## Chainalysis: Angriff mit KI-Agenten\n\nDiese Nachricht wird sicher einige in der Community freuen :-).\n\nDie Angreifer verschafften sich Zugang zu internen Systemen von Chainalysis und erbeuteten Kundendaten: Nutzernamen, E-Mail-Adressen, Benutzer-IDs und Angaben zu Rollen in Organisationen. Dabei kamen laut Unternehmen „offensive agentic techniques“ zum Einsatz, also KI-gestützte Angriffsmethoden.\n\nFür Bitcoiner heißt das vor allem: Mit geleakten Namen und E-Mail-Adressen steigt das Risiko gezielter Phishing-Mails.\n\n## Delving Bitcoin: Eltoo mit TEMPLATEHASH\n\nEntwickler bauen gerade auf dem Bitcoin-Testnetz neue Wege, wie zwei Leute miteinander bezahlen können, ohne dass jemand einen alten Zwischenstand nochmal „zurückdrehen“ kann.\n\nStell dir einen gemeinsamen Topf vor (einen Channel): Alice und Bob zahlen rein und führen eine Art Kassenbuch. Bei klassischen Lightning-Kanälen muss man alte Zwischenstände hart bestrafen, sonst könnte jemand einen günstigeren alten Stand einschieben. Bei Eltoo soll das einfacher werden: Wer einen neueren Stand hat, ersetzt einfach den alten – ohne Drama.\n\nGenau das hat Aaron Zhang ausprobiert. Er hat denselben kleinen Übungs-Channel dreimal gebaut, jedes Mal mit neuen Bausteinen, die Bitcoin gerade testet. Neu ist vor allem ein Werkzeug namens OP\\_TEMPLATEHASH: Es legt einen Fingerabdruck der geplanten Zahlung auf den Tisch, sodass ein anderer Baustein (CSFS) darauf reagieren kann. Dadurch wird das „Update“-Skript winzig klein – im Test nur etwa 10 Bytes statt langer, komplizierter Skripte. Das Settlement-Skript (die Endabrechnung) kam auf etwa 35 Bytes.\n\nDer Vorteil: Channels könnten leichter und günstiger werden, und veraltete Zustände müssen nicht mehr mit harten Strafen verhindert werden. Das macht Lightning-ähnliche Zahlungskanäle robuster und einfacher zu verstehen. Zhang betont selbst: Sein Beispiel ist ein Spielzeug (ein Schlüssel, keine echten HTLCs) – aber als Beweis, dass die Idee funktioniert, zählt es in der Entwickler-Debatte.\n\n## Whitepaper-Archäologie\n\nZum 18. Geburtstag des Whitepapers erinnert ein Beitrag auf [Stacker News](https://stacker.news/items/1605927) daran, dass Satoshi das Dokument nach der Ankündigung vom 31. Oktober 2008 zweimal überarbeitet hat. Insgesamt sind vier Versionen bekannt, darunter eine von Nicholas Bohm bewahrte Kopie. Die heute unter bitcoin.org/bitcoin.pdf gehostete Datei trägt laut Metadaten das Erstellungsdatum 24. März 2009. \n\n# 18 Jahre Whitepaper: Die Community feiert – und diskutiert Sicherheit, Zyklen und Selbstverwahrung\n\nBitcoin wurde 18 Jahre alt und darf endlich alleine Auto fahren.\n\n## Zurück zu Satoshis Worten\n\nAm 31. Oktober 2008 veröffentlichte Satoshi Nakamoto das Bitcoin-Whitepaper. \n\nZwei Monate vor der Veröffentlichung habe Satoshi Adam Back per E-Mail gefragt, wie man Hashcash zitiert. Bitcoin baue auf dessen Proof-of-Work auf, \n\n> „so no one has to be in charge“\n\n## ![](https://blossom.einundzwanzig.space/a16f87961585ed8d5ac015833b6822b6ab86ac739ceeb233a724a6a13067a5c5.jpg)Fazit\n\nZum 18. Geburtstag zeigt sich die Community gefestigt. Der größte Börsen-Hack der Geschichte wird nicht als Schwäche von Bitcoin gelesen, sondern als Bestätigung einer alten Lektion: Zentrale Verwahrer sind Angriffsziele. Die Antwort, die schon im Titel des Whitepapers steckt, ist Peer-to-Peer – mit eigenen Schlüsseln.\n",
+  "sig": "73f8c1be3a444ca2a9b5e83496d361e8e0613c52956f3a96bf92dcecd1a4f2df7cefec7f53338b320cb68bb3b04ab141b9c90fec35bdc021fe6f76cc7c3060c2"
+ },
+ {
+  "id": "df4e7e549bd267ddc069afefa3e09adb28e47e8b7f92cb940f5f90294b641e46",
+  "pubkey": "f240be2b684f85cc81566f2081386af81d7427ea86250c8bde6b7a8500c761ba",
+  "created_at": 1793438763,
+  "kind": 30023,
+  "tags": [
+   [
+    "d",
+    "draft-279a1bf9-1cbd-4e3f-a90c-317e1e8e276b"
+   ],
+   [
+    "title",
+    "₿ Bitcoin Daily"
+   ],
+   [
+    "summary",
+    "31. Oktober 2026 \nHappy Whitepaper Day\nHeute vor 18 Jahren veröffentlichte Satoshi Nakamoto das Bitcoin-Whitepaper. "
+   ],
+   [
+    "image",
+    "https://blossom.einundzwanzig.space/4a3e82b30c26f28c6e7f800fc8cb1779d0071a4b3097987c61785546f55fa6d2.webp"
+   ],
+   [
+    "published_at",
+    "1793438763"
+   ],
+   [
+    "L",
+    "ISO-639-1"
+   ],
+   [
+    "l",
+    "de",
+    "ISO-639-1"
+   ],
+   [
+    "client",
+    "EINUNDZWANZIG HUB"
+   ]
+  ],
+  "content": "# Nach dem Rekord-Hack: Bitcoin stabilisiert sich bei 77.000 Dollar – Binance will am Sonntag wieder auszahlen\n\nZwei Tage nach dem größten Diebstahl der Krypto-Geschichte notiert Bitcoin am Samstagmorgen bei rund 77.200 US-Dollar. Binance hat inzwischen weitere Einfallstore entdeckt, über 6,3 Milliarden Dollar zur Deckung der Schäden reserviert und peilt den Neustart der Auszahlungen für Sonntag an. Gleichzeitig drücken schwache Tech-Aktien auf die Stimmung – und Wall-Street-Analysten raten ausgerechnet jetzt zum Kauf.\n\n## Der Kurs am Morgen\n\nEin Bitcoin kostet am Samstag, 31. Oktober, um 06:10 Uhr (MEZ) 77.162 US-Dollar beziehungsweise 68.898 Euro. Das entspricht einem Minus von 1,6 Prozent in Dollar und 1,7 Prozent in Euro gegenüber dem Vortag. Am Freitag war der Kurs zwischenzeitlich auf etwa 76.400 Dollar gefallen – rund sechs Prozent unter dem Niveau nach der Fed-Entscheidung vom Mittwoch. Mehr als 1,3 Milliarden Dollar an gehebelten Positionen wurden liquidiert.\n\nBemerkenswert ist weniger der Rückgang als seine Begrenztheit. Wenn man die Lage mit  März 2018 vergleicht, als ein gescheiterter Angriff auf dieselbe Börse den Bitcoin-Kurs binnen Minuten um fast elf Prozent gedrückt hatte – obwohl damals laut Binance nichts gestohlen wurde. Heute ist der Markt mit rund 2,6 Billionen Dollar mehr als sechsmal so groß, und die US-Spot-ETFs halten rund 1,3 Millionen Bitcoin. Das dämpft anscheinend die Panikreaktionen spürbar.\n\n## Binance: größer und komplexer\n\nDie Ermittlungen haben das Bild am Freitag erweitert. Zunächst hatte Binance einen kompromittierten Laptop eines DevOps-Ingenieurs als Einfallstor genannt. Inzwischen spricht CEO Richard Teng von weiteren Angriffspunkten; die Hacker hätten Spuren gelöscht und Sicherheitsprüfungen umgangen. Decrypt zitiert Teng mit den Worten, es handle sich um „einen komplexeren Angriffsablauf“, der „nicht einfach die Berechtigungen eines einzelnen Ingenieurs nutzte“\n\nIn ihrem zweiten Sicherheits-Update stellten die Co-CEOs Yi He und Richard Teng einen Vier-Punkte-Plan vor. Der Kernsatz: „Binance wird die finanziellen Folgen dieser gestohlenen Mittel tragen, nicht unsere Nutzer.“ Mehr als 6,34 Milliarden Dollar an Firmenmitteln seien reserviert, davon fünf Milliarden bereits in den betroffenen Token – das decke rund 80 Prozent der Verluste in USDC, USDT, BTC, ETH und BNB ab. Den Rest kaufe die Börse über den Markt und OTC-Kanäle zu. Rund drei Milliarden Dollar seien on-chain eingefroren.\n\nDie Auszahlungen sollen laut CoinDesk am Sonntag schrittweise wieder starten, einen Reservenachweis (Proof of Reserves) will Binance am Montag veröffentlichen.\n\nDie Spur führt weiter nach Nordkorea. Chainalysis beziffert die Beute auf 6,4 Milliarden Dollar und beobachtet „nie zuvor gesehene Geldwäschemuster“: Tausende Transaktionen in kurzer Zeit deuteten auf einen automatisierten Prozess hin. Die gestohlenen Mittel seien zudem mit Geld aus dem Bitget-Diebstahl vom September vermischt worden.\n\n&#x20;Auch Blocktrainer berichtet über die sich verdichtenden Hinweise auf nordkoreanische Täter ([Blocktrainer](https://www.blocktrainer.de/blog/bitcoin-crash-nach-binance-hack-spur-fuehrt-nach-nordkorea)). Die erbeuteten 18.270 BTC – rund 1,4 Milliarden Dollar – übersteigen laut CoinDesk die Bitcoin-Bestände von Tesla und sind mehr als doppelt so viel wie die Reserve El Salvadors; zu den offengelegten Beständen von SpaceX fehlen nur 442 Coins.\n\n## Tether eine Cash-Cow \n\nTether legte derweil Zahlen vor: 1,5 Milliarden Dollar operativer Gewinn im dritten Quartal, Überschussreserven von 7,95 Milliarden Dollar und Bitcoin-Reserven im Wert von 8,37 Milliarden Dollar zum Ende September. CEO Paolo Ardoino meldete mehr als 700 Millionen USDT-Nutzer.\n\n## Makro: Tech-Aktien unter Druck\n\nZusätzlicher Gegenwind kommt von den Aktienmärkten. Der Nasdaq 100 ist laut CoinDesk seit seinem Rekordhoch am 6. Oktober um rund zehn Prozent gefallen, allein am Freitag um 4,5 Prozent; OpenAI soll seine Finanzierungs- und Bewertungsziele gesenkt haben.\n\nIntel erlebte  den schwersten Kurseinbruch seit 50 Jahren. Über 60 Prozent der S\\&P-500-Werte lägen mindestens 20 Prozent unter ihren Hochs – ein „verdeckter“ Bärenmarkt?\n\n![](https://blossom.einundzwanzig.space/fe2e2ad0c0ac4c20ab86ded626794d2426ee8cc44335f4af0773860ae7edfa85.png)\n\n# Technik\n\nDie Technik-Nachrichten dieses Wochenendes drehen sich fast alle um Sicherheit: Für Linux-Node-Betreiber kursiert eine dringende Kernel-Warnung, Trezor warnt vor einem manipulierten Safe 5 aus einem asiatischen Shop, und der neue Optech-Newsletter erklärt, warum Bitcoin Core bei leicht auffindbaren Lücken nicht mehr auf das nächste Major-Release wartet. \n\n## Dringend: Linux-Kernel-Lücke und Lightning-Nodes\n\nAm Freitagmorgen meldete der Account Bitcoin++ Insider eine Schwachstelle im Linux-Kernel im Zusammenhang mit MPTCP (Multipath TCP), die laut dem Post Remote Code Execution, also das Ausführen von fremdem Code aus der Ferne, ermöglichen soll. Bitcoin-Entwickler Peter Todd rate allen LND-Betreibern unter Linux, ihre Nodes abzuschalten oder den Kernel so schnell wie möglich zu aktualisieren\n\nDie praktische Konsequenz ist trotzdem klar: Wer einen Bitcoin- oder Lightning-Node auf Linux betreibt, sollte heute die Sicherheitsupdates seiner Distribution einspielen und neu starten. Das gilt auch für Node-Distributionen wie Umbrel, Start9 oder RaspiBlitz, sobald deren Updates bereitstehen.\n\n## Trezor: Spionage-Chip im Safe 5?\n\nNach den manipulierten Ledger-Geräten Anfang Oktober scheint der Lieferketten-Angriff nun auch Trezor zu treffen. Der Hersteller warnt vor einem möglicherweise manipulierten „Trezor Safe 5“, der über den südostasiatischen Händler CryptoBilis verkauft wurde. Laut Blocktrainer erhielt Trezor am 28. Oktober über sein Responsible-Disclosure-Programm einen Hinweis auf ein im August 2026 über den Marktplatz Tokopedia gekauftes Gerät. Zwischen Hauptplatine und Display soll eine zusätzliche Leiterplatte mit Mobilfunkmodul und Antenne sitzen, die Bildschirminhalte – und damit auch den bei der Einrichtung angezeigten Recovery Seed – an die Angreifer übertragen könnte ([Blocktrainer](https://www.blocktrainer.de/blog/nach-ledger-skandal-jetzt-offenbar-auch-manipulierte-trezor-wallet-entdeckt)).\n\nTrezor hat das Gerät noch nicht selbst untersucht, hält den Bericht nach einem Videogespräch aber für glaubwürdig. Wer seit März 2026 ein Gerät bei CryptoBilis gekauft hat, soll seine Coins vorsorglich auf eine neue Wallet umziehen. Bislang habe kein CryptoBilis-Käufer einen Verlust gemeldet; weitere untersuchte Geräte zeigten bisher keine Manipulation.\n\n\\\nBitcoin Core: Schneller patchen, wenn KI Lücken findet\n------------------------------------------------------\n\nDer Bitcoin-Optech-Newsletter #429 vom 30. Oktober ordnet die Sicherheits-Releases der Woche ein. Antoine Poinsot hatte auf der Bitcoin-Dev-Mailingliste erklärt, dass Bitcoin Core seine Sicherheitsrichtlinie für Schwachstellen ändert, die als „leicht auffindbar“ gelten – etwa solche, die mit einem einfachen Prompt an ein großes Sprachmodell gefunden werden können. Das Projekt verzeichne mehr solcher Meldungen; zudem könnten verdeckte Fixes nachvollzogen werden. Statt auf das nächste Major-Release und die übliche, nach Schweregrad gestaffelte Sperrfrist zu warten, portiert Bitcoin Core den Fix nun in alle gepflegten Versionen, veröffentlicht so schnell wie möglich Point-Releases und dazu ein Advisory ([Bitcoin Optech](https://bitcoinops.org/en/newsletters/2026/10/30/)). Genau so liefen die Releases 29.5, 30.4 und 31.2 vom 28. Oktober ab.\n\nPassend dazu berichtet **BTCPay-Server-Gründer Nicolas Dorier** von KI-gestützten Sicherheitsscans: **Die Qualität der Berichte sei „verrückt“**. Man habe in den letzten Monaten viele Scans durchlaufen, trotzdem seien noch Funde mit kaum Fehlalarmen aufgetaucht. Manche Meldung, die er sonst als irrelevant abgetan hätte, habe ihn umgestimmt, weil der Bericht den Weg zur Ausnutzung nachvollzog.\n\n## Was heißt das für Node-Betreiber?\n\nDie Woche zeigt ein Muster: Lücken werden schneller gefunden – auch mit KI –, also muss schneller gepatcht werden. Wer Bitcoin Core, LND oder CLN betreibt, sollte heute drei Dinge prüfen: Betriebssystem und Kernel aktuell? \n\n# Was die Bitcoin-Szene am Wochenende bewegt\n\nAuch am zweiten Tag nach dem Binance-Hack bestimmt der Rekorddiebstahl die Timelines – aber die Debatte verschiebt sich: weg von den Zahlen, hin zur Frage, wie man sich selbst schützt. \n\n## „All diese Hacks werden das Interesse an Multisig steigern“\n\nDen knappsten Kommentar zur Lage lieferte Podcaster Stephan Livera. Sein Post lautet schlicht: „All diese Hacks werden das Interesse an Multisig deutlich steigern“\n\n## Blockstream: Nicht mehr ob, sondern wie\n\nBlockstream setzte am Freitag einen Kontrapunkt zur Hack-Panik: Viele Institutionen seien über die Frage hinaus, ob sie Bitcoin halten sollten. Die Frage sei jetzt das Wie: „Wer hält die Schlüssel, wie bleiben die Vermögenswerte sicher, während Quantencomputing voranschreitet, und was können sie darauf aufbauen?\n\n## Nostr: Patchen, Halloween, Esports\n\nAuf Nostr teilte Gigi am Freitagabend die Notiz „URGENT: Patch your nodes“, die auch auf Stacker News landete ([Gigi](https://njump.me/00000033de275cef09acd8dbfea6e8b79bcc78d020cadc11b90d350d5a0d32c0)). Seinen Frust über Microsofts Code-Plattform fasste er am Vormittag knapp zusammen: „GitHub wird immer schlechter und schlechter“ ([Gigi](https://njump.me/b2717b105eca4d07f4534159e5c904b22e0b2bc69f1b9a7c4e45d24548b711f5), übersetzt) – ein Dauerthema in der Nostr-Entwicklerszene, die mit ngit eine dezentrale Alternative pflegt. In einer Antwort merkte er an, bei Projekten mit mehr als 50 Mitwirkenden sei die Trägheit groß – „ngit ist bereits großartig“\n\nMostro nutzte Halloween für eine Botschaft an die Finanzwelt: Der größte Schrecken des traditionellen Finanzsystems habe einen Namen – Bitcoin-P2P mit eigenen Schlüsseln ([Mostro](https://njump.me/454b26ae20d993546087a83f1f546ac6e7844269da54db00ab3647eabfec6f48)). \n\n## Echte Menschen statt KI-Hotline\n\nFab the Foxx postete am Freitag ein Video mit einer klaren Haltung: „KI kann vieles, und wir nutzen sie auch, zum Beispiel für dieses Video. Wenn du aber eine Frage hast, antwortet dir bei uns ein Mensch. Echte Menschen. Echte Hilfe“ ([@fabthefoxx](https://x.com/fabthefoxx/status/2116083382820188327)). \n",
+  "sig": "85620c9df7cb77fe59b2d91c03d991d94655af10b27dc8c29b0faf773c2bfb6b1d85a7106feba0e04dc523f35307a238bd628a66c8824df7aec60c2c9c480698"
+ },
+ {
+  "id": "144607e122ed21cb77f1504fe0057fe21b030ec45070da55769923f4cb314923",
+  "pubkey": "f240be2b684f85cc81566f2081386af81d7427ea86250c8bde6b7a8500c761ba",
+  "created_at": 1793347206,
+  "kind": 30023,
+  "tags": [
+   [
+    "d",
+    "draft-406ef493-9090-4447-a248-49bc36ddb856"
+   ],
+   [
+    "title",
+    "₿ Bitcoin Daily"
+   ],
+   [
+    "summary",
+    "30. Oktober 2026 \nBinance, Lagarde, Schnabel, Nordkorea, Sparrow, Mostro"
+   ],
+   [
+    "image",
+    "https://blossom.einundzwanzig.space/5515385e5472f6470a9f1228f9ee588f3b0bd09754a5ef08cf1f1a4bb00888c2.jpg"
+   ],
+   [
+    "published_at",
+    "1793347206"
+   ],
+   [
+    "L",
+    "ISO-639-1"
+   ],
+   [
+    "l",
+    "de",
+    "ISO-639-1"
+   ],
+   [
+    "client",
+    "EINUNDZWANZIG HUB"
+   ]
+  ],
+  "content": "# Der Binance-Schock: Größter Krypto-Hack der Geschichte drückt Bitcoin unter 78.000 Dollar\n\nAm Donnerstagabend flossen nach Angaben von Binance rund 6,3 Milliarden US-Dollar aus Wallets der weltgrößten Kryptobörse ab. Bitcoin fiel daraufhin zeitweise unter 77.000 Dollar. Gleichzeitig legten Strategy und Coinbase Quartalszahlen vor – und mit Christine Lagarde kündigte die oberste Notenbankerin Europas ihren Abschied an.\n\n## Der Kurs am Morgen\n\nBitcoin steht am Freitag, 30. Oktober, um 06:04 Uhr (MEZ) 78.308 US-Dollar beziehungsweise 70.002 Euro. Das ist ein Minus von 2,4 Prozent in Dollar und 2,7 Prozent in Euro gegenüber dem Vortag. Noch am Donnerstagmorgen hatte Bitcoin knapp über 80.000 Dollar notiert. \\\nIn der Nacht ging es dann deutlich tiefer: Bitcoin ist um 4,8 Prozent auf rund 77.131 Dollar gefallen, Ether um 5,7 Prozent auf etwa 2.217 Dollar. BNB, der hauseigene Shitcoin von Binance, verlor rund 8 Prozent. \n\n## Was bei Binance passiert ist\n\nGegen 21:24 Uhr deutscher Zeit fielen am Donnerstag ungewöhnliche Abflüsse aus mehreren Hot-Wallets der Börse auf, unter anderem aus der als „Binance 14“ bekannten Wallet. \n\nGlassnode zählte rund 5,3 Milliarden Dollar an Abflüssen, darunter 17.985 BTC im Wert von etwa 1,45 Milliarden Dollar, rund 1,66 Milliarden USDT und 767 Millionen USDC. Eine Auswertung von Hyperdash kam auf 5,6 Milliarden Dollar in 67 verschiedenen Kryptowerten.\n\nBinance selbst bezifferte den Schaden in der Nacht auf „rund 6,3 Milliarden Dollar“. \n\nDie Börse versprach: „Binance wird alle Verluste aus dem SAFU-Fonds und aus Firmenmitteln decken. Kundengelder sind sicher.“ Ein- und Auszahlungen wurden vorübergehend ausgesetzt. \n\n![](https://blossom.einundzwanzig.space/ab36e8f027d087af960e2e8af70a654ccb323411edd7d0089c94c857783d396d.jpg)\n\nDie Stablecoin-Herausgeber reagierten schnell. Tether-CEO Paolo Ardoino meldete mehr als 1,567 Milliarden eingefrorene USDT, Circle-Chef Jeremy Allaire die Sperrung von mehr als 800 Millionen USDC.\n\nFür Bitcoin gibt es diese Möglichkeit zum Glück nicht – die Angreifer haben 1,4 Milliarden Dollar in Bitcoin auf 19 Wallets verteilt, „die niemand einfrieren kann“.\n\nNatürlich ließen die ersten Vermutungen nicht lange auf sich warten – und es dürfte kaum jemanden überraschen, wen der Finger am Ende zeigte: Es waren die Nordkoreaner. Wer hätte das gedacht?\n\n![](https://blossom.einundzwanzig.space/fc6cf3840104c90def14aa5364b73ca163c56691ec512b87b3a8b52140eb2604.jpg)\n\nFür Bitcoiner ist die Lehre nicht neu, aber selten so deutlich: Coins auf einer Börse sind ein Zahlungsversprechen der Börse. Wer seine Bitcoin selbst verwahrt, war von dieser Nacht nur über den Kurs betroffen. Naja, nach den ganzen Vorfällen um Hardware-Wallets ist diese endlich wieder eine Börse, endlich können wir wieder sagen:\\\n\"Not Your Keys, Not your Coins\"\n\n![](https://blossom.einundzwanzig.space/9612ed7d9785de70b68071ab5c5be1eb3995cca4e53ff43e7bf4d17643a241e9.jpg)\n\n## Strategy und Coinbase: Zahlen mit Bitcoin-Rückenwind\n\nFast untergegangen sind die Quartalszahlen. Strategy meldete für das dritte Quartal einen Nettogewinn von 19,53 Milliarden Dollar, getragen von einem Buchgewinn von 20,91 Milliarden Dollar auf die Bitcoin-Bestände. Zum 25. Oktober hielt das Unternehmen 848.517 BTC. \n\nMichael Saylor gab sich optimistisch: „Wir stehen am Anfang des nächsten Bitcoin-Bullenmarkts.“ Bitcoin notiere 21 Prozent über dem 200-Wochen-Durchschnitt. Die Aktie fiel nachbörslich trotzdem um rund 3,5 Prozent. Die Vorzugsaktie STRC habe sich durch Rückkäufe über 2,04 Milliarden Dollar „erholt“; die tägliche Dividende startet mit dem Stichtag 1. November.\n\nCoinbase drehte mit 719 Millionen Dollar Nettogewinn in die schwarzen Zahlen, allerdings stammten etwa 715 Millionen davon aus Gewinnen auf eigene Krypto-Bestände; bereinigt blieben 78 Millionen Dollar. Der Umsatz lag mit 1,22 Milliarden Dollar 35 Prozent unter dem Vorjahr. \n\n## Weitere News: Christine und Isabel verlassen uns\n\nAus Frankfurt kam eine Personalie mit Gewicht: EZB-Präsidentin Christine Lagarde teilte mit, sie werde ihr Amt am 7. Februar 2027 niederlegen, wer ihr als Clown an der Spitze des EZB Zirkusses folgen wird ist noch nicht ganz sicher.\n\nZwei Namen werden aktuell besonders oft genannt: der Niederländer Klaas Knot und der Spanier Pablo Hernandez de Cos. Beide sind Befürworter einer lockereren Geldpolitik, läuft also alles nach Plan für uns. \n\nDoch es gibt auch eine traurige Nachricht: Unsere geschätzte Uhrenhändlerin Isabel Schnabel wird uns leider verlassen. Dabei war sie doch eine so glühende Verfechterin des Bitcoin. Wer erinnert sich nicht an ihre **legendären Aussagen** zum Bitcoin und Euro. \\\nDanke, Isabel – es war unvergesslich.\n\n![](https://blossom.einundzwanzig.space/b4c6bd7c99a68534800989839b0a2539bb93ac1886d3c03a0d0171a9fa92e45e.png)\n\n## Was jetzt ansteht\n\n\\\nAm Samstag, dem 31. Oktober, jährt sich die Veröffentlichung des Bitcoin-Whitepapers zum 18. Mal. \n\n# Ein Laptop, 50 Signaturen, 6,3 Milliarden: Was der Binance-Hack technisch lehrt\n\nDer Binance-Einbruch war kein Angriff auf Kryptografie, sondern auf Infrastruktur: Ein kompromittierter Entwickler-Laptop soll genügt haben. \n\n![](https://blossom.einundzwanzig.space/881a353f958f7228a4ed9252a431da35f40e9783101acd5190b58de71b336709.jpg)\n\n## Wie der Angriff ablief\n\nNach dem vorläufigen Befund von Binance deutet alles auf einen kompromittierten Laptop eines DevOps-Ingenieurs hin. Dieser habe einem Angreifer Zugang zu einem Service-Container verschafft, über den er „nicht autorisierte Auszahlungstransaktionen“ einreichen konnte.\n\nIdo Ben-Natan, CEO der Sicherheitsfirma Blockaid, sprach gegenüber CoinTelegraph von „Key Misuse“: Angreifer bringen ein Signatursystem dazu, bösartige Transaktionen zu autorisieren, ohne den Schlüssel selbst zu stehlen. „Es scheint eine Kompromittierung der Signatur-Infrastruktur zu sein. Wir glauben nicht, dass ein Schlüssel geleakt wurde“\n\nAuf Ethereum-Seite nutzte der Angreifer laut Blockaid ein vergleichsweise neues Feature: Er bündelte 50 Autorisierungen nach EIP-7702 in einer einzigen Transaktion gegen die Wallet „Binance 14“. Eine davon passte zur erwarteten Nonce und wurde akzeptiert. EIP-7702 erlaubt es einem Konto, die Ausführung an Smart-Contract-Code zu delegieren; hier zeigte die Delegation auf einen unverifizierten „Sweeper“-Vertrag, der Token und Ether abziehen konnte. \n\nDie technische Lehre ist unbequem: Die stärkste Kryptografie hilft wenig, wenn die Maschine, die signiert, einer kompromittierten Umgebung vertraut. Für Bitcoiner ist das ein Argument für Hardware-Wallets mit eigenem Display, für Multisig mit unabhängigen Geräten und für das Prüfen jeder Transaktion auf dem Gerät selbst. \n\n## Sparrow 2.5.6: Tor-Pflicht-Update und Barrierefreiheit\n\nCraig Raw hat Sparrow Wallet 2.5.6 veröffentlicht – ein Update, das man nicht aufschieben sollte. Laut Changelog wird der mitgelieferte Tor-Client auf v0.4.9.5 angehoben, „um die Client-Protokolle zu erfüllen, die das Tor-Netzwerk inzwischen verlangt“. Außerdem werden mit dem Java-Upgrade auf v25.0.5 die eMudhra-Root-Zertifikate aus dem gebündelten Zertifikatsspeicher entfernt. \n\n## Mostro: Stablecoins und Bitcoin auf anderen Netzen\n\nDie Nostr-basierte P2P-Börse Mostro hat gleich zwei Releases veröffentlicht. Mostro Node v0.20.2 erlaubt Betreibern, Stablecoins (USDT, USDC, DOC) 1:1 zum Dollar und Bitcoin auf anderen Netzen – on-chain, Liquid-LBTC und Rootstock-RBTC – 1:1 in Sats zu quotieren. \n\n## Post-Quanten-Signaturen in drei Sekunden\n\nBlockstream meldete auf X, das Team von Blockstream Research habe einen Weg gefunden, Post-Quanten-Transaktionen auf einer Hardware-Wallet „in etwa 3 Sekunden statt in über 20“ zu signieren – mit Hardware, die Nutzer bereits besitzen. Der verlinkte Research-Beitrag untersucht hashbasierte Signaturverfahren wie SLH-DSA, eine reduzierte SPHINCS+-Variante und die zustandsbehafteten Teile von SHRINCS auf Jade, Trezor, Ledger und BitBox02 ([Blockstream Research](https://blog.blockstream.com/hardware-wallets-post-quantum-signatures/)). \n\n## Weitere interessante News:\n\n- **Fedimint trifft Ark:** Eric Sirion arbeitet nach eigenen Worten an „neuen Wegen, Fedimint mit Lightning zu verbinden“ – mit bark von Second.\n- **Schreiben lokal, veröffentlichen auf Nostr:** MyEditor ist ein quelloffener Desktop-Editor für Windows, macOS und Linux, bei dem alle Dateien auf dem eigenen Rechner bleiben und nur auf Wunsch auf Nostr publiziert wird ([myeditor.rinbal.de](https://myeditor.rinbal.de/), [Stacker News](https://stacker.news/items/1604549), als [Nostr-Bookmark](https://njump.me/nevent1qqs8xfelf5c904xq9y5cd62f09khhhjpf9la39fpcf8qhmhmav96a9spzemhxue69uhhyetvv9ujuurjd9kkzmpwdejhgq3q7c2szua46mc8ndp4grvy4z5465x0qxjge8tqx7vyu0vkqr24y2hsx3g2z7)).\n\n# „Es tut weh, aber wir werden es überstehen“: Der Hack als Live-Ereignis\n\nDie ersten Stunden nach den verdächtigen Abflüssen spielten sich vor allem auf X ab. Changpeng Zhao war dabei wie immer unfreiwillig lustig, bedanke sich artig für das schnelle Einfrieren durch Tether und Circle.\n\n##\n",
+  "sig": "e6ed37df57c372a01b41fadc8610d5966853c2fbbde9339bb05316fa3e5afbb83a5bef14e3bda589f3878a508dc0d37f792f6c83d349bf7edb8769e88d593d6c"
+ },
+ {
+  "id": "e07f1b6218cc844ee8e54dc6461805a99e40b1f21f9aa7a152c6545d976f5e86",
+  "pubkey": "f240be2b684f85cc81566f2081386af81d7427ea86250c8bde6b7a8500c761ba",
+  "created_at": 1793262653,
+  "kind": 30023,
+  "tags": [
+   [
+    "d",
+    "draft-ecc94a3f-2f0a-4fcc-91c6-7fccc20cac23"
+   ],
+   [
+    "title",
+    "₿ Bitcoin Daily"
+   ],
+   [
+    "summary",
+    "29. Oktober 2026 FED, Google, Bitcoin Core, Lightning, 402, Alby, Alles OkAI?!"
+   ],
+   [
+    "image",
+    "https://blossom.einundzwanzig.space/a2aaf6daa9d7ebbcbdf3b9517553f4ad3d9aa14d92821b6545f8639a80a87c4e.jpg"
+   ],
+   [
+    "published_at",
+    "1793262653"
+   ],
+   [
+    "L",
+    "ISO-639-1"
+   ],
+   [
+    "l",
+    "de",
+    "ISO-639-1"
+   ],
+   [
+    "client",
+    "EINUNDZWANZIG HUB"
+   ]
+  ],
+  "content": "# Falken-Pause: Bitcoin fällt zurück unter 80.000 Dollar\n\nDie US-Notenbank hat die Zinsen wie erwartet nicht angetastet, aber deutlich gemacht, dass sie die Inflation noch nicht im Griff sieht. Über Nacht kam dann ein Dämpfer aus Asien. Bitcoin hat seine Zwei-Tages-Erholung verloren und notiert am Donnerstagmorgen knapp über 80.000 US-Dollar, während Bitwise und Google langfristig ganz andere Signale senden.\n\nAm Mittwochabend um 19 Uhr deutscher Zeit verkündete die Federal Reserve ihre Entscheidung: Der Leitzins bleibt in der Spanne von 3,75 bis 4,00 Prozent; Lisa Cook und Beth Hammack stimmten für eine Erhöhung. Blocktrainer erinnert an den Hintergrund: Im September stiegen die US-Verbraucherpreise um 3,7 Prozent zum Vorjahr, erwartet waren 3,6 Prozent. Die Inflation liegt seit März 2021, also seit 67 Monaten in Folge, über dem Zwei-Prozent-Ziel.\n\n> *Die Amerikaner  haben immer noch mit einer Inflation zu kämpfen, die seit fast sechs Jahren über dem Ziel des Komitees liegt. Es ist unsere Verantwortung, die Inflation zu senken. – Kevin Warsh*\n\nFür Bitcoin ist das ein Problem: Hohe Realzinsen machen sichere Anleihen attraktiv und bremsen Zuflüsse in riskantere Anlagen. Ecoinometrics greift das in seinem aktuellen Kapitalfluss-Report mit dem Titel „Bitcoin's Recovery Has a Bond Problem“ auf. Laut dem frei zugänglichen Teil ist die Bitcoin-Nachfrage gegen null gefallen, während Anleihe-ETFs deutlich stärkere Zuflüsse verbuchen ([Ecoinometrics](https://ecoinometrics.substack.com/p/bitcoins-recovery-has-a-bond-problem)).\n\n## ![Bild](https://pbs.twimg.com/media/HVonABLbwAAUNyh?format=jpg\\&name=medium \"Bild\")ETFs und Firmen: vorsichtige Rückkehr der Käufer\n\nBei den US-Spot-ETFs zeigt der Trend nach den Abflüssen der Vorwoche wieder nach oben. Am Dienstag flossen laut News.Bitcoin.com 175,99 Millionen Dollar zu, angeführt von BlackRock und Fidelity. Seit Wochenbeginn summieren sich die Zuflüsse damit auf mehr als 286 Millionen Dollar.\n\n&#x20;Bei Strategy ist die Abstimmung über tägliche Dividenden durch. Laut vorläufigen Ergebnissen stimmten 99,3 Prozent der abgegebenen Stimmen dafür. Die Vorzugsaktie STRC schüttet ab November täglich aus, für STRK, STRF und STRD gilt das ab Januar 2027. Die Dividendenrendite bleibt bei 12 Prozent pro Jahr. Entscheidend für den Bitcoin-Markt ist eine andere Zahl: Strategy gibt neue STRC-Aktien nur bei einem Kurs von mindestens 100 Dollar aus, um mit den Erlösen Bitcoin zu kaufen. Am Mittwoch kratzte STRC mit 99,85 Dollar an dieser Marke.\n\nEine Warnung zur Selbstverwahrung liefert Datavault AI. Das börsennotierte Unternehmen teilte in einem 8-K-Filing mit, dass es seit Juni vergeblich versucht, Bitcoin von der Börse Biconomy abzuziehen. Die Aktie verlor knapp 50 Prozent.\n\n## Langfristig: Google baut\n\nBitcoin Magazine meldete, dass Google ein neues Custody-Framework für Banken vorgestellt hat. Laut Bitcoin Magazine testen es bereits mehrere große Finanzinstitute.\\\ns handelt sich um einen Multi-Party-Computation-Dienst (MPC) von Google Cloud, bei dem Institute Transaktionen gemeinsam signieren, ohne dass eine einzelne Partei den vollständigen Schlüssel kontrolliert. \n\n# Bitcoin Core rüstet nach, KI findet die Fehler\n\nBitcoin Core hat in dieser Woche gleich vier Versionen veröffentlicht und drei Sicherheitslücken offengelegt. Zwei davon hat ein KI-gestützter Scanner gefunden. Dazu kommen neue Zahlen zu manipulierten Ledger-Geräten, ein Fortschrittsbericht von Liquid und kräftiges Wachstum bei Lightning-Bezahlschnittstellen für Maschinen.\n\nDas Bitcoin-Core-Projekt hat am 27. Oktober die Versionen 32.1 und 31.2 sowie am 28. Oktober 29.5 und 30.4 veröffentlicht. Bemerkenswert ist der Sprung bei der neuen Hauptversion: Wegen kurzfristiger Probleme wurde 32.0 zwar getaggt, aber nie offiziell angekündigt oder freigegeben. Die erste offizielle Version der 32er-Reihe ist damit 32.1, wie Maintainer fanquake auf Delving Bitcoin mitteilte.\n\n## Drei offengelegte Lücken – zwei davon fand eine KI\n\nParallel veröffentlichte das Projekt drei Sicherheitshinweise, die in allen vier Releases behoben sind.\n\n**1. TCP-Urgent-Daten (mittlere Schwere):** Auf anderen Plattformen als Linux konnte ein bösartiger Peer einen Node per TCP-„Urgent“-Daten (Out-of-Band) dazu bringen, unbegrenzt Daten in die Verarbeitungswarteschlange zu legen. Der Bremsmechanismus für langsame Peers wurde damit umgangen. In der Praxis konnte ein Angreifer so jeden verbundenen Windows-, macOS- oder BSD-Node „trivial zum Absturz bringen“, heißt es in der Offenlegung. Linux-Nodes nutzen einen anderen Code-Pfad und waren nicht betroffen.\n\n**2. Speicherwachstum bei pausierten Pre-BIP31-Peers (mittel):** Ein Angreifer konnte vorgeben, keine BIP31-Pings zu unterstützen, und so verhindern, dass er als träger Peer getrennt wird. Die Warteschlange mit Transaktionsankündigungen wuchs dann langsam, aber ohne Grenze, um bis zu 2 MB pro Stunde und eingehendem Peer und 5 MB pro Stunde und ausgehendem Peer. Nodes im `-blocksonly`-Modus sind deutlich weniger betroffen.\n\n**3. Überlauf der Undo-Dateien (gering):** Positionen in den Undo-Dateien (rev\\*.dat) wurden als 32-Bit-Zahlen gespeichert. Ein Miner könnte gültige Blöcke erzeugen, deren Undo-Daten eine Datei über 4 GiB wachsen lassen. Dann würden ältere Daten überschrieben und der Node schaltet sich bei einer passenden Reorganisation ab. Praktisch ausnutzbar ist das kaum: Ein Angreifer müsste mehrere tausend Blöcke mit nicht standardkonformen Transaktionen minen, also etwa einen Monat der gesamten Blockproduktion. \n\n**Spannend ist die Herkunft der Funde.** Die ersten beiden Lücken entdeckte ein automatischer LLM-Scan im Rahmen von Elias Rohrers „Project Loupe“ bei Spiral. Gregory Sanders validierte sie und meldete sie dem Sicherheitsteam. Die zweite Lücke fand der Entwickler L0rinc unabhängig davon noch einmal. Bei der TCP-Lücke vergingen vom Fund am 23. Oktober bis zum Fix in vier Versionen nur fünf Tage. Für Node-Betreiber heißt das: Jetzt aktualisieren, vor allem unter Windows und macOS.\n\n## Lightning für Maschinen: 402 wächst weiter\n\nAlby hat seine Zählung kostenpflichtiger HTTP-402-Endpunkte aktualisiert. Nach einem Wachstum um etwa das Siebenfache in vier Monaten bis August kamen im dritten Quartal weitere 60 Prozent hinzu, auf nun 116.323 Endpunkte. Die Zahl der Anbieter hat sich mehr als verdoppelt.\n\n![](https://blossom.einundzwanzig.space/29cb2b5683c521716f8b6ebfc6d625e9d0f8239100b4f48df0ef03af4366e8af.jpg)**Was ist L402? (Das Protokoll für Maschinen-Zahlungen)**\n\nDer Name leitet sich vom HTTP-Fehlerstatus **402 Payment Required** ab. Während wir im Internet meist den Fehler 404 (Seite nicht gefunden) kennen, war der Code 402 seit den 90er Jahren für Zahlungen vorgesehen, wurde aber nie standardisiert genutzt.\n\n- **Das Konzept:** L402 kombiniert Authentifizierung (wer bin ich?) mit Zahlung (habe ich bezahlt?).\n- **Die Funktionsweise:** Wenn eine KI (ein Agent) Daten von einer anderen KI kaufen möchte, sendet der Server eine L402-Aufforderung. Die anfragende KI bezahlt diesen Bruchteil eines Cents sofort via Lightning, erhält ein digitales Ticket (Macaroon) und bekommt sofort den Zugriff.\n- **Warum das wichtig ist:** Herkömmliche Kreditkarten oder Banküberweisungen sind für Kleinstbeträge (Mikropayments von z. B. 0,001 Cent) viel zu langsam und zu teuer.\n\n## **Was steckt hinter dem Wachstum?**\n\nDie Steigerung auf über **116.000 Endpunkte** zeigt, dass immer mehr Webdienste ihre Dienste für automatisierte Zahlungen öffnen.\n\n- **Skalierbarkeit:** Das Lightning-Netzwerk erlaubt es, tausende Zahlungen pro Sekunde fast kostenlos abzuwickeln.\n- **Stablecoins auf Lightning (RGB):** Dies ist ein Protokoll, um z. B. digitale Dollar (Stablecoins) über Lightning zu versenden. Das ist entscheidend, da viele Firmen zwar die Technologie von Bitcoin nutzen wollen, aber die Preisschwankungen scheuen. Stablecoins auf Lightning wären das „Endgame“ für den globalen, sekundenschnellen Dollar-Zahlungsverkehr.\n\n# „Digitales Gold reicht nicht“: Worüber die Bitcoin-Bubble auf X und Nostr spricht\n\n### Die Debatte des Tages: Bitcoin bezahlen statt nur halten\n\nDen meistdiskutierten Gedanken lieferte ein Post von [@LightningNewsX](https://x.com/LightningNewsX). Spiral, die von Block finanzierte Entwicklerorganisation, sucht nach „Moonshots“ für Bitcoin-Zahlungen. Laut dem Post können mehr als eine Million US-Händler über Square Bitcoin annehmen, doch nur wenige Kunden zahlen täglich damit. Die Lücke liege bei der Nachfrage, nicht bei der Technik. Gleichzeitig gewinnen Stablecoins die neuen Zahlungswege bei Stripe, Shopify, Coinbase, Visa, Amex und Google. Die Leitfrage lautet: Was müsste passieren, damit Meta, Shopify oder OpenAI Bitcoin akzeptieren? Zitiert wird Jack Dorsey:\n\n> *Wenn Bitcoin am Ende nur digitales Gold ist, dann ist es meiner Meinung nach gescheitert. – Jack Dorsey*\n\n## Was hängen bleibt\n\nDie Bitcoin-Bubble ringt mit einer Identitätsfrage. Ist Bitcoin Wertspeicher oder Zahlungsnetz? Dorseys Satz vom „gescheiterten digitalen Gold“ trifft auf eine Realität, in der Stablecoins die neuen Zahlungswege erobern. Zugleich wächst Lightning dort, wo kaum jemand hinschaut: bei Maschinen, die per L402 für API-Aufrufe zahlen. Vielleicht sind die nächsten großen Bitcoin-Nutzer gar keine Menschen.\n\n## Hörtipp: „Alles OkAI?!“ – der neue KI-Podcast von Dennis Reimann\n\nDennis Reimann, Gründungsmitglied von Einundzwanzig, hat mit seinem langjährigen Freund und Kollegen Jan Persiel einen neuen Podcast gestartet: **„Alles OkAI?!“**. Darin geht es um die Frage, wie KI unsere Arbeitsweise verändert, und zwar praktisch statt theoretisch. Später sollen auch Gäste dazukommen. Die Folgen erscheinen als Audio und als Video auf YouTube. Die beiden kennen sich schon aus ihrem früheren „UI Engineering“-Podcast.\n\n**Folge 001 (27.10.2026, ca. 63 Min.):** <https://www.allesokai.de/episode-001/> · RSS: <https://www.allesokai.de/podcast/rss/>\n\nIn der ersten echten Folge, nach dem Kennenlern-Trailer Episode 000, erzählen Jan und Dennis von ihrem eigenen Weg mit KI. Es geht los bei Midjourney-Bildern mit zu vielen Armen und frühem GitHub Copilot und reicht bis zur heutigen Agenten-Arbeit mit OpenCode. Ihre zentrale Erkenntnis ist, dass der größte Sprung nicht im Tool passiert ist, sondern im eigenen Kopf: Man beschreibt das Ziel, statt den Weg vorzugeben. Dennis sieht sich inzwischen als „One-Man-Product-Company“. Er hat seinem 13-jährigen Sohn OpenCode eingerichtet und baut gerade eine **Bitcoin-Buchhaltungssoftware als Desktop-App**. Jan, der aus dem Design kommt, fragt dagegen, was an Gestaltung und Feinschliff verloren geht, und zeigt seine selbstgebaute App, mit der er 3D-Druckvorlagen erstellt.\n\n**Fünf Zitate aus Folge 1**:\n\n> „Das Ziel ist ja eigentlich das, was du haben willst.“ – Jan (ca. 00:23:35), über einen guten Chef, der nicht erklärt, wie man das Lineal anlegt\n\n> „Ich bin jetzt hier der Projekt Manager und betrachte das eher aus der Brille.“ – Dennis (ca. 00:20:50)\n\n> „… Kollegen an meiner Seite, der mich 10 Dollar im Monat kostet, reicher. Also das ist wirklich ein Unterschied wie Tag und Nacht.“ – Dennis (ca. 00:26:31)\n\n> „… weil es jetzt halt auch so super cheap geworden ist, Dinge in Software umzusetzen, für die Leute ansonsten überhaupt gar nicht das Geld gehabt hätten.“ – Dennis (ca. 00:52:15)\n\n> „… mein Kanal da rein ist die Programmiersprache Deutsch.“ – Dennis (ca. 00:58:07)\n\nFeedback und Themenideen nehmen die beiden unter <studio@allesok.ai> entgegen.\n",
+  "sig": "af529837c789edf1876a6aba88a1d88f8a212a18a49b548113626da4c1875265cc43c9aaa6328c57d870582e8e4326484c05fda54c6c37a8add95abfdb1aa49e"
+ },
+ {
+  "id": "5ff93d3ca6b938b8ce9dbd24d821b6d88968406c4329cd3b64c199587fbf289e",
+  "pubkey": "f240be2b684f85cc81566f2081386af81d7427ea86250c8bde6b7a8500c761ba",
+  "created_at": 1793178660,
+  "kind": 30023,
+  "tags": [
+   [
+    "d",
+    "draft-ce66eee4-159d-46b0-8dd8-1eadf3b301f9"
+   ],
+   [
+    "title",
+    "₿ Bitcoin Daily"
+   ],
+   [
+    "summary",
+    "28. Oktober 2026 \nFED, Krypto-Steuer, Liquid, Keystone, Quantenresistenz, Bitcoin-Bubble \n\n\n"
+   ],
+   [
+    "image",
+    "https://blossom.einundzwanzig.space/37a9a078179350940bc0494ea5f52a95a23c8791f4d2eb6f49b55edc9740feb9.webp"
+   ],
+   [
+    "published_at",
+    "1793178660"
+   ],
+   [
+    "L",
+    "ISO-639-1"
+   ],
+   [
+    "l",
+    "de",
+    "ISO-639-1"
+   ],
+   [
+    "client",
+    "EINUNDZWANZIG HUB"
+   ]
+  ],
+  "content": "## Der Kurs am Morgen\n\nBitcoin notiert am Mittwoch, 28. Oktober, um 06:00 Uhr (MEZ) bei 80.847 US-Dollar beziehungsweise 72.696 Euro. Auf Sicht von 24 Stunden entspricht das einem Plus von 1,4 Prozent in Dollar und 1,9 Prozent in Euro. Die Spanne der vergangenen 24 Stunden reichte von rund 79.400 bis knapp 81.100 Dollar, das gehandelte Volumen lag bei etwa 23,9 Milliarden Dollar, die Marktkapitalisierung bei rund 1,63 Billionen Dollar.\n\n## Der Taktgeber: die Fed – und Kevin Warsh\n\nIm Mittelpunkt steht heute die Zinsentscheidung der US-Notenbank. Die Fed hatte die Zinsen im September angehoben; für die heutige Sitzung erwarten die Märkte eine Pause. Interessant wird daher vor allem, was zwischen den Zeilen steht. \n\n&#x20;Die Fed steckt in einer äußerst schwierigen Lage. Zinserhöhungen wirken kaum noch gegen die Inflation, weil wir uns in einer fiskalischen Dominanz befinden: Die Staaten nehmen einfach noch mehr Schulden auf und gleichen die höheren Zinsen damit aus.\n\n## Deutschland: Krypto-Steuer weiter auf Eis\n\n![](https://blossom.einundzwanzig.space/48d9a75a82648a1ce741d3c1e7a9883b1fc0ecfdeb90bdcf415b832c2dfd145f.png)Der Referentenentwurf des Finanzministeriums zur Abschaffung der steuerfreien Haltefrist steht laut CDU-Finanzpolitiker Olav Gutting auch heute nicht auf der Tagesordnung des Kabinetts – wegen „großem Dissens“ zwischen den Ressorts. Gutting will den Entwurf im Bundestag ablehnen, hält einen Kabinettsbeschluss aber für wahrscheinlich: *„Irgendwann wird der wahrscheinlich kommen.“* Ein Inkrafttreten zum 1. Januar 2027 nannte er „sportlich“\n\n# Liquid heilt, Keystone blutet: Sicherheit dominiert die Bitcoin-Technik\n\nDie Liquid Federation meldet Fortschritte bei der Wiederherstellung ihrer Reserven, Keystone kämpft mit den Folgen eines Hacks, und der Bitcoin-Forschungspreis von Chaincode geht an eine Arbeit über Quanten-Risiken.\n\nEine Testtransaktion über 2,5 BTC an das Federation-Wallet ging raus und der 600 BTC Fehlbetrag soll  „in den kommenden Tagen“ folgen.Diese Angaben kommen von JAN3-Chef Samson Mow. \\\nDer Account @LightningNewsX griff die Nachricht  auf und stellte die offene Frage, ob der Angreifer die Mittel zurückgegeben oder einen Anteil von 15 Prozent behalten habe. Eine offizielle Bestätigung zur Herkunft der Mittel liegt nicht vor, es gibt nur Spekulationen.\n\n## Keystone: Wenn der Echtheitsschlüssel abhandenkommt\n\n![](https://blossom.einundzwanzig.space/8acc06ecacae2f2ee15a773336a916d681e26b73cefe7753802810ecd14e6475.jpg)Deutlich unangenehmer ist die Lage bei Keystone. Wie Blocktrainer berichtet, haben Angreifer über eine Schwachstelle in einem externen Überwachungstool der Website nicht nur rund 26.000 Bestelldatensätze mit Namen und Lieferadressen sowie knapp 12.900 Datensätze aus abgebrochenen Bestellungen erbeutet, sondern auch den sogenannten WebAuth-Schlüssel, mit dem Nutzer die Echtheit ihrer Geräte prüfen. Damit könnten Fälschungen die Prüfung bestehen. Keystone will 18.835 bereits produzierte Geräte vernichten und stellt den Versand vorerst ein.\n\n## Quantenresistenz: Forschungspreis für Google-Paper\n\nDer Bitcoin Research Prize 2026 von Chaincode Labs geht an das Paper „Securing Elliptic Curve Cryptocurrencies against Quantum Vulnerabilities“, das überwiegend von Googles Quantum-AI-Gruppe stammt. Es liefert neue Ressourcen-Schätzungen dafür, wie aufwendig es wäre, das 256-Bit-Problem des diskreten Logarithmus auf elliptischen Kurven zu brechen – den Kern heutiger Blockchain-Kryptografie. Das Thema zieht sich durch die Woche: Auch Blockstream wirbt für den Digital Assets Forum in New York am 13. November mit „Quantum Readiness“ als Schwerpunkt.Lightning, Ark und Taproot Assets\n\nBei Lightning Labs rückt „Wavelength“ in den Fokus. In einem Video erklärt Entwickler Dario Nakamoto, wie Wavelength-VTXOs Taproot Assets transportieren, abgesichert durch den Policy-Baum des Ark-Protokolls, mit kompakten Beweisen und clientseitiger Validierung, die die Historie eines Assets auf ein On-Chain-Commitment zurückführt ([Video](https://x.com/btcinsider__/status/2115141482042855544)). Jesse Shrader von Amboss demonstriert Stablecoin-Zahlungen über Taproot Assets und begründet, warum Stablecoins aus seiner Sicht Bitcoin und Lightning stärken können ([Video](https://x.com/btcinsider__/status/2115093267876581447)). \n\n## Lust die Bitcoin Mailingliste zu lesen?\n\nAuf Delving Bitcoin wurde ein Archiv-Projekt auf learnbitcoin.com vorgestellt, das 15 Jahre und 24.699 Nachrichten der bitcoin-dev-Mailingliste lesbar macht ([Delving](https://delvingbitcoin.org/t/we-made-the-bitcoin-dev-mailing-list-readable-15-years-24-699-messages/2985)).\n\nZwei spannende Einträge:\n\n- [„Block Size Increase“](https://www.learnbitcoin.com/archive/t/2015/block-size-increase) von Matt Corallo vom 07.05.2015 ist mit 116 Antworten der längste Thread im Archiv. Corallo kritisiert darin, dass Gavin Andresen größere Blöcke auf seinem Blog fordert, statt es auf der Liste zu diskutieren. Damit fing der Blocksize-Streit öffentlich an, der später zu SegWit und zur Abspaltung von Bitcoin Cash führte.\n- [„Taproot: Privacy preserving switchable scripting“](https://www.learnbitcoin.com/archive/t/2018/taproot-privacy-preserving-switchable-scripting) von Greg Maxwell vom 23.01.2018 ist der erste Vorschlag für Taproot, das im November 2021 aktiviert wurde.\n\n# Was die Bitcoin-Bubble diskutiert\n\nAuf X ging es in den vergangenen 24 Stunden um Energieverbrauch, Quanten-Forschung, Lightning-Bezahlerlebnisse und die Erholung der Liquid-Sidechain. Auf Nostr wurde – wie gewohnt – gebaut, gespielt und philosophiert.\n\n![](https://blossom.einundzwanzig.space/cd677db01eb53e866077321e8e9e8c438fce53fca969f8c041e47d2f8a71ae0d.png)Fab widmet sich einem echten deutschen Lieblingsthema: Energieverbrauch und Wäschewaschen. Dabei fällt mir ein, dass meine eigene Wäsche auch noch wartet. Außerdem befürchtet er, dass „Haltefrist“ das Wort des Jahres wird.\n\n### ![](https://blossom.einundzwanzig.space/0402b6592950b65e41b02560d6a389987e64a5dc22174d5b1a135daec9899b12.png)Nostr: Gigi philosophiert, Mostro spukt, Einundzwanzig spielt\n\n[Gigi](https://njump.me/npub1dergggklka99wwrs92yz8wdjs952h2ux2ha2ed598ngwu9w7a6fsh9xzpc) blieb seinem Stil treu: „GM“ und „GN“ mit Bildern, dazu Einzeiler wie „Comparison is the thief of joy“.\n\nDas P2P-Börsenprojekt [Mostro](https://njump.me/npub1m0str0d7z2ww8rdh20t2n9lx520xjwhaq24p68umqp06wwrwtsnqen40un) setzte zu Halloween auf Humor: Das „Spukhaus der KYC“ sei voller Formulare, Dokumente und Nachweise – Mostro lasse den Papierkram mit Lightning verschwinden ([Note](https://njump.me/note1j2jwlu8wx74zltqfkvlrrekz6w4ym70l8lntjvpd7lerfk3vt6ys59vjrf)). Bereits am Montag war Mostro v2.1.1 mit klarerem Reputations-Import und -Export erschienen.\n\n[TWENTY ONE Esports](https://esports.einundzwanzig.space/), die Gaming-Plattform der Einundzwanzig-Community, startete heute den Blockli Cup 2 mit 216.300 Sats Preisgeld – 129.780, 64.890 und 21.630 Sats für die Plätze eins bis drei ([Note](https://njump.me/note1fxw8qk3juxg97hssv3ghrzkj05jwl6svdsc9xxdja0w4vejpd94s4cfclz)). \n",
+  "sig": "1ae0645362b4a966b56225634a4ce716a59857984c2ddf4f6c76c071415b98fb803d162945d9f3dc88dcdad67fb3e6ac6cef25647b10ff587fc0d9f45bfd7745"
+ },
+ {
+  "id": "2981c362617e966eefa7dafe8e85c651524381c270a1efc204fd67ac7b4a0cb7",
+  "pubkey": "f240be2b684f85cc81566f2081386af81d7427ea86250c8bde6b7a8500c761ba",
+  "created_at": 1793091420,
+  "kind": 30023,
+  "tags": [
+   [
+    "d",
+    "draft-b00f47c7-2c7a-4140-996c-e44321e32610"
+   ],
+   [
+    "title",
+    "₿ Bitcoin Daily"
+   ],
+   [
+    "summary",
+    "Zitadelle 2027, Strive, Galaxy, Lightning Labs, Blink"
+   ],
+   [
+    "image",
+    "https://blossom.einundzwanzig.space/b9dbda42fa89d1c08c44d2728fddcd5e25b20a13681d160b7d6745df20700739.webp"
+   ],
+   [
+    "published_at",
+    "1793091420"
+   ],
+   [
+    "L",
+    "ISO-639-1"
+   ],
+   [
+    "l",
+    "de",
+    "ISO-639-1"
+   ],
+   [
+    "client",
+    "EINUNDZWANZIG HUB"
+   ]
+  ],
+  "content": "Die Kurse und das tägliche Rauschen verblassen heute gegen diese Nachricht: Die Location für die Zitadelle 2027 steht fest! Bevor wir tiefer in die Details dazu eintauchen, verschaffen wir uns jedoch den nötigen Überblick bei den Märkten und den neuesten Technik-Updates.\n\n### **Strive jagt Metaplanet – $511 Mio in einer Woche**\n\nStrive (ASST) kauft weiter: **6.182 BTC für $511,4 Mio** zwischen dem 17. und 23. Oktober. Der durchschnittliche Kaufpreis: $82.732. Damit hat Strive jetzt **43.000 BTC** im Tresor und liegt nur noch **514 BTC hinter Metaplanet** (44.000 BTC) auf Platz 3 der börsennotierten Halter. Strategy führt mit 848.517 BTC uneinholbar. Strive hat zusätzlich ein **$1 Mrd SATS-Vorzugsaktien-Programm** aufgelegt – sie wollen mehr.\n\n### **Galaxy Research: Der Bärenmarkt ist Geschichte**\n\nAlex Thorn von Galaxy Research wagt die Ansage: **„Der Bärenmarkt endete im Juni – jetzt ist Zeit zu akkumulieren.\"** Seine Argumente: BTC schloss fünf Wochen über der 50-Wochen-Linie, Long-Term-Holder-Verkäufe halbiert (34.000 BTC/Monat vs. 67.000 BTC in 2024), CME-Positionierung der Asset Manager um 57 % reduziert. US-Staatsverschuldung von $40,44 Billionen stärkt Debasement-These. Alles auf Grün – bis auf einen Vorbehalt: Ein Wochenschluss unter **$76.540** würde das bullish Narrativ kippen.\n\n## Technik\n\n### **Lightning Labs öffnet Wavelength für alle – der Agent-Zahlungsstandard?**\n\nLightning Labs hat am Freitag **Wavelength für den Bitcoin-Mainnet geöffnet**. Das Toolkit erlaubt Entwicklern und KI-Agenten, **Lightning-Zahlungen ohne eigene Node, ohne Kanäle und ohne Liquidität** zu integrieren. Zahlungen laufen über das **L402-Protokoll** – Agenten bezahlen API-Calls, Datenfeeds oder andere Agenten in Bruchteilen eines Cents. **Self-Custody:** Jederzeit auszahlbar, kein unilateraler Zugriff von Wavelength. Die **0,25 % Service-Fee** plus normale Routing-Gebühren sind günstig genug für Mikrozahlungen. Limit: 300.000 Sats pro Account. Stablecoins kommen bald.\n\n### **Blink Wallet: $1 Inaktivitätsgebühr als Turbo für Self-Custody**\n\nDie aus El Salvador stammende Lightning-Wallet Blink (ehemals Bitcoin Beach Wallet) erhebt **$1/Monat Inaktivitätsgebühr** auf Custodial-Accounts, die seit über 12 Monaten nicht genutzt wurden. **\\~100.000 Accounts** sind betroffen – mit einem Gesamtguthaben von über **$800.000**. Die erste Abbuchung brachte ~$45.000 ein. Blink hatte im Juni auf **Spark-basierte Self-Custody** umgestellt. Die Logik: Custodial-Lightning war ein Einstiegsmodell; jetzt sollen Nutzer in die Eigenverantwortung gehen. Wer sich innerhalb von 12 Monaten wieder einloggt, bekommt das Geld zurück.\n\n## Interview\n\n### **Peter Bain und der institutionelle Optimismus**\n\nBlockstream CMO **Peter Bain** gab Bitcoin Magazine ein ausführliches Interview. Seine Kernbotschaften: Dass Bitcoin bei **$81.000** durch einen Aktien-Selloff, steigende Renditen und europäische Unruhen hält, ist **„ein wirklich starkes Signal\"**. Bain spricht  über Blockstreams neue **Consulting-Sparte** für Schweizer Banken – klare Regulierung und Bankentiefe machen die Schweiz zum idealen Markt. **Quantencomputer seien Jahrzehnte entfernt**; die eigentliche Schwachstelle sei, wie Software ausgeliefert wird (PHP-Exploit). Der Liquid-Swap-Service läuft wieder, und institutionelle Klienten sehen Bitcoin **„bereit für einen großen Bull Run\"** bis 2027. Blockstream eröffnet ein Büro in Lugano – mitten im Bitcoin-Valley der Schweiz.\n\n## **Zitadelle 2027 – Satoshi's Dörfel**\n\nKurz und knapp:\n\n- **5. – 8. August 2027** (Donnerstag – Sonntag)\n- **Satoshi's Dörfel** – das **Steinschaler Dörfl** in Frankenfels, Niederösterreich!\n- 730m Höhe, 500 Jahre alt (erstmals 1449 erwähnt), 86 ha Wald + Wiesen  \n- Keine Nachbarn (1 km entfernt) → Party ohne Limits  \n- Liegt im **Dirndltal** (Frucht, nicht das Kleid)  \n- Ticketshop: Samstag **21:21 Uhr** – First come, first served\n- Maximal **450–500 Leute**\n\nBereits am kommenden Mittwoch erwartet euch der Launch einer brandneuen Webseite – den Link dazu veröffentlichen wir exklusiv über Nostr. Ein echtes Highlight darauf: Ein beeindruckendes 3D-Modell des ‚Dörfels‘, das wir mithilfe von Drohnenaufnahmen und der Rechenpower eines extra angemieteten Großrechners erstellt haben.\n\nBesonders stolz bin ich darauf, dass mein Tipp zur Location goldrichtig lag: Mit nur einem vagen Hinweis – ‚westlich von Wien‘ – und der Unterstützung von KI konnte ich den Ort tatsächlich vorab bestimmen.\n\n### Die Mariazellerbahn - auf der Himmelstreppe zur Wallfahrt\n\nDie Anreise verspricht übrigens ein Erlebnis für sich zu werden: Ab St. Pölten führt die Mariazellerbahn direkt zur Zitadelle. Sie wurde nicht ohne Grund zur schönsten Bahnstrecke Österreichs gekürt. Auf der Himmelstreppe zur Satoshi Wallfahrt.\n\n![](https://blossom.einundzwanzig.space/a35c6ed12db2c93223700d470b27a41bbce4a57db5ee5d1a90d8552b8b35461c.jpg)St. Pölten ist der ideale Knotenpunkt für eure Anreise, denn die Stadt ist perfekt an das europäische Nightjet-Netz angebunden. Zahlreiche Nachtzüge erreichen den Bahnhof in den frühen Morgenstunden: Ob aus Zürich (NJ467), Stuttgart (EN50237), Bregenz (NJ19947) oder Brüssel (NJ469) – ihr kommt entspannt an. Besonders praktisch: Die Züge aus Hamburg (NJ493) und Amsterdam (NJ40421) werden in Nürnberg zusammengeführt und erreichen St. Pölten zeitgleich. Sogar aus Berlin gibt es mit dem NJ457 (via Wien) eine komfortable Verbindung.\n\nDa fast alle Züge zwischen 7:00 und 9:00 Uhr eintreffen, haben wir eine besondere Idee: Wenn genügend Plebs den Nachtzug wählen, könnten wir für die Weiterfahrt einen kompletten Waggon der legendären Mariazellerbahn exklusiv für uns mieten!\n\nSchon ab einer Gruppe von 20 Plebs erhalten wir 15 % Rabatt – und dass die 21. Person komplett kostenlos fährt, würde nostr:npub1dergggklka99wwrs92yz8wdjs952h2ux2ha2ed598ngwu9w7a6fsh9xzpc wohl so kommentieren: Es gibt keine Zufälle!\n\n### Die Nachtzüge\n\nIch habe mich mal für euch schlau gemacht: Wenn wir frühzeitig buchen, sind die Preise unschlagbar! Einen Schlafplatz in den modernen Mini Cabins bekommt man beispielsweise schon für etwa 60 Euro. Ein eigenes Bett von Hamburg nach St. Pölten für diesen Preis – das kann sich definitiv sehen lassen! Wer es privater und mehr Platz mag: Ein komplettes Abteil für zwei Personen liegt bei etwa 250 Euro.\n\nDiese Schnäppchen gibt es natürlich nur für Frühbucher. Aber stellt euch mal vor, wie legendär die Fahrt wird, wenn der ganze Zug voller Plebs ist!\n\n![](https://blossom.einundzwanzig.space/7c7c0aaa09d16b915ddb0aeb1755f32f34be9726cba6d627c36919a3f6a0f21a.webp)\n",
+  "sig": "b6e5ce976b528099b1d1f2330a12d51965a671b5728a4827cb607a8cbe4bb383124bfd8a7911081b462e4d0301ad19bf77840b2d433993b2f947bef20dc1fda9"
+ },
+ {
+  "content": "## Staats-Mining und fallende Kurse\n\n Bitcoin ist übers Wochenende unter die psychologisch wichtige **$80.000-Marke** gerutscht und notiert aktuell bei rund **$79.890** – der tiefste Stand seit dem 18. September. Innerhalb von vier Stunden wurden **$150 Millionen an Long-Positionen** liquidiert. \n\nDer Druck kommt von mehreren Seiten: Der **Ölpreis (Brent)** ist auf ein 8-Monatshoch von **$116** geklettert, die **10-jährigen US-Renditen** kratzen an der 5-Prozent-Marke, und die **KI-Sorgen an der Wall Street** haben den Halbleiterindex SOX seit 6. Oktober um fast 20 % abstürzen lassen. Am Mittwoch visierte BTC noch die $85.000 an – dann drehte der Wind.\n\n**Retail vs. Whales**: Laut Daten von CryptoQuant haben Kleinanleger ihre BTC-Einzahlungen auf Binance auf ein 6-Monatshoch gesteigert – sie verkaufen in die Korrektur. Die Wale hingegen haben ihre Einzahlungen um 36 % reduziert.\n\n**China fordert die Beschlagnahmung von 61.900 BTC** aus einem milliardenschweren Betrugsfall – Großbritannien erhebt ebenfalls Anspruch. Die **Sparkassen** haben den Bitcoin-Handel gestartet. Und die USA planen angeblich **staatliches Bitcoin-Mining** mit Kernreaktoren auf Militärgelände, um die strategische Reserve haushaltsneutral zu füllen.\n\n### **Electrum-Wallet-Bug – Geld weg beim Fee-Boost**\n\n\\\nDie altehrwürdige Bitcoin-Wallet Electrum hat eine **kritische Sicherheitslücke** geschlossen (Version 4.8.3, gepatcht am 24. Oktober). Der Bug erlaubte es bösartigen Servern, unbestätigte Transaktionen durch gefälschte zu ersetzen. Wenn Nutzer dann die Gebühren erhöhen wollten (Replace-by-Fee), unterschrieben sie ahnungslos eine Transaktion an die Angreifer. **Mindestens ein Nutzer hat Geld verloren.** Wer Electrum nutzt: **sofort updaten!** Das Problem ist nicht das Bitcoin-Protokoll selbst, sondern die Server-Abhängigkeit von SPV-Wallets – ein weiterer Punkt fürs Betreiben eines eigenen Nodes.\n\n\\\nAuf der Lugano PlanB-Konferenz hat Blockstream-Forschungsdirektor **Jonas Nick** die Frage beantwortet, die alle umtreibt: **Wird KI Bitcoins Kryptografie knacken?** Kurze Antwort: **Nein.** Seine Forschung zu Post-Quantum-Signaturen (SHRINCS: 324-Byte-Signaturen, bereits auf Liquid in Betrieb) zeigt, dass Bitcoin sich längst vorbereitet. Blockstream CMO pwbain ergänzte, dass KI die Entwicklung sogar verbessert – durch bessere Code-Qualität und schnellere Fehlersuche.\n\n### **Google Quantum-Durchbruch: Q-Day rückt näher**\n\n\\\nGoogle-Forscher haben auf dem Willow-Chip eine Technik namens „Magic State Cultivation\" vorgestellt, die **Fehler um den Faktor 40 reduziert** – bei 99,99 % logischer Genauigkeit. Das ist kein Sofort-Knacken von Bitcoin, aber es bringt den **„Q-Day\" näher**. Bitcoins Entwickler haben reagiert: **BIP-360 und BIP-361** sind im Gespräch, um quantenresistente Signaturen einzuführen. \n\n### 🎙️ Podcast der Woche:  \n\nHard Money Interview – Nico Jilch über Inflation als Kernproblem\n\n> *Das ist wichtiger als Klimawandel und Geopolitik. Das ist das zentrale Problem unserer Zeit – diese verdammte Inflation. Das Gelddrucken. Der Cantillon-Effekt. Die Umverteilung von unten nach oben.*\n\n> *Jeder geht auf die Straße, weil er wütend ist – aber keiner weiß, wer das eigentliche Problem ist. Das ist auch die Verwirrung in Frankreich.*\n\n> *Jeder, der mehr als 0,1 Bitcoin besitzt, ist einfach nicht bullish genug.*\n\nDie Frankreich-Proteste sind dafür das perfekte Symptom: Die Menschen spüren, dass etwas faul ist, aber sie beschuldigen die Falschen.\n\nSeine These: Bitcoin ist der einzige Ausweg aus diesem Teufelskreis. Weil es keine Geldschöpfung von oben gibt. Weil Cantillon bei Bitcoin nicht existiert. Weil die 21 Millionen Obergrenze nicht verhandelbar ist. Und weil jeder – wirklich jeder – auf Augenhöhe teilnehmen kann.\n\n",
+  "created_at": 1793003802,
+  "id": "c6f1a3db2cbb957baafdcf85a8a58800c82890351f9092fb37b51401e83b4356",
+  "kind": 30023,
+  "pubkey": "f240be2b684f85cc81566f2081386af81d7427ea86250c8bde6b7a8500c761ba",
+  "sig": "25cbc27da10da5953771f41fc167564a08ab3815606c522760a5bdb5371cc854c3ef1e09fa1dddfe7d86135e1e48c7a9649f28ca65b429c17312ce3db29d1f96",
+  "tags": [
+   [
+    "d",
+    "draft-cdd764a7-30a6-42bc-8c46-c57fe4377626"
+   ],
+   [
+    "title",
+    "₿ Bitcoin Daily"
+   ],
+   [
+    "summary",
+    "Staats-Mining. fallende Kurse, Electrum-Wallet-Bug, Lugano PlanB, Lugano PlanB.."
+   ],
+   [
+    "image",
+    "https://blossom.einundzwanzig.space/88e34b6a611b8d09267bb93bbd068857dabc13e3364c25ca1469eb99ad2227c1.webp"
+   ],
+   [
+    "published_at",
+    "1793003802"
+   ],
+   [
+    "L",
+    "ISO-639-1"
+   ],
+   [
+    "l",
+    "de",
+    "ISO-639-1"
+   ],
+   [
+    "client",
+    "EINUNDZWANZIG HUB"
+   ]
+  ]
+ },
+ {
+  "id": "e75ad8747192f2bc3686d8c5e507ae14ada867587b2de7438149042327f372be",
+  "pubkey": "f240be2b684f85cc81566f2081386af81d7427ea86250c8bde6b7a8500c761ba",
+  "created_at": 1792916329,
+  "kind": 30023,
+  "tags": [
+   [
+    "d",
+    "draft-4ffbcc56-1b71-4b8d-aeb1-d1436418d357"
+   ],
+   [
+    "title",
+    "₿ Bitcoin Daily"
+   ],
+   [
+    "summary",
+    "Bitcoin crashte unter $80.000, Bitchat auf Platz 1 in Frankreich, Polymarket und der $400K-Betting-Skandal, Sprach-KI und EU-Palantir Scanner "
+   ],
+   [
+    "image",
+    "https://blossom.einundzwanzig.space/a737d5c91f08e653b8d3892aafba8ec9985bc81d04684affe632082e51ba2e73.webp"
+   ],
+   [
+    "published_at",
+    "1792916329"
+   ],
+   [
+    "L",
+    "ISO-639-1"
+   ],
+   [
+    "l",
+    "de",
+    "ISO-639-1"
+   ],
+   [
+    "client",
+    "EINUNDZWANZIG HUB"
+   ]
+  ],
+  "content": "### Das Wochenende, das Bitcoin die $80K kostet\n\n**Bitcoin crashte unter $80.000** und erreichte mit $79.146 den tiefsten Stand seit dem 18. September. Wer dachte, die Ruhe der letzten Woche mit 1,2% Volatilität sei der Beginn einer stabilen Seitwärtsbewegung, wurde Samstag früh eines Besseren belehrt. **$837 Millionen an Liquidationen** in 24 Stunden, 227.681 Trader ausgeknockt. \n\n**$635 Mio aus den Spot-ETFs** an einem einzigen Tag (Donnerstag) – der größte Abfluss seit Juni. Damit sind die Oktober-Flows mit −$174,5 Mio tief im roten Berech. Drei Tage Zuflüsse (zusammen über $1 Mrd) wurden an zwei Tagen komplett ausradiert. \n\nDazu kommt die **Fed-Sitzung am 27.-28. Oktober**. Zwar zeigt der FedWatch-Tool noch 91,7 % Wahrschenilichkeit für eine Zinspause, aber der CPI bei 3,7 % (verglichen mit 3,4 % im August) macht alen Angst. Die 10-jährigen US-Renditen steigen, der Dollar stärkt sich – der klassische Gegenwind für BTC. \n\nDer Printer wird jedoch kommen und uns alle retten :-), hier der Money printer aufgeteilt nach Fed Chair:\n\n![](https://blossom.einundzwanzig.space/779536a5cd3f1d2ff91babab659beca9530482a3e48936c88194f7dd45d176f1.jpg)\n\n### Bitchat auf Platz 1 in Frankreich\n\n„Bitchat“ von Jack Dorsey ist Berichten zufolge die am häufigsten heruntergeladene Social-Networking-App in Frankreich. 🇫🇷🔥\n\nFür den Nachrichtenaustausch ist kein Internet, WLAN oder Mobilfunknetz erforderlich.\nBitchat ist ein verschlüsseltes Peer-to-Peer-Bluetooth-Mesh-Netzwerk.\nPrivate, Ende-zu-Ende-verschlüsselte Nachrichten.\nEs werden weder eine Telefonnummer noch ein Benutzerkonto benötigt und sogar Bitcoin-Transaktionen können offline zwischen Geräten weitergeleitet werden.\n\nStell dir vor, du könntest kommunizieren und Bitcoin-Transaktionen abwickeln – selbst wenn herkömmliche Netzwerke nicht verfügbar sind. Das ist mehr als nur eine weitere Messaging-App.\n\nEs geht um zensurresistente Kommunikation, Privatsphäre und eine Bitcoin-Infrastruktur, die nicht vollständig von zentralisierten Netzwerken abhängig ist.\n\n### ![](https://blossom.einundzwanzig.space/4bea18110e3631f8ecfc3c0a56d426a0e561c331c281dab60eea51bf504d04bf.jpg)**Pentagon vs. Polymarket und der $400K-Betting-Skandal**\n\nVerteidigungsminister **Pete Hegseth** hat am 21. Oktober ein Memo unterzeichnet, das Pentagon-Mitarbeitern verbietet, mit nicht-öffentlichen Informationen auf **Polymarket und Kalshi** zu wetten. Der Hintergrund: Ein Special-Forces-Soldat hatte $33.000 auf die Gefangennahme von Venezuelas Präsidenten Maduro gesetzt und **$404.000 gewonnen** – weil er von der bevorstehenden Militäroperation „Operation Absolute Resolve“ wusste. Hegseths Warnung: „Unsere Feinde beobachten diese Märkte.“ Ein Trading-Signal auf Polymarket könnte verraten, wann und wo das US-Militär zuschlägt. \\\nWie Gigi immer sagt, Prediction-Märkte funktionieren aufgrund von Insiderhandel.\n\n### **Dessa: Die Sprach-KI, die keine Cloud braucht**\n\nJack Dorsey hat gerade einen richtigen Lauf gerade, neben Bitchat ist er auch mit einem anderen Programm gerade in den News.\n\n**Block** (früher Square, der Zahlungsriese hinter Cash App) hat **Dessa** vorgestellt: ein Full-Duplex-Sprachmodell, das von Grund auf nur auf menschlichen Gesprächsaufnahmen trainiert wurde. Keine geschriebenen Texte, keine LLMs als Basis, keine Tokenizer. Das Modell läuft **lokal auf einem MacBook Pro M4 Max** und reagiert in Echtzeit – es unterbricht, lacht, seufzt, macht Ironie. Jack Dorsey selbst nannte es „das authentischste Full-Duplex-Sprachmodell, das je gebaut wurde.“\n\n### 22 Millionen private Bilder in der EU gescannt – Palantir-Software wertet die Meldungen aus\n\n![](https://blossom.einundzwanzig.space/8c75f4c1ae269be2f955134865f5d437084ced88dd39a166b051f937bae930a0.jpg)\n\nIm Rahmen der  „Chatkontrolle“-Regelung scannen Google, Microsoft, Meta und Snap seit 2021 private Nachrichten von EU-Bürgern.\n\nUS-Recht verpflichtet die Unternehmen dazu, jeden Verdachtsfall an das NCMEC zu melden; das NCMEC bestätigt, dass sämtliche „CyberTipline“-Meldungen über die Software „Palantir Foundry“ verarbeitet werden. Allein LinkedIn hat im Jahr 2024 22 Millionen Bilder und über 2 Millionen Videos von EU-Nutzern verarbeitet.\n\nWährend die EU behauptet, die Scan-Technologie mache nur bei einem von 50 Milliarden Bildern einen Fehler, haben Forscher eine Fehlerrate von bis zu einem Fall pro tausend Analysen festgestellt.\n\nSelbst Patrick Breyer, der schärfste Kritiker dieser Regelung, wusste nichts von der Verbindung zu Palantir – ebenso wenig wie die befragten EU-Gesetzgeber.\n",
+  "sig": "ddbc9280184482afe04120ce73c8431e41f6debf2c2f2a616384294e6c43b3859ad5f649c6eed850bc48a666b373054a599104193c893ceeef5cec93ab05cc76"
+ },
+ {
+  "id": "dc622ed4989de957824b9298ddacd968b5ed019383f952d93b53020b8441eec0",
+  "pubkey": "f240be2b684f85cc81566f2081386af81d7427ea86250c8bde6b7a8500c761ba",
+  "created_at": 1792828773,
+  "kind": 30023,
+  "tags": [
+   [
+    "d",
+    "draft-cbea3229-ed70-4560-bf72-eee1561d6995"
+   ],
+   [
+    "title",
+    "₿ Bitcoin Daily #4"
+   ],
+   [
+    "summary",
+    "Bitcoin steuert auf seinen zweiten Oktober-Verlust in Folge zu – etwas, das es seit über zehn Jahren nicht gab. Während „Uptober“ in den Köpfen der Community als Monat der legendären Doppeldigit-Gewinne verankert ist (−18,3 % historischer Durchschnitt!), zeigt der Kalender für 2026 eine bittere −2,48 %. "
+   ],
+   [
+    "image",
+    "https://blossom.einundzwanzig.space/d67c3343a885f0824309ae1205c3f4eeac6b13a38783257c61e5cbeba680ef91.webp"
+   ],
+   [
+    "published_at",
+    "1792828773"
+   ],
+   [
+    "L",
+    "ISO-639-1"
+   ],
+   [
+    "l",
+    "de",
+    "ISO-639-1"
+   ],
+   [
+    "client",
+    "EINUNDZWANZIG HUB"
+   ]
+  ],
+  "content": "![](https://blossom.einundzwanzig.space/e67aa452a48141bce7730f4adf2c98af86d09007f880e4a7f0e64ccb21b807bb.png)Aber Moment: Im letzten Jahr fiel BTC aus einem Allzeithoch von $126k. Dieses Jahr startete er aus den $60k und erkämpfte sich immerhin eine Erholung auf $85k, bevor die Rallye verpuffte. Der Unterschied? 2025 stürzte man ab, 2026 lahmt man auf hohem Niveau. Das fühlt sich anders an – und ist es auch.\n\n#### **Strive: Der neue Star unter den Treasury-Companies**\n\nWährend die Welt von „Downtober“ spricht, kauft sich **Strive Inc.** in Rekordtempo in die Spitze der Corporate-Bitcoin-Halter. **4.045 BTC** in einer einzigen Woche, zu einem Durchschnittspreis von $82.803. Damit verdrängt Strive MARA Holdings aus den Top 4 und sitzt jetzt auf **36.818 BTC** (≈$3 Mrd.).\n\n#### **Fed, Midterms und die Flaute vor dem Sturm**\n\nZwei Ereignisse stehen bevor: **die FOMC-Sitzung am 28. Oktober** (FedWatch zeigt 91,7 % Wahrscheinlichkeit auf Zinspause) und die **US-Midterms am 3. November**. Beides kann in jede Richtung knallen.\n\nSpannende wird sein, ob die Fed sich traut, bei 3,7 % Kerninflation (September CPI) die Zinsen wirklich ruhen zu lassen.\n\n### Technik – LayerTree und der KI-Wachhund für Bitcoin\n\n#### **LayerTree: Das Paper ist raus – der Code auch**\n\nLightning Labs hat nicht nur ein 103-seitiges Papier veröffentlicht, sondern auch den **kompletten Code auf GitHub** bereitgestellt. Wer denkt „wieder nur Theorie“ liegt falsch: Es gibt eine Go-Implementierung, einen Simulator und Tausende von Executable Checks.\n\n![](https://blossom.einundzwanzig.space/20c8b6c9c06a06011be36bacbd168ef799dbbfa8c6cfb7255c2c4b09d27ed58c.png)\n\nEin UTXO, der über Covenants und einen Merkle-Sum-Tree die Guthaben von bis zu **65.536 Nutzern (Default-Konfiguration) verwaltet**. Jeder kann unilateral aussteigen, die Exit-Transaktion ist immer gleich groß (~1.020 vB), egal ob 10 oder 65.000 Teilnehmer. \n\n**Die Frage ist nur:** Wann bekommt Bitcoin die nötigen Covenant-OpCodes (**Great Script Restoration** + **OP\\_TX** + **OP\\_CHECKSIGFROMSTACK**)?\n\n#### **Loupe, Spiral und der KI-Wachhund**\n\nSpiral hat **Loupe** vorgestellt – einen kostenlosen, KI-gestützten Vulnerability-Scanner für Open-Source-Bitcoin-Projekte. Die Idee ist bestechend einfach: Angreifer nutzen längst KI, um Lücken in Bitcoin-Code zu finden. Warum sollten Maintainer das nicht auch tun? Spiral und Block führen die Scans durch und arbeiten mit den Maintainern an Fixes. Das langfristige Ziel: Jedes Projekt scanned sich selbst.\n",
+  "sig": "0b32dd439d94f3ce7cbcbb83350dc93348d40ea1d4152618011f96677d71257a6ccc12f54864370c15f2fbbc8b9e846e28c6aaf80dfad7e44acdbc8c3f97d87e"
+ }
+]

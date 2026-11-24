@@ -6,8 +6,9 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://start.einundzwanzig.dev',
-  // Sitemap ohne die Entwurfs-Startseiten; die Adresse steht in robots.txt, sobald PUBLIC_NOINDEX fehlt.
-  integrations: [mdx(), sitemap({ filter: (seite) => !seite.includes('/entwurf/') })],
+  // Sitemap ohne Entwurfs-Startseiten und ohne die Daily-Volltexte (deren Canonical zeigt auf die Plattform);
+  // die Adresse steht in robots.txt, sobald PUBLIC_NOINDEX fehlt.
+  integrations: [mdx(), sitemap({ filter: (seite) => !/^\/(entwurf|daily)\//.test(new URL(seite).pathname) })],
   vite: {
     plugins: [tailwindcss()],
   },

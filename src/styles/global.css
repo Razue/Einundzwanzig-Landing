@@ -150,7 +150,7 @@
     text-wrap: pretty;
   }
   :focus-visible {
-    outline: 2px solid var(--orange);
+    outline: 2px solid var(--orange-ink);
     outline-offset: 3px;
     border-radius: 2px;
   }
@@ -216,6 +216,8 @@
   /* Für gerenderte Markdown-Inhalte */
   .prose-ez {
     max-width: 68ch;
+    /* Lange Adressen und Nostr-Schlüssel in den Volltexten brechen um, statt die Seite seitlich zu sprengen. */
+    overflow-wrap: anywhere;
   }
   .prose-ez p, .prose-ez ul, .prose-ez ol {
     margin-block: 1em;
@@ -237,10 +239,25 @@
   .prose-ez h3 {
     @apply mt-8 mb-2 text-xl font-semibold;
   }
-  .prose-ez a {
+  .prose-ez a[href]:not(.btn) {
     color: var(--orange-ink);
     text-decoration: underline;
     text-underline-offset: 0.18em;
+  }
+  .prose-ez img {
+    margin-block: 1.5em;
+    height: auto;
+    border-radius: 1rem;
+  }
+  .prose-ez blockquote {
+    margin-block: 1em;
+    border-left: 3px solid var(--line);
+    padding-left: 1rem;
+    color: var(--ink-2);
+  }
+  .prose-ez hr {
+    margin-block: 2em;
+    border-color: var(--line);
   }
   .prose-ez code {
     font-size: 0.9em;

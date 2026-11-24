@@ -17,7 +17,10 @@ export interface Beitrag {
   datum: Date;
   rubrik: Rubrik;
   href: string;
+  // Link führt von der Seite weg.
   extern: boolean;
+  // Inhalt stammt von einer anderen Quelle (Plattform), dann steht der Autor auf der Karte.
+  fremd: boolean;
   autor: string;
   bild?: ImageMetadata;
   bildAlt: string;
@@ -34,7 +37,7 @@ export function artikelPfad(a: Artikel): string {
 
 export function zuBeitrag(a: Artikel): Beitrag {
   const { titel, teaser, datum, rubrik, autor, bild, bildAlt, beispiel } = a.data;
-  return { id: a.id, titel, teaser, datum, rubrik, href: artikelPfad(a), extern: false, autor, bild, bildAlt: bildAlt ?? '', beispiel };
+  return { id: a.id, titel, teaser, datum, rubrik, href: artikelPfad(a), extern: false, fremd: false, autor, bild, bildAlt: bildAlt ?? '', beispiel };
 }
 
 // Die Dailys heißen im Feed alle „₿ Bitcoin Daily“; hier werden sie zur Ausgabe des Tages,
@@ -48,8 +51,9 @@ export function dailyZuBeitrag(n: DailyNews): Beitrag {
     teaser: ohneDatum(n.zusammenfassung),
     datum: n.datum,
     rubrik: istDaily ? 'daily' : 'news',
-    href: n.url,
-    extern: true,
+    href: n.slug ? `/daily/${n.slug}/` : n.url,
+    extern: !n.slug,
+    fremd: true,
     autor: n.autor,
     bild: n.bild,
     bildAlt: '',

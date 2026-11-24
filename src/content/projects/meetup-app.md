@@ -14,4 +14,4 @@ Aus den Badges berechnet die App lokal eine Reputation, die du teilen kannst und
 
 ## Stand
 
-Version 1.6 läuft auf Android über Zapstore und auf iOS. Die Badge-Vergabe per QR-Code ist der aktive Weg; die ältere NFC-Variante ist abgeschaltet. In der App steckt außerdem der Prototyp „Deckel“ aus dem Stammtisch-Projekt, mit dem ein Tisch seine Rechnung in Sats teilt.
+Die App läuft auf Android über Zapstore und auf iOS. Die Badge-Vergabe per QR-Code ist der aktive Weg; die ältere NFC-Variante ist abgeschaltet. In der App steckt außerdem der Prototyp „Deckel“ aus dem Stammtisch-Projekt, mit dem ein Tisch seine Rechnung in Sats teilt.

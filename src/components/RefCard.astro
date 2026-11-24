@@ -6,8 +6,10 @@ import { datumKurz } from '../lib/format';
 
 interface Props {
   eintrag: CollectionEntry<'empfehlungen'>;
+  // h2, wenn die Karten direkt unter der Seitenüberschrift stehen (Kategorie-Seite), sonst h3.
+  ueberschrift?: 'h2' | 'h3';
 }
-const { eintrag } = Astro.props;
+const { eintrag, ueberschrift: Ueberschrift = 'h3' } = Astro.props;
 const { anbieter, kyc, laender, url, werbelink, programm, code, vorteil, risiken, geprueft_am } = eintrag.data;
 const { Content } = await render(eintrag);
 const hatBegruendung = (eintrag.body ?? '').trim().length > 0;
@@ -16,7 +18,7 @@ const programmText = programm === 'offen' ? 'Partnerprogramm wird geprüft' : pr
 
 <article class="relative flex flex-col gap-3 rounded-xl border border-line bg-bg-2 p-5">
   {werbelink && <span class="absolute top-4 right-4 rounded-full border border-orange px-2 py-0.5 text-xs text-orange-ink">Werbung</span>}
-  <h3 class="pr-20 font-display text-xl font-bold">{anbieter}</h3>
+  <Ueberschrift class="pr-20 font-display text-xl font-bold">{anbieter}</Ueberschrift>
   <div class="flex flex-wrap items-center gap-2 text-xs text-ink-3">
     <KycBadge kyc={kyc} />
     {laender.length > 0 && <span>{laender.join(', ')}</span>}

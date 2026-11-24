@@ -6,8 +6,8 @@ laender: [weltweit]
 url: https://blockstream.com/jade/
 werbelink: false
 programm: offen
-vorteil: Günstig, Bitcoin-only, mit Kamera für luftgetrennte Signaturen per QR-Code. Open Source.
-risiken: Das Geheimnis liegt standardmäßig verschlüsselt auf einem Blockstream-Server, prüfbar mit dem PIN. Wer das nicht will, nutzt den Modus ohne Server.
-geprueft_am: 2026-10-31
+vorteil: Günstig, Open Source, für Bitcoin und dessen Sidechain Liquid. Das Modell Jade Plus signiert luftgetrennt per Kamera und QR-Code.
+risiken: Die PIN wirkt standardmäßig nur zusammen mit einem Server von Blockstream, der einen Teil des Entsperrschlüssels hält. Deine Wörter bleiben verschlüsselt auf dem Gerät. Ohne Blockstream geht es mit eigenem PIN-Server oder per SeedQR (nur Jade Plus).
+geprueft_am: 2026-11-15
 reihenfolge: 20
 ---

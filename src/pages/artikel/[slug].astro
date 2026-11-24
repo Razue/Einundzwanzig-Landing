@@ -27,7 +27,7 @@ const { Content } = await render(artikel);
 
 <Base title={titel} description={teaser} bild={bild} bildAlt={bildAlt}>
   <article class="wrap py-10 lg:py-14">
-    <div class="mx-auto max-w-3xl">
+    <div class="mx-auto max-w-[40rem]">
       <p class="text-sm"><a class="link" data-home href="/">Zurück zur Übersicht</a></p>
       <div class="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm">
         <span class="font-semibold text-orange-ink">{RUBRIK_LABEL[rubrik]}</span>
@@ -45,12 +45,12 @@ const { Content } = await render(artikel);
         </div>
       )
     }
-    <div class="prose-ez mx-auto mt-10 max-w-3xl text-[1.05rem]">
+    <div class="prose-ez mx-auto mt-10 max-w-[40rem] text-[1.05rem]">
       <Content components={{ Empfehlung: EmpfehlungInline }} />
     </div>
     {
       beispiel && (
-        <p class="mx-auto mt-10 max-w-3xl rounded-xl border border-dashed border-beta/70 px-5 py-4 text-sm text-ink-2">
+        <p class="mx-auto mt-10 max-w-[40rem] rounded-xl border border-dashed border-beta/70 px-5 py-4 text-sm text-ink-2">
           Dieser Artikel ist ein Beispiel. Er zeigt, wie die täglichen Nachrichten hier aussehen werden, und verschwindet, sobald die
           ersten echten Ausgaben erscheinen.
         </p>

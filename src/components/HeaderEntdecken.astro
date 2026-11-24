@@ -19,9 +19,9 @@ function istAktiv(href: string): boolean {
 
 const nav = [
   { href: HOMES.entdecken, label: 'Entdecken' },
-  { href: '/artikel', label: 'Artikel' },
-  { href: '/projekte', label: 'Projekte' },
-  { href: '/empfehlungen', label: 'Empfehlungen' },
+  { href: '/artikel/', label: 'Artikel' },
+  { href: '/projekte/', label: 'Projekte' },
+  { href: '/empfehlungen/', label: 'Empfehlungen' },
   { href: EXTERN.portalKarte, label: 'Meetups', extern: true },
 ];
 ---
@@ -31,9 +31,10 @@ const nav = [
     <a href={HOMES.entdecken} class="mr-3 text-[1.4rem] leading-none font-extrabold tracking-tight text-ink no-underline">
       Einundzwanzig<span class="text-orange">.</span>
     </a>
+    {/* Innenabstand rundum, damit der Fokusring im Scroll-Bereich nicht abgeschnitten wird. Einzeilig erst ab 56rem (896 px): Navigation und Schalter brauchen rund 811 px, mit dem Breakpoint md rutschte der Schalter darunter allein in die zweite Zeile. */}
     <nav
       aria-label="Hauptnavigation"
-      class="order-last -mx-1 flex w-[calc(100%+0.5rem)] gap-1 overflow-x-auto px-1 [scrollbar-width:none] md:order-none md:mx-0 md:w-auto md:px-0"
+      class="order-last -m-1.5 flex w-[calc(100%+0.75rem)] gap-1 overflow-x-auto p-1.5 [scrollbar-width:none] min-[56rem]:order-none min-[56rem]:w-auto"
     >
       {
         nav.map((n) => (

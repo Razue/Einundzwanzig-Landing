@@ -1,6 +1,7 @@
 // Lädt die externen Datenquellen und legt sie als Fallback-Snapshots ab.
 // Der Build nutzt sie nur, wenn die Quelle gerade nicht erreichbar ist.
-import { writeFile } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
+import { dTagsAusFeed, eventsLaden, EVENTS_SNAPSHOT } from './daily-events.mjs';
 
 const quellen = [
   ['https://einundzwanzig.space/feed.xml', 'src/data/snapshots/podcast.xml'],
@@ -39,4 +40,14 @@ for (const [schluessel, url] of Object.entries(bitcoin)) {
 if (Object.keys(daten).length === Object.keys(bitcoin).length) {
   await writeFile('src/data/snapshots/bitcoin.json', JSON.stringify(daten, null, 2) + '\n');
   console.log('src/data/snapshots/bitcoin.json aktualisiert');
+}
+
+// Volltexte der täglichen Nachrichten: signierte Nostr-Events zu den Einträgen des Daily-Feeds.
+const dailyEvents = await eventsLaden(dTagsAusFeed(await readFile('src/data/snapshots/daily.xml', 'utf8')));
+if (dailyEvents.length > 0) {
+  await writeFile(EVENTS_SNAPSHOT, JSON.stringify(dailyEvents, null, 1) + '\n');
+  console.log(`${EVENTS_SNAPSHOT} aktualisiert (${dailyEvents.length} Beiträge)`);
+} else {
+  console.error('Keine Daily-Events von den Relays');
+  process.exitCode = 1;
 }

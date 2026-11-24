@@ -15,4 +15,4 @@ Das Portal sammelt alle Gruppen mit Ort, Termin und Kontakt. Die meisten organis
 
 ## Für Entwickler
 
-Das Portal hat eine offene Schnittstelle unter `portal.einundzwanzig.space/api/meetups`. Diese Seite nutzt sie, um die nächsten Termine auf der Startseite zu zeigen.
+Das Portal hat eine offene Schnittstelle unter <code>portal.einundzwanzig.space/<wbr>api/<wbr>meetups</code>. Diese Seite nutzt sie, um die nächsten Termine auf der Startseite zu zeigen.

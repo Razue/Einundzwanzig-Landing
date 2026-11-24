@@ -1,0 +1,75 @@
+---
+// Eine Ausgabe der täglichen Nachrichten als Volltext. Quelle ist der signierte Nostr-Langtext des
+// Autorenteams (src/lib/daily-loader.ts). Das Original liegt auf der Plattform: dorthin zeigt der
+// Canonical-Link, dort wird kommentiert und gezappt.
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ArtikelBild from '../../components/ArtikelBild.astro';
+import ArtikelKarte from '../../components/ArtikelKarte.astro';
+import { dailyZuBeitrag, RUBRIK_LABEL } from '../../lib/artikel';
+import { getDailyNews, lokalesBild } from '../../lib/daily';
+import { datumKurz, isoDatum } from '../../lib/format';
+import { EXTERN } from '../../lib/site';
+
+export async function getStaticPaths() {
+  return (await getCollection('daily')).map((ausgabe) => ({ params: { slug: ausgabe.id }, props: { ausgabe } }));
+}
+
+interface Props {
+  ausgabe: CollectionEntry<'daily'>;
+}
+const { ausgabe } = Astro.props;
+const { url, njump, bildUrl } = ausgabe.data;
+const beitrag = dailyZuBeitrag({ ...ausgabe.data, bild: bildUrl ? lokalesBild(bildUrl) : undefined });
+const { titel, teaser, datum, rubrik, autor, bild } = beitrag;
+const { Content } = await render(ausgabe);
+const weitere = (await getDailyNews()).filter((n) => n.slug && n.slug !== ausgabe.id).slice(0, 3).map(dailyZuBeitrag);
+---
+
+<Base title={titel} description={teaser || `${RUBRIK_LABEL[rubrik]} vom ${datumKurz(datum)}`} bild={bild} bildAlt={titel} canonical={url}>
+  <article class="wrap py-10 lg:py-14">
+    <div class="mx-auto max-w-[40rem]">
+      <p class="text-sm"><a class="link" href="/artikel/">Artikel</a></p>
+      <div class="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm">
+        <a href={`/artikel/rubrik/${rubrik}/`} class="font-semibold text-orange-ink no-underline hover:underline">{RUBRIK_LABEL[rubrik]}</a>
+        <time datetime={isoDatum(datum)} class="font-mono text-ink-3">{datumKurz(datum)}</time>
+        <span class="text-ink-3">{autor}</span>
+      </div>
+      <h1 class="mt-3 font-display text-[clamp(1.75rem,7vw,3rem)] leading-[1.05] font-extrabold tracking-tight">{titel}</h1>
+      {teaser && <p class="mt-5 text-lg text-ink-2">{teaser}</p>}
+      <p class="mt-6 rounded-xl border border-line bg-bg-2 px-5 py-4 text-sm text-ink-2">
+        Dieser Beitrag stammt von <a class="link" href={EXTERN.dailyNews} rel="noopener">Einundzwanzig News</a> und ist ein
+        signierter Nostr-Beitrag. <a class="link" href={url} rel="noopener">Im Original lesen</a>, dort kannst du kommentieren
+        und zappen. <a class="link" href={njump} rel="noopener">Auf Nostr ansehen</a>.
+      </p>
+    </div>
+    {
+      bild && (
+        <div class="mx-auto mt-8 max-w-4xl">
+          <ArtikelBild beitrag={beitrag} widths={[800, 1200, 1600]} sizes="(min-width: 1024px) 896px, 100vw" prioritaet />
+        </div>
+      )
+    }
+    <div class="prose-ez mx-auto mt-10 max-w-[40rem] text-[1.05rem]">
+      <Content />
+    </div>
+    <div class="mx-auto mt-10 max-w-[40rem]">
+      <a href={url} rel="noopener" class="btn btn-ghost">Im Original lesen, kommentieren, zappen</a>
+    </div>
+  </article>
+
+  {
+    weitere.length > 0 && (
+      <section class="wrap pb-16" aria-labelledby="weitere-titel">
+        <h2 id="weitere-titel" class="border-b border-line pb-3 font-display text-2xl font-bold">
+          Weitere Ausgaben
+        </h2>
+        <div class="mt-6 grid gap-8 sm:grid-cols-3">
+          {weitere.map((b) => (
+            <ArtikelKarte beitrag={b} />
+          ))}
+        </div>
+      </section>
+    )
+  }
+</Base>

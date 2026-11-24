@@ -41,7 +41,7 @@ const gruppen = KATEGORIEN.map((k) => ({ ...k, eintraege: alle.filter((e) => e.d
       <section id={g.slug} class="wrap scroll-mt-6 py-10" aria-labelledby={`titel-${g.slug}`}>
         <div class="flex flex-wrap items-baseline justify-between gap-3">
           <h2 id={`titel-${g.slug}`} class="font-display text-2xl font-bold sm:text-3xl">
-            <a class="no-underline hover:text-orange-ink" href={`/empfehlungen/${g.slug}`}>
+            <a class="no-underline hover:text-orange-ink" href={`/empfehlungen/${g.slug}/`}>
               {g.titel}
             </a>
           </h2>
